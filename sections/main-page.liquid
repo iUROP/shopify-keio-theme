@@ -1,0 +1,53 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+<div class="i-page section-{{ section.id }}-padding">
+  <div class="i-page-hero Bg-Colors-100">
+    <div class="i-page-hero__overlay">
+      <h1 class="main-page-title page-title Text-Colors-White Family-Font Typo-Display-XL">
+        {{ page.title | escape }}
+      </h1>
+    </div>
+
+    {% if page.metafields.custom.imagen_destacada %}
+      <img src="{{ page.metafields.custom.imagen_destacada | file_url }}" alt="Page background" class="bg-image" />
+    {% endif %}
+  </div>
+
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ page.content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,56 @@
+<div class="i-product-card {% if complex %} is-complex-card{% endif %}">
+  
+  <div class="custom-product-item-tags">
+    {% assign customtags = product.metafields.custom.custom_product_tags.value %}
+    {% for customtag in customtags %}
+      <span class="type-{{ customtag.titulo | handleize }}" style="color: {{ customtag.color_de_texto }}; background: {{ customtag.color_de_fondo }}">{{ customtag.titulo }}</span>
+    {% endfor %}
+  </div>
+
+  <a href="{{ product.url }}" class="i-product-card__gallery">
+    {% if use_review_type %}
+      {% if product.metafields.custom.review_image %}
+        <img src="{{ product.metafields.custom.review_image | file_url }}" alt="Product stamp image" draggable="false" />
+      {% endif %}
+    {% else %}
+      <img src="{{ product.featured_image | image_url: width: 400 }}" alt="{{ product.title }}" loading="lazy" class="Corner-Large" draggable="false" />
+
+      {% if product.images.size > 2 %}
+        <img src="{{ product.images[2] | img_url: '800x' }}" alt="{{ product.images[2].alt | escape }}" class="hover-product-image slow_ani" draggable="false" />
+      {% endif %}
+    {% endif %}
+  </a>
+  {% if complex %}
+    <div class="i-product-card__stamp">
+      {% if product.metafields.custom.stamp %}
+        <img src="{{ product.metafields.custom.stamp | file_url }}" alt="Product stamp">
+      {% endif %}
+    </div>
+  {% endif %}
+  <div class="i-product-card__labels">
+    <div class="i-product-card__labels--reviews">
+      {% render 'review-star' star: 5 %}
+      <span class="Family-Font---Body Text-Colors-Grey Typo-Body-XS">4.9/5 (255 reseñas)</span>
+    </div>
+    <a href="{{ product.url }}" class="i-product-card__labels--title Text-Colors-800 Family-Font Typo-H3">
+      {{ product.title }}
+
+      {% if complex %}
+        <div class="i-product-card__labels--prices-alternate">
+          {{ product.price | money }}
+        </div>
+      {% endif %}
+    </a>
+    {% if complex %}
+      <div class="i-product-card__labels--description">
+        {{ product.metafields.custom.custom_review }}
+      </div>
+    {% endif %}
+    <div class="i-product-card__labels--prices Text-Colors-800 Family-Font---Body Typo-Body-L">
+      {{ product.price | money }}
+    </div>
+    <div class="i-product-card__labels--actions">
+      <a class="i-product-add-to-cart-container is-button-hover-primary" href="{{ product.url }}">Comprar miel</a>
+    </div>
+  </div>
+</div>

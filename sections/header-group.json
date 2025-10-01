@@ -1,0 +1,33 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "i_announcement_bar_Xbqaq3": {
+      "type": "i-announcement-bar",
+      "disabled": true,
+      "name": "iUROP Announcement Bar",
+      "settings": {}
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "collection": "frontpage",
+        "container_height": 76
+      }
+    }
+  },
+  "order": [
+    "i_announcement_bar_Xbqaq3",
+    "header"
+  ]
+}

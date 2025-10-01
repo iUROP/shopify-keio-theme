@@ -1,0 +1,25 @@
+// plugins
+@import "./../plugins/slick-carousel/slick/slick.css";
+@import "./../plugins/slick-carousel/slick/slick-theme.css";
+
+// Foundations
+@import "./base/fonts";
+@import "./base/variables";
+@import "./base/colors";
+@import "./base/corners";
+@import "./base/spaces";
+@import "./base/normalize";
+@import "./base/animations";
+
+// Components
+
+// Sections
+@import "./sections/header";
+@import "./sections/footer";
+@import "./sections/sections";
+
+// Pages
+@import "./sections/pages";
+
+// Snippets
+@import "./sections/snippets";

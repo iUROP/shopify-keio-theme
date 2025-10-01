@@ -1,0 +1,13 @@
+.slow_ani {
+  -webkit-transition: all .25s cubic-bezier(.77,0,.175,1);
+  -moz-transition: all .25s cubic-bezier(.77,0,.175,1);
+  -o-transition: all .25s cubic-bezier(.77,0,.175,1);
+  transition: all .25s cubic-bezier(.77,0,.175,1);
+}
+
+.slow_header {
+  -webkit-transition: all .4s cubic-bezier(.77,0,.175,1);
+  -moz-transition: all .4s cubic-bezier(.77,0,.175,1);
+  -o-transition: all .4s cubic-bezier(.77,0,.175,1);
+  transition: all .4s cubic-bezier(.77,0,.175,1);
+}

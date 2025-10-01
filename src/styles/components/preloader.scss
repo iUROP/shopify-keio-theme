@@ -1,0 +1,17 @@
+.i-preloader-container {
+  &__section {
+    position: relative;
+    display: inline-block;
+    width: 22px;
+    vertical-align: middle;
+
+    svg {
+        width: 100%;
+        height: auto;
+
+        circle {
+            stroke: #000;
+        }
+    }
+  }
+}

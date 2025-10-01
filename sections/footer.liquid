@@ -1,0 +1,45 @@
+<footer class="i-footer-container">
+  Footer
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "class": "section-footer i-section section-i-footer",
+  "max_blocks": 2,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Estructura"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_footer",
+      "label": "Logo Footer"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "link_list",
+      "name": "Footer menus",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Menu",
+          "label": "Nombre del menu"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "Menu footer",
+        }
+      ]
+    },
+  ]
+}
+{% endschema %}

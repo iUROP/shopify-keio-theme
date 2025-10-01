@@ -1,0 +1,162 @@
+<div class="i-header-menu">
+  <div class="i-header-menu__toggler">
+    <div class="re">
+      <div class="ce">
+        {% render 'icon-hamburger' %}
+        {% render 'icon-close' %}
+      </div>
+    </div>
+  </div>
+  <nav class="i-header-menu__content slow_ani" style="top: {{ section.settings.container_height }}px;">
+
+    <div class="i-header-menu__content--alternative-header only-mobile">
+
+      <div class="i-header-menu__toggler">
+        <div class="re">
+          <div class="ce">
+            {% render 'icon-hamburger' %}
+          </div>
+        </div>
+      </div>
+
+      <div class="i-header-container__content--logo">
+        <div class="re">
+          <div class="ce">
+            <a href="{{ routes.root_url }}" class="header__logo">
+              <div class="header__logo--wrapper">
+                <img src="{{ section.settings.logo_header | image_url: width: 400 }}" alt="Logo" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="i-header-cart__toggler">
+        <div class="re">
+          <div class="ce">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+              <path d="M4.10547 0.900391C4.39897 0.900391 4.65507 1.10129 4.72852 1.38184L5.95215 5.89941H24.1543C24.1839 5.89941 24.213 5.90272 24.2402 5.90723L24.3154 5.92188L24.3203 5.92383L24.4434 5.97168C24.7128 6.1092 24.8569 6.41742 24.7773 6.7207V6.72168L22.3467 15.7695L22.3477 15.7705C22.0833 16.7687 21.1815 17.4648 20.1514 17.4756H9.47168C9.34776 17.4756 9.22496 17.4585 9.10449 17.4365L9.42969 18.627H20.1416L20.2842 18.6318C20.9926 18.6753 21.6228 19.003 22.0605 19.5L22.2158 19.6846C22.5569 20.1302 22.7578 20.6861 22.7578 21.291C22.7578 22.7547 21.573 23.9395 20.1094 23.9395C18.6458 23.9394 17.461 22.7546 17.4609 21.291C17.4609 20.7901 17.603 20.323 17.8418 19.9258H11.7178L11.7773 20.0244V20.0254L11.8496 20.1689C12.0087 20.5097 12.0996 20.8921 12.0996 21.291C12.0996 22.7545 10.9146 23.9392 9.45117 23.9395C7.98751 23.9395 6.80178 22.7547 6.80176 21.291C6.80176 20.3063 7.3393 19.4492 8.13672 18.9932L7.32129 16.0244V16.0234C7.2961 15.9526 7.26928 15.8731 7.25293 15.7969V15.7959L4.77832 6.72168L4.77441 6.70996V6.70898C4.76911 6.67129 4.76982 6.63342 4.77344 6.5957L3.5957 2.19922H1.5498C1.19124 2.19922 0.900582 1.90832 0.900391 1.5498C0.900391 1.19112 1.19112 0.900391 1.5498 0.900391H4.10547ZM9.45117 19.9258C8.69641 19.9258 8.08594 20.5363 8.08594 21.291C8.08596 22.0461 8.69113 22.6561 9.44531 22.6562C10.2001 22.6562 10.8105 22.0458 10.8105 21.291C10.8105 20.5409 10.205 19.926 9.45117 19.9258ZM20.1143 19.9258C19.3597 19.926 18.749 20.5364 18.749 21.291C18.749 22.0456 19.3597 22.656 20.1143 22.6562C20.869 22.6562 21.4795 22.0458 21.4795 21.291C21.4795 20.5363 20.869 19.9258 20.1143 19.9258ZM7.33398 11.0439L8.56641 15.5527C8.70392 15.9389 9.05953 16.1992 9.4668 16.2227H20.1328C20.5836 16.2133 20.9733 15.9084 21.0859 15.4727V15.4717L23.2871 7.20801H6.27051L7.33398 11.0439Z" fill="#FAF5E8" stroke="#FAF5E8" stroke-width="0.2"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <ul class="i-header-menu__content--items" role="list">
+      <h2 class="i-header-menu__content--items__heading Text-Colors-800 Family-Font Typo-Body-XL only-mobile">Productos</h2>
+      <div class="i-header-menu__content--items__products only-mobile">
+        {% if section.settings.collection != blank %}
+          {% assign featured_collection = collections[section.settings.collection] %}
+          {% if featured_collection.products_count > 0 %}
+            {% for product in featured_collection.products %}
+              <div class="i-section-product-testimonials__products--list__p">
+                {% render 'i-product-card' product: product, use_review_type: true %}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+      </div>
+      {%- for link in section.settings.menu.links -%}
+        <li class="i-header-menu__content--items__item only-desktop {% if forloop.first %} is-first-item{% endif %}">
+          {%- if link.links != blank -%}
+            <div class="item-details">
+              <summary class="{% if link.child_active %} active{% endif %}">
+                {{ link.title | escape }}
+                {% render 'icon-arrow' %}
+                {% render 'icon-caret' %}
+              </summary>
+              <div class="i-header-menu__content--items__item--submenu slow_ani" tabindex="-1">
+                <ul class="i-header-menu__content--items__item--submenu--items" role="list" tabindex="-1">
+                  <button class="i-header-menu__content--items__item--back" aria-expanded="true">
+                    {% render 'icon-arrow' %}
+                    {{ link.title | escape }}
+                  </button>
+                  {%- for childlink in link.links -%}
+                    <li class="i-header-menu__content--items__item--submenu--items__item">
+                      {%- if childlink.links == blank -%}
+                        <a
+                          href="{{ childlink.url }}"
+                          class="i-header-menu__content--items__item--submenu--items__item--link {% if childlink.current %} active{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                      {%- else -%}
+                        <div class="item-details">
+                          <summary class="{% if link.child_active %} active{% endif %}">
+                            {{ childlink.title | escape }}
+                            {% render 'icon-arrow' %}
+                            {% render 'icon-caret' %}
+                          </summary>
+                          <div class="i-header-menu__content--items__item--submenu--items__item--submenu slow_ani" tabindex="-1">
+                            <ul class="i-header-menu__content--items__item--submenu--items__item--submenu--items" role="list" tabindex="-1">
+                              <button class="i-header-menu__content--items__subitem--back" aria-expanded="true">
+                                {% render 'icon-arrow' %}
+                                {{ link.title | escape }}
+                              </button>
+                              {%- for grandchildlink in childlink.links -%}
+                                <li class="i-header-menu__content--items__item--submenu--items__item--submenu--items__item">
+                                  <a
+                                    href="{{ grandchildlink.url }}"
+                                    class="i-header-menu__content--items__item--submenu--items__item--submenu--items__item--link {% if grandchildlink.current %} active{% endif %}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+
+                            </ul>
+                          </div>
+                        </div>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            </div>
+          {%- else -%}
+            <a
+              href="{{ link.url }}"
+              class="i-header-menu__content--items__item--link Text-Colors-200 Family-Font---Body Typo-Body-M {% if link.current %} active{% endif %}"
+              {% if link.current %}
+                aria-current="page"
+              {% endif %}
+            >
+              {{ link.title | escape }}
+            </a>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+
+    <div class="i-header-menu__content--links only-mobile">
+      <a href="/collections/all" class="i-header-menu__content--links__primary is-button-hover-primary">Comprar miel</a>
+      <a href="/pages/ingredientes" class="i-header-menu__content--links__Secondary">Ingredientes</a>
+    </div>
+  </nav>
+  <div class="i-header-menu__overlay slow_ani" style="top: {{ section.settings.container_height }}px;"></div>
+</div>
+
+<script>
+  document.querySelector('.i-header-menu__toggler').addEventListener("click", function(){
+    Permalink.openMenu()
+  })
+  document.querySelector('.i-header-menu__overlay').addEventListener("click", function(){
+    Permalink.openMenu()
+  })
+  document.querySelector('.i-header-menu__content--alternative-header .i-header-menu__toggler').addEventListener("click", function(){
+    Permalink.openMenu()
+  })
+  document.querySelector('.i-header-cart__toggler').addEventListener("click", function(){
+    Permalink.openMenu()
+    Permalink.openCart()
+  })
+</script>

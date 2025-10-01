@@ -1,0 +1,411 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "custom_tags_QgcnPk": {
+          "type": "custom_tags",
+          "settings": {}
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "custom_icons_aUfbEJ": {
+          "type": "custom_icons",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "collapsible_tab_JHdRz4": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredientes",
+            "icon": "none",
+            "content": "<p>Texto de ingredientes</p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_E6nzTz": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Envíos y precios",
+            "icon": "none",
+            "content": "<p>Texto de envio y precios</p>",
+            "page": ""
+          }
+        },
+        "custom_image_ewChUF": {
+          "type": "custom-image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "custom_tags_QgcnPk",
+        "title",
+        "description",
+        "custom_icons_aUfbEJ",
+        "variant_picker",
+        "buy_buttons",
+        "collapsible_tab_JHdRz4",
+        "collapsible_tab_E6nzTz",
+        "custom_image_ewChUF"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "i_section_product_list_LMxRtN": {
+      "type": "i-section-product-list",
+      "name": "iUROP section - P List",
+      "settings": {
+        "collection": "frontpage",
+        "title": "También podría gustarte"
+      }
+    },
+    "i_section_banner_content_bTBCLc": {
+      "type": "i-section-banner-content",
+      "blocks": {
+        "item_YAby6q": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/fructose.png",
+            "title": "Fructosa",
+            "subtitle": "Azúcar natural"
+          }
+        },
+        "item_6XYrwN": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/bee-pollen.png",
+            "title": "Polen de abeja",
+            "subtitle": "Superalimento natural"
+          }
+        },
+        "item_QFyr7q": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/flavonoids.png",
+            "title": "Flavonoides",
+            "subtitle": "Nutrientes naturales"
+          }
+        },
+        "item_hnMznx": {
+          "type": "item",
+          "settings": {
+            "icon": "shopify://shop_images/item-info-2.png",
+            "title": "Miel cruda",
+            "subtitle": "Dulzura pura"
+          }
+        }
+      },
+      "block_order": [
+        "item_YAby6q",
+        "item_6XYrwN",
+        "item_QFyr7q",
+        "item_hnMznx"
+      ],
+      "name": "iUROP section - Banner C",
+      "settings": {
+        "title": "Miel, pura y naturalmente poderosa",
+        "text": "Cada gota de nuestra miel es creada por la naturaleza. Libre de aditivos, químicos y cualquier cosa artificial.",
+        "banner_image": "shopify://shop_images/bg-parallax.png"
+      }
+    },
+    "i_section_table_compare_96AMME": {
+      "type": "i-section-table-compare",
+      "blocks": {
+        "especificacion_RBEtnG": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Por qué nuestra miel destaca",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "no_include"
+          }
+        },
+        "especificacion_TKGYRF": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Certificada libre de residuos de glifosato",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "optional"
+          }
+        },
+        "especificacion_KYEqGp": {
+          "type": "especificacion",
+          "settings": {
+            "description": "100 % trazable hasta su origen",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "optional"
+          }
+        },
+        "especificacion_kwE79Y": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Apicultura con estándares éticos",
+            "opption_state_1": "include",
+            "opption_state_2": "optional",
+            "opption_state_3": "no_include"
+          }
+        },
+        "especificacion_A9F9Ua": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Garantía de textura rica y suave",
+            "opption_state_1": "include",
+            "opption_state_2": "no_include",
+            "opption_state_3": "no_include"
+          }
+        },
+        "especificacion_c7YWgV": {
+          "type": "especificacion",
+          "settings": {
+            "description": "Recomendada por expertos en bienestar",
+            "opption_state_1": "include",
+            "opption_state_2": "no_include",
+            "opption_state_3": "no_include"
+          }
+        }
+      },
+      "block_order": [
+        "especificacion_RBEtnG",
+        "especificacion_TKGYRF",
+        "especificacion_KYEqGp",
+        "especificacion_kwE79Y",
+        "especificacion_A9F9Ua",
+        "especificacion_c7YWgV"
+      ],
+      "name": "iUROP section - Table",
+      "settings": {
+        "title": "Por qué nuestra miel destaca",
+        "banner_1": "shopify://shop_images/logo1.png",
+        "banner_2": "shopify://shop_images/logo2.png",
+        "banner_3": "shopify://shop_images/logo3.png"
+      }
+    },
+    "i_section_image_text_fhdDVB": {
+      "type": "i-section-image-text",
+      "blocks": {
+        "checkblock_wjhWiw": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Sin aditivos"
+          }
+        },
+        "checkblock_ePKKpX": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Libre de pesticidas"
+          }
+        },
+        "checkblock_BneKjb": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Sin pasteurizar"
+          }
+        },
+        "checkblock_CgWNKJ": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Rica en antioxidantes"
+          }
+        },
+        "checkblock_QWQKye": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Cargada de polen"
+          }
+        },
+        "checkblock_dweLgQ": {
+          "type": "checkblock",
+          "settings": {
+            "title": "Alta en ácidos fenólicos"
+          }
+        }
+      },
+      "block_order": [
+        "checkblock_wjhWiw",
+        "checkblock_ePKKpX",
+        "checkblock_BneKjb",
+        "checkblock_CgWNKJ",
+        "checkblock_QWQKye",
+        "checkblock_dweLgQ"
+      ],
+      "name": "iUROP section - ImageText",
+      "settings": {
+        "title": "Cuidadosamente obtenida, naturalmente pura",
+        "id_section": "",
+        "content": "<p>Descubre nuestra miel artesanal pura, recolectada de forma ética y 100 % trazable. Rica en antioxidantes y enzimas.</p>",
+        "button_text": "",
+        "button_link": "",
+        "image": "shopify://shop_images/reseta.png",
+        "image_m": "shopify://shop_images/reseta.png",
+        "show_complete_image": false,
+        "imagen_mobile_less": false,
+        "hide_borders": false,
+        "image_left": true,
+        "text_to_left": true,
+        "is_complete": false,
+        "is_bg": true,
+        "template_text_style": "normal"
+      }
+    },
+    "i_section_recipes_TRctnp": {
+      "type": "i-section-recipes",
+      "disabled": true,
+      "name": "iUROP section - Recipes",
+      "settings": {}
+    },
+    "i_section_faqs_wdayGH": {
+      "type": "i-section-faqs",
+      "blocks": {
+        "content_block_A48nDF": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mauris turpis, cursus sit amet semper eu, pulvinar at eros. Maecenas malesuada porttitor laoreet."
+          }
+        },
+        "content_block_kzqaBB": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mauris turpis, cursus sit amet semper eu, pulvinar at eros. Maecenas malesuada porttitor laoreet."
+          }
+        },
+        "content_block_EpyqUT": {
+          "type": "content_block",
+          "settings": {
+            "title": "¿Vuestra miel contiene algún aditivo?",
+            "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mauris turpis, cursus sit amet semper eu, pulvinar at eros. Maecenas malesuada porttitor laoreet."
+          }
+        }
+      },
+      "block_order": [
+        "content_block_A48nDF",
+        "content_block_kzqaBB",
+        "content_block_EpyqUT"
+      ],
+      "name": "iUROP section - Faqs",
+      "settings": {}
+    },
+    "i_section_instagram_fMCFXj": {
+      "type": "i-section-instagram",
+      "blocks": {
+        "content_block_mcmcLe": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.png"
+          }
+        },
+        "content_block_BWhmcE": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.png"
+          }
+        },
+        "content_block_XyUkzR": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-3.png"
+          }
+        },
+        "content_block_NnbzFV": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-2.png"
+          }
+        },
+        "content_block_qCJnWT": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/ig-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_mcmcLe",
+        "content_block_BWhmcE",
+        "content_block_XyUkzR",
+        "content_block_NnbzFV",
+        "content_block_qCJnWT"
+      ],
+      "name": "iUROP section - Instagram",
+      "settings": {
+        "title": "#Nectararcadia",
+        "button_text": "Siguenos en nuestro Instagram",
+        "button_link": "/#"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "i_section_product_list_LMxRtN",
+    "i_section_banner_content_bTBCLc",
+    "i_section_table_compare_96AMME",
+    "i_section_image_text_fhdDVB",
+    "i_section_recipes_TRctnp",
+    "i_section_faqs_wdayGH",
+    "i_section_instagram_fMCFXj"
+  ]
+}

@@ -1,0 +1,25 @@
+.i-product-add-to-cart-container {
+  border-radius: var(--Corner-Full, 10000px);
+  background: var(--Colors-100, #5B1414);
+  width: 300px;
+  height: 50px;
+  color: var(--Colors-White, var(--Colors-white, #FFF));
+  font-family: var(--Family-Font, Besley);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.48px;
+  max-width: 100%;
+  border: 0px;
+  padding: 0px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  line-height: 44px;
+  text-decoration: none !important;
+
+  &:hover {
+    background: var(--Colors-100, #752020);
+  }
+}

@@ -1,0 +1,43 @@
+<header class="i-header-container">
+  Header
+</header>
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "section-header i-section section-i-header",
+  "max_blocks": 3,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Estructura"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_header",
+      "label": "Logo header"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_header_dark",
+      "label": "Logo header negro"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Productos megamenu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

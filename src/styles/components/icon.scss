@@ -1,0 +1,24 @@
+.i-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+
+  span {
+    display: block;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .icon-cart {
+    -webkit-transition: all .25s cubic-bezier(.77,0,.175,1);
+    -moz-transition: all .25s cubic-bezier(.77,0,.175,1);
+    -o-transition: all .25s cubic-bezier(.77,0,.175,1);
+    transition: all .25s cubic-bezier(.77,0,.175,1);
+
+    &:hover {
+      transform: scale(0.92);
+    }
+  }
+}

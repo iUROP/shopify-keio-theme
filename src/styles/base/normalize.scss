@@ -1,0 +1,51 @@
+.re,
+.i-rely {
+  position: relative;
+  display: table;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+
+  .ce,
+  .i-centry {
+    position: relative;
+    vertical-align: middle;
+    display: table-cell;
+    z-index: 1;
+  }
+}
+
+body {
+  padding: 24px 0px;
+  padding-bottom: 0px;
+}
+
+.i-container {
+  width: 1440px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 0 20px;
+
+  @media only screen and (max-width: 1024px) {
+
+  }
+}
+.i-relative {
+  position: relative;
+}
+
+body {
+  background-color: #ffffff !important;
+}
+
+.only-mobile {
+  @media only screen and (min-width: 1025px) {
+    display: none !important;
+  }
+}
+.only-desktop {
+  @media only screen and (max-width: 1024px) {
+    display: none !important;
+  }
+}

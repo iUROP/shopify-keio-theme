@@ -1,0 +1,16 @@
+<div class="product__media-wrapper-container">
+  <div class="product__media-wrapper-master gallery-slick">
+    {% for image in product.images %}
+      <div class="product__media-wrapper-master__item">
+        <img src="{{ image.src | img_url: '1000x' }}" alt="{{ image.alt | escape }}">
+      </div>
+    {% endfor %}
+  </div>
+  <div class="product__media-wrapper-thumbnails gallery-thumbs-slick">
+    {% for image in product.images %}
+      <div class="product__media-wrapper-master__thumb">
+        <img src="{{ image.src | img_url: '200x' }}" alt="{{ image.alt | escape }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>

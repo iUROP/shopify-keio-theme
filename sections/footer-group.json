@@ -1,0 +1,44 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "footer",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_CFp4Tf": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Arcadia’s nectar",
+            "menu": "footer-1"
+          }
+        },
+        "link_list_74qMmY": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Atención al cliente",
+            "menu": "footer-2"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_CFp4Tf",
+        "link_list_74qMmY"
+      ],
+      "settings": {
+        "logo_footer": "shopify://shop_images/footer-logo.png"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
