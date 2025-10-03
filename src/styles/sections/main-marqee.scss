@@ -1,0 +1,16 @@
+.main-custom-marquee {
+  display: flex;
+  height: 136px;
+  padding: var(--Space-1200, 48px) var(--Space-2400, 96px);
+  align-items: center;
+  gap: var(--Space-2400, 96px);
+  flex-shrink: 0;
+  align-self: stretch;
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    gap: 160px;
+    width: 100%;
+  }
+}

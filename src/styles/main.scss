@@ -4,19 +4,23 @@
 
 // Foundations
 @import "./base/fonts";
-@import "./base/variables";
-@import "./base/colors";
-@import "./base/corners";
-@import "./base/spaces";
 @import "./base/normalize";
 @import "./base/animations";
 
 // Components
 
 // Sections
-@import "./sections/header";
-@import "./sections/footer";
-@import "./sections/sections";
+@import "./sections/main-header.scss";
+@import "./sections/main-footer.scss";
+@import "./sections/main-hero.scss";
+@import "./sections/main-marqee.scss";
+@import "./sections/main-text-seo.scss";
+@import "./sections/main-categories.scss";
+@import "./sections/main-products-list.scss";
+@import "./sections/main-text-image.scss";
+@import "./sections/main-simple-banner.scss";
+@import "./sections/main-home-blog.scss";
+
 
 // Pages
 @import "./sections/pages";

@@ -1,0 +1,30 @@
+.main-custom-banner-seo {
+  display: flex;
+  padding: var(--Space-1600, 64px) 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-800, 32px);
+  align-self: stretch;
+  background: var(--Colors-1000, #000);
+
+  h2 {
+    color: var(--Colors-LigthGrey, var(--Colors-ligth_grey, #CDCDCD));
+    text-align: center;
+    font-family: var(--Family-Font, Nohemi);
+    font-size: var(--Typo-H2, 39px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0px;
+  }
+  p {
+    color: var(--Colors-White, var(--Colors-white, #FFF));
+    text-align: center;
+    font-family: var(--Family-Font---Body, Nohemi);
+    font-size: var(--Typo-Body-M, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0px;
+  }
+}

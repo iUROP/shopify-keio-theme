@@ -9,33 +9,63 @@
  */
 {
   "sections": {
-    "rich_text_atYEaE": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_fJ6mdP": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Coméntanos sobre tu marca",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_fJ6mdP"
-      ],
-      "name": "t:sections.rich-text.presets.name",
+    "main_custom_hero_9dTT7Y": {
+      "type": "main-custom-hero",
+      "name": "main-custom-hero",
+      "settings": {}
+    },
+    "main_custom_marquee_qM8Bmc": {
+      "type": "main-custom-marquee",
+      "name": "main-custom-marquee",
+      "settings": {}
+    },
+    "main_custom_banner_seo_6wiPkt": {
+      "type": "main-custom-banner-seo",
+      "name": "main-custom-banner-seo",
+      "settings": {}
+    },
+    "main_custom_categories_EYp63D": {
+      "type": "main-custom-categories",
+      "name": "main-custom-categories",
+      "settings": {}
+    },
+    "main_custom_product_list_eHBpz8": {
+      "type": "main-custom-product-list",
+      "name": "main-custom-product-list",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "collection": "frontpage"
       }
+    },
+    "main_custom_text_image_8nWyBG": {
+      "type": "main-custom-text-image",
+      "name": "main-custom-text-image",
+      "settings": {}
+    },
+    "main_custom_simple_banner_GiiLUb": {
+      "type": "main-custom-simple-banner",
+      "name": "main-custom-simple-banner",
+      "settings": {}
+    },
+    "main_custom_blog_feed_Fx6CNd": {
+      "type": "main-custom-blog-feed",
+      "name": "main-custom-blog-feed",
+      "settings": {}
+    },
+    "main_custom_instagram_XbYXxa": {
+      "type": "main-custom-instagram",
+      "name": "main-custom-instagram",
+      "settings": {}
     }
   },
   "order": [
-    "rich_text_atYEaE"
+    "main_custom_hero_9dTT7Y",
+    "main_custom_marquee_qM8Bmc",
+    "main_custom_banner_seo_6wiPkt",
+    "main_custom_categories_EYp63D",
+    "main_custom_product_list_eHBpz8",
+    "main_custom_text_image_8nWyBG",
+    "main_custom_simple_banner_GiiLUb",
+    "main_custom_blog_feed_Fx6CNd",
+    "main_custom_instagram_XbYXxa"
   ]
 }
