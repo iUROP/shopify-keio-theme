@@ -33,7 +33,7 @@
   {%- endif -%}
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
-  <div class="i-container">
+  <div class="i-container-product">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
         {% render 'product-media-gallery', variant_images: variant_images %}
@@ -57,8 +57,9 @@
                   {{- block.settings.text -}}
                 </p>
               {%- when 'title' -%}
+                {% assign plan = product.metafields.custom.plan.value %}
                 <div class="product__title" {{ block.shopify_attributes }}>
-                  <h1>{{ product.title | escape }}</h1>
+                  <h1>{{ product.title | escape }} {{ plan }}</h1>
                   <a href="{{ product.url }}" class="product__title">
                     <h2 class="h1">
                       {{ product.title | escape }}
@@ -70,7 +71,7 @@
                 </div>
                 <div class="custom-product-reviews">
                   {% render 'review-star' star: 5 %}
-                  <span class="Family-Font---Body Text-Colors-Grey Typo-Body-XS">4.9/5 (255 reseñas)</span>
+                  <span>(25)</span>
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -166,6 +167,8 @@
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
                     {{ product.description }}
+
+                    <a href="/#" class="global-color-link">Ver condiciones</a>
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}

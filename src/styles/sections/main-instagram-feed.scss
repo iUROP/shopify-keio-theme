@@ -1,0 +1,45 @@
+body.template-index {
+  .shopify-app-block {
+    background: #F0F0F0;
+    padding: 96px;
+    position: relative;
+
+    #insta-feed {
+      h2 {
+        color: #000;
+        font-family: var(--Family-Font, Nohemi);
+        font-size: var(--Typo-H2, 39px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-top: 0;
+        margin-bottom: 48px;
+      }
+    }
+
+    .instafeed-bottom-link-wrapper {
+      position: absolute;
+      top: 96px;
+      right: 96px;
+      width: auto;
+
+      a {
+        padding: 0px;
+        margin: 0px;
+        border-radius: var(--Corner-Extra-small, 4px);
+        background: var(--Colors-500, #931E31);
+        padding: var(--Space-400, 16px) var(--Space-800, 32px);
+        color: var(--Colors-White, var(--Colors-white, #FFF));
+        font-family: var(--Family-Font---Body, Nohemi);
+        font-size: var(--Typo-Body-M, 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}

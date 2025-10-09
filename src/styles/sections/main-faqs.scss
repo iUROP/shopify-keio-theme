@@ -1,0 +1,66 @@
+.custom-faqs-section {
+  position: relative;
+  padding: 0 96px;
+  padding-bottom: 64px;
+  &__content {
+    border-radius: var(--Corner-Extra-small, 4px);
+    background: #F5F5F5;
+    display: flex;
+    padding: var(--Space-800, 32px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Space-600, 24px);
+    margin-top: 10px;
+
+    h3 {
+      margin: 0px;
+      color: var(--Colors-1000, var(--Colors-1000, #000));
+      font-family: var(--Family-Font, Nohemi);
+      font-size: var(--Typo-Body-XL, 25px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      padding: 0 16px;
+    }
+
+    &--item {
+      display: block;
+      width: 100%;
+      details {
+        width: 100%;
+        border-bottom: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+        box-sizing: border-box;
+        padding: 16px;
+        summary {
+          &::marker,
+          &::-webkit-details-marker {
+            display: none !important;
+          }
+          list-style: none;
+          cursor: pointer;
+          position: relative;
+          color: var(--Colors-1000, var(--Colors-1000, #000));
+          font-family: var(--Family-Font---Body, Nohemi);
+          font-size: var(--Typo-Body-M, 16px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          svg {
+            position: absolute;
+            right: 0px;
+            top: 0px;
+          }
+        }
+        p {
+          color: var(--Colors-800, var(--Colors-800, #3C1518));
+          font-family: var(--Family-Font---Body, Nohemi);
+          font-size: var(--Typo-Body-M, 14px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}

@@ -49,23 +49,20 @@
       ul {
         margin: 0px;
         padding: 0px;
-        display: flex;
+        display: block;
         flex-direction: column;
         align-items: flex-start;
         align-self: stretch;
         li {
-          display: flex;
-          padding: var(--Space-800, 32px) 0;
-          align-items: center;
-          gap: var(--Space-300, 12px);
-          align-self: stretch;
+          display: block;
           border-bottom: 1px solid var(--Colors-grey, #5C5E5C);
           color: var(--Colors-White, var(--Colors-white, #FFF));
           font-family: var(--Family-Font---Body, Nohemi);
           font-size: var(--Typo-Body-L, 20px);
           font-style: normal;
           font-weight: 700;
-          line-height: 35px;
+          line-height: 26px;
+          padding: 32px 0;
           span {
             color: var(--Colors-LigthGrey, var(--Colors-ligth_grey, #CDCDCD));
             font-family: var(--Family-Font---Body, Nohemi);

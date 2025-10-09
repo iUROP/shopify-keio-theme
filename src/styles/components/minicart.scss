@@ -8,18 +8,19 @@ i-minicart {
 
     &__snap{
       position: fixed;
-      right: -420px;
-      width: 420px;
+      right: -500px;
+      width: 500px;
       top: 0px;
       bottom: 0px;
-      z-index: 4;
-      background-color: #FAF5E8;
+      z-index: 9;
+      border-left: 1px solid #E6E6E6;
+      background: #FFF;
       text-align: left;
       max-width: 90%;
 
       @media only screen and (min-width: 990px) {
-        right: -420px;
-        width: 420px;
+        right: -500px;
+        width: 500;
       }
 
       &.open {
@@ -32,20 +33,20 @@ i-minicart {
         top: 0px;
         right: 0px;
         height: 70px;
-        padding: 0 20px;
+        padding: 0 24px;
 
         &__close {
           position: absolute;
           right: 25px;
-          top: 10px;
+          top: -5px;
           bottom: 0px;
           background: transparent;
           border: 0px;
           cursor: pointer;
           z-index: 2;
           padding: 0px;
-          width: 16px;
-          height: 16px;
+          width: 13px;
+          height: 13px;
           margin: auto;
 
           .i-icon {
@@ -65,15 +66,13 @@ i-minicart {
         }
 
         h2 {
-          text-align: center;
-          color: var(--Colors-800, var(--Colors-800, #1E1E1E));
-          text-align: center;
-          font-family: var(--Family-Font, Besley);
+          color: #1C1C1C;
+          font-family: var(--Family-Font, Nohemi);
           font-size: var(--Typo-Body-XL, 25px);
           font-style: normal;
           font-weight: 400;
-          line-height: 150%;
-          letter-spacing: -0.75px;
+          line-height: normal;
+          text-align: left;
 
           span {
             display: none;
@@ -153,13 +152,14 @@ i-minicart {
       }
       &--freeShipping {
         position: absolute;
-        left: $Space-600;
+        left: 24px;
         top: 112px;
-        right: $Space-600;
+        right: 24px;
         height: 42px;
         text-align: center;
         color: #fff;
         text-align: center;
+        display: none !important;
 
         &--labels {
           position: absolute;
@@ -200,41 +200,38 @@ i-minicart {
       &--items {
         position: absolute;
         left: 0px;
-        top: 155px;
-        bottom: 240px;
+        top: 82px;
+        bottom: 430px;
         right: 0px;
         overflow: auto;
-        padding: $Space-300 $Space-600;
+        padding: 12px 24px;
 
         .i-cart-item {
-          height: 118px;
+          height: 116px;
           position: relative;
-          margin: 10px 0px;
+          margin: 0px 0px;
           margin-bottom: 16px;
-          border-radius: var(--Corner-Extra-small, 4px);
-          border: 1px solid var(--Colors-400, #C5BEAF);
-          background: var(--Colors-300, #EEE6D4);
-          padding: $Space-300;
+          padding: 0px;
           box-sizing: border-box;
 
           &--image {
             position: absolute;
-            left: $Space-300;
-            top: $Space-300;
-            bottom: $Space-300;
-            width: 100px;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            width: 116px;
             background-position: center center;
             background-size: cover;
             background-repeat: no-repeat;
             display: block;
-            border-radius: 10px;
+            border-radius: 4px;
           }
           &--labels {
             position: absolute;
-            left: 124px;
-            right: 10px;
-            top: 10px;
-            bottom: 10px;
+            left: 140px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
 
             &--reviews {
               height: 12px;
@@ -256,21 +253,19 @@ i-minicart {
               }
             }
             &--name {
-              margin-bottom: 4px;
-              color: var(--Colors-800, var(--Colors-800, #1E1E1E));
-              font-family: var(--Family-Font, Besley);
-              font-size: var(--Typo-Body-M, 16px);
+              color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+              font-family: var(--Family-Font---Body, Nohemi);
+              font-size: var(--Typo-Body-S, 13px);
               font-style: normal;
               font-weight: 400;
               line-height: 20px;
-              margin-top: 0px;
-              width: 50%;
 
               display: -webkit-box;
               -webkit-line-clamp: 2;
               -webkit-box-orient: vertical;
               overflow: hidden;
               text-overflow: ellipsis;
+              padding-right: 100px;
             }
             &--desc {
               font-size: 14px;
@@ -281,12 +276,12 @@ i-minicart {
               right: 0px;
               top: 0px;
               margin: 0;
-              color: var(--Colors-800, var(--Colors-800, #1E1E1E));
-              font-family: var(--Family-Font---Body, "Instrument Sans");
-              font-size: var(--Typo-Body-M, 16px);
+              color: #000;
+              font-family: var(--Family-Font---Body, Nohemi);
+              font-size: var(--Typo-Body-S, 13px);
               font-style: normal;
-              font-weight: 400;
-              line-height: 25px;
+              font-weight: 700;
+              line-height: 20px;
 
               span {
                 font-weight: 400;
@@ -298,19 +293,18 @@ i-minicart {
           }
           &--actions {
             position: absolute;
-            left: 124px;
+            left: 140px;
             right: 0px;
             height: 26px;
             bottom: 12px;
 
             &--qty {
               height: 100%;
-              width: 70px;
+              width: 62px;
               height: 26px;
               position: relative;
               display: inline-block;
               border-radius: 3px;
-              border: var(--Strokes-Small, 1px) solid var(--Colors-500, #887E64);
 
               input[type="number"]::-webkit-inner-spin-button,
               input[type="number"]::-webkit-outer-spin-button {
@@ -335,13 +329,19 @@ i-minicart {
                 border: 0;
                 padding: 0px !important;
                 background-color: transparent;
+                color: var(--Colors-800, var(--Colors-800, #3C1518));
+                font-family: var(--Family-Font---Body, Nohemi);
+                font-size: var(--Typo-Body-M, 16px);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
               }
               button {
                 position: absolute;
                 top: 0;
                 bottom: 0;
                 border: 0;
-                width: 25px;
+                width: 10px;
                 background: transparent;
                 font-weight: bold;
                 cursor: pointer;
@@ -355,9 +355,19 @@ i-minicart {
                   margin: 0;
                   width: 100%;
                   height: 100%;
-                  transform: scale(0.4);
                   position: relative;
-                  top: -2px;
+
+                  span {
+                    display: flex;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    svg {
+                      width: 100%;
+                      height: auto;
+                      transform: scale(1.3) translate(0px, -1px);
+                    }
+                  }
                 }
                 
                 
@@ -415,36 +425,188 @@ i-minicart {
           margin-top: 30px;
         }
       }
+
+      &--upsells {
+          position: absolute;
+          left: 24px;
+          bottom: 257px;
+          right: 24px;
+          height: 156px;
+          overflow: auto;
+          border: var(--Strokes-Medium, 2px) solid #F6F6F6;
+          padding: 22px 16px;
+
+          @media only screen and (max-width: 1024px) {
+            margin-bottom: 6px;
+            min-height: 120px;
+          }
+
+          &.no-items {
+            opacity: 0;
+            visibility: hidden;
+          }
+
+          h3 {
+            color: var(--Colors-1000, var(--Colors-1000, #000));
+            font-family: var(--Family-Font---Body, Nohemi);
+            font-size: var(--Typo-Body-M, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+
+            @media only screen and (max-width: 1024px) {
+              font-size: 16px;
+              margin-bottom: 10px;
+            }
+          }
+          &--list {
+            height: 50px;
+            .slick-slider {
+              height: 100%;
+              .slick-list {
+                height: 100%;
+                .slick-track {
+                  height: 100%;
+                  .slick-slide {
+                    height: 100%;
+
+                    & > div {
+                      height: 100%;
+                    }
+                  }
+                }
+              }
+            }
+            &__item {
+              height: 100%;
+              border-radius: 20px;
+              background: #FFF;
+              padding: 0px 30px;
+              position: relative;
+              
+              &--image {
+                position: absolute;
+                left: 33px;
+                top: 0;
+                bottom: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: var(--Corner-Extra-small, 4px);
+                background: #940707;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                }
+              }
+              &--labels {
+                position: absolute;
+                left: 100px;
+                right: 152px;
+                top: 0;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                h3 {
+                  color: var(--Colors-800, var(--Colors-800, #404040)) !important;
+                  font-family: var(--Family-Font---Body, Nohemi) !important;
+                  font-size: var(--Typo-Body-L, 20px) !important;
+                  font-style: normal !important;
+                  font-weight: 400 !important;
+                  line-height: 20px !important;
+                  margin: 0;
+                }
+                p {
+                  color: var(--Colors-800, var(--Colors-800, #404040));
+                  font-family: var(--Family-Font---Body, Nohemi);
+                  font-size: var(--Typo-Body-M, 16px);
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 16px;
+                  margin: 5px 0px;
+                  margin-bottom: 0px !important;
+
+                  span {
+                    color: #FF4040;
+                    font-family: "Helvetica Now Display";
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: normal;
+                    text-decoration-line: line-through;
+                    margin-right: 5px;
+
+                    display: none !important;
+                  }
+                }
+              }
+              &--actions {
+                position: absolute;
+                right: 30px;
+                top: 11px;
+                bottom: 11px;
+                width: 120px;
+                display: flex;
+                align-items: center;
+
+                button {
+
+                  &:hover {
+                    opacity: 0.7;
+                  }
+                }
+              }
+            }
+          }
+      }
+
+
       &--footer {
         position: absolute;
         left: 0px;
         bottom: 0px;
         right: 0px;
-        height: 250px;
-        border-top: 1px solid rgb(247, 247, 247);
-        padding: 29px;
+        height: 238px;
+        padding: 30px 24px;
+        background: #F5F5F5;
+
+        p {
+          color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+          font-family: var(--Family-Font---Body, Nohemi);
+          font-size: var(--Typo-Body-XS, 10px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 12px;
+        }
         
         &__subtotals {
           &--row {
             display: flex;
             margin: 6px 0px;
             &__key {
-              color: #000;
-              font-family: var(--Family-Font---Body, "Instrument Sans");
+              color: var(--Colors-1000, var(--Colors-1000, #000));
+              font-family: var(--Family-Font---Body, Nohemi);
               font-size: var(--Typo-Body-M, 16px);
               font-style: normal;
-              font-weight: 400;
-              line-height: 25px;
+              font-weight: 700;
+              line-height: 24px;
               flex: 1;
             }
             &__value {
-              color: #000;
+              color: var(--Colors-1000, var(--Colors-1000, #000));
               text-align: right;
-              font-family: var(--Family-Font---Body, "Instrument Sans");
+              font-family: var(--Family-Font---Body, Nohemi);
               font-size: var(--Typo-Body-M, 16px);
               font-style: normal;
               font-weight: 400;
-              line-height: 25px;
+              line-height: 24px;
               flex: 1;
               text-align: right;
 
@@ -457,25 +619,20 @@ i-minicart {
         &__actions {
           text-align: center;
           a {
-            border-radius: var(--Corner-Full, 10000px);
-            background: var(--Colors-100, #5B1414);
-            color: var(--Colors-White, var(--Colors-white, #FFF));
-            font-family: var(--Family-Font, Besley);
-            font-size: var(--Typo-Body-M, 16px);
-            font-style: normal;
-            font-weight: 600;
-            line-height: 95%;
-            letter-spacing: -0.48px;
-            width: 300px;
-            display: block;
-            margin: 30px auto;
-            margin-bottom: 32px;
-            padding: 17px 0px;
-            text-decoration: none;
-            text-shadow: none;
+            display: flex;
+            padding: var(--Space-400, 16px) var(--Space-800, 32px);
+            justify-content: center;
+            align-items: center;
+            gap: var(--Space-300, 12px);
+            align-self: stretch;
+            margin: 24px 0px;
+            svg {
+              
+            }
           }
         }
         &__cards {
+          text-align: center;
           .i-icon {
             width: 100% !important;
             height: auto !important;
@@ -490,7 +647,7 @@ i-minicart {
       width: 100%;
       top: 0px;
       bottom: 0px;
-      z-index: 2;
+      z-index: 8;
       background-color: rgba($color: #000000, $alpha: 0.5);
       display: block;
       cursor: pointer;

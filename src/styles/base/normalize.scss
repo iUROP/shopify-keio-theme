@@ -73,3 +73,12 @@ html, body {
     line-height: 24px;
   }
 }
+
+.global-color-link {
+  color: var(--Colors-500, var(--Colors-500, #931E31));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}

@@ -8,6 +8,7 @@
 @import "./base/animations";
 
 // Components
+@import "./components/minicart.scss";
 
 // Sections
 @import "./sections/main-header.scss";
@@ -20,7 +21,8 @@
 @import "./sections/main-text-image.scss";
 @import "./sections/main-simple-banner.scss";
 @import "./sections/main-home-blog.scss";
-
+@import "./sections/main-instagram-feed.scss";
+@import "./sections/main-faqs.scss";
 
 // Pages
 @import "./sections/pages";

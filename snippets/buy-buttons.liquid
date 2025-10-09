@@ -83,6 +83,19 @@
               assign quantity_rule_soldout = true
             endif
           -%}
+          <div class="product-form__quantity">
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" viewBox="0 0 10 2" fill="none">
+                <path d="M0 0.0966797H9.90234V1.90332H0V0.0966797Z" fill="#3C1518"/>
+              </svg>
+            </button>
+            <span>1</span>
+            <button>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M0.902344 6.8252V5.18457H5.16016V0.897461H6.83008V5.18457H11.0879V6.8252H6.83008V11.1025H5.16016V6.8252H0.902344Z" fill="#3C1518"/>
+              </svg>
+            </button>
+          </div>
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
@@ -109,10 +122,6 @@
           {%- if show_dynamic_checkout -%}
             {{ form | payment_button }}
           {%- endif -%}
-
-          <div class="product-form__buttons--shipping-calculator">
-            <i-shipping-calculator block="none|" />
-          </div>
           
           <div class="product-form__buttons--payment-cards">
             <img src="{{ 'complete-payments.png' | asset_url }}" />

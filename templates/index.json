@@ -51,10 +51,34 @@
       "name": "main-custom-blog-feed",
       "settings": {}
     },
-    "main_custom_instagram_XbYXxa": {
-      "type": "main-custom-instagram",
-      "name": "main-custom-instagram",
-      "settings": {}
+    "1759955518a288ef11": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_Jw4TDJ": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "Lo último de Keio",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "left",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": true,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_Jw4TDJ"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -66,6 +90,6 @@
     "main_custom_text_image_8nWyBG",
     "main_custom_simple_banner_GiiLUb",
     "main_custom_blog_feed_Fx6CNd",
-    "main_custom_instagram_XbYXxa"
+    "1759955518a288ef11"
   ]
 }
