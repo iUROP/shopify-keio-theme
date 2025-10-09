@@ -24,6 +24,7 @@ function MiniCart({
       const allProducts = window.allProducts
       const cart = await Permalink.getCart()
       const items =  []
+      const itemsWithUpsell = []
       if (cart && cart.items) {
 
         for (const item of cart.items) {
@@ -52,6 +53,8 @@ function MiniCart({
         setLineItems(items)
       }
       console.log("cart info", cart)
+
+      console.log("itemsWithUpsell", itemsWithUpsell)
 
       setUpsellProducts(itemsWithUpsell);
       setCartQty(cart.item_count)

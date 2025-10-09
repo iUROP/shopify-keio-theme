@@ -891,12 +891,7 @@ i-minicart .i-minicart-container__snap--upsells h3 {
   font-weight: 400;
   line-height: 24px;
   text-align: left;
-}
-@media only screen and (max-width: 1024px) {
-  i-minicart .i-minicart-container__snap--upsells h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
+  margin-top: 0px;
 }
 i-minicart .i-minicart-container__snap--upsells--list {
   height: 50px;
