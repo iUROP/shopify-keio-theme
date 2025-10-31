@@ -67,7 +67,7 @@
       "settings": {
         "title": "<p>La  <em>miel  </em>debería llevar un <strong>ÚNICO </strong>ingrediente. Debería…</p>",
         "subtitle": "En Arcadia’s Nectar creemos en la pureza: solo miel natural, cruda y auténtica. Sin añadidos, sin mezclas. Lo que ves es lo que es.",
-        "button_text": "Comprar miel natural",
+        "button_text": "Comprar natural",
         "button_link": "/#"
       }
     },
@@ -190,7 +190,7 @@
         "title": "Sin abuso de pesticidas, saludabledesde el origen",
         "id_section": "sin-pesticidas",
         "content": "<p>Cuando las abejas forrajean cerca de cultivos tratados con pesticidas, estos químicos terminan en la miel, afectando su calidad y poniendo en riesgo la salud de las propias abejas. Sustancias como el glifosato han sido encontradas incluso en mieles etiquetadas como “naturales”.<br/><br/>Nuestra miel se produce en zonas libres de agricultura intensiva, donde las abejas recolectan néctar y polen de flores silvestres, sin riesgo de contaminación. Trabajamos con apicultores que siguen prácticas agroecológicas, respetando el ecosistema y favoreciendo la biodiversidad.</p>",
-        "button_text": "Comprar miel pura",
+        "button_text": "Comprar",
         "button_link": "/#",
         "image": "shopify://shop_images/ti-3.png",
         "image_m": "shopify://shop_images/ti-3.png",
