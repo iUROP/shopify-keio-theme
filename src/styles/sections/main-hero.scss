@@ -37,7 +37,7 @@
       left: 0px;
       top: 0px;
       bottom: 0px;
-      width: 50%;
+      width: 62%;
 
       &--title {
         display: flex;
@@ -52,6 +52,13 @@
           font-style: normal;
           font-weight: 400;
           line-height: 120%;
+
+          @media only screen and (max-width: 1400px) {
+            font-size: 48px;
+          }
+          @media only screen and (max-width: 1360px) {
+            font-size: 40px;
+          }
         }
       }
       &--subtitle {

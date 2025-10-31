@@ -1,21 +1,21 @@
   <section class="main-custom-product-list custom-section pl pr pb">
     <div class="main-custom-product-list__container">
       {% assign product_fibra = all_products["keio-fibra"] %}
-      {% assign product_calls = all_products["keio-llamadas"] %}
+      {% assign product_calls = all_products["keio-llamadas-1"] %}
 
       <div class="main-custom-product-list__container--row">
         {% render 'custom-product-card' product: product_fibra %}
         {% render 'custom-product-card' product: product_calls %}
         {% render 'custom-product-card' product: product_fibra %}
-        {% render 'custom-product-card' product: product_fibra %}
+        {% render 'custom-product-card' product: product_calls %}
       </div>
 
-      <div class="main-custom-product-list__container--row">
+      {% comment %} <div class="main-custom-product-list__container--row">
         {% render 'custom-product-card' product: product_fibra %}
         {% render 'custom-product-card' product: product_calls %}
         {% render 'custom-product-card' product: product_fibra %}
         {% render 'custom-product-card' product: product_fibra %}
-      </div>
+      </div> {% endcomment %}
 
 
     </div>

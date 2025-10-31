@@ -456,6 +456,15 @@ html .main-custom-button, body .main-custom-button {
   border: 0px;
   cursor: pointer;
   text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+html .main-custom-button:hover, body .main-custom-button:hover {
+  border-radius: var(--Corner-Extra-small, 4px);
+  background: var(--Colors-600, #751D28);
 }
 html a.main-custom-button, body a.main-custom-button {
   padding: 0px 32px;
@@ -1427,7 +1436,7 @@ i-minicart .i-minicart-container__overlay.open {
   left: 0px;
   top: 0px;
   bottom: 0px;
-  width: 50%;
+  width: 62%;
 }
 .main-custom-hero--container__texts--title {
   display: flex;
@@ -1442,6 +1451,16 @@ i-minicart .i-minicart-container__overlay.open {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+}
+@media only screen and (max-width: 1400px) {
+  .main-custom-hero--container__texts--title div {
+    font-size: 48px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .main-custom-hero--container__texts--title div {
+    font-size: 40px;
+  }
 }
 .main-custom-hero--container__texts--subtitle {
   display: flex;
@@ -1533,17 +1552,24 @@ i-minicart .i-minicart-container__overlay.open {
   width: 34%;
   aspect-ratio: 2/2;
   text-decoration: none;
+  cursor: pointer;
 }
 .main-custom-categories__container--card__image {
   position: absolute;
   width: 100%;
   height: 100%;
+  overflow: hidden;
+  border-radius: var(--Corner-Large, 16px);
 }
 .main-custom-categories__container--card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: var(--Corner-Large, 16px);
+  -webkit-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .main-custom-categories__container--card__text {
   display: flex;
@@ -1560,6 +1586,9 @@ i-minicart .i-minicart-container__overlay.open {
   line-height: 100%;
   z-index: 2;
   text-transform: uppercase;
+}
+.main-custom-categories__container--card:hover .main-custom-categories__container--card__image img {
+  transform: scale(1.1);
 }
 
 .main-custom-product-list {
@@ -1752,7 +1781,7 @@ i-minicart .i-minicart-container__overlay.open {
   flex-direction: column;
   align-items: flex-start;
   border-radius: var(--Corner-Large, 16px);
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.08);
+  border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
 }
 .main-custom-blog-feed__items--slider__post--thumnbail {
   display: flex;
@@ -2477,8 +2506,8 @@ body.template-product .related-products .product-grid {
   padding: var(--Space-600, 24px);
   gap: 10px;
   border-radius: var(--Corner-Large, 16px);
+  border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
   background: #FFF;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.08);
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -2486,10 +2515,26 @@ body.template-product .related-products .product-grid {
   width: 100%;
   box-sizing: border-box;
 }
+.main-custom-product-card--inner__tag-offer {
+  position: absolute;
+  top: -24px;
+  left: 22px;
+  right: 22px;
+  border-radius: var(--Corner-Extra-small, 4px) var(--Corner-Extra-small, 4px) 0 0;
+  background: var(--Colors-1000, #000);
+  color: var(--Colors-1000, var(--Colors-1000, #FFF));
+  text-align: center;
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
 .main-custom-product-card--inner .corner-svg {
   position: absolute;
   top: 0px;
   right: 0px;
+  display: none !important;
 }
 .main-custom-product-card--inner h3 {
   color: var(--Colors-700, var(--Colors-700, #000));
@@ -2526,7 +2571,7 @@ body.template-product .related-products .product-grid {
   width: 100%;
   align-items: center;
   gap: var(--Space-200, 8px);
-  color: #000;
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
   font-family: var(--Family-Font---Body, Nohemi);
   font-size: var(--Typo-Body-M, 16px);
   font-style: normal;

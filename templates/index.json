@@ -33,7 +33,7 @@
       "type": "main-custom-product-list",
       "name": "main-custom-product-list",
       "settings": {
-        "collection": "frontpage"
+        "collection": "shop"
       }
     },
     "main_custom_text_image_8nWyBG": {

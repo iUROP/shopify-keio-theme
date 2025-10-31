@@ -41,7 +41,7 @@
         flex-direction: column;
         align-items: flex-start;
         border-radius: var(--Corner-Large, 16px);
-        box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.08);
+        border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
 
         &--thumnbail {
           display: flex;

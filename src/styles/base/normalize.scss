@@ -79,6 +79,15 @@ html, body {
     border: 0px;
     cursor: pointer;
     text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all .45s cubic-bezier(.77,0,.175,1);
+    -moz-transition: all .45s cubic-bezier(.77,0,.175,1);
+    -o-transition: all .45s cubic-bezier(.77,0,.175,1);
+    transition: all .45s cubic-bezier(.77,0,.175,1);
+    &:hover {
+      border-radius: var(--Corner-Extra-small, 4px);
+      background: var(--Colors-600, #751D28);
+    }
   }
   a.main-custom-button {
     padding: 0px 32px;
