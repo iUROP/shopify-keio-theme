@@ -18,7 +18,7 @@
   {%- assign hide_shop_login_button = true -%}
 {%- endif -%}
 
-<div class="customer login section-{{ section.id }}-padding">
+<div class="customer account-global-page login section-{{ section.id }}-padding">
   <h1 id="recover" tabindex="-1">
     {{ 'customer.recover_password.title' | t }}
   </h1>
@@ -100,7 +100,7 @@
         {{ form.errors | default_errors }}
       {%- endif -%}
 
-      {%- if shop.features.login_with_shop_classic_customer_accounts? -%}
+      {% comment %} {%- if shop.features.login_with_shop_classic_customer_accounts? -%}
         <section name="sign-in-with-shop-provider">
           {{ shop | login_button: hide_button: hide_shop_login_button }}
 
@@ -110,9 +110,12 @@
             </p>
           {%- endunless -%}
         </section>
-      {%- endif -%}
+      {%- endif -%} {% endcomment %}
 
-      <div class="field">
+      <div class="field main-input-field">
+        <label for="CustomerEmail" class="main-input-field__label">
+          {{ 'customer.login_page.email' | t }}
+        </label>
         <input
           type="email"
           name="customer[email]"
@@ -124,14 +127,15 @@
             aria-invalid="true"
           {% endif %}
           placeholder="{{ 'customer.login_page.email' | t }}"
+          class="main-input-field__input"
         >
-        <label for="CustomerEmail">
-          {{ 'customer.login_page.email' | t }}
-        </label>
       </div>
 
       {%- if form.password_needed -%}
-        <div class="field">
+        <div class="field main-input-field">
+          <label for="CustomerPassword" class="main-input-field__label">
+            {{ 'customer.login_page.password' | t }}
+          </label>
           <input
             type="password"
             value=""
@@ -142,24 +146,25 @@
               aria-invalid="true"
             {% endif %}
             placeholder="{{ 'customer.login_page.password' | t }}"
+            class="main-input-field__input"
           >
-          <label for="CustomerPassword">
-            {{ 'customer.login_page.password' | t }}
-          </label>
         </div>
 
-        <a href="#recover">
+        {% comment %} <a href="#recover">
           {{ 'customer.login_page.forgot_password' | t }}
-        </a>
+        </a> {% endcomment %}
       {%- endif -%}
 
-      <button>
+      <button class="main-global-button">
         {{ 'customer.login_page.sign_in' | t }}
       </button>
 
-      <a href="{{ routes.account_register_url }}">
-        {{ 'customer.login_page.create_account' | t }}
-      </a>
+      <div>
+        <span class="global-color-text">No tienes una cuenta, </span>
+        <a href="{{ routes.account_register_url }}" class="global-color-link global-inlines">
+          {{ 'customer.login_page.create_account' | t }}
+        </a>
+      </div>
     {%- endform -%}
   </div>
 

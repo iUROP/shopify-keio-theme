@@ -14,19 +14,65 @@
   }
 {%- endstyle -%}
 
-<div class="customer account section-{{ section.id }}-padding">
+<div class="customer account account-global-page section-{{ section.id }}-padding">
   <div>
     <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
-    <a href="{{ routes.account_logout_url }}">
-      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" fill="none" viewBox="0 0 18 19">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 4.5a3 3 0 116 0 3 3 0 01-6 0zm3-4a4 4 0 100 8 4 4 0 000-8zm5.58 12.15c1.12.82 1.83 2.24 1.91 4.85H1.51c.08-2.6.79-4.03 1.9-4.85C4.66 11.75 6.5 11.5 9 11.5s4.35.26 5.58 1.15zM9 10.5c-2.5 0-4.65.24-6.17 1.35C1.27 12.98.5 14.93.5 18v.5h17V18c0-3.07-.77-5.02-2.33-6.15-1.52-1.1-3.67-1.35-6.17-1.35z" fill="currentColor">
-      </svg>
-      {{ 'customer.log_out' | t }}
-    </a>
+
   </div>
 
-  <div>
-    <div>
+  <div class="flex-block">
+
+    <div class="account-global-page__content">
+      <div class="account-global-page__content--sidebar">
+        <div class="account-global-page__content--sidebar__links">
+          <a href="/account" class="active">Mi cuenta</a>
+          <a href="/#">Productos contratados</a>
+          <a href="/#">Keio X</a>
+        </div>
+        <div class="account-global-page__content--sidebar__close">
+          <a href="{{ routes.account_logout_url }}">
+            {{ 'customer.log_out' | t }}
+          </a>
+        </div>
+      </div>
+      <div class="account-global-page__content--content">
+        <div class="account-global-page__content--content__row">
+          <div class="account-global-page__content--content__row--heading">
+            <h3>Información personal</h3>
+            <a href="/#" class="global-edit-button">
+              Editar
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <mask id="mask0_13530_8956" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                  <rect width="16" height="16" fill="#D9D9D9"/>
+                </mask>
+                <g mask="url(#mask0_13530_8956)">
+                  <path d="M3.60104 12.4H4.34204L10.8997 5.84234L10.1587 5.10134L3.60104 11.659V12.4ZM2.73438 13.2667V11.2937L11.028 2.98717C11.1177 2.89561 11.2142 2.83045 11.3175 2.79167C11.4209 2.75278 11.5292 2.73334 11.6424 2.73334C11.7557 2.73334 11.8639 2.7515 11.9669 2.78784C12.07 2.82417 12.1698 2.8885 12.2664 2.98084L13.0139 3.72184C13.1062 3.81839 13.1716 3.91839 13.21 4.02184C13.2485 4.12528 13.2677 4.23178 13.2677 4.34134C13.2677 4.45811 13.2475 4.56956 13.207 4.67567C13.1665 4.78178 13.1021 4.87878 13.0139 4.96667L4.70738 13.2667H2.73438ZM10.5227 5.47834L10.1587 5.10134L10.8997 5.84234L10.5227 5.47834Z" fill="#931E31"/>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="account-global-page__content--content__row--body">
+            <div class="account-global-page__content--content__row--body__content">
+              <div>
+                <h4>Nombre completo</h4>
+                <p>{{ customer.first_name }} {{ customer.last_name }}</p>
+              </div>
+              <div>
+                <h4>Nº teléfono</h4>
+                <p>{{ customer.phone }}</p>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>{{ customer.email }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    {% comment %} <div>
       <h2>{{ 'customer.orders.title' | t }}</h2>
 
       {% paginate customer.orders by 20 %}
@@ -136,8 +182,8 @@
           {%- endif -%}
         {%- endif -%}
       {% endpaginate %}
-    </div>
-
+    </div> {% endcomment %}
+{% comment %} 
     <div>
       <h2>{{ 'customer.account.details' | t }}</h2>
 
@@ -146,7 +192,7 @@
       <a href="{{ routes.account_addresses_url }}">
         {{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})
       </a>
-    </div>
+    </div> {% endcomment %}
   </div>
 </div>
 

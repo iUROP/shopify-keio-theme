@@ -8,6 +8,15 @@
   padding-top: 130px;
   padding-bottom: 130px;
 
+  @media only screen and (max-width: 1600px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media only screen and (max-width: 1400px) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
   & * {
     color: #fff;
   }
@@ -47,6 +56,7 @@
     align-items: flex-start;
     position: relative;
     z-index: 2;
+    gap: 10px;
 
     &__nav {
       display: flex;

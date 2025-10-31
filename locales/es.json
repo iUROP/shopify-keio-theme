@@ -405,7 +405,7 @@
   },
   "customer": {
     "account": {
-      "title": "Cuenta",
+      "title": "Mi cuenta",
       "details": "Detalles de la cuenta",
       "view_addresses": "Ver direcciones",
       "return": "Regresar a detalles de la cuenta"
@@ -447,12 +447,12 @@
     "login_page": {
       "cancel": "Cancelar",
       "create_account": "Crear cuenta",
-      "email": "Correo electrónico",
+      "email": "Email",
       "forgot_password": "¿Olvidaste tu contraseña?",
       "guest_continue": "Continuar",
       "guest_title": "Continuar como invitado",
       "password": "Contraseña",
-      "title": "Inicio de sesión",
+      "title": "Accede a tu cuenta",
       "sign_in": "Iniciar sesión",
       "submit": "Enviar",
       "alternate_provider_separator": "o"
