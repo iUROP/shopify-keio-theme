@@ -244,4 +244,15 @@ window.Permalink = function() {
     setScrollDragger
   }
 }();
-Permalink.init()
+Permalink.init();
+
+const variantToggle = document.querySelector('.picker-label-text');
+const variantContent= document.querySelector('body.template-product .product-form__input');
+
+if (variantToggle && variantContent) {
+  variantToggle.addEventListener('click', () => {
+    variantToggle.classList.toggle('active');
+    variantContent.classList.toggle('active');
+  });
+}
+

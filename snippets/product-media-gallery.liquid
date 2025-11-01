@@ -1,4 +1,22 @@
+{% assign plan = product.metafields.custom.plan.value %}
+{% assign characteristics = product.metafields.custom.grupo_de_caracteristicas.value %}
+
 <div class="product__media-wrapper-container">
+
+  <div class="product__media-wrapper-master--tooltip">
+    <div class="product__media-wrapper-master--tooltip__heading">{{ product.title }} <strong>{{ plan }}</strong></div>
+    <div class="product__media-wrapper-master--tooltip__features">
+      <ul>
+        {% for characteristic in characteristics %}
+          <li>
+            <img src="{{ characteristic.icono | image_url: width: 24 }}" />
+            {{ characteristic.titulo }}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
   <div class="product__media-wrapper-master gallery-slick">
     {% for image in product.images %}
       <div class="product__media-wrapper-master__item">

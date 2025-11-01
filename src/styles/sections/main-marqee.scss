@@ -12,5 +12,9 @@
     align-items: center;
     gap: 160px;
     width: 100%;
+
+    .slick-list {
+      width: 100% !important;
+    }
   }
 }

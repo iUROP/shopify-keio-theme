@@ -181,6 +181,20 @@ html, body {
   line-height: 24px;
 }
 
+.global-color-disclaimer {
+  color: var(--Colors-1000, var(--Colors-1000, #000)) !important;
+  font-family: var(--Family-Font---Body, Nohemi) !important;
+  font-size: var(--Typo-Body-S, 13px) !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: 20px !important;
+
+  svg {
+    position: relative;
+    top: 2px;
+  }
+}
+
 .global-inlines {
   display: inline !important;
 }

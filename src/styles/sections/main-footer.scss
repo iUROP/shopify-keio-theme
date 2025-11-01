@@ -7,6 +7,18 @@
   gap: 50px;
   padding-top: 130px;
   padding-bottom: 130px;
+  
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    width: 0;
+    height: 0;
+    border-top: 80px solid #f0f0f0;
+    border-right: 80px solid transparent;
+  }
 
   @media only screen and (max-width: 1600px) {
     padding-top: 100px;
@@ -64,6 +76,7 @@
       align-items: flex-start;
       gap: var(--Space-600, 24px);
       flex-shrink: 0;
+      max-width: 140px;
 
       h2 {
         margin: 0px;
@@ -95,13 +108,13 @@
           list-style: none;
           a {
             color: var(--Colors-White, var(--Colors-white, #FFF));
-            text-align: center;
             font-family: var(--Family-Font---Body, Nohemi);
             font-size: var(--Typo-Body-S, 13px);
             font-style: normal;
             font-weight: 400;
             line-height: 20px;
             text-decoration: none;
+            text-align: left;
           }
         }
       }

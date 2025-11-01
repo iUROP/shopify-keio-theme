@@ -73,6 +73,8 @@ i-minicart {
           font-weight: 400;
           line-height: normal;
           text-align: left;
+          border-bottom: 1px solid #e5e5e5;
+          padding-bottom: 16px;
 
           span {
             display: none;
@@ -435,6 +437,7 @@ i-minicart {
           overflow: auto;
           border: var(--Strokes-Medium, 2px) solid #F6F6F6;
           padding: 22px 16px;
+          display: none;
 
           @media only screen and (max-width: 1024px) {
             margin-bottom: 6px;
