@@ -109,6 +109,60 @@
       "type": "main-custom-faqs",
       "name": "iUROP - Faqs section",
       "settings": {}
+    },
+    "main_custom_reviews_CeTD6W": {
+      "type": "main-custom-reviews",
+      "blocks": {
+        "review_6mbWr9": {
+          "type": "review",
+          "settings": {
+            "title": "Servicio rápido y sin complicaciones",
+            "comment": "Me sorprendió lo sencillo que fue darme de alta con Keio. En menos de un día ya estaba usando la línea y la cobertura es",
+            "author": "Laura G."
+          }
+        },
+        "review_RfR9iq": {
+          "type": "review",
+          "settings": {
+            "title": "Atención al cliente de 10",
+            "comment": "Tuve una duda con mi factura y me atendieron en pocos minutos. Trato cercano, claro y muy profesional. Da gu",
+            "author": "Miguel Ángel R."
+          }
+        },
+        "review_inzbak": {
+          "type": "review",
+          "settings": {
+            "title": "La mejor relación calidad precio",
+            "comment": "Viajo mucho por trabajo y siempre tengo buena señal, incluso en zonas rurales donde otras compañías fallan. H",
+            "author": "Carmen S."
+          }
+        },
+        "review_ReQ4gL": {
+          "type": "review",
+          "settings": {
+            "title": "Cobertura excelente",
+            "comment": "Viajo mucho por trabajo y siempre tengo buena señal, incluso en zonas rurales donde otras compañías fallan. H",
+            "author": "Daniel P."
+          }
+        },
+        "review_a4GTAN": {
+          "type": "review",
+          "settings": {
+            "title": "Cobertura excelente",
+            "comment": "Viajo mucho por trabajo y siempre tengo buena señal, incluso en zonas rurales donde otras compañías fallan. H",
+            "author": "Daniel P."
+          }
+        }
+      },
+      "block_order": [
+        "review_6mbWr9",
+        "review_RfR9iq",
+        "review_inzbak",
+        "review_ReQ4gL",
+        "review_a4GTAN"
+      ],
+      "name": "main-custom-reviews",
+      "settings": {}
     }
   },
   "order": [
@@ -116,6 +170,7 @@
     "related-products",
     "main_custom_text_image_UXVzMx",
     "main_custom_marquee_Jez4Jw",
-    "main_custom_faqs_kVRFYX"
+    "main_custom_faqs_kVRFYX",
+    "main_custom_reviews_CeTD6W"
   ]
 }
