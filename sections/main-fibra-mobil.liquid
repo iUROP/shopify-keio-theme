@@ -1,13 +1,406 @@
-  <section class="main-custom-fibra-mobile custom-section pl pr pb">
-    Error liquid
-  </section>
+<section class="main-custom-fibra-mobile custom-section">
+    <div class="main-custom-fibra-mobile__banner">
+      <div class="main-custom-fibra-mobile__banner--frame">
+        <h1>Crea tu propia tarifa fibra+móvil</h1>
+        <p>Selecciona tu fibra preferida y añade las lineas de móviles que necesites</p>
+        <button class="main-custom-button">Comprueba tu cobertura</button>
+      </div>
+      <img src="{{ section.settings.primary_banner | image_url: width: 1200 }}" class="full-banner" />
+    </div>
+
+    <div class="main-custom-fibra-mobile__bundler main-custom-bundler pl pr pt pb">
+      <h2>Configura tu pack</h2>
+      <div class="main-custom-bundler__pack">
+        <div class="main-custom-bundler__pack--content">
+          <div class="main-custom-bundler__pack--content__inner">
+
+            {% comment %} row {% endcomment %}
+            <div class="main-custom-bundler__pack--content__inner--row active">
+              <div class="main-custom-bundler__pack--content__inner--row__heading">
+                <div>
+                  <span>1</span>
+                  Elige tu plan de Fibra
+                </div>
+                <div>50% de descuento en Fibra 2ª vivienda</div>
+              </div>
+              <div class="main-custom-bundler__pack--content__inner--row__content">
+
+                {% comment %} Card {% endcomment %}
+                <div class="main-custom-pack-card">
+                  <div class="main-custom-pack-card__heading">Fibra Principal</div>
+                  <div class="main-custom-pack-card__content">
+                    <div class="main-custom-pack-card__content--switcher action-js-switcher">
+                      <button class="active" rel-price="9900">600 Mb</button>
+                      <button rel-price="12000">1 Gb</button>
+                    </div>
+                  </div>
+                  <div class="main-custom-pack-card__pricing">
+                    <div>99,00<span>€/año</span></div>
+                  </div>
+                </div>
+                {% comment %} Card {% endcomment %}
+                 {% comment %} Card {% endcomment %}
+                <div class="main-custom-pack-card">
+                  <label class="custom-switch add-fibra-secondary">
+                    <input type="checkbox">
+                    <span class="custom-slider"></span>
+                  </label>
+                  <div class="main-custom-pack-card__heading">Fibra 2ª vivienda</div>
+                  <div class="main-custom-pack-card__content">
+                    <div class="main-custom-pack-card__content--select">
+                      <select name="options" id="options">
+                        <option value="">600 Mb</option>
+                        <option value="">600 Mb</option>
+                        <option value="">600 Mb</option>
+                        <option value="">600 Mb</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="main-custom-pack-card__pricing">
+                    <div class="listPrice">99,00<span>€/año</span></div>
+                    <div class="bestPrice">99,00<span>€/año</span></div>
+                  </div>
+                </div>
+                {% comment %} Card {% endcomment %}
+
+              </div>
+            </div>
+            {% comment %} row {% endcomment %}
+
+            {% comment %} row {% endcomment %}
+            <div class="main-custom-bundler__pack--content__inner--row">
+              <div class="main-custom-bundler__pack--content__inner--row__heading">
+                <div>
+                  <span>2</span>
+                  Elige tu plan Móvil
+                </div>
+                <div>10% de descuento en líneas adicionales</div>
+              </div>
+              <div class="main-custom-bundler__pack--content__inner--row__content">
+
+                {% comment %} Card {% endcomment %}
+                <div class="main-custom-pack-card">
+                  <div class="main-custom-pack-card__heading">Datos ilimitados</div>
+                  <div class="main-custom-pack-card__content column-r">
+                    <div class="main-custom-pack-card__content--select">
+                      <label for="options2">Cobertura</label>
+                      <select name="options2" id="options2">
+                        <option value="">Orange</option>
+                        <option value="">Orange</option>
+                        <option value="">Orange</option>
+                        <option value="">Orange</option>
+                      </select>
+                    </div>
+                    <div class="main-custom-pack-card__content--select">
+                      <label for="options3">Tipo de contratación</label>
+                      <select name="options3" id="options3">
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="main-custom-pack-card__pricing">
+                    <div>99,00<span>€/año</span></div>
+                  </div>
+                </div>
+                {% comment %} Card {% endcomment %}
+                {% comment %} Card {% endcomment %}
+                <div class="main-custom-pack-card">
+                  <div class="main-custom-pack-card__heading">120 Gb</div>
+                  <div class="main-custom-pack-card__content column-r">
+                    <div class="main-custom-pack-card__content--select">
+                      <label for="options2">Cobertura</label>
+                      <select name="options2" id="options2">
+                        <option value="">Movistar</option>
+                        <option value="">Movistar</option>
+                        <option value="">Movistar</option>
+                        <option value="">Movistar</option>
+                      </select>
+                    </div>
+                    <div class="main-custom-pack-card__content--select">
+                      <label for="options3">Tipo de contratación</label>
+                      <select name="options3" id="options3">
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="main-custom-pack-card__pricing">
+                    <div class="listPrice">99,00<span>€/año</span></div>
+                    <div class="bestPrice">99,00<span>€/año</span></div>
+                  </div>
+                </div>
+                {% comment %} Card {% endcomment %}
+                {% comment %} Card {% endcomment %}
+                <div class="main-custom-pack-card">
+                  <div class="main-custom-pack-card__heading">120 Gb</div>
+                  <div class="main-custom-pack-card__content column-r">
+                    <div class="main-custom-pack-card__content--select">
+                      <label for="options2">Cobertura</label>
+                      <select name="options2" id="options2">
+                        <option value="">Movistar</option>
+                        <option value="">Movistar</option>
+                        <option value="">Movistar</option>
+                        <option value="">Movistar</option>
+                      </select>
+                    </div>
+                    <div class="main-custom-pack-card__content--select">
+                      <label for="options3">Tipo de contratación</label>
+                      <select name="options3" id="options3">
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="main-custom-pack-card__pricing">
+                    <div class="listPrice">99,00<span>€/año</span></div>
+                    <div class="bestPrice">99,00<span>€/año</span></div>
+                  </div>
+                </div>
+                {% comment %} Card {% endcomment %}
+                 {% comment %} Card {% endcomment %}
+                <div class="main-custom-pack-card">
+                  <div class="main-custom-pack-card__heading">120 Gb</div>
+                  <div class="main-custom-pack-card__content column-r">
+                    <div class="main-custom-pack-card__content--select">
+                      <label for="options2">Cobertura</label>
+                      <select name="options2" id="options2">
+                        <option value="">Orange</option>
+                        <option value="">Orange</option>
+                        <option value="">Orange</option>
+                        <option value="">Orange</option>
+                      </select>
+                    </div>
+                    <div class="main-custom-pack-card__content--select">
+                      <label for="options3">Tipo de contratación</label>
+                      <select name="options3" id="options3">
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                        <option value="">Portabilidad</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="main-custom-pack-card__pricing">
+                    <div class="listPrice">99,00<span>€/año</span></div>
+                    <div class="bestPrice">99,00<span>€/año</span></div>
+                  </div>
+                </div>
+                {% comment %} Card {% endcomment %}
+
+              </div>
+            </div>
+            {% comment %} row {% endcomment %}
+
+            {% comment %} row {% endcomment %}
+            <div class="main-custom-bundler__pack--content__inner--row">
+              <div class="main-custom-bundler__pack--content__inner--row__heading">
+                <div>
+                  <span>3</span>
+                  Keio Energy
+                </div>
+                <div>Añade Keio Energy y llévate 50€ de descuento</div>
+              </div>
+              <div class="main-custom-bundler__pack--content__inner--row__content">
+
+                {% comment %} Card {% endcomment %}
+                <div class="main-custom-pack-card">
+                  <label class="custom-switch">
+                    <input type="checkbox">
+                    <span class="custom-slider"></span>
+                  </label>
+                  <div class="main-custom-pack-card__heading">Keio Energy</div>
+                  <div class="main-custom-pack-card__content">
+                    <ul>
+                      <li>Luz 100% endesa</li>
+                      <li>Sin permanencia</li>
+                      <li>50€ de regalo al contratar</li>
+                    </ul>
+                  </div>
+                  <div class="main-custom-pack-card__pricing">
+                    <div>99,00<span>€/KWH</span></div>
+                  </div>
+                </div>
+                {% comment %} Card {% endcomment %}
+
+              </div>
+            </div>
+            {% comment %} row {% endcomment %}
+
+          </div>
+        </div>
+        <div class="main-custom-bundler__pack--totals">
+          <div class="main-custom-bundler__pack--totals__inner">
+            <div class="main-custom-bundler__pack--totals__inner--title">
+              <h4>Tu pack Keio</h4>
+            </div>
+
+            <div class="main-custom-bundler__pack--totals__inner--resume resume-fibra">
+              <div>Fibra</div>
+              <div>
+                <span>Fibra Principal</span>
+                <span>99,00€</span>
+              </div>
+              <div>
+                <span>Fibra Principal</span>
+                <span>99,00€</span>
+              </div>
+            </div>
+
+            <div class="main-custom-bundler__pack--totals__inner--resume resume-mobile">
+              <div>Móvil</div>
+              <div>
+                <span>Fibra Principal</span>
+                <span>99,00€</span>
+              </div>
+              <div>
+                <span>Fibra Principal</span>
+                <span>99,00€</span>
+              </div>
+            </div>
+
+            <div class="main-custom-bundler__pack--totals__inner--divider"></div>
+            <div class="main-custom-bundler__pack--totals__inner--totals">
+              <div>
+                <span>Total Anual</span>
+                <span id="total-annual">99,00€</span>
+              </div>
+            </div>
+            <div class="main-custom-bundler__pack--totals__inner--bulker">
+              <button class="main-custom-button">Lo quiero</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<script>
+    AOS.init();
+
+    function formatEuro(value, options = {}) {
+      const { decimals = 2 } = options
+
+      return new Intl.NumberFormat('es-ES', {
+        minimumFractionDigits: decimals,
+        maximumFractionDigits: decimals
+      }).format(value)
+    }
+
+    $( window ).on( "ready", function() {
+      const packInfo = [
+        {
+          title: "Fibra",
+          items: [
+            {
+              name: "Fibra Principal",
+              price: 9900
+            }
+          ]
+        }
+      ];
+
+      function updateTotalizer (info) {
+        console.log("info!", JSON.stringify(info))
+        $('.resume-fibra').html('')
+        $('.resume-mobile').html('')
+        let total = 0
+
+        $.each(info, function(index, item) {
+          console.log(index, item)
+          if (item.title == 'Fibra') {
+            let htmLInsert = `
+              <div>${item.title}</div>
+            `
+
+            for (let i = 0; i < item.items.length; i++) {
+              const plan = item.items[i]
+              htmLInsert += `
+                <div>
+                  <span>${plan.name}</span>
+                  <span>${formatEuro(plan.price / 100)}€</span>
+                </div>
+              `
+            }
+
+            $('.resume-fibra').html(htmLInsert)
+          }
+          if (item.title == 'Móvil') {
+            let htmLInsert = `
+              <div>${item.title}</div>
+            `
+
+            for (let i = 0; i < item.items.length; i++) {
+              const plan = item.items[i]
+              htmLInsert += `
+                <div>
+                  <span>${plan.name}</span>
+                  <span>${plan.price}€</span>
+                </div>
+              `
+            }
+            
+            $('.resume-mobile').html(htmLInsert)
+          }
+        })
+
+        info.forEach(group => {
+          group.items.forEach(item => {
+            total += item.price
+          })
+        })
+
+        $('#total-annual').html(`${formatEuro(total / 100)}€`)
+        console.log(total)
+
+      }
+      updateTotalizer(packInfo);
+      
+
+      $('.action-js-switcher button').on('click', function() {
+        $(this).siblings().removeClass('active')
+        $(this).addClass('active')
+
+        const prev = packInfo
+        const newPrice = $(this).attr('rel-price')
+        packInfo[0].items[0].price = Number(newPrice)
+        updateTotalizer(packInfo)
+      });
+
+      $('.add-fibra-secondary input[type="checkbox"]').on('change', function() {
+        if ($(this).is(':checked')) {
+          packInfo[0].items.push({
+            name: "Fibra Secundaria",
+            price: 9900
+          })
+        } else {
+          packInfo[0].items = packInfo[0].items.filter(item => item.name !== "Fibra Secundaria")
+        }
+        updateTotalizer(packInfo)
+      })
+
+    
+    });
+</script>
 
 {% schema %}
 {
   "name": "main-custom-fibra-mobile",
   "tag": "section",
   "class": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "primary_banner",
+      "label": "Banner principal"
+    },
+  ],
   "presets": [
     {
       "name": "main-custom-fibra-mobile"

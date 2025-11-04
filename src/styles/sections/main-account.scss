@@ -179,4 +179,32 @@
       }
     }
   }
+
+  .form-error-msg {
+    border-radius: var(--Corner-Small, 8px);
+    background: var(--Colors-200, #EED2D2);
+    position: relative;
+    display: inline-flex;
+    padding: 10px 14px;
+    align-items: center;
+    gap: var(--Space-200, 8px);
+    svg {
+
+    }
+    .errors {
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          color: var(--Colors-500, var(--Colors-500, #931E31));
+          font-family: var(--Family-Font---Body, Nohemi);
+          font-size: var(--Typo-Body-S, 13px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px
+        }
+      }
+    }
+  }
 }

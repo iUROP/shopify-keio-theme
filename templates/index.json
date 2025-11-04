@@ -44,7 +44,10 @@
     "main_custom_simple_banner_GiiLUb": {
       "type": "main-custom-simple-banner",
       "name": "main-custom-simple-banner",
-      "settings": {}
+      "settings": {
+        "isLast": false,
+        "text_custom": ""
+      }
     },
     "main_custom_blog_feed_Fx6CNd": {
       "type": "main-custom-blog-feed",

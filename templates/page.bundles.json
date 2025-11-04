@@ -20,11 +20,31 @@
     "main_fibra_mobil_fUkJBQ": {
       "type": "main-fibra-mobil",
       "name": "main-custom-fibra-mobile",
-      "settings": {}
+      "settings": {
+        "primary_banner": "shopify://shop_images/banner-bundles.png"
+      }
+    },
+    "main_custom_product_list_rncRFd": {
+      "type": "main-custom-product-list",
+      "name": "main-custom-product-list",
+      "settings": {
+        "collection": "shop"
+      }
+    },
+    "main_custom_simple_banner_4yPkVT": {
+      "type": "main-custom-simple-banner",
+      "name": "main-custom-simple-banner",
+      "settings": {
+        "banner": "shopify://shop_images/banner-packs.png",
+        "isLast": true,
+        "text_custom": "No lo pienses más,\ncontrata tu tarifa hoy mismo"
+      }
     }
   },
   "order": [
     "main",
-    "main_fibra_mobil_fUkJBQ"
+    "main_fibra_mobil_fUkJBQ",
+    "main_custom_product_list_rncRFd",
+    "main_custom_simple_banner_4yPkVT"
   ]
 }

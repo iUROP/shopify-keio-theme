@@ -419,3 +419,13 @@ body.template-product {
     }
   }
 }
+
+body.template-page-bundles {
+  .section-i-footer {
+    .main-custom-footer {
+      &::before {
+        border-top: 80px solid #351610;
+      }
+    }
+  }
+}
