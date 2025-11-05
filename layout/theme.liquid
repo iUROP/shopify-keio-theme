@@ -286,10 +286,12 @@
 
     <link rel="stylesheet" type="text/css" href="{{ 'slick.css' | asset_url }}"/>
     <link rel="stylesheet" type="text/css" href="{{ 'slick-theme.css' | asset_url }}"/>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
     <script src="{{ 'slick.js' | asset_url }}" defer="defer"></script>
 
     {{ 'iurop-layout.css' | asset_url | stylesheet_tag }}
@@ -410,6 +412,15 @@
         autoplay: true,
         autoplaySpeed: 2000,
         infinite: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 1
+            }
+          }
+        ]
       });
 
       $('.main-custom-reviews__body--list').slick({
@@ -425,7 +436,51 @@
         $(this).siblings().removeClass('active')
         $(this).addClass('active')
       });
+
       
+      $('.goToScrollDown').on('click', function(e) {
+        e.preventDefault();
+        const destino = $(this).attr('href');
+
+        $('html, body').animate({
+          scrollTop: $(destino).offset().top
+        }, 800);
+      });
+
+
+      if ($(window).width() < 1024) {
+        $('.main-custom-categories__container').slick({
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          centerMode: false,
+          infinite: false
+        });
+
+        $('.main-custom-product-list__container--row').slick({
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          centerMode: false,
+          infinite: false
+        });
+
+        $('.main-custom-blog-feed__items--slider').slick({
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          centerMode: false,
+          infinite: false
+        });
+        
+        
+      }
+      
+
+
       Permalink.setScrollDragger();
     });
   </script>

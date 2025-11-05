@@ -28,6 +28,7 @@ html, body {
     padding-right: 96px;
   }
 
+
   @media only screen and (max-width: 1600px) {
     .pt {
       padding-top: 56px;
@@ -56,12 +57,35 @@ html, body {
       padding-right: 46px;
     }
   }
+  @media only screen and (max-width: 1024px) {
+    .pt {
+      padding-top: 28px;
+    }
+    .pb {
+      padding-bottom: 28px;
+    }
+    .pl {
+      padding-left: 16px;
+    }
+    .pr {
+      padding-right: 16px;
+    }
+  }
 
   .ptm {
     padding-top: 48px;
   }
   .pbm {
     padding-bottom: 48px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .ptm {
+      padding-top: 32px;
+    }
+    .pbm {
+      padding-bottom: 32px;
+    }
   }
 
   .main-custom-button {
@@ -87,6 +111,12 @@ html, body {
     &:hover {
       border-radius: var(--Corner-Extra-small, 4px);
       background: var(--Colors-600, #751D28);
+    }
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+      height: 40px;
+      padding: 11px 24px;
     }
   }
   a.main-custom-button {
@@ -258,6 +288,136 @@ html, body {
     &.slick-disabled {
       opacity: 0.4;
       cursor: no-drop;
+    }
+  }
+}
+
+.custom-global-select {
+  position: relative;
+  width: 100%;
+
+  select {
+    height: 45px;
+    border-radius: var(--Corner-Extra-small, 4px);
+    border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
+    color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 var(--Space-400, 16px);
+  }
+  label {
+    color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
+    font-family: var(--Family-Font---Body, Nohemi);
+    font-size: var(--Typo-Body-M, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+.custom-global-slider {
+  label {
+    color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
+    font-family: var(--Family-Font---Body, Nohemi);
+    font-size: var(--Typo-Body-M, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .slider-values {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    align-self: stretch;
+    input {
+      display: flex;
+      height: 45px;
+      padding: 0 var(--Space-400, 16px);
+      align-items: center;
+      gap: 101px;
+      flex: 1 0 0;
+      border-radius: var(--Corner-Small, 8px);
+      border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
+      color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-M, 16px);
+      font-style: normal;
+      font-weight: 300;
+      line-height: 24px;
+      width: 50%;
+      box-sizing: border-box;
+    }
+  }
+  .ui-slider {
+    border: 0;
+    height: 6px;
+    margin-bottom: 16px;
+    border-radius: 20px;
+    background: var(--Colors-500, #CDCDCD);
+    .ui-slider-range {
+      border-radius: 20px;
+      background: var(--Colors-ligth_grey, #931E31);
+    }
+    .ui-slider-handle {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      background-color: #931E31;
+      border-radius: 100px;
+      border: 0px;
+      outline: 0px !important;
+      top: -4px;
+    }
+  }
+}
+
+.show-only-desktop {
+  @media only screen and (max-width: 1024px) {
+    display: none !important;
+  }
+}
+.show-only-mobile {
+  @media only screen and (min-width: 1025px) {
+    display: none !important;
+  }
+}
+
+.slick-slider {
+  &.slick-dotted {
+    @media only screen and (max-width: 1024px) {
+      margin-bottom: 30px !important;
+    }
+  }
+
+  .slick-dots {
+    li {
+      width: 24px;
+      height: 4px;
+      button {
+        width: 100%;
+        height: 100%;
+        border: 0px;
+        padding: 0px;
+        border-radius: var(--Corner-Full, 10000px);
+        opacity: 0.3;
+        background: var(--Colors-grey, #5C5E5C);
+
+        &::before {
+          display: none;
+        }
+      }
+      &.slick-active {
+        height: 6px;
+        button {
+          border-radius: var(--Corner-Full, 10000px);
+          background: var(--Colors-grey, #5C5E5C);
+          opacity: 1;
+        }
+      }
     }
   }
 }

@@ -188,9 +188,10 @@
     padding: 10px 14px;
     align-items: center;
     gap: var(--Space-200, 8px);
-    svg {
-
-    }
+    position: absolute;
+    top: 534px;
+    left: 10px;
+    right: 10px;
     .errors {
       ul {
         margin: 0;
@@ -205,6 +206,12 @@
           line-height: 20px
         }
       }
+    }
+  }
+
+  .customer {
+    form {
+      position: relative;
     }
   }
 }

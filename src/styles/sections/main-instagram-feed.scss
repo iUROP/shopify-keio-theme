@@ -4,6 +4,10 @@ body.template-index {
     padding: 96px;
     position: relative;
 
+    @media only screen and (max-width: 1024px) {
+      padding: 24px 16px;
+    }
+
     #insta-feed {
       h2 {
         color: #000;
@@ -14,6 +18,11 @@ body.template-index {
         line-height: 120%;
         margin-top: 0;
         margin-bottom: 48px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 25px;
+          margin-bottom: 22px;
+        }
       }
     }
 
@@ -22,6 +31,10 @@ body.template-index {
       top: 96px;
       right: 96px;
       width: auto;
+
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
 
       a {
         padding: 0px;

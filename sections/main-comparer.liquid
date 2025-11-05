@@ -1,0 +1,261 @@
+
+<section class="main-custom-comparer custom-section">
+    <div class="main-custom-comparer__banner">
+      <div class="main-custom-comparer__banner--frame">
+        <h1>Compara tarifas y ahorra con Keio</h1>
+        <p>Encuentra el mejor precio entre Keio y los principales proveedores</p>
+        <button class="main-custom-button goToScrollDown" href="#content-section">Comparar</button>
+      </div>
+      <img src="{{ section.settings.primary_banner | image_url: width: 1200 }}" class="full-banner" />
+    </div>
+
+    <div class="main-custom-comparer__content pl pr pt pb" id="content-section">
+      <h2>Compara y decide</h2>
+      <p>Todas las tarifas incluyen IVA. Precios actualizados a 9/10/2025</p>
+
+      <div class="main-custom-comparer-canvas">
+        <div class="main-custom-comparer-canvas__filter">
+
+          <div class="main-custom-comparer-canvas__filter--item">
+            <div class="custom-global-select">
+              <label for="serviceType">Tipo de servicio</label>
+              <select name="serviceType" id="serviceType">
+                <option value="Fibra + Móvil">Fibra + Móvil</option>
+                <option value="Fibra">Fibra</option>
+                <option value="Móvil">Móvil</option>
+              </select>
+            </div>
+          </div>
+          <div class="main-custom-comparer-canvas__filter--item">
+            <div class="custom-global-select">
+              <label for="company">Compañía</label>
+              <select name="company" id="company">
+                <option value="Todas">Todas</option>
+                <option value="Movistar">Movistar</option>
+                <option value="Vodafone">Vodafone</option>
+                <option value="Orange">Orange</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="main-custom-comparer-canvas__filter--item">
+            <div class="custom-global-slider">
+              <label for="fibra">Fibra</label>
+              <div id="slider-fibra"></div>
+
+              <div class="slider-values">
+                <input type="text" id="fibra-min" readonly>
+                <input type="text" id="fibra-max" readonly>
+              </div>
+            </div>
+          </div>
+          
+          <div class="main-custom-comparer-canvas__filter--item">
+            <div class="custom-global-slider">
+              <label for="mins">Minutos</label>
+              <div id="slider-mins"></div>
+
+              <div class="slider-values">
+                <input type="text" id="mins-min" readonly>
+                <input type="text" id="mins-max" readonly>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-custom-comparer-canvas__filter--item">
+            <div class="custom-global-slider">
+              <label for="dates">Datos móviles</label>
+              <div id="slider-dates"></div>
+
+              <div class="slider-values">
+                <input type="text" id="dates-min" readonly>
+                <input type="text" id="dates-max" readonly>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="main-custom-comparer-canvas__results">Cargando tarifas...</div>
+      </div>
+
+
+    </div>
+</section>
+
+<script>
+    AOS.init();
+
+    $(function() {
+
+      let type = 'Fibra + Móvil'
+      let company = 'Todas'
+      let fibra = 1000
+      let mins = 600
+
+      // data
+      const rates = [
+        {% for rate in shop.metaobjects.tarifa.values %}
+          {
+            nombre: {{ rate.nombre | json }},
+            precio: {{ rate.precio }},
+            compania: {{ rate.compania }},
+
+            characteristics: [
+              {% for item in rate.caracteristicas.value %}
+                {
+                  titulo: {{ item.titulo | json }},
+                  icono: {% if item.icono %}
+                    {{ item.icono | image_url: width: 24 | json }}
+                  {% else %}
+                    null
+                  {% endif %}
+                }{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ]
+
+          }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ];
+
+      function renderRates (rates, type, company, fibra, mins) {
+        console.log("Render!");
+
+        let htmLInsert = ``
+
+        $.each(rates, function(index, item) {
+          console.log("Render rate", item);
+
+          htmLInsert += `
+            <div class="main-custom-comparer-canvas__results--item is-${item.compania[0]}" rel-company="${item.compania[0]}">
+              <a href="/#" class="main-custom-button">Contratar ahora</a>
+              <div class="main-custom-comparer-canvas__results--item__heading">
+                <h2>${item.nombre}</h2>
+                <div>
+                  ${Number(item.precio.amount)} <span>,00€/año</span>
+                </div>
+              </div>
+              <div class="main-custom-comparer-canvas__results--item__body">
+                <div class="main-custom-comparer-canvas__results--item__body--inner">
+                  <ul>
+          `
+          for (let i = 0; i < item.characteristics.length; i++) {
+            const char = item.characteristics[i]
+            htmLInsert += `
+              <li>
+                <img src="${char.icono}" />
+                ${char.titulo}
+              </li>
+            `
+          }
+          htmLInsert += `
+                  </ul>
+                  <a class="anchor" href="/#">Ver más detalles</a>
+                </div>
+              </div>
+            </div>
+          `
+        })
+
+        $('.main-custom-comparer-canvas__results').html(htmLInsert)
+
+      }
+      
+      $("#slider-fibra").slider({
+        range: true,
+        min: 0,
+        max: 1000,
+        values: [0, 1000],
+        slide: function(event, ui) {
+          $("#fibra-min").val(ui.values[0] + "MB");
+          $("#fibra-max").val(ui.values[1] + "MB");
+        }
+      });
+      $("#fibra-min").val($("#slider-fibra").slider("values", 0) + "MB");
+      $("#fibra-max").val($("#slider-fibra").slider("values", 1) + "MB");
+
+      $("#slider-fibra").on("slidechange", function(event, ui) {
+        const minVal = $(this).slider("values", 0);
+        const maxVal = $(this).slider("values", 1);
+        console.log("fibra:", minVal, maxVal);
+      });
+
+
+      $("#slider-mins").slider({
+        range: true,
+        min: 0,
+        max: 600,
+        values: [0, 600],
+        slide: function(event, ui) {
+          $("#mins-min").val(ui.values[0] + "");
+          $("#mins-max").val(ui.values[1] + "");
+        }
+      });
+      $("#mins-min").val($("#slider-mins").slider("values", 0) + "");
+      $("#mins-max").val($("#slider-mins").slider("values", 1) + "");
+
+      $("#slider-mins").on("slidechange", function(event, ui) {
+        const minVal = $(this).slider("values", 0);
+        const maxVal = $(this).slider("values", 1);
+        console.log("minutos:", minVal, maxVal);
+      });
+
+
+
+      $("#slider-dates").slider({
+        range: true,
+        min: 0,
+        max: 120,
+        values: [0, 120],
+        slide: function(event, ui) {
+          $("#dates-min").val(ui.values[0] + "GB");
+          $("#dates-max").val(ui.values[1] + "GB");
+        }
+      });
+      $("#dates-min").val($("#slider-dates").slider("values", 0) + "GB");
+      $("#dates-max").val($("#slider-dates").slider("values", 1) + "GB");
+
+      $("#slider-dates").on("slidechange", function(event, ui) {
+        const minVal = $(this).slider("values", 0);
+        const maxVal = $(this).slider("values", 1);
+        console.log("dates:", minVal, maxVal);
+      });
+
+
+
+
+      $('#serviceType').on('change', function() {
+        const selected = $(this).val();
+        console.log('serviceType:', selected);
+      });
+
+      $('#company').on('change', function() {
+        const selected = $(this).val();
+        console.log('company:', selected);
+      });
+
+      renderRates(rates, type, company, fibra, mins);
+
+    });
+
+</script>
+
+{% schema %}
+{
+  "name": "main-custom-comparer",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "primary_banner",
+      "label": "Banner principal"
+    },
+  ],
+  "presets": [
+    {
+      "name": "main-custom-comparer"
+    }
+  ]
+}
+{% endschema %}

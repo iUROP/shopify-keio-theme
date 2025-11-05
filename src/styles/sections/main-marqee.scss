@@ -7,6 +7,11 @@
   flex-shrink: 0;
   align-self: stretch;
 
+  @media only screen and (max-width: 1024px) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
   &__logos {
     display: flex;
     align-items: center;
@@ -15,6 +20,12 @@
 
     .slick-list {
       width: 100% !important;
+    }
+
+    @media only screen and (max-width: 1024px) {
+      .slick-slide {
+        padding: 0 18px;
+      }
     }
   }
 }

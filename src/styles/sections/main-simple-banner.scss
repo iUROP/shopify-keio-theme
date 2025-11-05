@@ -4,6 +4,16 @@
   aspect-ratio: 10 / 2;
   position: relative;
 
+  @media only screen and (max-width: 1024px) {
+    aspect-ratio: 10 / 11;
+
+    .main-custom-link-white {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+
   &.isLast {
     .main-custom-simple-banner__container--title {
       color: #FFF;
@@ -61,6 +71,23 @@
       font-weight: 400;
       line-height: 100%;
       margin-bottom: 16px;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 38px;
+        text-align: center;
+
+        svg {
+          width: 150px;
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          top: -5px;
+
+          &.keio-icon {
+            width: 114px;
+          }
+        }
+      }
     }
   }
 }

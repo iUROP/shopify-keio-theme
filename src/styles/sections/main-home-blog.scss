@@ -20,6 +20,20 @@
       font-style: normal;
       font-weight: 400;
       line-height: 120%;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 25px;
+        padding: 0 16px;
+
+        svg {
+          width: 52px;
+          display: inline-block;
+          vertical-align: middle;
+          position: relative;
+          top: -4px;
+          margin-left: 3px;
+        }
+      }
     }
   }
   &__items {
@@ -116,6 +130,28 @@
     .main-custom-button {
       text-align: center;
       margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    gap: 22px;
+
+    .main-custom-button {
+      line-height: 38px !important;
+    }
+
+    .slick-track {
+      padding: 0 8px;
+      box-sizing: border-box;
+      .slick-slide {
+        padding: 0 8px;
+      }
+    }
+
+    .main-arrows .slick-arrow {
+      top: -41px;
     }
   }
 }
