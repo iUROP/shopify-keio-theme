@@ -190,6 +190,24 @@ html, body {
       opacity: 0.8;
     }
   }
+
+  .main-global-title-section {
+    color: #000;
+    text-align: center;
+    font-family: var(--Family-Font, Nohemi);
+    font-size: var(--Typo-H1, 49px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0px;
+
+    @media only screen and (max-width: 1500px) {
+      font-size: 40px;
+    }
+    @media only screen and (max-width: 1024px) {
+      font-size: 30px;
+    }
+  }
 }
 
 .global-color-link {

@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "main_keio_x_XmiGrk": {
+      "type": "main-keio-x",
+      "name": "main-custom-keio-x",
+      "settings": {
+        "primary_banner": "shopify://shop_images/Banner_Keio_x.png",
+        "primary_banner_mobile": "shopify://shop_images/banner-keio-x-mobile.png",
+        "banner_cta_1": "shopify://shop_images/imagen_2025-11-05_223929986.png",
+        "banner_cta_1_mobile": "shopify://shop_images/invitaciones-mobile.png",
+        "banner_cta_2": "shopify://shop_images/Comunidad.png",
+        "banner_cta_2_mobile": "shopify://shop_images/comunidad-mobile.png",
+        "banner_cta_3": "shopify://shop_images/Atencion-premium.png",
+        "banner_cta_3_mobile": "shopify://shop_images/atention-mobile.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_keio_x_XmiGrk"
+  ]
+}

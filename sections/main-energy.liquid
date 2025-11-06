@@ -1,0 +1,43 @@
+<section class="main-custom-energy custom-section">
+    <div class="main-custom-energy__banner">
+      <div class="main-custom-energy__banner--frame">
+        <h1>La energía de endesa con descuentos exclusivos por contratar con Keio</h1>
+        <p>Contrata luz 100% Endesa , sin permanencia y con hasta 170€ en beneficios para ti</p>
+        <button class="main-custom-button">Contrata ahora</button>
+      </div>
+      <img src="{{ section.settings.primary_banner | image_url: width: 1200 }}" class="full-banner" />
+    </div>
+
+    <div class="main-custom-energy__content pl pr pt pb" id="content-section">
+      Contenido
+    </div>
+</section>
+
+<script>
+    AOS.init();
+
+    $( window ).on( "ready", function() {
+      console.log("Run energy")
+    
+    });
+</script>
+
+{% schema %}
+{
+  "name": "main-custom-energy",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "primary_banner",
+      "label": "Banner principal"
+    },
+  ],
+  "presets": [
+    {
+      "name": "main-custom-energy"
+    }
+  ]
+}
+{% endschema %}

@@ -564,6 +564,26 @@ html .main-global-button, body .main-global-button {
 html .main-global-button:hover, body .main-global-button:hover {
   opacity: 0.8;
 }
+html .main-global-title-section, body .main-global-title-section {
+  color: #000;
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H1, 49px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 0px;
+}
+@media only screen and (max-width: 1500px) {
+  html .main-global-title-section, body .main-global-title-section {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  html .main-global-title-section, body .main-global-title-section {
+    font-size: 30px;
+  }
+}
 
 .global-color-link {
   color: var(--Colors-500, var(--Colors-500, #931E31));
@@ -1595,8 +1615,10 @@ i-minicart .i-minicart-container__overlay.open {
 }
 @media only screen and (max-width: 1024px) {
   .main-custom-footer--logo {
-    width: 100%;
+    width: 70%;
     height: auto;
+    margin: 0 auto;
+    max-width: 224px;
   }
 }
 .main-custom-footer--logo img {
@@ -3611,6 +3633,603 @@ body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a:after {
 }
 .main-custom-comparer-canvas__results--item.is-KEIO a {
   display: block;
+}
+
+.main-custom-keio-x {
+  position: relative;
+}
+.main-custom-keio-x .full-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.main-custom-keio-x__banner {
+  position: relative;
+}
+.main-custom-keio-x__banner--frame {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-800, 24px);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 1100px;
+}
+.main-custom-keio-x__banner--frame h1 {
+  margin: 0px;
+  color: #FFF;
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-Display-XL, 61px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.main-custom-keio-x__banner--frame p {
+  margin: 0px;
+  color: #FFF;
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H3, 31px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0px;
+}
+.main-custom-keio-x__banner--frame button {
+  width: 270px;
+}
+.main-custom-keio-x__content--benefits {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: var(--Space-4000, 64px) var(--Space-2400, 0px);
+  padding-bottom: 160px;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-1600, 64px);
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--benefits {
+    padding: 18px 0px !important;
+    gap: 20px;
+  }
+}
+.main-custom-keio-x__content--benefits__body {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--benefits__body {
+    flex-wrap: nowrap;
+    overflow: auto;
+    gap: 0px;
+    display: block;
+    white-space: nowrap;
+    padding: 0 10px;
+  }
+}
+.main-custom-keio-x__content--benefits__body--card {
+  display: flex;
+  padding: 32px;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--Corner-Large, 16px);
+  border: 2px solid var(--Colors-ligth_grey, #CDCDCD);
+  background: var(--Colors-100, #FAFAFA);
+  width: calc(20% - 25px);
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--benefits__body--card {
+    padding: 26px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .main-custom-keio-x__content--benefits__body--card {
+    padding: 22px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--benefits__body--card {
+    width: 240px !important;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: top;
+    white-space: wrap;
+  }
+}
+.main-custom-keio-x__content--benefits__body--card .inner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-2400, 96px);
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card {
+    gap: 32px;
+  }
+}
+.main-custom-keio-x__content--benefits__body--card .inner-card__icon {
+  width: 56px;
+  height: 56px;
+  aspect-ratio: 1/1;
+}
+.main-custom-keio-x__content--benefits__body--card .inner-card__labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-600, 24px);
+  align-self: stretch;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels {
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels {
+    gap: 16px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels {
+    gap: 8px;
+  }
+}
+.main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(1) {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H3, 31px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-self: stretch;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(1) {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(1) {
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(1) {
+    font-size: 20px;
+  }
+}
+.main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(2) {
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  align-self: stretch;
+  height: 96px;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(2) {
+    height: 96px;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(2) {
+    height: 96px;
+  }
+}
+@media only screen and (max-width: 1320px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(2) {
+    height: 120px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--benefits__body--card .inner-card__labels div:nth-child(2) {
+    height: auto;
+    font-size: 14px;
+  }
+}
+.main-custom-keio-x__content--promotions-table {
+  display: flex;
+  padding: var(--Space-2400, 96px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-1600, 48px);
+  width: 100%;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--promotions-table {
+    padding: 68px;
+    gap: 32px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--promotions-table {
+    padding: 58px 16px;
+    gap: 22px;
+  }
+}
+.main-custom-keio-x__content--promotions-table__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-600, 2px);
+}
+.main-custom-keio-x__content--promotions-table__heading p {
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-Body-XL, 18px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 0px;
+  opacity: 0.7;
+  margin-top: 8px;
+}
+.main-custom-keio-x__content--promotions-table__body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--Space-800, 32px);
+  flex-wrap: wrap;
+  width: 100%;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--promotions-table__body {
+    gap: 24px;
+  }
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card {
+  display: flex;
+  width: calc(25% - 24px);
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-400, 16px);
+  border-radius: var(--Corner-Large, 16px);
+  background: var(--Colors-100, #FAFAFA);
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--promotions-table__body .inner-card {
+    width: 100%;
+  }
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__labels {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-1200, 28px);
+  align-self: stretch;
+  border-radius: 8px;
+  background: var(--Colors-white, #FFF);
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--promotions-table__body .inner-card__labels {
+    gap: 18px;
+    padding: 18px;
+  }
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__labels--heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H3, 31px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--promotions-table__body .inner-card__labels--heading {
+    font-size: 26px;
+  }
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__labels--subheading {
+  margin: 0px;
+  color: #000;
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--promotions-table__body .inner-card__labels--subheading {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__labels--body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__labels--body ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  align-self: stretch;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--promotions-table__body .inner-card__labels--body ul {
+    gap: 18px;
+  }
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__labels--body ul li {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: var(--Space-200, 8px);
+  list-style: none;
+  color: #000;
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--promotions-table__body .inner-card__labels--body ul li {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-keio-x__content--promotions-table__body .inner-card__actions {
+    gap: 4px;
+  }
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__actions button {
+  display: flex;
+  height: var(--Buttons-D-H, 50px);
+  padding: var(--Space-400, 16px) var(--Space-800, 32px);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: var(--Corner-Extra-small, 4px);
+  background: var(--Colors-1000, #000);
+  cursor: pointer;
+  color: var(--Colors-White, var(--Colors-white, #FFF));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__actions button:hover {
+  opacity: 0.8;
+}
+.main-custom-keio-x__content--promotions-table__body .inner-card__actions button.secondary {
+  background: transparent;
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  border: 0px !important;
+}
+.main-custom-keio-x__content--banner-cta {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: var(--Space-2400, 96px);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--banner-cta {
+    padding: 65px 16px;
+  }
+}
+.main-custom-keio-x__content--banner-cta .full-banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.main-custom-keio-x__content--banner-cta__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--Space-1200, 48px);
+  position: relative;
+  z-index: 2;
+}
+.main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-600, 8px);
+}
+.main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--heading div:nth-child(1) {
+  color: var(--Colors-White, var(--Colors-white, #FFF));
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H1, 49px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--heading div:nth-child(1) {
+    font-size: 30px;
+  }
+}
+.main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--heading div:nth-child(2) {
+  color: var(--Colors-White, var(--Colors-white, #FFF));
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-Body-XL, 25px);
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  opacity: 0.7;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--heading div:nth-child(2) {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--body {
+  display: flex;
+  flex-direction: column;
+  align-items: anchor-center;
+  gap: var(--Space-600, 24px);
+}
+.main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--body svg {
+  width: 70%;
+}
+.main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--body button {
+  display: flex;
+  height: var(--Buttons-D-H, 50px);
+  padding: var(--Space-400, 16px) var(--Space-800, 32px);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--Corner-Extra-small, 4px);
+  background: var(--Colors-white, #FFF);
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  cursor: pointer;
+  border: 0px;
+}
+.main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--body button:hover {
+  opacity: 0.8;
+}
+.main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--body button.dark {
+  color: #FFF;
+  border-radius: var(--Corner-Extra-small, 4px);
+  background: var(--Colors-1000, #000);
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--body button {
+    font-size: 14px;
+    padding: var(--Space-400, 8px) var(--Space-800, 24px);
+    height: var(--Buttons-D-H, 42px);
+  }
+}
+.main-custom-keio-x__content--banner-cta__inner.dark .main-custom-keio-x__content--banner-cta__inner--heading div {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-keio-x__content--banner-cta.invitations {
+    padding-bottom: 450px;
+  }
+}
+
+body.template-page-keio-x .main-custom-footer:before {
+  border-top: 80px solid #d6c2a5;
+  border-right: 80px solid transparent;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-page-keio-x .main-custom-footer:before {
+    border-top: 30px solid #dab785;
+    border-right: 30px solid transparent;
+  }
+}
+
+.main-custom-energy {
+  position: relative;
+}
+.main-custom-energy .full-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.main-custom-energy__banner {
+  position: relative;
+}
+.main-custom-energy__banner--frame {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-800, 24px);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 1100px;
+}
+.main-custom-energy__banner--frame h1 {
+  margin: 0px;
+  color: #FFF;
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-Display-XL, 61px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.main-custom-energy__banner--frame p {
+  margin: 0px;
+  color: #FFF;
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H3, 31px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0px;
+}
+.main-custom-energy__banner--frame button {
+  width: 270px;
 }
 
 body.template-product .i-container-product {
