@@ -1,0 +1,81 @@
+<section class="main-hero-title custom-section">
+    <div class="main-hero-title__banner">
+      <div class="main-hero-title__banner--frame">
+        {% if section.settings.title != blank %}
+          <h1>{{ section.settings.title }}</h1>
+        {% endif %}
+        {% if section.settings.subtitle != blank %}
+          <p>{{ section.settings.subtitle }}</p>
+        {% endif %}
+
+        {% if section.settings.button_label != blank %}
+          <button class="main-custom-button {% if section.settings.is_anchor %}goToScrollDown{% endif %} {% if section.settings.is_popup %}open-coberturer{% endif %}" href="{% if section.settings.is_anchor %}#content-section{% else %}{{section.settings.button_link}}{% endif %}">
+            {{ section.settings.button_label }}
+          </button>
+        {% endif %}
+
+      </div>
+      <img src="{{ section.settings.primary_banner | image_url: width: 1200 }}" class="full-banner show-only-desktop" />
+      <img src="{{ section.settings.primary_banner_mobile | image_url: width: 1200 }}" class="full-banner show-only-mobile" />
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "main-custom-hero-title",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "primary_banner",
+      "label": "Banner principal"
+    },
+    {
+      "type": "image_picker",
+      "id": "primary_banner_mobile",
+      "label": "Banner principal (mobile)"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Titulo",
+      "label": "Titulo"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "default": "Subtitulo",
+      "label": "Subtitulo"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Texto del botón",
+      "default": "Comprar ahora"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Enlace del botón"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_anchor",
+      "default": false,
+      "label": "Botón tipo ancla"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_popup",
+      "default": false,
+      "label": "Abrir el popop"
+    },
+  ],
+  "presets": [
+    {
+      "name": "main-custom-hero-title"
+    }
+  ]
+}
+{% endschema %}

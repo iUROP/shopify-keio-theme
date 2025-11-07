@@ -2,9 +2,21 @@ body.template-product {
   .i-container-product {
     padding: 0px 96px;
 
+    @media only screen and (max-width: 1024px) {
+      padding: 0px 16px;
+    }
+
     .product {
       display: flex;
       gap: 80px;
+
+      @media only screen and (max-width: 1500px) {
+        gap: 58px;
+      }
+      @media only screen and (max-width: 1024px) {
+        gap: 28px;
+        flex-wrap: wrap;
+      }
 
       .product__media-wrapper {
         display: flex;
@@ -19,6 +31,16 @@ body.template-product {
         padding: 0px;
         padding-top: 60px;
 
+        @media only screen and (max-width: 1500px) {
+          width: 55% !important;
+          max-width: 55% !important;
+        }
+        @media only screen and (max-width: 1024px) {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding-top: 20px;
+        }
+
         .product__media-wrapper-container {
           width: 100%;
           position: relative;
@@ -27,10 +49,23 @@ body.template-product {
             border-radius: var(--Corner-Large-increased, 20px);
             overflow: hidden;
             .product__media-wrapper-master__item {
+
+              @media only screen and (max-width: 1024px) {
+                aspect-ratio: 2 / 2.23 !important;
+                height: auto;
+                width: 100%;
+              }
+
               img {
                 display: block;
                 width: 100%;
                 border-radius: var(--Corner-Large-increased, 20px);
+
+                @media only screen and (max-width: 1024px) {
+                  height: 100% !important;
+                  width: 100%;
+                  object-fit: cover !important;
+                }
               }
             }
           }
@@ -57,6 +92,19 @@ body.template-product {
               margin: auto;
               transform: translate(0, 34%);
 
+              @media only screen and (max-width: 1500px) {
+                transform: translate(0, 22%);
+              }
+              @media only screen and (max-width: 1024px) {
+                top: auto;
+                bottom: 30px;
+                transform: translate(0, 0);
+                left: 20px;
+                right: 20px;
+                width: auto;
+                gap: 22px;
+              }
+
               .product__media-wrapper-master--tooltip__heading {
                 color: var(--Colors-700, var(--Colors-700, #000));
                 font-family: var(--Family-Font, Nohemi);
@@ -66,6 +114,10 @@ body.template-product {
                 line-height: normal;
                 margin: 0px;
                 z-index: 2;
+
+                @media only screen and (max-width: 1500px) {
+                  font-size: 26px;
+                }
 
                 strong {
                   display: block;
@@ -99,6 +151,10 @@ body.template-product {
                     font-weight: 400;
                     line-height: 24px;
 
+                    @media only screen and (max-width: 1500px) {
+                      font-size: 14px;
+                    }
+
                     img {
                       position: relative;
                       top: -1px;
@@ -121,6 +177,16 @@ body.template-product {
         padding: 0px;
         padding-top: 60px;
 
+        @media only screen and (max-width: 1500px) {
+          width: 45% !important;
+          max-width: 45% !important;
+        }
+        @media only screen and (max-width: 1024px) {
+          width: 100% !important;
+          max-width: 100% !important;
+          padding-top: 0px;
+        }
+
         .product__info-container {
           max-width: 600px;
           width: 100%;
@@ -138,6 +204,11 @@ body.template-product {
               line-height: normal;
               margin: 0px;
               padding-right: 120px;
+
+              @media only screen and (max-width: 1024px) {
+                font-size: 18px;
+                padding-right: 0px;
+              }
             }
             .product__title--prices {
               position: absolute;
@@ -149,6 +220,12 @@ body.template-product {
               font-style: normal;
               font-weight: 400;
               line-height: 35px;
+
+              @media only screen and (max-width: 1024px) {
+                position: relative;
+                font-size: 16px;
+                line-height: 18px;
+              }
             }
           }
           .custom-product-reviews {
@@ -197,6 +274,11 @@ body.template-product {
               line-height: 24px;
               &:first-of-type {
                 margin-top: 6px;
+              }
+
+              @media only screen and (max-width: 1024px) {
+                font-size: 14px;
+                line-height: 20px;
               }
             }
           }
@@ -400,6 +482,14 @@ body.template-product {
     padding-right: 96px;
     padding-top: 80px;
 
+    @media only screen and (max-width: 1024px) {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 30px;
+      width: 100%;
+      overflow: hidden;
+    }
+
     .related-products__heading {
       width: 100%;
       text-align: center;
@@ -409,6 +499,12 @@ body.template-product {
       font-style: normal;
       font-weight: 400;
       line-height: 120%;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 25px;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
     }
 
     .product-grid {
@@ -416,6 +512,47 @@ body.template-product {
       display: flex;
       gap: 20px;
       margin-top: 60px;
+
+      @media only screen and (max-width: 1024px) {
+        padding: 0 8px;
+        .slick-slide {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .custom-faqs-section {
+      padding: 0 16px;
+
+      .custom-faqs-section__content {
+        padding: 24px 16px;
+        gap: 16px;
+        
+        h3 {
+          padding: 0px !important;
+          font-size: 18px;
+        }
+        .custom-faqs-section__content--item {
+          summary {
+            font-size: 14px;
+            line-height: 20px;
+
+            svg {
+              right: -10px;
+            }
+          }
+          details {
+            padding: 12px;
+            padding-right: 22px;
+          }
+        }
+      }
+
+      .main-custom-button {
+        line-height: 40px !important;
+      }
     }
   }
 }

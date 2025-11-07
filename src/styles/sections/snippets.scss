@@ -6,6 +6,10 @@
   gap: 10px;
   width: 25%;
 
+  @media only screen and (max-width: 1500px) {
+    height: 378px;
+  }
+
   &--inner {
     display: flex;
     padding: var(--Space-600, 24px);
@@ -19,6 +23,10 @@
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+
+    @media only screen and (max-width: 1500px) {
+      padding: 18px;
+    }
 
     &__tag-offer {
       position: absolute;
@@ -53,6 +61,10 @@
       margin: 0px;
       z-index: 2;
 
+      @media only screen and (max-width: 1500px) {
+        font-size: 26px;
+      }
+
       strong {
         display: block;
       }
@@ -64,6 +76,10 @@
       align-items: flex-start;
       gap: 24px;
       align-self: stretch;
+
+      @media only screen and (max-width: 1500px) {
+        gap: 18px;
+      }
 
       ul {
         padding: 0px;
@@ -87,6 +103,11 @@
           font-weight: 400;
           line-height: 24px;
 
+          @media only screen and (max-width: 1500px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+
           img {
             position: relative;
             top: -1px;
@@ -107,6 +128,10 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+
+        @media only screen and (max-width: 1500px) {
+          font-size: 24px;
+        }
         span {
           color: #000;
           font-family: var(--Family-Font---Body, Nohemi);
@@ -116,9 +141,22 @@
           line-height: 20px;
         }
       }
-      button {
-
+      a {
+        @media only screen and (max-width: 1500px) {
+          padding: 0 12px !important;
+        }
+        @media only screen and (max-width: 1024px) {
+          padding: 0 20px !important;
+          line-height: 39px !important;
+        }
       }
     }
   }
+}
+
+body.template-page-bundles .section-i-footer .main-custom-footer:before {
+  @media only screen and (max-width: 1024px) {
+    border-top: 32px solid #351610;
+  }
+    
 }

@@ -1,7 +1,8 @@
   <section class="main-custom-simple-banner custom-section {% if section.settings.isLast %} isLast{% endif %}">
 
     {% if section.settings.banner != blank %}
-      <img src="{{ section.settings.banner | image_url: width: 1200 }}" />
+      <img src="{{ section.settings.banner | image_url: width: 1200 }}" class="show-only-desktop" />
+      <img src="{{ section.settings.banner_m | image_url: width: 1200 }}" class="show-only-mobile" />
     {% else %}
       <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/BANNER.png" />
     {% endif %}
@@ -56,6 +57,11 @@
       "type": "image_picker",
       "id": "banner",
       "label": "Imagen"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_m",
+      "label": "Imagen móvil"
     },
     {
       "type": "checkbox",

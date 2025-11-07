@@ -67,6 +67,10 @@
     font-weight: 400;
     line-height: 120%;
     margin: 0px;
+
+    @media only screen and (max-width: 1024px) {
+      display: none !important;
+    }
   }
 
   &__pack {
@@ -84,6 +88,11 @@
       border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
       background: #FFF;
       width: 80%;
+
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+        padding: 16px;
+      }
       &__inner {
         display: flex;
         flex-direction: column;
@@ -102,6 +111,14 @@
             display: flex;
             align-items: center;
             gap: 32px;
+
+            @media only screen and (max-width: 1024px) {
+              flex-direction: column;
+              width: 100%;
+              align-items: baseline;
+              gap: 6px;
+            }
+
             div {
               &:nth-child(1) {
                 color: #000;
@@ -114,6 +131,11 @@
                 display: flex;
                 align-items: center;
                 gap: 8px;
+
+                @media only screen and (max-width: 1024px) {
+                  font-size: 16px;
+                  line-height: 30px;
+                }
 
                 span {
                   border-radius: var(--Corner-Full, 10000px);
@@ -154,6 +176,10 @@
             align-self: stretch;
             flex-wrap: nowrap;
             width: 100%;
+
+            @media only screen and (max-width: 1600px) {
+              flex-wrap: wrap;
+            }
           }
 
           &.active {
@@ -167,10 +193,20 @@
     }
     &--totals {
       display: flex;
-      width: 356px;
+      width: 302px;
       flex-direction: column;
       align-items: flex-start;
       gap: 10px;
+
+      @media only screen and (max-width: 1024px) {
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        width: auto;
+        z-index: 5;
+      }
+
       &__inner {
         display: flex;
         padding: 24px;
@@ -181,6 +217,16 @@
         border-radius: var(--Corner-Large, 16px);
         border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
         background: var(--Colors-white, #FFF);
+
+        @media only screen and (max-width: 1024px) {
+          border-radius: 0px;
+          border-radius: var(--Corner-None, 0);
+          border-top: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+          background: var(--Colors-white, #FFF);
+          box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.10);
+          gap: 14px;
+        }
+
         &--title {
           display: flex;
           align-items: flex-end;
@@ -218,10 +264,10 @@
                 flex: 1 0 0;
                 color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
                 font-family: var(--Family-Font---Body, Nohemi);
-                font-size: var(--Typo-Body-M, 15px);
+                font-size: var(--Typo-Body-M, 13px);
                 font-style: normal;
                 font-weight: 400;
-                line-height: 22px;
+                line-height: 18px;
               }
               &:nth-child(2) {
                 flex: 1 0 0;
@@ -308,6 +354,16 @@
   width: calc(25%);
   position: relative;
 
+  @media only screen and (max-width: 1600px) {
+    width: calc(31%);
+  }
+  @media only screen and (max-width: 1340px) {
+    padding: 20px 16px;
+  }
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
+
   &__heading {
     color: var(--Colors-1000, var(--Colors-1000, #000));
     font-family: var(--Family-Font---Body, Nohemi);
@@ -365,10 +421,10 @@
         border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
         color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
         font-family: var(--Family-Font---Body, Nohemi);
-        font-size: var(--Typo-Body-M, 16px);
+        font-size: var(--Typo-Body-M, 15px);
         font-style: normal;
         font-weight: 400;
-        line-height: 24px;
+        line-height: 22px;
         cursor: pointer;
         background-color: transparent;
         text-align: center;
@@ -439,8 +495,13 @@
     display: inline-block;
     width: 46px;
     height: 26px;
-    top: 28px;
+    top: 26px;
     right: 24px;
+
+    @media only screen and (max-width: 1360px) {
+      top: 23px;
+      right: 18px;
+    }
   }
   .custom-switch input {
     opacity: 0;

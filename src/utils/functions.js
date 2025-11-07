@@ -246,13 +246,13 @@ window.Permalink = function() {
 }();
 Permalink.init();
 
-const variantToggle = document.querySelector('.picker-label-text');
-const variantContent= document.querySelector('body.template-product .product-form__input');
 
-if (variantToggle && variantContent) {
-  variantToggle.addEventListener('click', () => {
-    variantToggle.classList.toggle('active');
-    variantContent.classList.toggle('active');
-  });
-}
-
+document.addEventListener('click', function(event) {
+  const toggle = event.target.closest('.picker-label-text');
+  
+  if (!toggle) return;
+  
+  const variantContent = document.querySelector('body.template-product .product-form__input');
+  toggle.classList.toggle('active');
+  variantContent?.classList.toggle('active');
+});

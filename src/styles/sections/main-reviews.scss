@@ -5,6 +5,15 @@
   align-items: center;
   gap: 38px;
 
+  @media only screen and (max-width: 1024px) {
+    gap: 20px;
+    overflow: hidden;
+
+    .slick-arrow {
+      display: none !important;
+    }
+  }
+
   &__heading {
     display: flex;
     justify-content: space-between;
@@ -26,6 +35,10 @@
         font-weight: 400;
         line-height: 120%;
         margin: 0px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 25px;
+        }
       }
       p {
         color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
@@ -35,6 +48,12 @@
         font-weight: 400;
         line-height: 35px;
         margin: 0px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 16px;
+          line-height: 24px;
+          margin-top: 8px;
+        }
       }
     }
   }
@@ -45,6 +64,10 @@
     gap: var(--Space-1200, 48px);
     align-self: stretch;
     width: 100%;
+
+    @media only screen and (max-width: 1024px) {
+      gap: 20px;
+    }
 
     &--list {
       display: flex;
@@ -72,6 +95,11 @@
         background: #FFF;
         gap: 20px;
 
+        @media only screen and (max-width: 1024px) {
+          gap: 16px;
+          padding: 28px;
+        }
+
         h3 {
           margin: 0px;
           color: var(--Colors-1000, var(--Colors-1000, #000));
@@ -81,6 +109,11 @@
           font-weight: 400;
           line-height: normal;
           height: 52px;
+
+          @media only screen and (max-width: 1024px) {
+            font-size: 18px;
+            height: 32px;
+          }
         }
         p {
           overflow: hidden;
@@ -95,6 +128,16 @@
           line-height: 35px;
           margin: 0px;
           height: 170px;
+
+          @media only screen and (max-width: 1024px) {
+            color: var(--Gray, #868686);
+            font-family: var(--Family-Font---Body, Nohemi);
+            font-size: var(--Typo-Body-L, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            height: 102px;
+          }
         }
         .review-data {
           display: flex;

@@ -27,25 +27,23 @@
       </div>
     </div>
     <div class="main-custom-header__bottom b-box">
-      <nav class="main-custom-header__bottom--container">
-        <ul class="main-custom-header__bottom--container__list">
-          <li class="main-custom-header__bottom--container__list--item">
-            <a href="/#">FIBRA Y MÓVIL</a>
-          </li>
-          <li class="main-custom-header__bottom--container__list--item">
-            <a href="/#">KEIO ENERGY</a>
-          </li>
-          <li class="main-custom-header__bottom--container__list--item level-2">
-            <a href="/#">TOP VENTAS</a>
-          </li>
-          <li class="main-custom-header__bottom--container__list--item">
-            <a href="/#">KEIO X</a>
-          </li>
-          <li class="main-custom-header__bottom--container__list--item">
-            <a href="/pages/blog">BLOG</a>
-          </li>
-        </ul>
-      </nav>
+      {% if section.settings.menu != blank %}
+        <nav class="main-custom-header__bottom--container">
+          <ul class="main-custom-header__bottom--container__list">
+            {%- for link in section.settings.menu.links -%}
+              {% assign is_active = false %}
+
+              {%- if link.current or link.child_active -%}
+                {% assign is_active = true %}
+              {%- endif -%}
+
+              <li class="main-custom-header__bottom--container__list--item {{ link.title }} {% if is_active %} level-2{% endif %}">
+                <a href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </nav>
+      {% endif %}
     </div>
   </header>
 
@@ -82,7 +80,7 @@
       "type": "link_list",
       "id": "menu",
       "default": "main-menu",
-      "label": "t:sections.header.settings.menu.label"
+      "label": "Menu principal"
     },
     {
       "type": "image_picker",

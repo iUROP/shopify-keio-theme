@@ -17,12 +17,24 @@
         "padding_bottom": 28
       }
     },
+    "main_hero_title_tL8zGX": {
+      "type": "main-hero-title",
+      "name": "main-custom-hero-title",
+      "settings": {
+        "primary_banner": "shopify://shop_images/banner-bundles_9283e4f5-0b1e-440a-b1d8-10e09df7bc9f.png",
+        "primary_banner_mobile": "shopify://shop_images/banner-bundle-mobile.png",
+        "title": "Crea tu propia tarifa fibra+móvil",
+        "subtitle": "Selecciona tu fibra preferida y añade las lineas de móviles que necesites",
+        "button_label": "Comprueba tu cobertura",
+        "button_link": "",
+        "is_anchor": false,
+        "is_popup": true
+      }
+    },
     "main_fibra_mobil_fUkJBQ": {
       "type": "main-fibra-mobil",
       "name": "main-custom-fibra-mobile",
-      "settings": {
-        "primary_banner": "shopify://shop_images/banner-bundles.png"
-      }
+      "settings": {}
     },
     "main_custom_product_list_rncRFd": {
       "type": "main-custom-product-list",
@@ -36,6 +48,7 @@
       "name": "main-custom-simple-banner",
       "settings": {
         "banner": "shopify://shop_images/banner-packs.png",
+        "banner_m": "shopify://shop_images/Banner-contratar.png",
         "isLast": true,
         "text_custom": "No lo pienses más,\ncontrata tu tarifa hoy mismo"
       }
@@ -43,6 +56,7 @@
   },
   "order": [
     "main",
+    "main_hero_title_tL8zGX",
     "main_fibra_mobil_fUkJBQ",
     "main_custom_product_list_rncRFd",
     "main_custom_simple_banner_4yPkVT"
