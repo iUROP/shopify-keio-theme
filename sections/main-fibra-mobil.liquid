@@ -380,6 +380,106 @@
     
     });
 </script>
+<div id="modal-coberturer" class="main-modal">
+  <div class="main-modal__overlay"></div>
+  <div class="main-modal__content">
+    <button class="main-modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M0.166174 15.8324C0.219247 15.8855 0.282271 15.9277 0.351644 15.9564C0.421017 15.9852 0.495379 16 0.570476 16C0.645574 16 0.719935 15.9852 0.789308 15.9564C0.858682 15.9277 0.921706 15.8855 0.974779 15.8324L7.99792 8.8099L15.0239 15.8324C15.1312 15.9396 15.2766 15.9999 15.4282 15.9999C15.5799 15.9999 15.7253 15.9396 15.8325 15.8324C15.9398 15.7252 16 15.5798 16 15.4281C16 15.2765 15.9398 15.1311 15.8325 15.0239L8.80653 8.00136L15.8297 0.975985C15.9369 0.868767 15.9971 0.723348 15.9971 0.571719C15.9971 0.42009 15.9369 0.274671 15.8297 0.167453C15.7224 0.0602344 15.577 0 15.4254 0C15.2737 0 15.1283 0.0602344 15.0211 0.167453L7.99792 7.19283L0.971921 0.17031C0.862602 0.076699 0.721981 0.0277836 0.578161 0.0333383C0.43434 0.038893 0.297912 0.0985085 0.196139 0.200272C0.0943666 0.302035 0.0347458 0.438451 0.0291906 0.582259C0.0236354 0.726067 0.0725552 0.866675 0.166174 0.975985L7.18932 8.00136L0.166174 15.0267C0.0597406 15.1338 0 15.2786 0 15.4296C0 15.5805 0.0597406 15.7254 0.166174 15.8324Z" fill="#1E1E1E"/>
+      </svg>
+    </button>
+    <div class="main-modal__content--inner">
+      <div class="main-modal__content--inner__body">
+        <div class="main-modal__content--inner__body--form">
+          <div class="main-modal__content--inner__body--form__heading">
+            <h3>Introduce tu dirección para confirmar la instalación</h3>
+            <p>Nos llevará menos de 30 segundos</p>
+          </div>
+
+          <div class="main-modal__content--inner__body--form__inputs">
+            <div class="main-modal-row top">
+              <div class="main-input-field">
+                <label>Calle</label>
+                <input type="text" placeholder="C/Principal" />
+              </div>
+              <div class="main-input-field">
+                <label>Nº</label>
+                <input type="text" placeholder="12" />
+              </div>
+              <div class="main-input-field">
+                <label>Código postal</label>
+                <input type="text" placeholder="28400" />
+              </div>
+            </div>
+            <div class="main-modal-row">
+              <div class="main-input-field">
+                <label>Email</label>
+                <input type="text" placeholder="email@ejemplo.com" />
+              </div>
+              <div class="main-input-field">
+                <label>Nº de teléfono</label>
+                <input type="text" placeholder="+34 666 666 666" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-modal__content--inner__body--terms">
+          <div class="main-checkbox-field">
+            <input type="checkbox" id="javascript">
+            <label for="javascript">
+              He leído y acepto la <a href="/#">política de privacidad*</a>
+            </label>
+          </div>
+        </div>
+
+        <div class="main-toast-success">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <mask id="mask0_13743_18715" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+              <rect width="16" height="16" fill="#D9D9D9"/>
+            </mask>
+            <g mask="url(#mask0_13743_18715)">
+              <path d="M6.36688 11.7692L2.81055 8.2129L3.52321 7.50007L6.36688 10.3437L12.4772 4.2334L13.1899 4.94623L6.36688 11.7692Z" fill="#1F7B01"/>
+            </g>
+          </svg>
+          <span>Cobertura confirmada en esta dirección, puedes  continuar con la contratación</span>
+        </div>
+
+      </div>
+      <div class="main-modal__content--inner__actions">
+        <button class="main-custom-button-secondary">Cancelar</button>
+        <button class="main-custom-button">Comprobar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    $( window ).on( "ready", function() {
+
+      $('.open-coberturer').on('click', function() {
+        $('#modal-coberturer').addClass('active')
+      });
+
+      $('#modal-coberturer .main-modal__overlay').on('click', function() {
+        $('#modal-coberturer').removeClass('active')
+      });
+      $('#modal-coberturer .main-modal__close').on('click', function() {
+        $('#modal-coberturer').removeClass('active')
+      });
+
+      $('#modal-coberturer .main-custom-button-secondary').on('click', function() {
+        $('#modal-coberturer').removeClass('active')
+      });
+
+      $('#modal-coberturer .main-custom-button').on('click', function() {
+        $('#modal-coberturer .main-toast-success').addClass('active')
+      });
+      
+    
+    });
+</script>
+
 
 {% schema %}
 {
