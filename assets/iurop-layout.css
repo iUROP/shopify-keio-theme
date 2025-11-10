@@ -488,6 +488,12 @@ html .main-custom-button:hover, body .main-custom-button:hover {
   border-radius: var(--Corner-Extra-small, 4px);
   background: var(--Colors-600, #751D28);
 }
+html .main-custom-button svg, body .main-custom-button svg {
+  margin-top: -6px;
+}
+html .main-custom-button.is-loading, body .main-custom-button.is-loading {
+  display: none;
+}
 @media only screen and (max-width: 1024px) {
   html .main-custom-button, body .main-custom-button {
     font-size: 14px;
@@ -826,9 +832,55 @@ html .main-modal__content--inner__body--form__inputs .main-modal-row, body .main
   gap: var(--Space-400, 16px);
   align-self: stretch;
   width: 100%;
+  position: relative;
 }
 html .main-modal__content--inner__body--form__inputs .main-modal-row.top .main-input-field:nth-child(2), body .main-modal__content--inner__body--form__inputs .main-modal-row.top .main-input-field:nth-child(2) {
   width: 55px;
+}
+html .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete, body .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete {
+  position: absolute;
+  display: flex;
+  padding: var(--Space-600, 24px) var(--Space-600, 24px) var(--Space-600, 24px) var(--Space-400, 16px);
+  padding-top: 20px;
+  flex-direction: column;
+  justify-content: unset;
+  align-items: flex-start;
+  gap: var(--Space-0, 0);
+  align-self: stretch;
+  border-radius: var(--Corner-Small, 8px);
+  background: var(--Colors-100, #FAFAFA);
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  height: 156px;
+  overflow: auto;
+  display: none;
+}
+html .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete.active, body .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete.active {
+  display: flex !important;
+}
+html .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete li, body .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete li {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  padding-bottom: var(--Space-400, 16px);
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(92, 94, 92, 0.2);
+  box-sizing: border-box;
+  cursor: pointer;
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  leading-trim: both;
+  text-edge: cap;
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+html .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete li:hover, body .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete li:hover {
+  opacity: 0.8;
 }
 html .main-modal__content--inner__body--actions, body .main-modal__content--inner__body--actions {
   display: flex;
@@ -844,6 +896,12 @@ html .main-modal__content--inner__actions, body .main-modal__content--inner__act
 }
 html .main-modal__content--inner__actions button, body .main-modal__content--inner__actions button {
   padding: 13px 32px;
+}
+html .main-modal__content--inner__actions.loading .main-custom-button, body .main-modal__content--inner__actions.loading .main-custom-button {
+  display: none;
+}
+html .main-modal__content--inner__actions.loading .main-custom-button.is-loading, body .main-modal__content--inner__actions.loading .main-custom-button.is-loading {
+  display: flex;
 }
 html .main-modal__close, body .main-modal__close {
   position: absolute;
@@ -884,6 +942,30 @@ html .main-toast-success span, body .main-toast-success span {
   align-items: flex-start;
   gap: 10px;
   color: #1F7B01;
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+html .main-toast-error, body .main-toast-error {
+  display: flex;
+  padding: var(--Space-200, 8px) var(--Space-400, 16px) var(--Space-200, 8px) var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-200, 8px);
+  border-radius: var(--Corner-Small, 8px);
+  background: var(--Colors-200, #EED2D2);
+  display: none;
+}
+html .main-toast-error.active, body .main-toast-error.active {
+  display: flex;
+}
+html .main-toast-error span, body .main-toast-error span {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  color: #931E31;
   font-family: var(--Family-Font---Body, Nohemi);
   font-size: var(--Typo-Body-S, 13px);
   font-style: normal;

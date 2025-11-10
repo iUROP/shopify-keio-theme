@@ -400,25 +400,26 @@
             <div class="main-modal-row top">
               <div class="main-input-field">
                 <label>Calle</label>
-                <input type="text" placeholder="C/Principal" />
+                <input id="street-field" type="text" placeholder="C/Principal" />
               </div>
               <div class="main-input-field">
                 <label>Nº</label>
-                <input type="text" placeholder="12" />
+                <input id="number-field" type="text" placeholder="12" />
               </div>
               <div class="main-input-field">
                 <label>Código postal</label>
-                <input type="text" placeholder="28400" />
+                <input id="zipcode-field" type="text" placeholder="28400" />
               </div>
+              <div class="main-modal-row-autocomplete"></div>
             </div>
             <div class="main-modal-row">
               <div class="main-input-field">
                 <label>Email</label>
-                <input type="text" placeholder="email@ejemplo.com" />
+                <input id="email-field" type="text" placeholder="email@ejemplo.com" />
               </div>
               <div class="main-input-field">
                 <label>Nº de teléfono</label>
-                <input type="text" placeholder="+34 666 666 666" />
+                <input id="phone-field" type="text" placeholder="+34 666 666 666" />
               </div>
             </div>
           </div>
@@ -444,11 +445,24 @@
           </svg>
           <span>Cobertura confirmada en esta dirección, puedes  continuar con la contratación</span>
         </div>
+        <div class="main-toast-error">
+          <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+            <path d="M0.7025 8.87167L0 8.16917L3.73333 4.43583L0 0.7025L0.7025 0L4.43583 3.73333L8.16917 0L8.87167 0.7025L5.13833 4.43583L8.87167 8.16917L8.16917 8.87167L4.43583 5.13833L0.7025 8.87167Z" fill="#931E31"/>
+          </svg>
+          <span>Por ahora no hay cobertura en tu dirección. Guardaremos tus datos y te avisaremos cuando esté disponible</span>
+        </div>
 
       </div>
       <div class="main-modal__content--inner__actions">
         <button class="main-custom-button-secondary">Cancelar</button>
+
         <button class="main-custom-button">Comprobar</button>
+        <button class="main-custom-button is-loading">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="34" height="34" style="shape-rendering: auto; display: block; background: transparent;" xmlns:xlink="http://www.w3.org/1999/xlink"><g><circle stroke-dasharray="103.67255756846316 36.55751918948772" r="22" stroke-width="8" stroke="#ffffff" fill="none" cy="50" cx="50">
+            <animateTransform keyTimes="0;1" values="0 50 50;360 50 50" dur="0.6493506493506493s" repeatCount="indefinite" type="rotate" attributeName="transform"></animateTransform>
+          </circle><g></g></g></svg>
+        </button>
+
       </div>
     </div>
   </div>
@@ -472,8 +486,114 @@
         $('#modal-coberturer').removeClass('active')
       });
 
+      $('#street-field').on('input', function() {
+        const val = $(this).val();
+        $('.main-modal-row-autocomplete').html('')
+        $('.main-modal-row-autocomplete').addClass('active')
+
+        if (val.length > 3) {
+          const street = $('#street-field').val()
+          const number = $('#number-field').val()
+          const zipcode = $('#zipcode-field').val() 
+
+          // fetch
+          let settings = {
+            "url": `https://4gslwyq3z556yfbpkrgh5z455y0mcyer.lambda-url.us-east-1.on.aws/?search=${street}`,
+            "method": "GET",
+            "timeout": 0,
+            "headers": {
+              "Content-Type": "application/json",
+              "accept": "application/json"
+            },
+          };
+          
+
+          $.ajax(settings).done(function (response) {
+            let options = ``
+            console.log(response);
+
+            $.each(response, function(index, item) {
+              options += `
+                <li rel-street="${item.address.summary}" rel-number="" rel-zipcode="${item.address.postal_code[0]}">${item.address.summary} - ${item.address.town} - ${item.address.postal_code[0]}</li>
+              `
+            });
+            $('.main-modal-row-autocomplete').html(options)
+            $('.main-modal-row-autocomplete').addClass('active')
+          });
+          // -----
+
+
+
+          
+        }
+      });
+
+      $(document).on('click', '#modal-coberturer .main-modal-row-autocomplete li', function() {
+        const street = $(this).attr('rel-street')
+        const zipcode = $(this).attr('rel-zipcode')
+        console.log("street", street)
+        console.log("zipcode", zipcode)
+
+        $('#street-field').val(street)
+        $('#zipcode-field').val(zipcode) 
+        $('.main-modal-row-autocomplete').html('')
+        $('.main-modal-row-autocomplete').removeClass('active')
+
+      });
+
       $('#modal-coberturer .main-custom-button').on('click', function() {
-        $('#modal-coberturer .main-toast-success').addClass('active')
+        const street = $('#street-field').val() // AVENIDA 12 DE OCTUBRE
+        const number = $('#number-field').val()
+        const zipcode = $('#zipcode-field').val() // 30600
+
+        const email = $('#email-field').val()
+        const phone = $('#phone-field').val()
+
+        if (street.length < 3) {
+          $('#modal-coberturer .main-toast-error span').html('Ingresa una dirección válida.')
+          $('#modal-coberturer .main-toast-error').addClass('active')
+
+          return false;
+        } else if (zipcode.length < 3) {
+          $('#modal-coberturer .main-toast-error span').html('Ingresa un código postal válido.')
+          $('#modal-coberturer .main-toast-error').addClass('active')
+
+          return false;
+        } else if (email.length < 3) {
+          $('#modal-coberturer .main-toast-error span').html('Ingresa un correo electrónico válido.')
+          $('#modal-coberturer .main-toast-error').addClass('active')
+
+          return false;
+        }
+
+        $('.main-modal__content--inner__actions').addClass('loading')
+
+        // fetch
+        let settings = {
+          "url": `https://4gslwyq3z556yfbpkrgh5z455y0mcyer.lambda-url.us-east-1.on.aws/?search=${street} ${zipcode}`,
+          "method": "GET",
+          "timeout": 0,
+          "headers": {
+            "Content-Type": "application/json",
+            "accept": "application/json"
+          },
+        };
+
+        $.ajax(settings).done(function (response) {
+          const findZipCode = response.find((item) => item.address.postal_code[0] == zipcode)
+          console.log(response, findZipCode);
+          if (findZipCode) {
+            $('#modal-coberturer .main-toast-success').addClass('active')
+            $('#modal-coberturer .main-toast-error').removeClass('active')
+            $('.main-modal__content--inner__actions').removeClass('loading')
+          } else {
+            $('#modal-coberturer .main-toast-error span').html('Por ahora no hay cobertura en tu dirección. Guardaremos tus datos y te avisaremos cuando esté disponible')
+            $('#modal-coberturer .main-toast-success').removeClass('active')
+            $('#modal-coberturer .main-toast-error').addClass('active')
+            $('.main-modal__content--inner__actions').removeClass('loading')
+          }
+        });
+        // -----
       });
       
     
