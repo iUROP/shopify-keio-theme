@@ -275,7 +275,157 @@
                     line-height: 20px;
                   }
                 }
+              }
 
+              .keio-x-content {
+                display: flex;
+                flex-direction: column;
+                gap: var(--Space-800, 16px);
+              }
+
+              .products-content {
+                display: flex;
+                flex-direction: column;
+                gap: var(--Space-800, 16px);
+
+                .order-card {
+                  width: 100%;
+
+                  .order-items {
+                    width: 100%;
+
+                    .order-items-item {
+                      display: flex;
+                      width: 100%;
+                      padding: var(--Space-800, 32px);
+                      flex-direction: column;
+                      align-items: flex-start;
+                      gap: var(--Space-800, 32px);
+                      border-radius: var(--Corner-Large, 16px);
+                      background: #F7F7F7;
+                      box-sizing: border-box;
+                      position: relative;
+
+                      @media only screen and (max-width: 1024px) {
+                        padding: 20px;
+                        gap: 18px;
+                      }
+
+                      .order-items-item-heading {
+                        color: var(--Colors-1000, var(--Colors-1000, #000));
+                        font-family: var(--Family-Font, Nohemi);
+                        font-size: var(--Typo-Body-XL, 25px);
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                        flex-direction: row;
+                        position: relative;
+                        width: 100%;
+                        box-sizing: border-box;
+
+                        @media only screen and (max-width: 1024px) {
+                          font-size: 18px;
+                          align-items: center;
+                        }
+
+                        span {
+                          display: flex;
+                          padding: var(--Space-150, 6px) var(--Space-200, 8px);
+                          flex-direction: column;
+                          align-items: flex-start;
+                          gap: 6.378px;
+                          color: #1F7B01;
+                          font-family: var(--Family-Font---Body, Nohemi);
+                          font-size: var(--Typo-Body-S, 13px);
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 12px;
+                          border-radius: var(--Corner-Full, 10000px);
+                          background: #C2EEB4;
+                        }
+                        button {
+                          position: absolute;
+                          right: 0;
+                          top: 5px;
+                          background: transparent;
+                          border: 0;
+                          margin: 0;
+                          -webkit-transition: all .25s cubic-bezier(.77,0,.175,1);
+                          -moz-transition: all .25s cubic-bezier(.77,0,.175,1);
+                          -o-transition: all .25s cubic-bezier(.77,0,.175,1);
+                          transition: all .25s cubic-bezier(.77,0,.175,1);
+                        }
+                      }
+                      .order-items-item-body {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        align-items: flex-end;
+                        gap: 20px;
+                        align-self: stretch;
+                        display: none;
+
+                        .order-items-item-body-inner {
+                          display: flex;
+                          flex-direction: column;
+                          align-items: flex-start;
+                          gap: var(--Space-600, 20px);
+                          align-self: stretch;
+
+                          @media only screen and (max-width: 1024px) {
+                            gap: 4px;
+                          }
+
+                          .order-items-item-body-inner-summary {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            align-self: stretch;
+                            flex-direction: initial;
+                            
+                            div {
+                              &:nth-child(1) {
+                                color: var(--Colors-1000, var(--Colors-1000, #000));
+                                font-family: var(--Family-Font---Body, Nohemi);
+                                font-size: var(--Typo-Body-M, 16px);
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 24px;
+                              }
+                              &:nth-child(2) {
+                                color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+                                text-align: right;
+                                font-family: var(--Family-Font---Body, Nohemi);
+                                font-size: var(--Typo-Body-S, 13px);
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: 20px;
+                                align-items: end;
+                              }
+                            }
+                          }
+                        }
+
+                        .order-items-item-body-actions {
+                          display: flex;
+                          justify-content: space-between;
+                          align-items: flex-start;
+                          align-self: stretch;
+                        }
+                      }
+
+                      &.active {
+                        .order-items-item-body {
+                          display: flex;
+                        }
+                        .order-items-item-heading button {
+                          transform: rotate(180deg);
+                          top: 3px;
+                        }
+                      }
+                    }
+                  }
+                }
               }
 
             }

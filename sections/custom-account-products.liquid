@@ -1,0 +1,124 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<div class="customer account account-global-page custom-account-page products">
+  <div>
+    <h1 class="customer__title">Mi cuenta</h1>
+  </div>
+
+  <div class="flex-block">
+
+    <div class="account-global-page__content">
+      <div class="account-global-page__content--sidebar">
+        <div class="account-global-page__content--sidebar__links">
+          <a href="{{ routes.account_url }}">Mi cuenta</a>
+          <a href="/pages/productos-contratados" class="active">Productos contratados</a>
+          <a href="/pages/invitaciones-keio-x">Keio X</a>
+          <a href="/pages/soporte" class="last-link">Soporte</a>
+        </div>
+        <div class="account-global-page__content--sidebar__close">
+          <a href="/account/logout">
+            Cerrar sesión
+          </a>
+        </div>
+      </div>
+      <div class="account-global-page__content--content">
+        <div class="account-global-page__content--content__row">
+          <div class="account-global-page__content--content__row--heading">
+            <h3>Mis productos</h3>
+          </div>
+          <div class="account-global-page__content--content__row--body">
+            <div class="account-global-page__content--content__row--body__content">
+              
+              <div class="products-content">
+
+                {% if customer %}
+
+                  {% if customer.orders.size > 0 %}
+                    {% paginate customer.orders by 10 %}
+                      {% for order in customer.orders %}
+                        <div class="order-card">
+                          <div class="order-items">
+                            {% for item in order.line_items %}
+                              <div class="order-items-item">
+                                <div class="order-items-item-heading">
+                                  {{ item.title }} - {{ order.name }}
+                                  <span>Activo</span>
+                                  <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="10" viewBox="0 0 19 10" fill="none">
+                                      <path d="M9.24245 7.83077L16.7752 0.298019C16.9739 0.0993528 17.2078 0.00251961 17.4769 0.00751972C17.7463 0.0126867 17.9803 0.114602 18.1789 0.313269C18.3776 0.512102 18.4769 0.746102 18.4769 1.01527C18.4769 1.28444 18.3776 1.51844 18.1789 1.71727L10.5232 9.38827C10.3424 9.5691 10.1398 9.7031 9.91545 9.79027C9.69111 9.87744 9.46678 9.92102 9.24245 9.92102C9.01811 9.92102 8.79378 9.87744 8.56945 9.79027C8.34511 9.7031 8.14253 9.5691 7.9617 9.38827L0.290446 1.71727C0.0917794 1.51844 -0.00497022 1.28185 0.000196444 1.00752C0.00536311 0.733187 0.107279 0.496686 0.305946 0.298019C0.504613 0.0993528 0.738613 2.00272e-05 1.00795 2.00272e-05C1.27711 2.00272e-05 1.51103 0.0993528 1.7097 0.298019L9.24245 7.83077Z" fill="#931E31"/>
+                                    </svg>
+                                  </button>
+                                </div>
+                                <div class="order-items-item-body">
+                                  <div class="order-items-item-body-inner">
+                                    <div class="order-items-item-body-inner-summary">
+                                      <div>Próxima factura</div>
+                                      <div>{{ order.created_at | date: "%d/%m/%Y" }}</div>
+                                    </div>
+                                    <div class="order-items-item-body-inner-summary">
+                                      <div>Importe de renovación</div>
+                                      <div>{{ order.total_price | money }}</div>
+                                    </div>
+                                    <div class="order-items-item-body-inner-summary">
+                                      <div>Método de pago</div>
+                                      <div>{{ order.payment_gateway_names | join: ', ' }}</div>
+                                    </div>
+                                  </div>
+
+                                  <div class="order-items-item-body-actions">
+                                    <a href="https://apps.orderprinterpro.com/a/print/{{ shop.permanent_domain }}/{{ order.id }}?document_type=invoice" class="main-custom-button">Descargar factura</a>
+                                  </div>
+                                </div>
+                              </div>
+                            {% endfor %}
+                          </div>
+
+                        </div>
+                      {% endfor %}
+
+                      {{ paginate | default_pagination }}
+                    {% endpaginate %}
+                  {% else %}
+                    <p>No tienes pedidos todavía.</p>
+                  {% endif %}
+
+                {% else %}
+                  <p>Esta área es privada.</p>
+                {% endif %}
+                
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  $( window ).on( "ready", function() {
+    
+    $(document).on('click', '.order-items-item', function() {
+      $('.order-items-item active').removeClass('active')
+      $(this).addClass('active')
+    });
+    
+  });
+</script>
+
+{% schema %}
+{
+  "name": "custom-account-products",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "custom-account-products"
+    }
+  ]
+}
+{% endschema %}

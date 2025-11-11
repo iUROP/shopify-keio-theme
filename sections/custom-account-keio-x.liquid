@@ -1,0 +1,61 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<div class="customer account account-global-page custom-account-page keio-x">
+  <div>
+    <h1 class="customer__title">Mi cuenta</h1>
+  </div>
+
+  <div class="flex-block">
+
+    <div class="account-global-page__content">
+      <div class="account-global-page__content--sidebar">
+        <div class="account-global-page__content--sidebar__links">
+          <a href="{{ routes.account_url }}">Mi cuenta</a>
+          <a href="/pages/productos-contratados">Productos contratados</a>
+          <a href="/pages/invitaciones-keio-x" class="active">Keio X</a>
+          <a href="/pages/soporte" class="last-link">Soporte</a>
+        </div>
+        <div class="account-global-page__content--sidebar__close">
+          <a href="/account/logout">
+            Cerrar sesión
+          </a>
+        </div>
+      </div>
+      <div class="account-global-page__content--content">
+        <div class="account-global-page__content--content__row">
+          <div class="account-global-page__content--content__row--heading">
+            <h3>Keio X</h3>
+          </div>
+          <div class="account-global-page__content--content__row--body">
+            <div class="account-global-page__content--content__row--body__content">
+              
+              <div class="keio-x-content">
+                <p>No hay invitaciones disponibles.</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+{% schema %}
+{
+  "name": "custom-account-keio-x",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "custom-account-keio-x"
+    }
+  ]
+}
+{% endschema %}
