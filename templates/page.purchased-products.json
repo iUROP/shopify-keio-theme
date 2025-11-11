@@ -16,15 +16,9 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "custom_account_support_Lb8L7z": {
-      "type": "custom-account-support",
-      "name": "custom-account-support",
-      "settings": {}
     }
   },
   "order": [
-    "main",
-    "custom_account_support_Lb8L7z"
+    "main"
   ]
 }
