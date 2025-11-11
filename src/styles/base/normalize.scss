@@ -186,6 +186,10 @@ html, body {
     align-items: flex-start;
     gap: var(--Space-300, 12px);
     flex: 1 0 0;
+
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+    }
   }
   .main-input-field__label {
     color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
@@ -406,12 +410,22 @@ html, body {
       -o-transition: all .25s cubic-bezier(.77,0,.175,1);
       transition: all .25s cubic-bezier(.77,0,.175,1);
 
+      @media only screen and (max-width: 1024px) {
+        width: 96%;
+        padding: 16px;
+        gap: 4px;
+      }
+
       &--inner {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 32px;
         align-self: stretch;
+
+        @media only screen and (max-width: 1024px) {
+          gap: 14px;
+        }
 
         &__body {
           display: flex;
@@ -420,12 +434,20 @@ html, body {
           gap: 18px;
           align-self: stretch;
 
+          @media only screen and (max-width: 1024px) {
+            gap: 10px;
+          }
+
           &--form {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 16px;
             align-self: stretch;
+
+            @media only screen and (max-width: 1024px) {
+              gap: 10px;
+            }
 
             &__heading {
               display: flex;
@@ -435,6 +457,10 @@ html, body {
               align-items: baseline;
               gap: 2px;
               align-self: stretch;
+
+              @media only screen and (max-width: 1024px) {
+                padding-right: 50px;
+              }
               h3 {
                 margin: 0px;
                 color: #000;
@@ -443,6 +469,11 @@ html, body {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 35px;
+
+                @media only screen and (max-width: 1024px) {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
               }
               p {
                 margin: 0px;
@@ -452,6 +483,11 @@ html, body {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 24px;
+
+                @media only screen and (max-width: 1024px) {
+                  font-size: 14px;
+                  line-height: 20px;
+                }
               }
             }
             &__inputs {
@@ -461,6 +497,10 @@ html, body {
               gap: var(--Space-800, 32px);
               align-self: stretch;
 
+              @media only screen and (max-width: 1024px) {
+                gap: 18px;
+              }
+
               .main-modal-row {
                 display: flex;
                 align-items: flex-start;
@@ -469,9 +509,22 @@ html, body {
                 width: 100%;
                 position: relative;
 
+                @media only screen and (max-width: 1024px) {
+                  gap: 10px;
+                  flex-direction: column;
+                }
+
                 &.top {
+                  .main-input-field:nth-child(1) {
+                    @media only screen and (max-width: 1024px) {
+                      width: 100%;
+                    }
+                  }
                   .main-input-field:nth-child(2) {
                     width: 55px;
+                    @media only screen and (max-width: 1024px) {
+                      width: 100%;
+                    }
                   }
                 }
 
@@ -541,6 +594,10 @@ html, body {
 
           button {
             padding: 13px 32px;
+
+            @media only screen and (max-width: 1024px) {
+              padding: 7px 20px;
+            }
           }
 
           &.loading {
@@ -563,6 +620,10 @@ html, body {
       border: 0px;
       cursor: pointer;
       padding: 0;
+
+      @media only screen and (max-width: 1024px) {
+        right: 20px;
+      }
     }
 
     &.active {

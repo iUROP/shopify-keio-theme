@@ -560,6 +560,11 @@ html .main-input-field, body .main-input-field {
   gap: var(--Space-300, 12px);
   flex: 1 0 0;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-input-field, body .main-input-field {
+    width: 100%;
+  }
+}
 html .main-input-field__label, body .main-input-field__label {
   color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
   font-family: var(--Family-Font---Body, Nohemi);
@@ -771,12 +776,24 @@ html .main-modal__content, body .main-modal__content {
   -o-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
 }
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content, body .main-modal__content {
+    width: 96%;
+    padding: 16px;
+    gap: 4px;
+  }
+}
 html .main-modal__content--inner, body .main-modal__content--inner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
   align-self: stretch;
+}
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner, body .main-modal__content--inner {
+    gap: 14px;
+  }
 }
 html .main-modal__content--inner__body, body .main-modal__content--inner__body {
   display: flex;
@@ -785,12 +802,22 @@ html .main-modal__content--inner__body, body .main-modal__content--inner__body {
   gap: 18px;
   align-self: stretch;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body, body .main-modal__content--inner__body {
+    gap: 10px;
+  }
+}
 html .main-modal__content--inner__body--form, body .main-modal__content--inner__body--form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
   align-self: stretch;
+}
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body--form, body .main-modal__content--inner__body--form {
+    gap: 10px;
+  }
 }
 html .main-modal__content--inner__body--form__heading, body .main-modal__content--inner__body--form__heading {
   display: flex;
@@ -801,6 +828,11 @@ html .main-modal__content--inner__body--form__heading, body .main-modal__content
   gap: 2px;
   align-self: stretch;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body--form__heading, body .main-modal__content--inner__body--form__heading {
+    padding-right: 50px;
+  }
+}
 html .main-modal__content--inner__body--form__heading h3, body .main-modal__content--inner__body--form__heading h3 {
   margin: 0px;
   color: #000;
@@ -809,6 +841,12 @@ html .main-modal__content--inner__body--form__heading h3, body .main-modal__cont
   font-style: normal;
   font-weight: 400;
   line-height: 35px;
+}
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body--form__heading h3, body .main-modal__content--inner__body--form__heading h3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 html .main-modal__content--inner__body--form__heading p, body .main-modal__content--inner__body--form__heading p {
   margin: 0px;
@@ -819,12 +857,23 @@ html .main-modal__content--inner__body--form__heading p, body .main-modal__conte
   font-weight: 400;
   line-height: 24px;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body--form__heading p, body .main-modal__content--inner__body--form__heading p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 html .main-modal__content--inner__body--form__inputs, body .main-modal__content--inner__body--form__inputs {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--Space-800, 32px);
   align-self: stretch;
+}
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body--form__inputs, body .main-modal__content--inner__body--form__inputs {
+    gap: 18px;
+  }
 }
 html .main-modal__content--inner__body--form__inputs .main-modal-row, body .main-modal__content--inner__body--form__inputs .main-modal-row {
   display: flex;
@@ -834,8 +883,24 @@ html .main-modal__content--inner__body--form__inputs .main-modal-row, body .main
   width: 100%;
   position: relative;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body--form__inputs .main-modal-row, body .main-modal__content--inner__body--form__inputs .main-modal-row {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body--form__inputs .main-modal-row.top .main-input-field:nth-child(1), body .main-modal__content--inner__body--form__inputs .main-modal-row.top .main-input-field:nth-child(1) {
+    width: 100%;
+  }
+}
 html .main-modal__content--inner__body--form__inputs .main-modal-row.top .main-input-field:nth-child(2), body .main-modal__content--inner__body--form__inputs .main-modal-row.top .main-input-field:nth-child(2) {
   width: 55px;
+}
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__body--form__inputs .main-modal-row.top .main-input-field:nth-child(2), body .main-modal__content--inner__body--form__inputs .main-modal-row.top .main-input-field:nth-child(2) {
+    width: 100%;
+  }
 }
 html .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete, body .main-modal__content--inner__body--form__inputs .main-modal-row .main-modal-row-autocomplete {
   position: absolute;
@@ -897,6 +962,11 @@ html .main-modal__content--inner__actions, body .main-modal__content--inner__act
 html .main-modal__content--inner__actions button, body .main-modal__content--inner__actions button {
   padding: 13px 32px;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-modal__content--inner__actions button, body .main-modal__content--inner__actions button {
+    padding: 7px 20px;
+  }
+}
 html .main-modal__content--inner__actions.loading .main-custom-button, body .main-modal__content--inner__actions.loading .main-custom-button {
   display: none;
 }
@@ -911,6 +981,11 @@ html .main-modal__close, body .main-modal__close {
   border: 0px;
   cursor: pointer;
   padding: 0;
+}
+@media only screen and (max-width: 1024px) {
+  html .main-modal__close, body .main-modal__close {
+    right: 20px;
+  }
 }
 html .main-modal.active, body .main-modal.active {
   visibility: visible;
@@ -3031,6 +3106,11 @@ body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a:after {
 }
 .account-global-page.account .account-global-page__content--sidebar__links a.active {
   background: var(--Colors-100, #FAFAFA);
+}
+.account-global-page.account .account-global-page__content--sidebar__links a.last-link {
+  border-top: 1px solid #CDCDCD;
+  border-radius: 0px;
+  padding-top: 24px;
 }
 .account-global-page.account .account-global-page__content--sidebar__close {
   display: flex;

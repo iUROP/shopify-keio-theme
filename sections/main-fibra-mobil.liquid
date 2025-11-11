@@ -427,9 +427,9 @@
 
         <div class="main-modal__content--inner__body--terms">
           <div class="main-checkbox-field">
-            <input type="checkbox" id="javascript">
-            <label for="javascript">
-              He leído y acepto la <a href="/#">política de privacidad*</a>
+            <input type="checkbox" id="terms-agree">
+            <label for="terms-agree">
+              He leído y acepto la <a href="/policies/privacy-policy">política de privacidad*</a>
             </label>
           </div>
         </div>
@@ -491,7 +491,7 @@
         $('.main-modal-row-autocomplete').html('')
         $('.main-modal-row-autocomplete').addClass('active')
 
-        if (val.length > 3) {
+        if (val.length > 5) {
           const street = $('#street-field').val()
           const number = $('#number-field').val()
           const zipcode = $('#zipcode-field').val() 
@@ -548,8 +548,9 @@
 
         const email = $('#email-field').val()
         const phone = $('#phone-field').val()
-
-        if (street.length < 3) {
+        const terms = $('#terms-agree').val()
+        
+        if (street.length < 4) {
           $('#modal-coberturer .main-toast-error span').html('Ingresa una dirección válida.')
           $('#modal-coberturer .main-toast-error').addClass('active')
 
@@ -561,6 +562,11 @@
           return false;
         } else if (email.length < 3) {
           $('#modal-coberturer .main-toast-error span').html('Ingresa un correo electrónico válido.')
+          $('#modal-coberturer .main-toast-error').addClass('active')
+
+          return false;
+        } else if (!$('#terms-agree').is(':checked')) {
+          $('#modal-coberturer .main-toast-error span').html('Confirma que has leido nuestros términos y condiciones.')
           $('#modal-coberturer .main-toast-error').addClass('active')
 
           return false;
@@ -580,9 +586,10 @@
         };
 
         $.ajax(settings).done(function (response) {
-          const findZipCode = response.find((item) => item.address.postal_code[0] == zipcode)
-          console.log(response, findZipCode);
-          if (findZipCode) {
+          const findAddress = response.find((item) => item.address.postal_code[0] == zipcode && item.address.summary == street)
+          console.log(response, findAddress);
+
+          if (findAddress) {
             $('#modal-coberturer .main-toast-success').addClass('active')
             $('#modal-coberturer .main-toast-error').removeClass('active')
             $('.main-modal__content--inner__actions').removeClass('loading')
