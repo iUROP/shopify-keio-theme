@@ -1,7 +1,7 @@
 .main-custom-product-card {
   position: relative;
   display: flex;
-  height: 434px;
+  height: 472px;
   align-items: center;
   gap: 10px;
   width: 25%;
@@ -54,15 +54,17 @@
     h3 {
       color: var(--Colors-700, var(--Colors-700, #000));
       font-family: var(--Family-Font, Nohemi);
-      font-size: var(--Typo-H3, 31px);
+      font-size: var(--Typo-H3, 28px);
       font-style: normal;
       font-weight: 400;
       line-height: normal;
       margin: 0px;
       z-index: 2;
+      height: 56px;
+      min-height: 56px;
 
       @media only screen and (max-width: 1500px) {
-        font-size: 26px;
+        font-size: 25px;
       }
 
       strong {

@@ -509,7 +509,53 @@
         }, 1000);
       }
       
+      
+      // add to carts
+      $('.product-form__buttons .product-form__submit').on('click', function (event) {
+        event.preventDefault();
+      });
 
+
+      $('.product-form__buttons .product-form__submit_v2').on('click', function (event) {
+        event.preventDefault();
+        const variantSelect = document.querySelector('form[action="/cart/add"] [name="id"]').value;
+        let addObj = [
+          {
+            id: variantSelect,
+            quantity: 1
+          }
+        ]
+
+        const activeSubscription = document.querySelector(
+          '.shopify_subscriptions_app_block input[type="radio"][data-radio-type="selling_plan"]:checked'
+        );
+
+        if (activeSubscription) {
+          const sellingPlanId = activeSubscription.dataset.sellingPlanId;
+          console.log("Plan ID:", sellingPlanId);
+          addObj[0]['selling_plan'] = Number(sellingPlanId)
+
+        } else {
+          console.log("No hay suscripción activa (probablemente es compra única).");
+        }
+
+        const activeVariants = Array.from(
+          document.querySelectorAll('.custom-product-add-ons--option.active')
+        ).map(el => el.getAttribute('rel-variant'));
+
+        activeVariants.forEach(variantId => {
+          addObj.push(
+            {
+              id: variantId,
+              quantity: 1
+            }
+          )
+        });
+
+        console.log("agregar por click", addObj)
+        Permalink.addItems(addObj, true)
+
+      });
 
       Permalink.setScrollDragger();
     });

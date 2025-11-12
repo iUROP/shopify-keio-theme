@@ -1,7 +1,4 @@
 import React, { useState } from 'react'
-
-import Preloader from '../atoms/Preloader'
-import VerticalCenter from '../atoms/VerticalCenter'
 import Icon from '../atoms/Icon'
 import Stars from '../atoms/Stars'
 
@@ -30,18 +27,39 @@ function CartItem({
 
   const remove = async () => {
     setItemUpdating(true)
-    await Permalink.updateQty(product.id, 0)
+    // await Permalink.updateQty(product.id, 0)
+    await Permalink.clearCart()
+    
     setItemUpdating(false)
   }
+
+  const addonsVariants = [55889944969547, 55889939890507, 55889935270219, 55889933173067]
   
   return (
-    <div className={`i-cart-item`}>
+    <div className={`i-cart-item ${itemUpdating ? 'loading' : ''} ${addonsVariants.includes(product.variant_id) ? 'is-add-on' : ''}`}>
       <div className='i-cart-item--image' style={{"backgroundImage": `url(${product.featured_image.url})`}}></div>
       <div className='i-cart-item--labels'>
         <div className='i-cart-item--labels--reviews'>
           <Stars stars={5} />
         </div>
-        <div className='i-cart-item--labels--name'>{product.product_title}</div>
+        <div className='i-cart-item--labels--name'>
+          {product.product_title}
+          {product.selling_plan_allocation?.selling_plan?.name &&
+            <span>{product.selling_plan_allocation.selling_plan.name}</span>
+          }
+
+          {product.options_with_values &&
+            <>
+              {product.options_with_values[0] &&
+                <span>{product.options_with_values[0].value}</span>
+              }
+              {product.options_with_values[1] &&
+                <span>{product.options_with_values[1].value}</span>
+              }
+            </>
+          }
+
+        </div>
 
         {product.compare_at_price && product.compare_at_price != product.price
           ? <div className='i-cart-item--labels--price'>
@@ -69,17 +87,6 @@ function CartItem({
       <div className='i-cart-item--delete' onClick={remove}>
         <Icon name="remove" />
       </div>
-
-      {itemUpdating &&
-        <div className='i-cart-item--overlay'>
-          <VerticalCenter>
-            <Preloader
-              type="section"
-              invert
-            />
-          </VerticalCenter>
-        </div>
-      }
     </div>
   )
 }

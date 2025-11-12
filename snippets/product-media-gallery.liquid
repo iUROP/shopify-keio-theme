@@ -4,12 +4,14 @@
 <div class="product__media-wrapper-container">
 
   <div class="product__media-wrapper-master--tooltip">
-    <div class="product__media-wrapper-master--tooltip__heading">{{ product.title }} <strong>{{ plan }}</strong></div>
+    <div class="product__media-wrapper-master--tooltip__heading">{{ product.title }}</div>
     <div class="product__media-wrapper-master--tooltip__features">
       <ul>
         {% for characteristic in characteristics %}
           <li>
-            <img src="{{ characteristic.icono | image_url: width: 24 }}" />
+            {% if characteristic.icono != blank %}
+              <img src="{{ characteristic.icono | image_url: width: 24 }}" />
+            {% endif %}
             {{ characteristic.titulo }}
           </li>
         {% endfor %}

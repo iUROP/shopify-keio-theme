@@ -27,6 +27,18 @@
             "swatch_shape": "circle"
           }
         },
+        "subscriptions_app_block_GcxQUg": {
+          "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
+          "settings": {
+            "color_text_body": "#6D7175",
+            "dividers_color": "#8F8D8D",
+            "bacgkround_color": "#FFFFFF",
+            "border_thickness": 1,
+            "border_radius": 0,
+            "subscription_policy_url": "",
+            "product": "{{product}}"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -57,6 +69,7 @@
         "title",
         "description",
         "variant_picker",
+        "subscriptions_app_block_GcxQUg",
         "buy_buttons",
         "collapsible_tab_BjNE4d",
         "collapsible_tab_FGjqXR"
@@ -163,6 +176,12 @@
       ],
       "name": "main-custom-reviews",
       "settings": {}
+    },
+    "1762918408d420279f": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -171,6 +190,7 @@
     "main_custom_text_image_UXVzMx",
     "main_custom_marquee_Jez4Jw",
     "main_custom_faqs_kVRFYX",
-    "main_custom_reviews_CeTD6W"
+    "main_custom_reviews_CeTD6W",
+    "1762918408d420279f"
   ]
 }

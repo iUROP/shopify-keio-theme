@@ -66,6 +66,45 @@
 
         <div class="product-form__buttons--variant-picker">
           {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+
+          {% assign add_ons = product.metafields.custom.add_ons.value %}
+          
+          <div class="custom-product-add-ons">
+            {% for add_on in add_ons %}
+            <div 
+              rel-variant="{% if add_on == 'Bonus Keio Energy' %}55889944969547{% endif %}{% if add_on == 'Protección de línea' %}55889939890507{% endif %}{% if add_on == 'Activación Express' %}55889935270219{% endif %}{% if add_on == 'Multi-SIM' %}55889933173067{% endif %}"
+              class="custom-product-add-ons--option"
+            >
+              <div class="custom-product-add-ons--option__inner">
+                <div class="custom-add-on">
+                  <span></span>
+                  <span>{{ add_on }}</span>
+                </div>
+                <div>
+                  {% assign bonus = all_products["bonus-keio-energy"] %}
+                  {% assign protection = all_products["proteccion-de-linea"] %}
+                  {% assign activation = all_products["activacion-express"] %}
+                  {% assign multisim = all_products["multi-sim"] %}
+                  
+
+                  {% if add_on == 'Bonus Keio Energy' %}
+                    (-5€)
+                  {% endif %}
+                  {% if add_on == 'Protección de línea' %}
+                    (+{{ protection.price | money }})
+                  {% endif %}
+                  {% if add_on == 'Activación Express' %}
+                    (+{{ activation.price | money }})
+                  {% endif %}
+                  {% if add_on == 'Multi-SIM' %}
+                    (+{{ multisim.price | money }})
+                  {% endif %}
+
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
         </div>
 
         {%- if gift_card_recipient_feature_active -%}
@@ -96,10 +135,14 @@
               </svg>
             </button>
           </div>
+          <button class="product-form__submit_v2">
+            Agregar al carrito - <strong class="print-current-price"></strong>
+          </button>
           <button
             id="ProductSubmitButton-{{ section_id }}"
             type="submit"
             name="add"
+            style="display: none !important;"
             class="product-form__submit is-button-hover-primary button button--full-width {% if show_dynamic_checkout %}button--secondary{% else %}button--primary{% endif %}"
             {% if product.selected_or_first_available_variant.available == false
               or quantity_rule_soldout
@@ -178,3 +221,7 @@
     <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 </div>
+
+<script type="application/json" id="ProductJson-{{ product.id }}">
+  {{ product | json }}
+</script>

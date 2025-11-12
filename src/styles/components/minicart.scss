@@ -203,7 +203,7 @@ i-minicart {
         position: absolute;
         left: 0px;
         top: 82px;
-        bottom: 430px;
+        bottom: 290px;
         right: 0px;
         overflow: auto;
         padding: 12px 24px;
@@ -215,6 +215,29 @@ i-minicart {
           margin-bottom: 16px;
           padding: 0px;
           box-sizing: border-box;
+
+          &.is-add-on {
+            height: 22px;
+            .i-cart-item--image {
+              display: none !important;
+            }
+            .i-cart-item--labels--name span {
+              display: none !important;
+            }
+            .i-cart-item--actions,
+            .i-cart-item--delete {
+              display: none !important;
+            }
+            .i-cart-item--labels {
+              left: 0;
+            }
+          }
+
+          &.loading {
+            opacity: 0.5 !important;
+            cursor: no-drop;
+            pointer-events: none;
+          }
 
           &--image {
             position: absolute;
@@ -261,13 +284,18 @@ i-minicart {
               font-style: normal;
               font-weight: 400;
               line-height: 20px;
-
               display: -webkit-box;
-              -webkit-line-clamp: 2;
+              -webkit-line-clamp: 4;
               -webkit-box-orient: vertical;
               overflow: hidden;
               text-overflow: ellipsis;
               padding-right: 100px;
+
+              span {
+                display: block;
+                font-size: 11px;
+                line-height: 18px;
+              }
             }
             &--desc {
               font-size: 14px;

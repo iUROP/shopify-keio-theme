@@ -8,13 +8,15 @@
       <path d="M212.135 130H87.8654L0 42.1346V-82.1346L87.8654 -170H212.135L300 -82.1346V42.1346L212.135 130ZM106.457 85.1407H193.553L255.151 23.5428V-63.553L193.553 -125.151H106.457L44.8592 -63.553V23.5428L106.457 85.1407Z" fill="#FBF3F3"/>
     </svg>
     <h3>
-      {{ product.title }} <strong>{{ plan }}</strong>
+      {{ product.title }}
     </h3>
     <div class="main-custom-product-card--inner__desc">
       <ul>
         {% for characteristic in characteristics %}
           <li>
-            <img src="{{ characteristic.icono | image_url: width: 24 }}" />
+            {% if characteristic.icono != blank %}
+              <img src="{{ characteristic.icono | image_url: width: 24 }}" />
+            {% endif %}
             {{ characteristic.titulo }}
           </li>
         {% endfor %}
@@ -23,7 +25,7 @@
     </div>
     <div class="main-custom-product-card--inner__actions">
       <div>
-        149<span>,00€/año</span>
+        {{ product.price | money }}<span>/año</span>
       </div>
       <a href="{{ product.url }}" class="main-custom-button is-primary">Contratar</a>
     </div>

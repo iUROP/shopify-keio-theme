@@ -1,6 +1,52 @@
 window.Permalink = function() {
   const init = function() {
-    console.log("Init Permalink Theme Functions!")
+    console.log("Init iUROP Theme Functions!")
+
+    function getActiveAddOnsTotal() {
+      let total = 0;
+
+      document.querySelectorAll('.custom-product-add-ons--option.active').forEach(el => {
+        const text = el.textContent;
+        const match = text.match(/([+-]?)\s*€\s*([\d.,]+)/);
+
+        if (match) {
+          const sign = match[1] === '-' ? -1 : 1;
+          const value = parseFloat(match[2].replace('.', '').replace(',', '.'));
+          total += sign * value;
+        }
+      });
+
+      return total;
+    }
+
+    if (document.querySelector('body.template-cart')) {
+      // document.location.href = '/checkout'
+    }
+
+    setInterval(function () {
+      if (document.querySelector('body.template-product')) {
+        const productJson = JSON.parse(document.querySelector('[id^="ProductJson"]').textContent);
+        const variantSelect = document.querySelector('form[action="/cart/add"] [name="id"]');
+        const variantSelectValue = document.querySelector('form[action="/cart/add"] [name="id"]').value;
+
+        let variant = productJson.variants.find(v => v.id == variantSelectValue);
+        variantSelect.addEventListener('change', (event) => {
+          const variantId = event.target.value;
+          variant = productJson.variants.find(v => v.id == variantId);
+        });
+
+        let totalForm = variant.price / 100
+        const totalAddOns = getActiveAddOnsTotal();
+
+        const formattedPrice = (totalForm + totalAddOns).toLocaleString('es-ES', {
+          style: 'currency',
+          currency: 'EUR'
+        });
+        document.querySelectorAll('.print-current-price').forEach(el => {
+          el.textContent = formattedPrice;
+        });
+      }
+    }, 1000);
 
     stickyMenu()
     setupHeader()
@@ -77,6 +123,21 @@ window.Permalink = function() {
       reactive()
     })
   }
+
+  const clearCart = async function() {
+    return new Promise(async (resolve) => {
+      const request = await fetch(`/cart/clear.js`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      resolve(await request.json());
+
+      reactive();
+    });
+  };
 
   const updateNote = async function() {
 
@@ -231,6 +292,7 @@ window.Permalink = function() {
     addItems,
     updateItems,
     updateQty,
+    clearCart,
     updateNote,
     updateAttributes,
     removeItems,
@@ -248,11 +310,27 @@ Permalink.init();
 
 
 document.addEventListener('click', function(event) {
-  const toggle = event.target.closest('.picker-label-text');
-  
+  const toggle = event.target.closest('.js.product-form__input');
+  console.log("Click to:", toggle)
+
   if (!toggle) return;
-  
-  const variantContent = document.querySelector('body.template-product .product-form__input');
   toggle.classList.toggle('active');
-  variantContent?.classList.toggle('active');
 });
+
+
+document.addEventListener('click', function(event) {
+  const option = event.target.closest('.custom-product-add-ons--option');
+  console.log("Click to option:", option)
+
+  if (!option) return;
+  option.classList.toggle('active');
+});
+
+document.addEventListener('click', function(event) {
+  const option = event.target.closest('.shopify_subscriptions_fieldset');
+  console.log("Click to suscription:", option)
+
+  if (!option) return;
+  option.classList.toggle('active');
+});
+
