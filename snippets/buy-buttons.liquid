@@ -67,29 +67,31 @@
         <div class="product-form__buttons--variant-picker">
           {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
-          <div class="product-form__buttons--sim-selector">
-            <div class="product-form__buttons--sim-selector__heading">
-              <span>SIM/eSIM</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <mask id="mask0_13558_5736" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
-                  <rect width="24" height="24" fill="#D9D9D9"></rect>
-                </mask>
-                <g mask="url(#mask0_13558_5736)">
-                  <path d="M11.9998 14.975C11.8665 14.975 11.7415 14.9542 11.6248 14.9125C11.5081 14.8708 11.3998 14.8 11.2998 14.7L6.6998 10.1C6.51647 9.91665 6.4248 9.68332 6.4248 9.39999C6.4248 9.11665 6.51647 8.88332 6.6998 8.69999C6.88314 8.51665 7.11647 8.42499 7.3998 8.42499C7.68314 8.42499 7.91647 8.51665 8.0998 8.69999L11.9998 12.6L15.8998 8.69999C16.0831 8.51665 16.3165 8.42499 16.5998 8.42499C16.8831 8.42499 17.1165 8.51665 17.2998 8.69999C17.4831 8.88332 17.5748 9.11665 17.5748 9.39999C17.5748 9.68332 17.4831 9.91665 17.2998 10.1L12.6998 14.7C12.5998 14.8 12.4915 14.8708 12.3748 14.9125C12.2581 14.9542 12.1331 14.975 11.9998 14.975Z" fill="#5C5E5C"></path>
-                </g>
-              </svg>
+          {% if product.metafields.custom.selector_de_sim %}
+            <div class="product-form__buttons--sim-selector">
+              <div class="product-form__buttons--sim-selector__heading">
+                <span>SIM/eSIM</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <mask id="mask0_13558_5736" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                    <rect width="24" height="24" fill="#D9D9D9"></rect>
+                  </mask>
+                  <g mask="url(#mask0_13558_5736)">
+                    <path d="M11.9998 14.975C11.8665 14.975 11.7415 14.9542 11.6248 14.9125C11.5081 14.8708 11.3998 14.8 11.2998 14.7L6.6998 10.1C6.51647 9.91665 6.4248 9.68332 6.4248 9.39999C6.4248 9.11665 6.51647 8.88332 6.6998 8.69999C6.88314 8.51665 7.11647 8.42499 7.3998 8.42499C7.68314 8.42499 7.91647 8.51665 8.0998 8.69999L11.9998 12.6L15.8998 8.69999C16.0831 8.51665 16.3165 8.42499 16.5998 8.42499C16.8831 8.42499 17.1165 8.51665 17.2998 8.69999C17.4831 8.88332 17.5748 9.11665 17.5748 9.39999C17.5748 9.68332 17.4831 9.91665 17.2998 10.1L12.6998 14.7C12.5998 14.8 12.4915 14.8708 12.3748 14.9125C12.2581 14.9542 12.1331 14.975 11.9998 14.975Z" fill="#5C5E5C"></path>
+                  </g>
+                </svg>
+              </div>
+              <div class="product-form__buttons--sim-selector__options">
+                <div class="product-form__buttons--sim-selector__options--item">eSIM por email (QR instantáneo)</div>
+                <div class="product-form__buttons--sim-selector__options--item">SIM física</div>
+              </div>
             </div>
-            <div class="product-form__buttons--sim-selector__options">
-              <div class="product-form__buttons--sim-selector__options--item">eSIM por email (QR instantáneo)</div>
-              <div class="product-form__buttons--sim-selector__options--item">SIM física</div>
-            </div>
-          </div>
+          {% endif %}
 
           {% assign add_ons = product.metafields.custom.add_ons.value %}
           <div class="custom-product-add-ons">
             {% for add_on in add_ons %}
             <div 
-              rel-variant="{% if add_on == 'Bonus Keio Energy' %}55889944969547{% endif %}{% if add_on == 'Protección de línea' %}55889939890507{% endif %}{% if add_on == 'Activación Express' %}55889935270219{% endif %}{% if add_on == 'Multi-SIM' %}55889933173067{% endif %}"
+              rel-variant="{% if add_on == 'Bonus Keio Energy' %}55889944969547{% endif %}{% if add_on == 'Protección de línea' %}55889939890507{% endif %}{% if add_on == 'Activación Express' %}55889935270219{% endif %}{% if add_on == 'Multi-SIM' %}55889933173067{% endif %}{% if add_on == 'Servicio Premium de Soporte' %}55901036544331{% endif %}"
               class="custom-product-add-ons--option"
             >
               <div class="custom-product-add-ons--option__inner">
@@ -102,6 +104,7 @@
                   {% assign protection = all_products["proteccion-de-linea"] %}
                   {% assign activation = all_products["activacion-express"] %}
                   {% assign multisim = all_products["multi-sim"] %}
+                  {% assign soporte = all_products["servicio-premium-de-soporte"] %}
                   
 
                   {% if add_on == 'Bonus Keio Energy' %}
@@ -115,6 +118,9 @@
                   {% endif %}
                   {% if add_on == 'Multi-SIM' %}
                     (+{{ multisim.price | money }})
+                  {% endif %}
+                  {% if add_on == 'Servicio Premium de Soporte' %}
+                    (+{{ soporte.price | money }})
                   {% endif %}
 
                 </div>

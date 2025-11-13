@@ -23,7 +23,7 @@
                   <div class="main-custom-pack-card__content">
                     <div class="main-custom-pack-card__content--switcher action-js-switcher">
                       <button class="active" rel-price="9900">600 Mb</button>
-                      <button rel-price="12000">1 Gb</button>
+                      <button rel-price="18900">1 Gb</button>
                     </div>
                   </div>
                   <div class="main-custom-pack-card__pricing">
@@ -41,10 +41,8 @@
                   <div class="main-custom-pack-card__content">
                     <div class="main-custom-pack-card__content--select">
                       <select name="options" id="options">
-                        <option value="">600 Mb</option>
-                        <option value="">600 Mb</option>
-                        <option value="">600 Mb</option>
-                        <option value="">600 Mb</option>
+                        <option value="9900">600 Mb</option>
+                        <option value="18900">1 Gb</option>
                       </select>
                     </div>
                   </div>
@@ -367,6 +365,7 @@
 
       $('.add-fibra-secondary input[type="checkbox"]').on('change', function() {
         if ($(this).is(':checked')) {
+          console.log("Price this", $(this) )
           packInfo[0].items.push({
             name: "Fibra Secundaria",
             price: 9900
@@ -542,6 +541,7 @@
       });
 
       $('#modal-coberturer .main-custom-button').on('click', function() {
+        localStorage.removeItem('coberturer')
         const street = $('#street-field').val() // AVENIDA 12 DE OCTUBRE
         const number = $('#number-field').val()
         const zipcode = $('#zipcode-field').val() // 30600
@@ -593,11 +593,13 @@
             $('#modal-coberturer .main-toast-success').addClass('active')
             $('#modal-coberturer .main-toast-error').removeClass('active')
             $('.main-modal__content--inner__actions').removeClass('loading')
+            localStorage.setItem('coberturer', 'true')
           } else {
             $('#modal-coberturer .main-toast-error span').html('Por ahora no hay cobertura en tu dirección. Guardaremos tus datos y te avisaremos cuando esté disponible')
             $('#modal-coberturer .main-toast-success').removeClass('active')
             $('#modal-coberturer .main-toast-error').addClass('active')
             $('.main-modal__content--inner__actions').removeClass('loading')
+            localStorage.removeItem('coberturer')
           }
         });
         // -----

@@ -467,6 +467,11 @@
         }, 800);
       });
 
+      $('.product-form__buttons--sim-selector__options--item').on('click', function() {
+        $('.product-form__buttons--sim-selector__options--item').removeClass('active')
+        $(this).addClass('active')
+      });
+
 
       if ($(window).width() < 1024) {
         $('.main-custom-categories__container').slick({
@@ -518,10 +523,17 @@
       $('.product-form__buttons .product-form__submit_v2').on('click', function (event) {
         event.preventDefault();
         const variantSelect = document.querySelector('form[action="/cart/add"] [name="id"]').value;
+        let properties = {}
+
+        if (document.querySelector('.product-form__buttons--sim-selector__options--item.active')) {
+          properties['Tipo de SIM'] = document.querySelector('.product-form__buttons--sim-selector__options--item.active').innerHTML
+        }
+
         let addObj = [
           {
             id: variantSelect,
-            quantity: 1
+            quantity: 1,
+            properties: properties
           }
         ]
 

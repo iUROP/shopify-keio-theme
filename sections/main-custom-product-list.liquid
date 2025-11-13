@@ -1,24 +1,18 @@
   <section class="main-custom-product-list custom-section pl pr pb">
     <div class="main-custom-product-list__container">
-      {% assign product_10 = all_products["keio-movil-10-gb"] %}
-      {% assign product_30 = all_products["keio-movil-30-gb"] %}
-      {% assign product_60 = all_products["keio-movil-60-gb"] %}
-      {% assign product_unlimited = all_products["keio-movil-ilimitado"] %}
+
+      {% assign collection = section.settings.collection %}
 
       <div class="main-custom-product-list__container--row">
-        {% render 'custom-product-card' product: product_10 %}
-        {% render 'custom-product-card' product: product_30 %}
-        {% render 'custom-product-card' product: product_60 %}
-        {% render 'custom-product-card' product: product_unlimited %}
+        {% for product in collection.products limit: 4 %}
+          {% render 'custom-product-card' product: product %}
+        {% endfor %}
       </div>
-
-      {% comment %} <div class="main-custom-product-list__container--row">
-        {% render 'custom-product-card' product: product_fibra %}
-        {% render 'custom-product-card' product: product_calls %}
-        {% render 'custom-product-card' product: product_fibra %}
-        {% render 'custom-product-card' product: product_fibra %}
-      </div> {% endcomment %}
-
+      <div class="main-custom-product-list__container--row">
+        {% for product in collection.products limit: 4 offset: 4 %}
+          {% render 'custom-product-card' product: product %}
+        {% endfor %}
+      </div>
 
     </div>
   </section>

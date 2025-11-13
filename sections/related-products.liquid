@@ -32,12 +32,14 @@
         {{ section.settings.heading }}
       </h2>
       <ul
-        class="grid product-grid grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
+        class="grid product-grid best-sellers grid--{{ section.settings.columns_desktop }}-col-desktop grid--{{ section.settings.columns_mobile }}-col-tablet-down"
         role="list"
       >
-        {% for recommendation in recommendations.products %}
-          {% render 'custom-product-card' %}
+
+        {% for recommendation in collections['best-sellers'].products limit:4 %}
+          {% render 'custom-product-card' product: recommendation %}
         {% endfor %}
+
       </ul>
     {% endif %}
   </product-recommendations>
