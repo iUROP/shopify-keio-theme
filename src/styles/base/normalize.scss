@@ -692,6 +692,56 @@ html, body {
       line-height: 20px;
     }
   }
+
+  .main-custom-qty {
+    position: absolute;
+    top: 32px;
+    right: 23px;
+    width: 69px;
+    height: 24px;
+
+    span {
+      color: var(--Colors-1000, var(--Colors-1000, #000));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-S, 13px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    button {
+      display: flex;
+      width: 20px;
+      height: 20px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      aspect-ratio: 1/1;
+      position: absolute;
+      z-index: 2;
+      top: 0px;
+      border-radius: var(--Corner-Full, 10000px);
+      border: 1px solid var(--Colors-grey, #5C5E5C);
+      background: transparent;
+      cursor: pointer;
+
+      &.disabled {
+        cursor: no-drop;
+        opacity: 0.4;
+      }
+
+      &.less {
+        left: 0px;
+      }
+      &.more {
+        right: 0px;
+      }
+    }
+  }
 }
 
 .global-color-link {
