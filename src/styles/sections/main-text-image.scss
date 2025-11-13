@@ -11,7 +11,7 @@
     padding-bottom: 36px !important;
 
     .main-custom-button {
-      line-height: 39px;
+      line-height: 43px;
     }
   }
 
@@ -122,6 +122,15 @@
 
     @media only screen and (max-width: 1024px) {
       flex-direction: column;
+    }
+  }
+}
+
+.main-custom-reviews__body--actions {
+  @media only screen and (max-width: 1024px) {
+    .main-custom-button {
+        height: 40px !important;
+        padding: 11px 24px !important;
     }
   }
 }
