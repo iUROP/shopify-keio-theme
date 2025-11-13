@@ -334,3 +334,10 @@ document.addEventListener('click', function(event) {
   option.classList.toggle('active');
 });
 
+document.addEventListener('click', function(event) {
+  const mobileNav = event.target.closest('.main-custom-header__top--container__mobile-menu');
+
+  if (!mobileNav) return;
+  document.querySelector('body').classList.toggle('show-mobile-menu');
+});
+

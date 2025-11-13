@@ -9,6 +9,9 @@
   @media only screen and (max-width: 1500px) {
     height: 378px;
   }
+  @media only screen and (max-width: 1024px) {
+    height: auto;
+  }
 
   &--inner {
     display: flex;

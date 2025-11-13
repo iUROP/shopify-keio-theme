@@ -719,6 +719,7 @@ body.template-product {
         font-size: 25px;
         padding-left: 16px;
         padding-right: 16px;
+        margin-bottom: 0 !important;
       }
     }
 
@@ -730,6 +731,7 @@ body.template-product {
 
       @media only screen and (max-width: 1024px) {
         padding: 0 8px;
+        margin-top: 20px;
         .slick-slide {
           padding: 0 10px;
         }

@@ -9,6 +9,10 @@
   @media only screen and (max-width: 1024px) {
     padding-top: 36px !important;
     padding-bottom: 36px !important;
+
+    .main-custom-button {
+      line-height: 39px;
+    }
   }
 
   &--content {

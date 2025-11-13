@@ -1925,6 +1925,7 @@ i-minicart .i-minicart-container__overlay.open {
 @media only screen and (max-width: 1024px) {
   .main-custom-header {
     height: 56px;
+    z-index: 9;
   }
 }
 .main-custom-header__top {
@@ -1941,6 +1942,7 @@ i-minicart .i-minicart-container__overlay.open {
 @media only screen and (max-width: 1024px) {
   .main-custom-header__top {
     padding: var(--Space-400, 16px);
+    padding-bottom: 0;
   }
 }
 .main-custom-header__top--container {
@@ -1960,6 +1962,9 @@ i-minicart .i-minicart-container__overlay.open {
   .main-custom-header__top--container__logo {
     height: auto;
     width: 60px;
+    position: relative;
+    left: 46px;
+    top: -3px;
   }
 }
 .main-custom-header__top--container__logo a {
@@ -1973,6 +1978,10 @@ i-minicart .i-minicart-container__overlay.open {
     width: 100%;
     height: auto;
   }
+}
+.main-custom-header__top--container__mobile-menu {
+  position: absolute;
+  cursor: pointer;
 }
 .main-custom-header__top--container__icons {
   display: flex;
@@ -2001,7 +2010,13 @@ i-minicart .i-minicart-container__overlay.open {
 }
 @media only screen and (max-width: 1024px) {
   .main-custom-header__bottom {
-    display: none !important;
+    position: absolute;
+    z-index: 2;
+    bottom: auto;
+    top: 56px;
+    padding: 0px 16px;
+    height: auto;
+    display: none;
   }
 }
 .main-custom-header__bottom--container {
@@ -2010,12 +2025,27 @@ i-minicart .i-minicart-container__overlay.open {
   padding: 8px 0;
   align-items: center;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-header__bottom--container {
+    display: block;
+    max-height: 100% !important;
+    padding: 22px 0;
+  }
+}
 .main-custom-header__bottom--container__list {
   display: flex;
   align-items: flex-end;
   gap: 48px;
   margin: 0px;
   padding: 0px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-header__bottom--container__list {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 22px;
+    align-items: baseline;
+  }
 }
 .main-custom-header__bottom--container__list--item {
   display: flex;
@@ -2038,6 +2068,54 @@ i-minicart .i-minicart-container__overlay.open {
 }
 .main-custom-header__bottom--container__list--item.level-2 a {
   color: var(--Colors-500, var(--Colors-500, #931E31));
+}
+
+.float-whatsapp {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  z-index: 2;
+  animation: float 2s ease-in-out infinite;
+}
+@media only screen and (max-width: 1024px) {
+  .float-whatsapp {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+.float-whatsapp a {
+  display: block;
+  display: flex;
+  padding: var(--Space-600, 24px);
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--Space-400, 16px);
+  border-radius: var(--Corner-Extra-large, 28px);
+  background: var(--Colors-500, #931E31);
+}
+@media only screen and (max-width: 1024px) {
+  .float-whatsapp a {
+    padding: var(--Space-600, 20px);
+  }
+  .float-whatsapp a svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-8px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+body.show-mobile-menu .main-custom-header__bottom {
+  display: block !important;
 }
 
 .main-custom-footer {
@@ -2524,6 +2602,9 @@ i-minicart .i-minicart-container__overlay.open {
   .main-custom-text-image {
     padding-top: 36px !important;
     padding-bottom: 36px !important;
+  }
+  .main-custom-text-image .main-custom-button {
+    line-height: 39px;
   }
 }
 .main-custom-text-image--content {
@@ -5870,6 +5951,7 @@ body.template-product .related-products .related-products__heading {
     font-size: 25px;
     padding-left: 16px;
     padding-right: 16px;
+    margin-bottom: 0 !important;
   }
 }
 body.template-product .related-products .product-grid {
@@ -5881,6 +5963,7 @@ body.template-product .related-products .product-grid {
 @media only screen and (max-width: 1024px) {
   body.template-product .related-products .product-grid {
     padding: 0 8px;
+    margin-top: 20px;
   }
   body.template-product .related-products .product-grid .slick-slide {
     padding: 0 10px;
@@ -5929,6 +6012,11 @@ body.template-page-bundles .section-i-footer .main-custom-footer::before {
 @media only screen and (max-width: 1500px) {
   .main-custom-product-card {
     height: 378px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-product-card {
+    height: auto;
   }
 }
 .main-custom-product-card--inner {
