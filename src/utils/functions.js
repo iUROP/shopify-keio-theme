@@ -341,3 +341,11 @@ document.addEventListener('click', function(event) {
   document.querySelector('body').classList.toggle('show-mobile-menu');
 });
 
+document.addEventListener('click', function(event) {
+  const option = event.target.closest('.product-form__buttons--sim-selector');
+
+  if (!option) return;
+  option.classList.toggle('active');
+});
+
+

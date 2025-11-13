@@ -238,8 +238,12 @@
                       {% render 'i-icon' name: 'plus' %}
                     </summary>
                     <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                      {{ block.settings.content }}
-                      {{ block.settings.page.content }}
+                      {% if block.settings.content contains 'caracteristicas' %}
+                        {{ product.metafields.custom.caracteristicas | metafield_tag }}
+                      {% else %}
+                        {{ block.settings.content }}
+                        {{ block.settings.page.content }}
+                      {% endif %}
                     </div>
                   </details>
                 </div>
