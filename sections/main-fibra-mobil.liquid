@@ -88,8 +88,8 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options2">Cobertura</label>
-                      <select name="options2" id="options2">
+                      <label for="movilIlimitado">Cobertura</label>
+                      <select name="movilIlimitado" id="movilIlimitado">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
@@ -103,7 +103,7 @@
                     </div>
                   </div>
                   <div class="main-custom-pack-card__pricing">
-                    <div>99,00<span>€/año</span></div>
+                    <div>0,00<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -127,8 +127,8 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options2">Cobertura</label>
-                      <select name="options2" id="options2">
+                      <label for="gb10">Cobertura</label>
+                      <select name="gb10" id="gb10">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
@@ -142,8 +142,8 @@
                     </div>
                   </div>
                   <div class="main-custom-pack-card__pricing">
-                    <div class="listPrice">99,00<span>€/año</span></div>
-                    <div class="bestPrice">99,00<span>€/año</span></div>
+                    <div class="listPrice">0,00<span>€/año</span></div>
+                    <div class="bestPrice">0,00<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -167,8 +167,8 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options2">Cobertura</label>
-                      <select name="options2" id="options2">
+                      <label for="gb15">Cobertura</label>
+                      <select name="gb15" id="gb15">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
@@ -182,8 +182,8 @@
                     </div>
                   </div>
                   <div class="main-custom-pack-card__pricing">
-                    <div class="listPrice">99,00<span>€/año</span></div>
-                    <div class="bestPrice">99,00<span>€/año</span></div>
+                    <div class="listPrice">0,00<span>€/año</span></div>
+                    <div class="bestPrice">0,00<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -207,8 +207,8 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options2">Cobertura</label>
-                      <select name="options2" id="options2">
+                      <label for="bg30">Cobertura</label>
+                      <select name="bg30" id="bg30">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
@@ -222,8 +222,8 @@
                     </div>
                   </div>
                   <div class="main-custom-pack-card__pricing">
-                    <div class="listPrice">99,00<span>€/año</span></div>
-                    <div class="bestPrice">99,00<span>€/año</span></div>
+                    <div class="listPrice">0,00<span>€/año</span></div>
+                    <div class="bestPrice">0,00<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -247,8 +247,8 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options2">Cobertura</label>
-                      <select name="options2" id="options2">
+                      <label for="gb60">Cobertura</label>
+                      <select name="gb60" id="gb60">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
@@ -262,8 +262,8 @@
                     </div>
                   </div>
                   <div class="main-custom-pack-card__pricing">
-                    <div class="listPrice">99,00<span>€/año</span></div>
-                    <div class="bestPrice">99,00<span>€/año</span></div>
+                    <div class="listPrice">0,00<span>€/año</span></div>
+                    <div class="bestPrice">0,00<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -415,7 +415,7 @@
               htmLInsert += `
                 <div>
                   <span>${plan.name}</span>
-                  <span>${plan.price}€</span>
+                  <span>${formatEuro(plan.price / 100)}€</span>
                 </div>
               `
             }
@@ -448,12 +448,87 @@
           if (
             Number(movilCard.querySelector('.main-custom-qty span').innerHTML) > 0
           ) {
-            console.log(movilCard);
-          }
+            const name = movilCard.querySelector('.main-custom-pack-card__heading').innerText.replace('\n1','').replace('\n2', '').replace('\n3', '')
+            const option1 = movilCard.querySelectorAll('.main-custom-pack-card__content--select')[0].querySelector('select').value
+            const option2 = movilCard.querySelectorAll('.main-custom-pack-card__content--select')[1].querySelector('select').value
+
+            let price = 0
+            let variant = 0
+
+            if (name == 'Datos ilimitados') {
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 8990; variant = 55890184667467}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 10980; variant = 55890184733003}
+              // ---
+              if (option1 == 'orange' && option2 == 'portabilidad') {price = 8990; variant = 55890184700235}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 10980; variant = 55890184765771}
+            }
+            if (name == '10 Gb') {
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 1990; variant = 55889672143179}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 3980; variant = 55889672208715}
+              // ---
+              if (option1 == 'orange' && option2 == 'portabilidad') {price = 1990; variant = 55889672175947}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 3980; variant = 55889672241483}
+            }
+            if (name == '15 Gb') {
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 2990; variant = 55890181095755}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 3980; variant = 55890181161291}
+              // ---
+              if (option1 == 'orange' && option2 == 'portabilidad') {price = 2990; variant = 55890181128523}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 3980; variant = 55890181194059}
+            }
+            if (name == '30 Gb') {
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 3990; variant = 55890182963531}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 5980; variant = 55890183029067}
+              // ---
+              if (option1 == 'orange' && option2 == 'portabilidad') {price = 3990; variant = 55890182996299}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 5980; variant = 55890183061835}
+            }
+            if (name == '60 Gb') {
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 5990; variant = 55890183684427}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 7980; variant = 55890183749963}
+              // ---
+              if (option1 == 'orange' && option2 == 'portabilidad') {price = 5990; variant = 55890183717195}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 7980; variant = 55890183782731}
+            }
+
+            arr.push(
+              {
+                "name": name,
+                "price": price,
+                "variant": variant
+              }
+            )
+            
+
+          } // end if
           
+        } // end for
+
+
+        if (arr.length > 0) {
+          const exist = packInfo.find((item) => item.title == 'Móvil')
+          const index = packInfo.findIndex(item => item.title === 'Móvil');
+
+          if (exist) {
+            packInfo[index].items = arr
+          } else {
+            packInfo.push(
+              {
+                title: "Móvil",
+                items: arr
+              }
+            )
+          }
+
+
+          updateTotalizer(packInfo);
+        } else {
+          const newPackInfo = packInfo.filter(item => item.title !== "Móvil");
+          updateTotalizer(newPackInfo);
         }
 
-
+        console.log("arr", arr)
+        
       }
       
 
@@ -464,6 +539,13 @@
         const prev = packInfo
         const newPrice = $(this).attr('rel-price')
         packInfo[0].items[0].price = Number(newPrice)
+
+        $(this).closest('.main-custom-pack-card').find('.main-custom-pack-card__pricing').html(
+          `
+            <div>${formatEuro(Number(newPrice) / 100)}<span>€/año</span></div>
+          `
+        )
+
         updateTotalizer(packInfo)
       });
 

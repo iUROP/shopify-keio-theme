@@ -1054,6 +1054,12 @@ html .main-custom-qty, body .main-custom-qty {
   width: 69px;
   height: 24px;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-custom-qty, body .main-custom-qty {
+    top: 28px;
+    right: 16px;
+  }
+}
 html .main-custom-qty span, body .main-custom-qty span {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   font-family: var(--Family-Font---Body, Nohemi);
