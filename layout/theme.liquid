@@ -501,16 +501,20 @@
           infinite: false
         });
 
-        setTimeout(function() {
-          $('.related-products .product-grid').slick({
-            slidesToShow: 1.1,
-            slidesToScroll: 1,
-            dots: false,
-            arrows: true,
-            centerMode: false,
-            infinite: false
-          });
-        }, 2000);
+
+
+        setInterval(function() {
+          if (!document.querySelector('.related-products .product-grid.slick-initialized')) {
+            $('.related-products .product-grid').slick({
+              slidesToShow: 1.1,
+              slidesToScroll: 1,
+              dots: false,
+              arrows: true,
+              centerMode: false,
+              infinite: false
+            });
+          }
+        }, 1000);
       }
       
       
