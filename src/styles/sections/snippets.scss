@@ -1,13 +1,13 @@
 .main-custom-product-card {
   position: relative;
   display: flex;
-  height: 472px;
+  height: 480px;
   align-items: center;
   gap: 10px;
   width: 25%;
 
   @media only screen and (max-width: 1500px) {
-    height: 378px;
+    height: 380px;
   }
   @media only screen and (max-width: 1024px) {
     height: auto;
@@ -129,7 +129,7 @@
       & > div {
         color: var(--Colors-1000, var(--Colors-1000, #000));
         font-family: var(--Family-Font, Nohemi);
-        font-size: var(--Typo-H3, 31px);
+        font-size: var(--Typo-H3, 25px);
         font-style: normal;
         font-weight: 400;
         line-height: normal;

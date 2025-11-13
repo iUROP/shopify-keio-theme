@@ -13,6 +13,61 @@
     gap: var(--Space-800, 46px);
     align-self: stretch;
 
+    @media only screen and (max-width: 1024px) {
+      gap: 12px;
+    }
+
+    &--filter {
+      display: inline-flex;
+      padding: var(--Space-150, 6px);
+      align-items: center;
+      gap: var(--Space-300, 12px);
+      border-radius: var(--Corner-Full, 10000px);
+      background: var(--Colors-100, #FAFAFA);
+      margin: 0 auto;
+      margin-bottom: 26px;
+
+      @media only screen and (max-width: 1024px) {
+        padding: 5px;
+        gap: 6px;
+        margin-bottom: 18px;
+      }
+
+      button {
+        display: flex;
+        height: var(--sds-size-icon-large);
+        max-width: var(--Buttons-D-MaxW, 300px);
+        padding: var(--Space-400, 8px) var(--Space-800, 32px);
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: var(--Corner-Full, 10000px);
+        color: var(--Colors-500, var(--Colors-500, #931E31));
+        font-family: var(--Family-Font---Body, Nohemi);
+        font-size: var(--Typo-Body-M, 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        background: transparent;
+        border: 0px;
+        cursor: pointer;
+        border: var(--Strokes-Medium, 2px) solid transparent;
+
+        @media only screen and (max-width: 1024px) {
+          padding: 5px 10px;
+          font-size: 12px;
+          line-height: 18px;
+        }
+
+        &.active {
+          border-radius: var(--Corner-Full, 10000px);
+          border: var(--Strokes-Medium, 2px) solid var(--Colors-500, #931E31);
+          background: var(--Colors-500, #931E31);
+          color: #fff;
+        }
+      }
+    }
+
     &--row {
       display: flex;
       justify-content: flex-start;
@@ -27,6 +82,23 @@
 
       .main-custom-product-card {
         position: relative;
+        margin-bottom: 30px;
+        width: calc(25% - 18px);
+      }
+
+      &.fibra,
+      &.movil,
+      &.fibra-y-movil,
+      &.best {
+        flex-wrap: wrap;
+        display: none;
+        .main-custom-product-card {
+          width: calc(25% - 18px);
+        }
+
+        &.active {
+          display: flex;
+        }
       }
     }
   }

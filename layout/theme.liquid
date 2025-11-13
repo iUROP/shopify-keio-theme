@@ -472,6 +472,11 @@
         $(this).addClass('active')
       });
 
+      $('.shopify_subscriptions_app_block_label').on('click', function() {
+        $('.shopify_subscriptions_app_block_label').removeClass('active')
+        $(this).addClass('active')
+      });
+
 
       if ($(window).width() < 1024) {
         $('.main-custom-categories__container').slick({

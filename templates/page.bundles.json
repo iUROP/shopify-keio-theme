@@ -40,7 +40,8 @@
       "type": "main-custom-product-list",
       "name": "main-custom-product-list",
       "settings": {
-        "collection": "shop"
+        "collection": "shop",
+        "show_navigation": true
       }
     },
     "main_custom_simple_banner_4yPkVT": {

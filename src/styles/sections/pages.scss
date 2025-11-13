@@ -415,7 +415,7 @@ body.template-product {
           border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
           background: var(--Colors-100, #FAFAFA);
           display: flex;
-          height: 64px;
+          height: 50px;
           padding: var(--Space-600, 24px) var(--Space-800, 32px);
           flex-direction: column;
           justify-content: center;
@@ -458,7 +458,7 @@ body.template-product {
             background: var(--Colors-100, #FAFAFA);
             display: flex;
             height: 50px;
-            padding: var(--Space-600, 20px) var(--Space-800, 32px);
+            padding: var(--Space-600, 15px) var(--Space-800, 32px);
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
@@ -489,8 +489,8 @@ body.template-product {
             border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
             background: var(--Colors-100, #FAFAFA);
             display: flex;
-            height: 64px;
-            padding: var(--Space-600, 20px) var(--Space-800, 32px);
+            height: 50px;
+            padding: var(--Space-600, 15px) var(--Space-800, 32px);
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
@@ -503,9 +503,22 @@ body.template-product {
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
-            padding-left: 54px;
+            padding-left: 60px;
             text-align: left;
             display: none;
+            position: relative;
+
+            &:before {
+              content: '';
+              width: 17px;
+              height: 17px;
+              aspect-ratio: 1/1;
+              border: 1px solid #931E31;
+              left: 30px;
+              top: 17px;
+              position: absolute;
+              z-index: 1;
+            }
 
             strong {
               display: none;
@@ -523,8 +536,18 @@ body.template-product {
         }
 
         .product-form__input--pill input[type=radio]:checked+label {
-          background: var(--Colors-100, #f3f3f3);
-          border: 1px solid #cdcdcd;
+
+          &:after {
+            content: "";
+            width: 11px;
+            height: 11px;
+            aspect-ratio: 1 / 1;
+            background-color: #931e31;
+            left: 33px;
+            top: 20px;
+            position: absolute;
+            border-radius: 20px;
+          }
         }
       }
       .product-form__buttons--sim-selector {
@@ -534,7 +557,7 @@ body.template-product {
           background: var(--Colors-100, #FAFAFA);
           display: flex;
           height: 50px;
-          padding: var(--Space-600, 20px) var(--Space-800, 32px);
+          padding: var(--Space-600, 15px) var(--Space-800, 32px);
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
@@ -576,8 +599,8 @@ body.template-product {
             border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
             background: var(--Colors-100, #FAFAFA);
             display: flex;
-            height: 64px;
-            padding: var(--Space-600, 20px) var(--Space-800, 32px);
+            height: 50px;
+            padding: var(--Space-600, 15px) var(--Space-800, 32px);
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
@@ -590,13 +613,37 @@ body.template-product {
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
-            padding-left: 54px;
+            padding-left: 60px;
             text-align: left;
             margin-bottom: 8px;
             cursor: pointer;
+            position: relative;
+
+            &:before {
+              content: '';
+              width: 17px;
+              height: 17px;
+              aspect-ratio: 1/1;
+              border: 1px solid #931E31;
+              left: 30px;
+              top: 14px;
+              position: absolute;
+              z-index: 1;
+              border-radius: 30px;
+            }
+
             &.active {
-              background: var(--Colors-100, #f3f3f3);
-              border: 1px solid #cdcdcd;
+              &:after {
+                content: "";
+                width: 11px;
+                height: 11px;
+                aspect-ratio: 1 / 1;
+                background-color: #931e31;
+                left: 33px;
+                top: 17px;
+                position: absolute;
+                border-radius: 20px;
+              }
             }
           }
         }
@@ -705,7 +752,7 @@ body.template-product {
           background: var(--Colors-100, #FAFAFA);
           display: flex;
           height: 50px;
-          padding: var(--Space-600, 20px) var(--Space-800, 32px);
+          padding: var(--Space-600, 15px) var(--Space-800, 32px);
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
@@ -744,8 +791,8 @@ body.template-product {
           border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
           background: var(--Colors-100, #FAFAFA);
           display: flex;
-          height: 64px;
-          padding: var(--Space-600, 20px) var(--Space-800, 32px);
+          height: 50px;
+          padding: var(--Space-600, 15px) var(--Space-800, 32px);
           flex-direction: column;
           justify-content: center;
           align-items: flex-start;
@@ -758,11 +805,40 @@ body.template-product {
           font-style: normal;
           font-weight: 400;
           line-height: 24px;
-          padding-left: 54px;
+          padding-left: 60px;
           text-align: left;
           margin-bottom: 8px;
           display: none;
           cursor: pointer;
+          position: relative;
+
+          &:before {
+            content: '';
+            width: 17px;
+            height: 17px;
+            aspect-ratio: 1/1;
+            border: 1px solid #931E31;
+            left: 30px;
+            top: 13px;
+            position: absolute;
+            z-index: 1;
+            border-radius: 30px;
+          }
+
+          &.active {
+            &:after {
+              content: "";
+              width: 11px;
+              height: 11px;
+              aspect-ratio: 1 / 1;
+              background-color: #931e31;
+              left: 33px;
+              top: 16px;
+              position: absolute;
+              border-radius: 20px;
+            }
+          }
+
           .allocation_price {
             display: none !important;
           }

@@ -347,3 +347,4 @@ document.addEventListener('click', function(event) {
   if (!option) return;
   option.classList.toggle('active');
 });
+

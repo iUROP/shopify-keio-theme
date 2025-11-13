@@ -1,21 +1,112 @@
-  <section class="main-custom-product-list custom-section pl pr pb">
+<section class="main-custom-product-list custom-section pl pr pb">
     <div class="main-custom-product-list__container">
 
-      {% assign collection = section.settings.collection %}
+      {% if section.settings.show_navigation %}
 
-      <div class="main-custom-product-list__container--row">
-        {% for product in collection.products limit: 4 %}
-          {% render 'custom-product-card' product: product %}
-        {% endfor %}
-      </div>
-      <div class="main-custom-product-list__container--row">
-        {% for product in collection.products limit: 4 offset: 4 %}
-          {% render 'custom-product-card' product: product %}
-        {% endfor %}
-      </div>
+        {% assign collection_fibra = collections['fibra'] %}
+        {% assign collection_movil = collections['movil'] %}
+        {% assign collection_fibra_y_movil = collections['fibra-y-movil'] %}
+        {% assign collection_best = collections['best-sellers'] %}
+
+        <div class="main-custom-product-list__container--filter">
+          <button class="fibra-btn active">Fibra</button>
+          <button class="movil-btn">Móvil</button>
+          <button class="packs-btn">Packs combinados</button>
+          <button class="best-btn">Best sellers</button>
+        </div>
+
+        <div class="main-custom-product-list__container--row fibra active">
+          {% for product in collection_fibra.products %}
+            {% render 'custom-product-card' product: product %}
+          {% endfor %}
+        </div>
+        <div class="main-custom-product-list__container--row movil">
+          {% for product in collection_movil.products %}
+            {% render 'custom-product-card' product: product %}
+          {% endfor %}
+        </div>
+        <div class="main-custom-product-list__container--row fibra-y-movil">
+          {% for product in collection_fibra_y_movil.products %}
+            {% render 'custom-product-card' product: product %}
+          {% endfor %}
+        </div>
+        <div class="main-custom-product-list__container--row best">
+          {% for product in collection_best.products %}
+            {% render 'custom-product-card' product: product %}
+          {% endfor %}
+        </div>
+
+      {% else %}
+
+        {% assign collection = section.settings.collection %}
+        <div class="main-custom-product-list__container--row">
+          {% for product in collection.products limit: 4 %}
+            {% render 'custom-product-card' product: product %}
+          {% endfor %}
+        </div>
+        <div class="main-custom-product-list__container--row">
+          {% for product in collection.products limit: 4 offset: 4 %}
+            {% render 'custom-product-card' product: product %}
+          {% endfor %}
+        </div>
+
+      {% endif %}
 
     </div>
-  </section>
+</section>
+
+<script>
+  $( window ).on( "ready", function() {
+    $('.main-custom-product-list__container--filter button').on('click', function() {
+        $('.main-custom-product-list__container--filter button').removeClass('active')
+        $('.main-custom-product-list__container--row').removeClass('active')
+        $(this).addClass('active')
+
+        if ($(this).html() == 'Fibra') {
+          $('.main-custom-product-list__container--row.fibra').addClass('active')
+        }
+        if ($(this).html() == 'Móvil') {
+          $('.main-custom-product-list__container--row.movil').addClass('active')
+        }
+        if ($(this).html() == 'Packs combinados') {
+          $('.main-custom-product-list__container--row.fibra-y-movil').addClass('active')
+        }
+        if ($(this).html() == 'Best sellers') {
+          $('.main-custom-product-list__container--row.best').addClass('active')
+        }
+    });
+
+
+    const params = new URLSearchParams(window.location.search);
+    const filter = params.get('filter');
+
+    if (filter == 'fibra') {
+      $('.main-custom-product-list__container--filter button').removeClass('active')
+      $('.main-custom-product-list__container--row').removeClass('active')
+      
+      $('.main-custom-product-list__container--filter button.fibra-btn').click()
+    }
+    if (filter == 'movil') {
+      $('.main-custom-product-list__container--filter button').removeClass('active')
+      $('.main-custom-product-list__container--row').removeClass('active')
+
+      $('.main-custom-product-list__container--filter button.movil-btn').click()
+    }
+    if (filter == 'packs') {
+      $('.main-custom-product-list__container--filter button').removeClass('active')
+      $('.main-custom-product-list__container--row').removeClass('active')
+
+      $('.main-custom-product-list__container--filter button.packs-btn').click()
+    }
+    if (filter == 'best') {
+      $('.main-custom-product-list__container--filter button').removeClass('active')
+      $('.main-custom-product-list__container--row').removeClass('active')
+      
+      $('.main-custom-product-list__container--filter button.best-btn').click()
+    }
+
+  });
+</script>
 
 {% schema %}
 {
@@ -27,7 +118,13 @@
       "id": "collection",
       "type": "collection",
       "label": "Colección"
-    }
+    },
+    {
+      "type": "checkbox",
+      "id": "show_navigation",
+      "default": false,
+      "label": "Mostrar filtrador"
+    },
   ],
   "presets": [
     {
