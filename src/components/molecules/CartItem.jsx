@@ -33,7 +33,7 @@ function CartItem({
     setItemUpdating(false)
   }
 
-  const addonsVariants = [55889944969547, 55889939890507, 55889935270219, 55889933173067]
+  const addonsVariants = [55889944969547, 55889939890507, 55889935270219, 55889933173067, 55901036544331]
   
   return (
     <div className={`i-cart-item ${itemUpdating ? 'loading' : ''} ${addonsVariants.includes(product.variant_id) ? 'is-add-on' : ''}`}>
