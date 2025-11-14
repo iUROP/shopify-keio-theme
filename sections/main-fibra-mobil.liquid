@@ -574,12 +574,15 @@
 
           const addons = JSON.parse(itemMobile.getAttribute('rel-addons'))
           addons.forEach(variantId => {
-            map.push(
-              {
-                id: variantId,
-                quantity: 1
-              }
-            )
+            let obj = {
+              id: variantId,
+              quantity: 1
+            }
+            if (Number(variantId) == 55889933173067) {
+              obj['selling_plan'] = 690050466123
+            }
+            
+            map.push(obj)
           });
 
 

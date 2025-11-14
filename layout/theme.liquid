@@ -564,12 +564,15 @@
         ).map(el => el.getAttribute('rel-variant'));
 
         activeVariants.forEach(variantId => {
-          addObj.push(
-            {
-              id: variantId,
-              quantity: 1
-            }
-          )
+          let obj = {
+            id: variantId,
+            quantity: 1
+          }
+          if (Number(variantId) == 55889933173067) {
+            obj['selling_plan'] = 690050433355
+          }
+
+          addObj.push(obj)
         });
 
         console.log("agregar por click", addObj)
