@@ -984,3 +984,15 @@ html, body {
     }
   }
 }
+
+@media only screen and (max-width: 1024px) {
+  .main-custom-hero--container .main-custom-button {
+    margin: 0 auto;
+    line-height: 41px !important;
+  }
+  .main-hero-title__banner--frame {
+    .main-custom-button {
+      line-height: 20px !important;
+    }
+  }
+}

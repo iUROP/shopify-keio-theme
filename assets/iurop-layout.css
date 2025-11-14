@@ -1323,6 +1323,15 @@ html .main-custom-qty button.more, body .main-custom-qty button.more {
   opacity: 1;
 }
 
+@media only screen and (max-width: 1024px) {
+  .main-custom-hero--container .main-custom-button {
+    margin: 0 auto;
+    line-height: 41px !important;
+  }
+  .main-hero-title__banner--frame .main-custom-button {
+    line-height: 20px !important;
+  }
+}
 .slow_ani {
   -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
