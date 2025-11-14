@@ -1049,7 +1049,7 @@ html .main-toast-error span, body .main-toast-error span {
 }
 html .main-custom-qty, body .main-custom-qty {
   position: absolute;
-  top: 32px;
+  top: 30px;
   right: 23px;
   width: 69px;
   height: 24px;
@@ -4163,10 +4163,15 @@ body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a:after {
 }
 .main-custom-bundler__pack--totals {
   display: flex;
-  width: 302px;
+  width: 370px;
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+}
+@media only screen and (max-width: 1400px) {
+  .main-custom-bundler__pack--totals {
+    width: 418px;
+  }
 }
 @media only screen and (max-width: 1024px) {
   .main-custom-bundler__pack--totals {
@@ -4321,6 +4326,11 @@ body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a:after {
 @media only screen and (max-width: 1600px) {
   .main-custom-pack-card {
     width: 31%;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .main-custom-pack-card {
+    width: 48%;
   }
 }
 @media only screen and (max-width: 1340px) {

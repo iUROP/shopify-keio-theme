@@ -18,12 +18,12 @@
               <div class="main-custom-bundler__pack--content__inner--row__content">
 
                 {% comment %} Card {% endcomment %}
-                <div class="main-custom-pack-card">
+                <div class="main-custom-pack-card fibra-1-card">
                   <div class="main-custom-pack-card__heading">Fibra Principal</div>
                   <div class="main-custom-pack-card__content">
                     <div class="main-custom-pack-card__content--switcher action-js-switcher">
-                      <button class="active" rel-price="9900">600 Mb</button>
-                      <button rel-price="18900">1 Gb</button>
+                      <button class="active" rel-price="9900" rel-variant="55896289149259">600 Mb</button>
+                      <button rel-price="18900" rel-variant="55896293802315">1 Gb</button>
                     </div>
                   </div>
                   <div class="main-custom-pack-card__pricing">
@@ -32,7 +32,7 @@
                 </div>
                 {% comment %} Card {% endcomment %}
                  {% comment %} Card {% endcomment %}
-                <div class="main-custom-pack-card">
+                <div class="main-custom-pack-card fibra-2-card">
                   <label class="custom-switch add-fibra-secondary">
                     <input type="checkbox">
                     <span class="custom-slider"></span>
@@ -40,15 +40,15 @@
                   <div class="main-custom-pack-card__heading">Fibra 2ª vivienda</div>
                   <div class="main-custom-pack-card__content">
                     <div class="main-custom-pack-card__content--select">
-                      <select name="options" id="options">
-                        <option value="9900">600 Mb</option>
-                        <option value="18900">1 Gb</option>
+                      <select name="secondaryFibra" id="secondaryFibra">
+                        <option value="4950" data-old="9900"  data-variant="55896289149259">600 Mb</option>
+                        <option value="9450" data-old="18900" data-variant="55896293802315">1 Gb</option>
                       </select>
                     </div>
                   </div>
                   <div class="main-custom-pack-card__pricing">
                     <div class="listPrice">99,00<span>€/año</span></div>
-                    <div class="bestPrice">99,00<span>€/año</span></div>
+                    <div class="bestPrice">49,50<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -88,15 +88,15 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="movilIlimitado">Cobertura</label>
-                      <select name="movilIlimitado" id="movilIlimitado">
+                      <label for="movilIlimitado_cobertura">Cobertura</label>
+                      <select name="movilIlimitado_cobertura" id="movilIlimitado_cobertura">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
                     </div>
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options3">Tipo de contratación</label>
-                      <select name="options3" id="options3">
+                      <label for="movilIlimitado_type">Tipo de contratación</label>
+                      <select name="movilIlimitado_type" id="movilIlimitado_type">
                         <option value="portabilidad">Portabilidad</option>
                         <option value="alta-nueva">Alta Nueva</option>
                       </select>
@@ -127,15 +127,15 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="gb10">Cobertura</label>
-                      <select name="gb10" id="gb10">
+                      <label for="gb10_cobertura">Cobertura</label>
+                      <select name="gb10_cobertura" id="gb10_cobertura">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
                     </div>
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options3">Tipo de contratación</label>
-                      <select name="options3" id="options3">
+                      <label for="gb10_type">Tipo de contratación</label>
+                      <select name="gb10_type" id="gb10_type">
                         <option value="portabilidad">Portabilidad</option>
                         <option value="alta-nueva">Alta Nueva</option>
                       </select>
@@ -167,15 +167,15 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="gb15">Cobertura</label>
-                      <select name="gb15" id="gb15">
+                      <label for="gb15_cobertura">Cobertura</label>
+                      <select name="gb15_cobertura" id="gb15_cobertura">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
                     </div>
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options3">Tipo de contratación</label>
-                      <select name="options3" id="options3">
+                      <label for="gb15_type">Tipo de contratación</label>
+                      <select name="gb15_type" id="gb15_type">
                         <option value="portabilidad">Portabilidad</option>
                         <option value="alta-nueva">Alta Nueva</option>
                       </select>
@@ -207,15 +207,15 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="bg30">Cobertura</label>
-                      <select name="bg30" id="bg30">
+                      <label for="bg30_cobertura">Cobertura</label>
+                      <select name="bg30_cobertura" id="bg30_cobertura">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
                     </div>
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options3">Tipo de contratación</label>
-                      <select name="options3" id="options3">
+                      <label for="bg30_type">Tipo de contratación</label>
+                      <select name="bg30_type" id="bg30_type">
                         <option value="portabilidad">Portabilidad</option>
                         <option value="alta-nueva">Alta Nueva</option>
                       </select>
@@ -247,15 +247,15 @@
                   </div>
                   <div class="main-custom-pack-card__content column-r">
                     <div class="main-custom-pack-card__content--select">
-                      <label for="gb60">Cobertura</label>
-                      <select name="gb60" id="gb60">
+                      <label for="gb60_cobertura">Cobertura</label>
+                      <select name="gb60_cobertura" id="gb60_cobertura">
                         <option value="vodafone">Vodafone</option>
                         <option value="orange">Orange</option>
                       </select>
                     </div>
                     <div class="main-custom-pack-card__content--select">
-                      <label for="options3">Tipo de contratación</label>
-                      <select name="options3" id="options3">
+                      <label for="gb60_type">Tipo de contratación</label>
+                      <select name="gb60_type" id="gb60_type">
                         <option value="portabilidad">Portabilidad</option>
                         <option value="alta-nueva">Alta Nueva</option>
                       </select>
@@ -284,7 +284,7 @@
               <div class="main-custom-bundler__pack--content__inner--row__content">
 
                 {% comment %} Card {% endcomment %}
-                <div class="main-custom-pack-card">
+                <div class="main-custom-pack-card energy-card">
                   <label class="custom-switch">
                     <input type="checkbox">
                     <span class="custom-slider"></span>
@@ -347,7 +347,7 @@
               </div>
             </div>
             <div class="main-custom-bundler__pack--totals__inner--bulker">
-              <button class="main-custom-button">Lo quiero</button>
+              <button id="bulker" class="main-custom-button">Lo quiero</button>
             </div>
           </div>
         </div>
@@ -374,7 +374,9 @@
           items: [
             {
               name: "Fibra Principal",
-              price: 9900
+              price: 9900,
+              variant: 55896289149259,
+              qty: 1
             }
           ]
         }
@@ -413,9 +415,9 @@
             for (let i = 0; i < item.items.length; i++) {
               const plan = item.items[i]
               htmLInsert += `
-                <div>
-                  <span>${plan.name}</span>
-                  <span>${formatEuro(plan.price / 100)}€</span>
+                <div class="item-movil" rel-variant="${plan.variant}" rel-qty="${plan.qty}">
+                  <span>${plan.name} x${plan.qty}</span>
+                  <span>${formatEuro((plan.price * plan.qty) / 100)}€</span>
                 </div>
               `
             }
@@ -436,7 +438,6 @@
       }
       updateTotalizer(packInfo);
 
-
       function updateTotalizerFromFibraHTML() {
         console.log("Update totalizer from fibra html")
         const movilCards = document.querySelectorAll('.main-custom-pack-card.card-movil')
@@ -454,6 +455,7 @@
 
             let price = 0
             let variant = 0
+            let qty = 0
 
             if (name == 'Datos ilimitados') {
               if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 8990; variant = 55890184667467}
@@ -491,11 +493,14 @@
               if (option1 == 'orange' && option2 == 'alta-nueva') {price = 7980; variant = 55890183782731}
             }
 
+            qty = Number(movilCard.querySelector('.main-custom-pack-card__heading .main-custom-qty span').innerHTML)
+
             arr.push(
               {
                 "name": name,
                 "price": price,
-                "variant": variant
+                "variant": variant,
+                "qty": qty
               }
             )
             
@@ -503,7 +508,6 @@
           } // end if
           
         } // end for
-
 
         if (arr.length > 0) {
           const exist = packInfo.find((item) => item.title == 'Móvil')
@@ -525,12 +529,8 @@
         } else {
           const newPackInfo = packInfo.filter(item => item.title !== "Móvil");
           updateTotalizer(newPackInfo);
-        }
-
-        console.log("arr", arr)
-        
+        }       
       }
-      
 
       $('.action-js-switcher button').on('click', function() {
         $(this).siblings().removeClass('active')
@@ -542,26 +542,25 @@
 
         $(this).closest('.main-custom-pack-card').find('.main-custom-pack-card__pricing').html(
           `
-            <div>${formatEuro(Number(newPrice) / 100)}<span>€/año</span></div>
+            ${formatEuro(Number(newPrice) / 100)}<span>€/año</span>
           `
         )
-
         updateTotalizer(packInfo)
       });
 
       $('.add-fibra-secondary input[type="checkbox"]').on('change', function() {
         if ($(this).is(':checked')) {
-          console.log("Price this", $(this) )
+          const getPrice = $(this).closest('.main-custom-pack-card').find('.bestPrice').html().replace('<span>€/año</span>','').replace('&gt;','').replace(',','') 
+
           packInfo[0].items.push({
             name: "Fibra Secundaria",
-            price: 9900
+            price: Number(getPrice)
           })
         } else {
           packInfo[0].items = packInfo[0].items.filter(item => item.name !== "Fibra Secundaria")
         }
         updateTotalizer(packInfo)
       })
-
 
       $('.main-custom-qty button.more').on('click', function() {
         const current = $(this).closest('.main-custom-qty').find('span').html()
@@ -594,6 +593,68 @@
 
         updateTotalizerFromFibraHTML()
       });
+
+      $('.main-custom-pack-card.card-movil .main-custom-pack-card__content--select select').on('change', function() {
+        updateTotalizerFromFibraHTML()
+      });
+
+      $('#secondaryFibra').on('change', function() {
+        let option = $(this).find('option:selected');
+        let oldPrice = option.data('old');
+
+        $('.main-custom-pack-card__pricing .listPrice').html(`${formatEuro(Number(oldPrice) / 100)}<span>€/año</span>`)
+        $('.main-custom-pack-card__pricing .bestPrice').html(`${formatEuro(Number($(this).val()) / 100)}<span>€/año</span>`)
+
+        const getPrice = $(this).closest('.main-custom-pack-card').find('.bestPrice').html().replace('<span>€/año</span>','').replace('&gt;','').replace(',','') 
+        const secondaryFibra = packInfo[0].items.find((item) => item.name == 'Fibra Secundaria')
+        const secondaryFibraIndex = packInfo[0].items.findIndex(item => item.name === 'Fibra Secundaria');
+        packInfo[0].items[secondaryFibraIndex].price = Number(getPrice)
+
+        updateTotalizer(packInfo)
+      });
+
+      $('#bulker').on('click', function() {
+        const map = []
+
+        const fibra1 = document.querySelector('.fibra-1-card .main-custom-pack-card__content--switcher button.active').getAttribute('rel-variant')
+        console.log("fibra1", fibra1)
+
+        map.push({id: Number(fibra1), quantity: 1, selling_plan: 690050466123})
+
+        if (document.querySelector('.add-fibra-secondary input').checked) {
+          const fibra2_content = document.querySelector('#secondaryFibra')
+          const fibra2_option = fibra2_content.options[fibra2_content.selectedIndex];
+          const fibra2 = fibra2_option.dataset.variant;
+          console.log("fibra2", fibra2)
+          map.push({id: Number(fibra2), quantity: 1, selling_plan: 690050466123})
+        }
+
+        const itemsMobile = document.querySelectorAll('.item-movil')
+
+        for (let i = 0; i < itemsMobile.length; i++) {
+          const itemMobile = itemsMobile[i]
+          const item = {
+            id: Number(itemMobile.getAttribute('rel-variant')),
+            quantity: Number(itemMobile.getAttribute('rel-qty')),
+            selling_plan: 690050466123
+          }
+          console.log("itemMobile", item)
+          map.push(item)
+        }
+
+
+        const keioEnergy = document.querySelector('.main-custom-pack-card.energy-card input')
+        if (keioEnergy.checked) {
+          console.log("add keyio energy")
+          map.push({id: 55889944969547, quantity: 1})
+        }
+
+        console.log("map to add", map)
+
+        Permalink.addItems(map, true)
+      
+      });
+      
     
     });
 </script>
@@ -739,9 +800,6 @@
           });
           // -----
 
-
-
-          
         }
       });
 
@@ -823,7 +881,6 @@
         // -----
       });
       
-    
     });
 </script>
 
