@@ -1,0 +1,49 @@
+<div class="custom-product-add-ons">
+  {% for add_on in add_ons %}
+    {% assign enable = true %}
+
+    {% if hide_energy %}
+      {% if add_on == 'Bonus Keio Energy' or add_on == 'Servicio Premium de Soporte' %}
+        {% assign enable = false %}
+      {% endif %}
+    {% endif %}
+
+    {% if enable %}
+      <div 
+        rel-variant="{% if add_on == 'Bonus Keio Energy' %}55889944969547{% endif %}{% if add_on == 'Protección de línea' %}55889939890507{% endif %}{% if add_on == 'Activación Express' %}55889935270219{% endif %}{% if add_on == 'Multi-SIM' %}55889933173067{% endif %}{% if add_on == 'Servicio Premium de Soporte' %}55901036544331{% endif %}"
+        class="custom-product-add-ons--option"
+      >
+        <div class="custom-product-add-ons--option__inner">
+          <div class="custom-add-on">
+            <span></span>
+            <span>{{ add_on }}</span>
+          </div>
+          <div>
+            {% assign protection = all_products["proteccion-de-linea"] %}
+            {% assign activation = all_products["activacion-express"] %}
+            {% assign multisim = all_products["multi-sim"] %}
+            {% assign soporte = all_products["servicio-premium-de-soporte"] %}
+            
+            {% if add_on == 'Bonus Keio Energy' %}
+              (-50€)
+            {% endif %}
+            {% if add_on == 'Protección de línea' %}
+              (+{{ protection.price | money }})
+            {% endif %}
+            {% if add_on == 'Activación Express' %}
+              (+{{ activation.price | money }})
+            {% endif %}
+            {% if add_on == 'Multi-SIM' %}
+              (+{{ multisim.price | money }})
+            {% endif %}
+            {% if add_on == 'Servicio Premium de Soporte' %}
+              (+{{ soporte.price | money }})
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+  {% endfor %}
+</div>

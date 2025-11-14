@@ -496,7 +496,6 @@
     }
   }
 
-
   .custom-switch {
     position: absolute;
     display: inline-block;
@@ -542,5 +541,30 @@
   }
   .custom-slider:active::before {
     width: 22px;
+  }
+
+  .custom-product-add-ons {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    .custom-product-add-ons--option {
+      padding: 8px 0px;
+
+      .custom-product-add-ons--option__inner {
+        div {
+          &:nth-child(1) {
+            gap: 8px;
+            span {
+              &:nth-child(2) {
+                font-size: var(--Typo-Body-M, 13px);
+                line-height: 18px;
+              }
+            }
+          }
+          &:nth-child(2) {
+            display: none !important;
+          }
+        }
+      }
+    }
   }
 }

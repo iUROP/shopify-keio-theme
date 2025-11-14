@@ -18,20 +18,33 @@
               <div class="main-custom-bundler__pack--content__inner--row__content">
 
                 {% comment %} Card {% endcomment %}
+                {% assign fibra_600mb = all_products['keio-fibra-600-mb-simetrica'] %}
+                {% assign variant_fibra_600mb = fibra_600mb.variants.first %}
+                {% assign fibra_600mb_add_ons = fibra_600mb.metafields.custom.add_ons.value %}
+
+                {% assign fibra_1gb = all_products['keio-fibra-1-gb-simetrica'] %}
+                {% assign variant_fibra_1gb = fibra_1gb.variants.first %}
+
                 <div class="main-custom-pack-card fibra-1-card">
                   <div class="main-custom-pack-card__heading">Fibra Principal</div>
                   <div class="main-custom-pack-card__content">
                     <div class="main-custom-pack-card__content--switcher action-js-switcher">
-                      <button class="active" rel-price="9900" rel-variant="55896289149259">600 Mb</button>
-                      <button rel-price="18900" rel-variant="55896293802315">1 Gb</button>
+                      <button class="active" rel-price="{{ fibra_600mb.price }}" rel-variant="{{ variant_fibra_600mb.id }}">600 Mb</button>
+                      <button rel-price="{{ fibra_1gb.price }}" rel-variant="{{ variant_fibra_1gb.id }}">1 Gb</button>
                     </div>
                   </div>
+                  {% render 'addons-selector' add_ons: fibra_600mb_add_ons, hide_energy: true %}
                   <div class="main-custom-pack-card__pricing">
-                    <div>99,00<span>€/año</span></div>
+                    <div>{{ variant_fibra_600mb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
-                 {% comment %} Card {% endcomment %}
+                {% comment %} Card {% endcomment %}
+                {% assign fibra_600mb_2 = all_products['keio-fibra-600-mb-simetrica-2ª-vivienda'] %}
+                {% assign variant_fibra_600mb_2 = fibra_600mb_2.variants.first %}
+
+                {% assign fibra_1gb_2 = all_products['keio-fibra-1-gb-simetrica-2ª-vivienda'] %}
+                {% assign variant_fibra_1gb_2 = fibra_1gb_2.variants.first %}
                 <div class="main-custom-pack-card fibra-2-card">
                   <label class="custom-switch add-fibra-secondary">
                     <input type="checkbox">
@@ -41,14 +54,15 @@
                   <div class="main-custom-pack-card__content">
                     <div class="main-custom-pack-card__content--select">
                       <select name="secondaryFibra" id="secondaryFibra">
-                        <option value="4950" data-old="9900"  data-variant="55896289149259">600 Mb</option>
-                        <option value="9450" data-old="18900" data-variant="55896293802315">1 Gb</option>
+                        <option value="{{ fibra_600mb_2.price }}" data-old="9900"  data-variant="{{ variant_fibra_600mb_2.id }}">600 Mb</option>
+                        <option value="{{ fibra_1gb_2.price }}" data-old="18900" data-variant="{{ variant_fibra_1gb_2.id }}">1 Gb</option>
                       </select>
                     </div>
                   </div>
+                  {% render 'addons-selector' add_ons: fibra_600mb_add_ons, hide_energy: true %}
                   <div class="main-custom-pack-card__pricing">
                     <div class="listPrice">99,00<span>€/año</span></div>
-                    <div class="bestPrice">49,50<span>€/año</span></div>
+                    <div class="bestPrice">{{ variant_fibra_600mb_2.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -69,201 +83,102 @@
               <div class="main-custom-bundler__pack--content__inner--row__content">
 
                 {% comment %} Card {% endcomment %}
+                {% assign movil_ilimitados = all_products['keio-movil-ilimitado'] %}
+                {% assign variant_movil_ilimitados = movil_ilimitados.variants.first %}
+                {% assign movil_ilimitados_add_ons = movil_ilimitados.metafields.custom.add_ons.value %}
                 <div class="main-custom-pack-card card-movil">
                   <div class="main-custom-pack-card__heading">
                     Datos ilimitados
-                    <div class="main-custom-qty">
-                      <button class="less disabled">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2" fill="none">
-                          <path d="M5.85 0V1.2675H0V0H5.85Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                      <span>0</span>
-                      <button class="more">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
-                          <path d="M3.731 6.097H2.366V3.64975H0V2.44725H2.366V0H3.731V2.44725H6.097V3.64975H3.731V6.097Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                    </div>
+                    {% render 'qty-selector' %}
                   </div>
                   <div class="main-custom-pack-card__content column-r">
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="movilIlimitado_cobertura">Cobertura</label>
-                      <select name="movilIlimitado_cobertura" id="movilIlimitado_cobertura">
-                        <option value="vodafone">Vodafone</option>
-                        <option value="orange">Orange</option>
-                      </select>
-                    </div>
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="movilIlimitado_type">Tipo de contratación</label>
-                      <select name="movilIlimitado_type" id="movilIlimitado_type">
-                        <option value="portabilidad">Portabilidad</option>
-                        <option value="alta-nueva">Alta Nueva</option>
-                      </select>
-                    </div>
+                    {% render 'variant-selector' id: 'movilIlimitado_cobertura', name: 'Cobertura', type: 'cobertura' %}
+                    {% render 'variant-selector' id: 'movilIlimitado_type', name: 'Tipo de contratación', type: 'type' %}
+                    {% render 'sim-selector' product: movil_ilimitados, use_select: true %}
                   </div>
+                  {% render 'addons-selector' add_ons: movil_ilimitados_add_ons, hide_energy: true %}
                   <div class="main-custom-pack-card__pricing">
-                    <div>0,00<span>€/año</span></div>
+                    <div class="bestPrice">{{ variant_movil_ilimitados.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
                 {% comment %} Card {% endcomment %}
+                {% assign movil_10gb = all_products['keio-movil-10-gb'] %}
+                {% assign variant_movil_10gb = movil_10gb.variants.first %}
+                {% assign movil_10gb_add_ons = movil_10gb.metafields.custom.add_ons.value %}
                 <div class="main-custom-pack-card card-movil">
                   <div class="main-custom-pack-card__heading">
                     10 Gb
-                    <div class="main-custom-qty">
-                      <button class="less disabled">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2" fill="none">
-                          <path d="M5.85 0V1.2675H0V0H5.85Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                      <span>0</span>
-                      <button class="more">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
-                          <path d="M3.731 6.097H2.366V3.64975H0V2.44725H2.366V0H3.731V2.44725H6.097V3.64975H3.731V6.097Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                    </div>
+                    {% render 'qty-selector' %}
                   </div>
                   <div class="main-custom-pack-card__content column-r">
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="gb10_cobertura">Cobertura</label>
-                      <select name="gb10_cobertura" id="gb10_cobertura">
-                        <option value="vodafone">Vodafone</option>
-                        <option value="orange">Orange</option>
-                      </select>
-                    </div>
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="gb10_type">Tipo de contratación</label>
-                      <select name="gb10_type" id="gb10_type">
-                        <option value="portabilidad">Portabilidad</option>
-                        <option value="alta-nueva">Alta Nueva</option>
-                      </select>
-                    </div>
+                    {% render 'variant-selector' id: 'gb10_cobertura', name: 'Cobertura', type: 'cobertura' %}
+                    {% render 'variant-selector' id: 'gb10_type', name: 'Tipo de contratación', type: 'type' %}
+                    {% render 'sim-selector' product: movil_10gb, use_select: true %}
                   </div>
+                  {% render 'addons-selector' add_ons: movil_10gb_add_ons, hide_energy: true %}
                   <div class="main-custom-pack-card__pricing">
-                    <div class="listPrice">0,00<span>€/año</span></div>
-                    <div class="bestPrice">0,00<span>€/año</span></div>
+                    <div class="bestPrice">{{ variant_movil_10gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
                 {% comment %} Card {% endcomment %}
+                {% assign movil_15gb = all_products['keio-movil-15-gb'] %}
+                {% assign variant_movil_15gb = movil_15gb.variants.first %}
+                {% assign movil_15gb_add_ons = movil_15gb.metafields.custom.add_ons.value %}
                 <div class="main-custom-pack-card card-movil">
                   <div class="main-custom-pack-card__heading">
                     15 Gb
-                    <div class="main-custom-qty">
-                      <button class="less disabled">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2" fill="none">
-                          <path d="M5.85 0V1.2675H0V0H5.85Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                      <span>0</span>
-                      <button class="more">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
-                          <path d="M3.731 6.097H2.366V3.64975H0V2.44725H2.366V0H3.731V2.44725H6.097V3.64975H3.731V6.097Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                    </div>
+                    {% render 'qty-selector' %}
                   </div>
                   <div class="main-custom-pack-card__content column-r">
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="gb15_cobertura">Cobertura</label>
-                      <select name="gb15_cobertura" id="gb15_cobertura">
-                        <option value="vodafone">Vodafone</option>
-                        <option value="orange">Orange</option>
-                      </select>
-                    </div>
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="gb15_type">Tipo de contratación</label>
-                      <select name="gb15_type" id="gb15_type">
-                        <option value="portabilidad">Portabilidad</option>
-                        <option value="alta-nueva">Alta Nueva</option>
-                      </select>
-                    </div>
+                    {% render 'variant-selector' id: 'gb15_cobertura', name: 'Cobertura', type: 'cobertura' %}
+                    {% render 'variant-selector' id: 'gb15_type', name: 'Tipo de contratación', type: 'type' %}
+                    {% render 'sim-selector' product: movil_15gb, use_select: true %}
                   </div>
+                  {% render 'addons-selector' add_ons: movil_15gb_add_ons, hide_energy: true %}
                   <div class="main-custom-pack-card__pricing">
-                    <div class="listPrice">0,00<span>€/año</span></div>
-                    <div class="bestPrice">0,00<span>€/año</span></div>
+                    <div class="bestPrice">{{ variant_movil_15gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
                 {% comment %} Card {% endcomment %}
+                {% assign movil_30gb = all_products['keio-movil-30-gb'] %}
+                {% assign variant_movil_30gb = movil_30gb.variants.first %}
+                {% assign movil_30gb_add_ons = movil_30gb.metafields.custom.add_ons.value %}
                 <div class="main-custom-pack-card card-movil">
                   <div class="main-custom-pack-card__heading">
                     30 Gb
-                    <div class="main-custom-qty">
-                      <button class="less disabled">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2" fill="none">
-                          <path d="M5.85 0V1.2675H0V0H5.85Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                      <span>0</span>
-                      <button class="more">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
-                          <path d="M3.731 6.097H2.366V3.64975H0V2.44725H2.366V0H3.731V2.44725H6.097V3.64975H3.731V6.097Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                    </div>
+                    {% render 'qty-selector' %}
                   </div>
                   <div class="main-custom-pack-card__content column-r">
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="bg30_cobertura">Cobertura</label>
-                      <select name="bg30_cobertura" id="bg30_cobertura">
-                        <option value="vodafone">Vodafone</option>
-                        <option value="orange">Orange</option>
-                      </select>
-                    </div>
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="bg30_type">Tipo de contratación</label>
-                      <select name="bg30_type" id="bg30_type">
-                        <option value="portabilidad">Portabilidad</option>
-                        <option value="alta-nueva">Alta Nueva</option>
-                      </select>
-                    </div>
+                    {% render 'variant-selector' id: 'gb30_cobertura', name: 'Cobertura', type: 'cobertura' %}
+                    {% render 'variant-selector' id: 'gb30_type', name: 'Tipo de contratación', type: 'type' %}
+                    {% render 'sim-selector' product: movil_30gb, use_select: true %}
                   </div>
+                  {% render 'addons-selector' add_ons: movil_30gb_add_ons, hide_energy: true %}
                   <div class="main-custom-pack-card__pricing">
-                    <div class="listPrice">0,00<span>€/año</span></div>
-                    <div class="bestPrice">0,00<span>€/año</span></div>
+                    <div class="bestPrice">{{ variant_movil_30gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
-                   {% comment %} Card {% endcomment %}
+                {% comment %} Card {% endcomment %}
+                {% assign movil_60gb = all_products['keio-movil-60-gb'] %}
+                {% assign variant_movil_60gb = movil_60gb.variants.first %}
+                {% assign movil_60gb_add_ons = movil_60gb.metafields.custom.add_ons.value %}
                 <div class="main-custom-pack-card card-movil">
                   <div class="main-custom-pack-card__heading">
                     60 Gb
-                    <div class="main-custom-qty">
-                      <button class="less disabled">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="6" height="2" viewBox="0 0 6 2" fill="none">
-                          <path d="M5.85 0V1.2675H0V0H5.85Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                      <span>0</span>
-                      <button class="more">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7" fill="none">
-                          <path d="M3.731 6.097H2.366V3.64975H0V2.44725H2.366V0H3.731V2.44725H6.097V3.64975H3.731V6.097Z" fill="#5C5E5C"/>
-                        </svg>
-                      </button>
-                    </div>
+                    {% render 'qty-selector' %}
                   </div>
                   <div class="main-custom-pack-card__content column-r">
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="gb60_cobertura">Cobertura</label>
-                      <select name="gb60_cobertura" id="gb60_cobertura">
-                        <option value="vodafone">Vodafone</option>
-                        <option value="orange">Orange</option>
-                      </select>
-                    </div>
-                    <div class="main-custom-pack-card__content--select">
-                      <label for="gb60_type">Tipo de contratación</label>
-                      <select name="gb60_type" id="gb60_type">
-                        <option value="portabilidad">Portabilidad</option>
-                        <option value="alta-nueva">Alta Nueva</option>
-                      </select>
-                    </div>
+                    {% render 'variant-selector' id: 'gb60_cobertura', name: 'Cobertura', type: 'cobertura' %}
+                    {% render 'variant-selector' id: 'gb60_type', name: 'Tipo de contratación', type: 'type' %}
+                    {% render 'sim-selector' product: movil_60gb, use_select: true %}
                   </div>
+                  {% render 'addons-selector' add_ons: movil_60gb_add_ons, hide_energy: true %}
                   <div class="main-custom-pack-card__pricing">
-                    <div class="listPrice">0,00<span>€/año</span></div>
-                    <div class="bestPrice">0,00<span>€/año</span></div>
+                    <div class="bestPrice">{{ variant_movil_60gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -415,7 +330,7 @@
             for (let i = 0; i < item.items.length; i++) {
               const plan = item.items[i]
               htmLInsert += `
-                <div class="item-movil" rel-variant="${plan.variant}" rel-qty="${plan.qty}">
+                <div class="item-movil" rel-variant="${plan.variant}" rel-qty="${plan.qty}" rel-addons='${JSON.stringify(plan.addons)}' rel-sim="${plan.sim}">
                   <span>${plan.name} x${plan.qty}</span>
                   <span>${formatEuro((plan.price * plan.qty) / 100)}€</span>
                 </div>
@@ -495,16 +410,20 @@
 
             qty = Number(movilCard.querySelector('.main-custom-pack-card__heading .main-custom-qty span').innerHTML)
 
+            const activeVariants = Array.from(
+              movilCard.querySelectorAll('.custom-product-add-ons--option.active')
+            ).map(el => el.getAttribute('rel-variant'));
+
             arr.push(
               {
                 "name": name,
                 "price": price,
                 "variant": variant,
-                "qty": qty
+                "qty": qty,
+                "addons": activeVariants,
+                "sim": movilCard.querySelector('.main-custom-pack-card__content--select.sim-selector select').value
               }
             )
-            
-
           } // end if
           
         } // end for
@@ -595,7 +514,14 @@
       });
 
       $('.main-custom-pack-card.card-movil .main-custom-pack-card__content--select select').on('change', function() {
-        updateTotalizerFromFibraHTML()
+        setTimeout(() => {
+          updateTotalizerFromFibraHTML()
+        }, 500);
+      });
+      $('.main-custom-pack-card .custom-product-add-ons .custom-product-add-ons--option').on('click', function() {
+        setTimeout(() => {
+          updateTotalizerFromFibraHTML()
+        }, 500);
       });
 
       $('#secondaryFibra').on('change', function() {
@@ -633,13 +559,30 @@
 
         for (let i = 0; i < itemsMobile.length; i++) {
           const itemMobile = itemsMobile[i]
+
+          let properties = {}
+          properties['Tipo de SIM'] = itemMobile.getAttribute('rel-sim')
+        
           const item = {
             id: Number(itemMobile.getAttribute('rel-variant')),
             quantity: Number(itemMobile.getAttribute('rel-qty')),
-            selling_plan: 690050466123
+            selling_plan: 690050466123,
+            properties: properties
           }
           console.log("itemMobile", item)
           map.push(item)
+
+          const addons = JSON.parse(itemMobile.getAttribute('rel-addons'))
+          addons.forEach(variantId => {
+            map.push(
+              {
+                id: variantId,
+                quantity: 1
+              }
+            )
+          });
+
+
         }
 
 

@@ -656,91 +656,6 @@ body.template-product {
           }
         }
       }
-      .custom-product-add-ons {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: var(--Space-100, 0px);
-        align-self: stretch;
-        margin-top: 4px;
-        margin-bottom: 22px;
-        &--option {
-          display: flex;
-          padding: var(--Space-300, 12px) var(--Space-800, 32px);
-          flex-direction: column;
-          align-items: flex-start;
-          gap: var(--Space-600, 24px);
-          align-self: stretch;
-          &__inner {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            align-self: stretch;
-            div {
-              &:nth-child(1) {
-                display: flex;
-                align-items: center;
-                gap: var(--Space-400, 16px);
-                cursor: pointer;
-              }
-              &:nth-child(2) {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                gap: 2px;
-                color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
-                font-family: var(--Family-Font---Body, Nohemi);
-                font-size: var(--Typo-Body-S, 13px);
-                font-style: normal;
-                font-weight: 400;
-                line-height: 20px;
-              }
-
-              span {
-                &:nth-child(1) {
-                  width: 16px;
-                  height: 16px;
-                  aspect-ratio: 1/1;
-                  border-radius: 50px;
-                  border: 1px solid #931E31;
-                  position: relative;
-                  top: -1px;
-                }
-                &:nth-child(2) {
-                  color: var(--Colors-1000, var(--Colors-1000, #000));
-                  font-family: var(--Family-Font---Body, Nohemi);
-                  font-size: var(--Typo-Body-M, 16px);
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: 24px;
-                }
-              }
-            }
-          }
-
-          &.active {
-            .custom-add-on {
-              span {
-                &:nth-child(1) {
-                  position: relative;
-                  &::before {
-                    content: '';
-                    position: absolute;
-                    left: 2px;
-                    top: 2px;
-                    bottom: 2px;
-                    right: 2px;
-                    margin: auto;
-                    z-index: 1;
-                    background-color: #931E31;
-                    border-radius: 50px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
       .shopify_subscriptions_fieldset {
         position: relative;
         margin-bottom: -20px;
@@ -977,3 +892,89 @@ body.template-collection {
     }
   }
 }
+
+.custom-product-add-ons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--Space-100, 0px);
+  align-self: stretch;
+  margin-top: 4px;
+  margin-bottom: 22px;
+  &--option {
+    display: flex;
+    padding: var(--Space-300, 12px) var(--Space-800, 32px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--Space-600, 24px);
+    align-self: stretch;
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-self: stretch;
+      div {
+        &:nth-child(1) {
+          display: flex;
+          align-items: center;
+          gap: var(--Space-400, 16px);
+          cursor: pointer;
+        }
+        &:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 2px;
+          color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+          font-family: var(--Family-Font---Body, Nohemi);
+          font-size: var(--Typo-Body-S, 13px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+        }
+
+        span {
+          &:nth-child(1) {
+            width: 16px;
+            height: 16px;
+            aspect-ratio: 1/1;
+            border-radius: 50px;
+            border: 1px solid #931E31;
+            position: relative;
+            top: -1px;
+          }
+          &:nth-child(2) {
+            color: var(--Colors-1000, var(--Colors-1000, #000));
+            font-family: var(--Family-Font---Body, Nohemi);
+            font-size: var(--Typo-Body-M, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+
+    &.active {
+      .custom-add-on {
+        span {
+          &:nth-child(1) {
+            position: relative;
+            &::before {
+              content: '';
+              position: absolute;
+              left: 2px;
+              top: 2px;
+              bottom: 2px;
+              right: 2px;
+              margin: auto;
+              z-index: 1;
+              background-color: #931E31;
+              border-radius: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+} /* add-ons */

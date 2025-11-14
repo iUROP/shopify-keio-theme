@@ -1,0 +1,13 @@
+<div class="main-custom-pack-card__content--select">
+  <label for="{{ id }}">{{ name }}</label>
+  <select name="{{ id }}" id="{{ id }}">
+    {% if type == 'cobertura' %}
+      <option value="vodafone">Vodafone</option>
+      <option value="orange">Orange</option>
+    {% endif %}
+    {% if type == 'type' %}
+      <option value="portabilidad">Portabilidad</option>
+      <option value="alta-nueva">Alta Nueva</option>
+    {% endif %}
+  </select>
+</div>

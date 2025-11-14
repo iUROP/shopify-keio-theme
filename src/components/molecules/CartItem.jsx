@@ -44,16 +44,19 @@ function CartItem({
         </div>
         <div className='i-cart-item--labels--name'>
           {product.product_title}
+          {addonsVariants.includes(product.variant_id) &&
+            <> x{product.quantity}</>
+          }
           {product.selling_plan_allocation?.selling_plan?.name &&
             <span>{product.selling_plan_allocation.selling_plan.name}</span>
           }
 
           {product.options_with_values &&
             <>
-              {product.options_with_values[0] &&
+              {product.options_with_values[0] && product.options_with_values[0].value != 'Default Title' && 
                 <span>{product.options_with_values[0].value}</span>
               }
-              {product.options_with_values[1] &&
+              {product.options_with_values[1] && product.options_with_values[0].value != 'Default Title' && 
                 <span>{product.options_with_values[1].value}</span>
               }
             </>

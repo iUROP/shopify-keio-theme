@@ -217,7 +217,8 @@ i-minicart {
           box-sizing: border-box;
 
           &.is-add-on {
-            height: 22px;
+            height: 25px;
+            background: #f3f3f3;
             .i-cart-item--image {
               display: none !important;
             }
@@ -229,7 +230,9 @@ i-minicart {
               display: none !important;
             }
             .i-cart-item--labels {
-              left: 0;
+              left: 8px;
+              top: 3px;
+              right: 8px;
             }
           }
 
