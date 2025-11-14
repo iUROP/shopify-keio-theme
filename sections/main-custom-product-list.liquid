@@ -61,6 +61,7 @@
         $('.main-custom-product-list__container--filter button').removeClass('active')
         $('.main-custom-product-list__container--row').removeClass('active')
         $(this).addClass('active')
+        console.log("$(this).html()", $(this).html())
 
         if ($(this).html() == 'Fibra') {
           $('.main-custom-product-list__container--row.fibra').addClass('active')
@@ -74,6 +75,16 @@
         if ($(this).html() == 'Best sellers') {
           $('.main-custom-product-list__container--row.best').addClass('active')
         }
+
+        $('.main-custom-product-list__container--row').slick('unslick');
+        $('.main-custom-product-list__container--row').slick({
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false,
+          centerMode: false,
+          infinite: false
+        });
     });
 
 
