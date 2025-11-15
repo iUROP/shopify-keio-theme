@@ -174,12 +174,9 @@
             align-content: center;
             gap: 24px;
             align-self: stretch;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             width: 100%;
 
-            @media only screen and (max-width: 1600px) {
-              flex-wrap: wrap;
-            }
           }
 
           &.active {
@@ -357,6 +354,7 @@
   background: var(--Colors-white, #FFF);
   width: calc(25%);
   position: relative;
+  min-width: 300px;
 
   @media only screen and (max-width: 1600px) {
     width: calc(31%);

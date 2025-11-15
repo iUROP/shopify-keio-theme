@@ -1106,6 +1106,11 @@ html .main-custom-qty button.more, body .main-custom-qty button.more {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  background: transparent;
+  border: 0;
+  padding: 0px;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .global-color-text {
@@ -4350,13 +4355,8 @@ body.template-article .article-template__link.link {
   align-content: center;
   gap: 24px;
   align-self: stretch;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
-}
-@media only screen and (max-width: 1600px) {
-  .main-custom-bundler__pack--content__inner--row__content {
-    flex-wrap: wrap;
-  }
 }
 .main-custom-bundler__pack--content__inner--row.active .main-custom-bundler__pack--content__inner--row__heading div:nth-child(1) span {
   background: var(--Colors-600, #751D28);
@@ -4523,6 +4523,7 @@ body.template-article .article-template__link.link {
   background: var(--Colors-white, #FFF);
   width: 25%;
   position: relative;
+  min-width: 300px;
 }
 @media only screen and (max-width: 1600px) {
   .main-custom-pack-card {

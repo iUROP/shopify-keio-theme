@@ -343,7 +343,7 @@
 
         info.forEach(group => {
           group.items.forEach(item => {
-            total += item.price
+            total += (item.price * item.qty)
           })
         })
 
@@ -367,45 +367,48 @@
             const name = movilCard.querySelector('.main-custom-pack-card__heading').innerText.replace(/\n\d+/g, '');
             const option1 = movilCard.querySelectorAll('.main-custom-pack-card__content--select')[0].querySelector('select').value
             const option2 = movilCard.querySelectorAll('.main-custom-pack-card__content--select')[1].querySelector('select').value
+            const cardPrice = movilCard.querySelector('.main-custom-pack-card__pricing .bestPrice').innerHTML.replace('<span>€/año</span>','').replace('&gt;','').replace(',','') 
 
-            let price = 0
+            console.log("cardPrice", cardPrice)
+
+            let price = Number(cardPrice)
             let variant = 0
             let qty = 0
 
             if (name == 'Datos ilimitados') {
-              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 8990; variant = 55890184667467}
-              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 10980; variant = 55890184733003}
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {variant = 55890184667467}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') { variant = 55890184733003}
               // ---
-              if (option1 == 'orange' && option2 == 'portabilidad') {price = 8990; variant = 55890184700235}
-              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 10980; variant = 55890184765771}
+              if (option1 == 'orange' && option2 == 'portabilidad') {variant = 55890184700235}
+              if (option1 == 'orange' && option2 == 'alta-nueva') { variant = 55890184765771}
             }
             if (name == '10 Gb') {
-              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 1990; variant = 55889672143179}
-              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 3980; variant = 55889672208715}
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {variant = 55889672143179}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {variant = 55889672208715}
               // ---
-              if (option1 == 'orange' && option2 == 'portabilidad') {price = 1990; variant = 55889672175947}
-              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 3980; variant = 55889672241483}
+              if (option1 == 'orange' && option2 == 'portabilidad') {variant = 55889672175947}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {variant = 55889672241483}
             }
             if (name == '15 Gb') {
-              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 2990; variant = 55890181095755}
-              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 3980; variant = 55890181161291}
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {variant = 55890181095755}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {variant = 55890181161291}
               // ---
-              if (option1 == 'orange' && option2 == 'portabilidad') {price = 2990; variant = 55890181128523}
-              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 3980; variant = 55890181194059}
+              if (option1 == 'orange' && option2 == 'portabilidad') {variant = 55890181128523}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {variant = 55890181194059}
             }
             if (name == '30 Gb') {
-              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 3990; variant = 55890182963531}
-              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 5980; variant = 55890183029067}
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {variant = 55890182963531}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {variant = 55890183029067}
               // ---
-              if (option1 == 'orange' && option2 == 'portabilidad') {price = 3990; variant = 55890182996299}
-              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 5980; variant = 55890183061835}
+              if (option1 == 'orange' && option2 == 'portabilidad') {variant = 55890182996299}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {variant = 55890183061835}
             }
             if (name == '60 Gb') {
-              if (option1 == 'vodafone' && option2 == 'portabilidad') {price = 5990; variant = 55890183684427}
-              if (option1 == 'vodafone' && option2 == 'alta-nueva') {price = 7980; variant = 55890183749963}
+              if (option1 == 'vodafone' && option2 == 'portabilidad') {variant = 55890183684427}
+              if (option1 == 'vodafone' && option2 == 'alta-nueva') {variant = 55890183749963}
               // ---
-              if (option1 == 'orange' && option2 == 'portabilidad') {price = 5990; variant = 55890183717195}
-              if (option1 == 'orange' && option2 == 'alta-nueva') {price = 7980; variant = 55890183782731}
+              if (option1 == 'orange' && option2 == 'portabilidad') {variant = 55890183717195}
+              if (option1 == 'orange' && option2 == 'alta-nueva') {variant = 55890183782731}
             }
 
             qty = Number(movilCard.querySelector('.main-custom-pack-card__heading .main-custom-qty span').innerHTML)
@@ -515,30 +518,78 @@
         updateTotalizerFromFibraHTML()
       });
 
-      $('.main-custom-pack-card.card-movil .main-custom-pack-card__content--select select').on('change', function() {
-        const text = $(this).find('option:selected').text();
-        if (text.includes('Alta Nueva')) {
-          const currentPrice = $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').text().replace('/año','').replace(',','').replace('€','')
-          $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').html(
-            `
-              ${formatEuro((Number(currentPrice) + 1990) / 100)}<span>€/año</span>
-            `
-          )
-        } else {
-          const originalPrice = $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing').attr('original-price')
-          $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').html(
-            `
-              ${formatEuro(Number(originalPrice) / 100)}<span>€/año</span>
-            `
-          )
-        }
 
+
+      $('.main-custom-pack-card.card-movil .main-custom-pack-card__content--select.Tipo select').on('change', function() {
+        const __this = $(this)
+        const text = $(this).find('option:selected').text();
+
+        setTimeout(() => {
+          const originalPrice = $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing').attr('original-price')
+
+          let total = 0;
+          __this.closest('.main-custom-pack-card.card-movil').find('.custom-product-add-ons .custom-product-add-ons--option.active').each(function () {
+            let raw = $(this).find('div:last').text();
+            raw = raw.replace(/[^\d,.-]/g, '');
+            let valor = parseFloat(raw.replace(',', '.'));
+            if (!isNaN(valor)) total += valor;
+          });
+
+          if (text.includes('Alta Nueva')) {
+            $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').html(
+              `
+                ${formatEuro((Number(originalPrice) + total + 1990) / 100)}<span>€/año</span>
+              `
+            )
+          } else {
+            $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').html(
+              `
+                ${formatEuro((Number(originalPrice) + total) / 100)}<span>€/año</span>
+              `
+            )
+          }
+
+          updateTotalizerFromFibraHTML()
+        }, 500);
+      });
+
+
+      $('.main-custom-pack-card.card-movil .main-custom-pack-card__content--select.Cobertura select').on('change', function() {
         setTimeout(() => {
           updateTotalizerFromFibraHTML()
         }, 500);
       });
-      $('.main-custom-pack-card .custom-product-add-ons .custom-product-add-ons--option').on('click', function() {
+      $('.main-custom-pack-card.card-movil .main-custom-pack-card__content--select.sim-selector select').on('change', function() {
         setTimeout(() => {
+          updateTotalizerFromFibraHTML()
+        }, 500);
+      });
+
+
+      $('.main-custom-pack-card .custom-product-add-ons .custom-product-add-ons--option').on('click', function() {
+        const __this = $(this)
+        const originalPrice = $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing').attr('original-price')
+
+        setTimeout(() => {
+          let total = 0;
+          __this.closest('.custom-product-add-ons').find('.custom-product-add-ons--option.active').each(function () {
+            let raw = $(this).find('div:last').text();
+            raw = raw.replace(/[^\d,.-]/g, '');
+            let valor = parseFloat(raw.replace(',', '.'));
+            if (!isNaN(valor)) total += valor;
+          });
+          let optionTypePrice = 0
+
+          const text = $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__content--select.Tipo option:selected').text();
+          if (text.includes('Alta Nueva')) {
+            optionTypePrice = 1990
+          }
+
+          $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').html(
+            `
+              ${formatEuro((Number(total) + (Number(originalPrice) + optionTypePrice)) / 100)}<span>€/año</span>
+            `
+          )
           updateTotalizerFromFibraHTML()
         }, 500);
       });
