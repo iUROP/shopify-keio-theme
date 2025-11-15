@@ -7039,7 +7039,8 @@ body.template-collection .main-custom-product-list__container--filter {
 }
 @media only screen and (max-width: 1500px) {
   .main-custom-product-card {
-    height: 380px;
+    height: 405px;
+    font-size: 22px;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -7102,6 +7103,8 @@ body.template-collection .main-custom-product-list__container--filter {
 @media only screen and (max-width: 1500px) {
   .main-custom-product-card--inner h3 {
     font-size: 25px;
+    height: auto;
+    min-height: auto;
   }
 }
 .main-custom-product-card--inner h3 strong {
