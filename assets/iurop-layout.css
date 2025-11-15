@@ -6852,9 +6852,11 @@ body.template-collection .collection-hero__inner .collection-hero__title {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  text-align: center;
 }
 body.template-collection .collection-hero__inner .collection-hero__description {
   margin: 10px 0px;
+  display: none !important;
 }
 body.template-collection .collection-hero__inner .collection-hero__description p {
   margin: 10px 0px;

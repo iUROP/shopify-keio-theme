@@ -892,9 +892,11 @@ body.template-collection {
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      text-align: center;
     }
     .collection-hero__description {
       margin: 10px 0px;
+      display: none !important;
 
       p {
         margin: 10px 0px;
