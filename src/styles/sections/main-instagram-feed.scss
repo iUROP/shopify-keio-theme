@@ -34,7 +34,9 @@ body.template-page-blog {
       width: auto;
 
       @media only screen and (max-width: 1024px) {
-        display: none;
+        position: relative;
+        top: auto;
+        right: auto;
       }
 
       a {
@@ -52,9 +54,18 @@ body.template-page-blog {
         font-size: 0px;
         padding-top: 20px;
 
+        @media only screen and (max-width: 1024px) {
+          margin: 0 auto;
+          margin-top: 20px;
+        }
+
         &:before {
           content: 'Encuentranos en Instagram';
           font-size: 16px;
+
+          @media only screen and (max-width: 1024px) {
+            font-size: 14px;
+          }
         }
 
         &:after {

@@ -3166,7 +3166,9 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper {
 @media only screen and (max-width: 1024px) {
   body.template-index .shopify-app-block .instafeed-bottom-link-wrapper,
   body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper {
-    display: none;
+    position: relative;
+    top: auto;
+    right: auto;
   }
 }
 body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a,
@@ -3185,10 +3187,23 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a {
   font-size: 0px;
   padding-top: 20px;
 }
+@media only screen and (max-width: 1024px) {
+  body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a,
+  body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a {
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
 body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a:before,
 body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:before {
   content: "Encuentranos en Instagram";
   font-size: 16px;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a:before,
+  body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:before {
+    font-size: 14px;
+  }
 }
 body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a:after,
 body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:after {

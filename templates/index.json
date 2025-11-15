@@ -33,7 +33,8 @@
       "type": "main-custom-product-list",
       "name": "main-custom-product-list",
       "settings": {
-        "collection": "shop"
+        "collection": "shop",
+        "show_navigation": false
       }
     },
     "main_custom_text_image_8nWyBG": {
@@ -51,6 +52,7 @@
     },
     "main_custom_blog_feed_Fx6CNd": {
       "type": "main-custom-blog-feed",
+      "disabled": true,
       "name": "main-custom-blog-feed",
       "settings": {}
     },
