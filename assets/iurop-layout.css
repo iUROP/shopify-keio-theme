@@ -6856,6 +6856,9 @@ body.template-product .related-products .product-grid {
 body.template-page-bundles .section-i-footer .main-custom-footer::before {
   border-top: 80px solid #351610;
 }
+body.template-page-bundles .main-hero-title__banner--frame .open-coberturer {
+  line-height: initial;
+}
 
 body.template-collection .facets-wrapper.page-width {
   display: none !important;
