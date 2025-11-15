@@ -23,7 +23,8 @@
       "settings": {
         "primary_banner": "shopify://shop_images/Banner-energy.png",
         "primary_banner_m": "shopify://shop_images/primary-mobile.png",
-        "banner_grid": "shopify://shop_images/banner_388d0b13-40d7-4241-9527-0c3bd10c6406.png"
+        "banner_grid": "shopify://shop_images/banner_388d0b13-40d7-4241-9527-0c3bd10c6406.png",
+        "banner_grid_m": "shopify://shop_images/imagen_2025-11-15_103309063.png"
       }
     }
   },

@@ -5492,6 +5492,12 @@ body.template-page-keio-x .main-custom-footer:before {
   gap: 24px;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--grid {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
 .main-custom-energy__content--grid .main-custom-energy-image {
   display: flex;
   width: 55%;
@@ -5500,6 +5506,11 @@ body.template-page-keio-x .main-custom-footer:before {
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--grid .main-custom-energy-image {
+    width: 100%;
+  }
 }
 .main-custom-energy__content--grid .main-custom-energy-image img {
   display: block;
@@ -5518,6 +5529,12 @@ body.template-page-keio-x .main-custom-footer:before {
 @media only screen and (max-width: 1690px) {
   .main-custom-energy__content--grid .main-custom-energy-items {
     gap: 18px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--grid .main-custom-energy-items {
+    width: 100%;
+    gap: 12px;
   }
 }
 .main-custom-energy__content--grid .main-custom-energy-items__item {
@@ -5539,6 +5556,13 @@ body.template-page-keio-x .main-custom-footer:before {
 @media only screen and (max-width: 1690px) {
   .main-custom-energy__content--grid .main-custom-energy-items__item {
     padding: 22px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--grid .main-custom-energy-items__item {
+    padding: 22px 12px;
+    aspect-ratio: 3/4;
+    width: calc(50% - 6px);
   }
 }
 .main-custom-energy__content--grid .main-custom-energy-items__item--item {
@@ -5580,6 +5604,11 @@ body.template-page-keio-x .main-custom-footer:before {
     font-size: 19px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--grid .main-custom-energy-items__item--item__text h3 {
+    font-size: 16px;
+  }
+}
 .main-custom-energy__content--grid .main-custom-energy-items__item--item__text p {
   margin: 0px;
   color: var(--Colors-1000, var(--Colors-1000, #000));
@@ -5588,11 +5617,18 @@ body.template-page-keio-x .main-custom-footer:before {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  opacity: 0.6;
 }
 @media only screen and (max-width: 1690px) {
   .main-custom-energy__content--grid .main-custom-energy-items__item--item__text p {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--grid .main-custom-energy-items__item--item__text p {
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 .main-custom-energy__content--table {
@@ -5603,6 +5639,13 @@ body.template-page-keio-x .main-custom-footer:before {
   align-items: center;
   gap: 64px;
   box-sizing: border-box;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--table {
+    gap: 14px;
+    padding-top: 56px;
+    padding-bottom: 46px;
+  }
 }
 .main-custom-energy__content--table h2 {
   color: var(--Colors-1000, var(--Colors-1000, #000));
@@ -5621,6 +5664,11 @@ body.template-page-keio-x .main-custom-footer:before {
     font-size: 36px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--table h2 {
+    font-size: 30px;
+  }
+}
 .main-custom-energy__content--table .main-custom-table {
   position: relative;
   width: 874px;
@@ -5630,6 +5678,12 @@ body.template-page-keio-x .main-custom-footer:before {
   gap: 34px;
   margin-top: 35px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--table .main-custom-table {
+    width: 100%;
+    margin-top: 0px;
+  }
+}
 .main-custom-energy__content--table .main-custom-table__row {
   color: var(--Colors-800, var(--Colors-800, #1E1E1E));
   font-family: var(--Family-Font---Body, Nohemi);
@@ -5638,12 +5692,24 @@ body.template-page-keio-x .main-custom-footer:before {
   font-weight: 400;
   line-height: 35px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--table .main-custom-table__row {
+    display: none;
+  }
+}
 .main-custom-energy__content--table .main-custom-table svg {
   position: absolute;
   right: 0;
   bottom: -53px;
   width: 500px;
   height: auto;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--table .main-custom-table svg {
+    width: 100%;
+    bottom: 0px;
+    position: relative;
+  }
 }
 .main-custom-energy__content--activation {
   background: var(--Colors-1000, #000);

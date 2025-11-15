@@ -13,7 +13,8 @@
 
       <div class="main-custom-energy__content--grid">
         <div class="main-custom-energy-image">
-          <img src="{{ section.settings.banner_grid | image_url: width: 1200 }}" class="full-banner" />
+          <img src="{{ section.settings.banner_grid | image_url: width: 1200 }}" class="full-banner show-only-desktop" />
+          <img src="{{ section.settings.banner_grid_m | image_url: width: 1200 }}" class="full-banner show-only-mobile" />
         </div>
         <div class="main-custom-energy-items">
 
@@ -93,6 +94,7 @@
           <div class="main-custom-table__row">Gestión más sencilla</div>
 
           {% render 'svg-table' %}
+          {% render 'svg-table-m' %}
         </div>
       </div>
 
