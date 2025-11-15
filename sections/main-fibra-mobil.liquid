@@ -34,7 +34,7 @@
                     </div>
                   </div>
                   {% render 'addons-selector' add_ons: fibra_600mb_add_ons, hide_energy: true %}
-                  <div class="main-custom-pack-card__pricing">
+                  <div class="main-custom-pack-card__pricing" original-price="{{ variant_fibra_600mb.price }}">
                     <div>{{ variant_fibra_600mb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
@@ -60,7 +60,7 @@
                     </div>
                   </div>
                   {% render 'addons-selector' add_ons: fibra_600mb_add_ons, hide_energy: true %}
-                  <div class="main-custom-pack-card__pricing">
+                  <div class="main-custom-pack-card__pricing" original-price="{{ variant_fibra_600mb_2.price }}">
                     <div class="listPrice">99,00<span>€/año</span></div>
                     <div class="bestPrice">{{ variant_fibra_600mb_2.price | money_without_currency }}<span>€/año</span></div>
                   </div>
@@ -97,7 +97,7 @@
                     {% render 'sim-selector' product: movil_ilimitados, use_select: true %}
                   </div>
                   {% render 'addons-selector' add_ons: movil_ilimitados_add_ons, hide_energy: true %}
-                  <div class="main-custom-pack-card__pricing">
+                  <div class="main-custom-pack-card__pricing" original-price="{{ variant_movil_ilimitados.price }}">
                     <div class="bestPrice">{{ variant_movil_ilimitados.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
@@ -117,7 +117,7 @@
                     {% render 'sim-selector' product: movil_10gb, use_select: true %}
                   </div>
                   {% render 'addons-selector' add_ons: movil_10gb_add_ons, hide_energy: true %}
-                  <div class="main-custom-pack-card__pricing">
+                  <div class="main-custom-pack-card__pricing" original-price="{{ variant_movil_10gb.price }}">
                     <div class="bestPrice">{{ variant_movil_10gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
@@ -137,7 +137,7 @@
                     {% render 'sim-selector' product: movil_15gb, use_select: true %}
                   </div>
                   {% render 'addons-selector' add_ons: movil_15gb_add_ons, hide_energy: true %}
-                  <div class="main-custom-pack-card__pricing">
+                  <div class="main-custom-pack-card__pricing" original-price="{{ variant_movil_15gb.price }}">
                     <div class="bestPrice">{{ variant_movil_15gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
@@ -157,7 +157,7 @@
                     {% render 'sim-selector' product: movil_30gb, use_select: true %}
                   </div>
                   {% render 'addons-selector' add_ons: movil_30gb_add_ons, hide_energy: true %}
-                  <div class="main-custom-pack-card__pricing">
+                  <div class="main-custom-pack-card__pricing" original-price="{{ variant_movil_30gb.price }}">
                     <div class="bestPrice">{{ variant_movil_30gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
@@ -177,7 +177,7 @@
                     {% render 'sim-selector' product: movil_60gb, use_select: true %}
                   </div>
                   {% render 'addons-selector' add_ons: movil_60gb_add_ons, hide_energy: true %}
-                  <div class="main-custom-pack-card__pricing">
+                  <div class="main-custom-pack-card__pricing" original-price="{{ variant_movil_60gb.price }}">
                     <div class="bestPrice">{{ variant_movil_60gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
                 </div>
@@ -516,6 +516,23 @@
       });
 
       $('.main-custom-pack-card.card-movil .main-custom-pack-card__content--select select').on('change', function() {
+        const text = $(this).find('option:selected').text();
+        if (text.includes('Alta Nueva')) {
+          const currentPrice = $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').text().replace('/año','').replace(',','').replace('€','')
+          $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').html(
+            `
+              ${formatEuro((Number(currentPrice) + 1990) / 100)}<span>€/año</span>
+            `
+          )
+        } else {
+          const originalPrice = $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing').attr('original-price')
+          $(this).closest('.main-custom-pack-card.card-movil').find('.main-custom-pack-card__pricing .bestPrice').html(
+            `
+              ${formatEuro(Number(originalPrice) / 100)}<span>€/año</span>
+            `
+          )
+        }
+
         setTimeout(() => {
           updateTotalizerFromFibraHTML()
         }, 500);
