@@ -416,7 +416,57 @@
       }
     }
     &--contract {
+      width: 532px;
+      margin: 0 auto;
+      display: block;
+      padding-top: 160px;
+      padding-bottom: 160px;
 
+      h2 {
+        color: var(--Colors-1000, var(--Colors-1000, #000));
+        text-align: center;
+        font-family: var(--Family-Font, Nohemi);
+        font-size: var(--Typo-H1, 49px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin: 0px;
+        margin-bottom: 64px;
+      }
+
+      .main-input-field-container {
+        display: flex;
+        gap: 20px;
+
+        .main-input-field {
+          width: 50%;
+        }
+      }
+      .main-checkbox-field-container {
+        margin-bottom: 20px;
+        .main-checkbox-field {
+          margin-bottom: 6px;
+          position: relative;
+
+          input {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 3px;
+            left: -2px;
+            opacity: 0;
+          }
+          label {
+            letter-spacing: 0px;
+          }
+        }
+      }
+      .main-input-field {
+        margin-bottom: 20px;
+      }
+      .main-custom-button {
+        width: 100%;
+      }
     }
   }
 }

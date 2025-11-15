@@ -169,7 +169,65 @@
         </div>
       </div>
 
-      <div class="main-custom-energy__content--contract"></div>
+      <div class="main-custom-energy__content--contract">
+
+        <h2>Contrátalo ahora</h2>
+        <form method="post" action="/contact#contact_form" accept-charset="UTF-8" class="contratalo-form">
+          <input type="hidden" name="form_type" value="contact">
+          <input type="hidden" name="utf8" value="✓">
+
+          {% if form and form.errors %}
+            {{ form.errors | default_errors }}
+          {% endif %}
+
+          <div class="main-input-field-container">
+            <div class="main-input-field">
+              <label>Nombre completo</label>
+              <input type="text" name="contact[name]" required>
+            </div>
+            <div class="main-input-field">
+              <label>Nº de teléfono</label>
+              <input type="text" name="contact[phone]" required>
+            </div>
+          </div>
+          
+          <div class="main-input-field">
+            <label>Email</label>
+            <input type="email" name="contact[email]" required>
+          </div>
+
+          <div class="main-input-field">
+            <label>Código postal</label>
+            <input type="text" name="contact[codigo_postal]" required>
+          </div>
+
+          <div class="main-input-field">
+            <label>Disponibilidad de contacto</label>
+            <select name="contact[disponibilidad]">
+              <option>Mañana</option>
+              <option>Tarde</option>
+              <option>Noche</option>
+            </select>
+          </div>
+
+          <div class="main-checkbox-field-container">
+            <div class="main-checkbox-field">
+              <input type="checkbox" required>
+              <label>He leído y acepto la <a href="/#" class="main-custom-link-primary">información básica sobre protección de datos*</a></label>
+            </div>
+            <div class="main-checkbox-field">
+              <input type="checkbox" required>
+              <label>Deseo factura electrónica</label>
+            </div>
+            <div class="main-checkbox-field">
+              <input type="checkbox" required>
+              <label>Me registraré en la app 'Para Ti'</label>
+            </div>
+          </div>
+
+          <button type="submit" class="main-custom-button">Enviar</button>
+        </form>
+      </div>
 
     </div>
 </section>

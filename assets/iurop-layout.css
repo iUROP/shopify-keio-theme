@@ -486,7 +486,7 @@ html .main-custom-button, body .main-custom-button {
 }
 html .main-custom-button:hover, body .main-custom-button:hover {
   border-radius: var(--Corner-Extra-small, 4px);
-  background: var(--Colors-600, #931E31);
+  background: var(--Colors-600, #751D28);
 }
 html .main-custom-button svg, body .main-custom-button svg {
   margin-top: -6px;
@@ -644,7 +644,7 @@ html .main-input-field label, body .main-input-field label {
   font-weight: 400;
   line-height: 24px;
 }
-html .main-input-field input, body .main-input-field input {
+html .main-input-field input, html .main-input-field select, body .main-input-field input, body .main-input-field select {
   display: flex;
   height: 45px;
   padding: 0 var(--Space-400, 16px);
@@ -660,7 +660,7 @@ html .main-input-field input, body .main-input-field input {
   font-weight: 300;
   line-height: 24px;
 }
-html .main-input-field input::placeholder, body .main-input-field input::placeholder {
+html .main-input-field input::placeholder, html .main-input-field select::placeholder, body .main-input-field input::placeholder, body .main-input-field select::placeholder {
   color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
   font-family: var(--Family-Font---Body, Nohemi);
   font-size: var(--Typo-Body-M, 16px);
@@ -5975,6 +5975,56 @@ body.template-page-keio-x .main-custom-footer:before {
     line-height: 20px;
   }
 }
+.main-custom-energy__content--contract {
+  width: 532px;
+  margin: 0 auto;
+  display: block;
+  padding-top: 160px;
+  padding-bottom: 160px;
+}
+.main-custom-energy__content--contract h2 {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H1, 49px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 0px;
+  margin-bottom: 64px;
+}
+.main-custom-energy__content--contract .main-input-field-container {
+  display: flex;
+  gap: 20px;
+}
+.main-custom-energy__content--contract .main-input-field-container .main-input-field {
+  width: 50%;
+}
+.main-custom-energy__content--contract .main-checkbox-field-container {
+  margin-bottom: 20px;
+}
+.main-custom-energy__content--contract .main-checkbox-field-container .main-checkbox-field {
+  margin-bottom: 6px;
+  position: relative;
+}
+.main-custom-energy__content--contract .main-checkbox-field-container .main-checkbox-field input {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 3px;
+  left: -2px;
+  opacity: 0;
+}
+.main-custom-energy__content--contract .main-checkbox-field-container .main-checkbox-field label {
+  letter-spacing: 0px;
+}
+.main-custom-energy__content--contract .main-input-field {
+  margin-bottom: 20px;
+}
+.main-custom-energy__content--contract .main-custom-button {
+  width: 100%;
+}
+
 .main-hero-title {
   position: relative;
 }
