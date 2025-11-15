@@ -573,6 +573,12 @@ html .main-input-field__label, body .main-input-field__label {
   font-weight: 400;
   line-height: 24px;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-input-field__label, body .main-input-field__label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 html .main-input-field__input, body .main-input-field__input {
   display: flex;
   height: 45px;
@@ -644,6 +650,12 @@ html .main-input-field label, body .main-input-field label {
   font-weight: 400;
   line-height: 24px;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-input-field label, body .main-input-field label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 html .main-input-field input, html .main-input-field select, body .main-input-field input, body .main-input-field select {
   display: flex;
   height: 45px;
@@ -689,6 +701,12 @@ html .main-checkbox-field label, body .main-checkbox-field label {
   font-weight: 400;
   line-height: 24px;
 }
+@media only screen and (max-width: 1024px) {
+  html .main-checkbox-field label, body .main-checkbox-field label {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
 html .main-checkbox-field label a, body .main-checkbox-field label a {
   color: var(--Colors-500, var(--Colors-500, #931E31));
   font-family: var(--Family-Font---Body, Nohemi);
@@ -702,6 +720,12 @@ html .main-checkbox-field label a, body .main-checkbox-field label a {
   text-decoration-thickness: auto;
   text-underline-offset: auto;
   text-underline-position: from-font;
+}
+@media only screen and (max-width: 1024px) {
+  html .main-checkbox-field label a, body .main-checkbox-field label a {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
 html .main-checkbox-field label:before, body .main-checkbox-field label:before {
   content: "";
@@ -5851,6 +5875,26 @@ body.template-page-keio-x .main-custom-footer:before {
   width: auto;
   padding: var(--Space-4000, 160px) var(--Space-2400, 96px);
 }
+@media only screen and (max-width: 1600px) {
+  .main-custom-energy__content--activation {
+    margin-left: -56px;
+    margin-right: -56px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .main-custom-energy__content--activation {
+    margin-left: -46px;
+    margin-right: -46px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--activation {
+    padding: 64px 16px;
+    margin-left: -16px;
+    margin-right: -16px;
+    gap: 48px;
+  }
+}
 .main-custom-energy__content--activation h2 {
   color: var(--Colors-White, var(--Colors-white, #FFF));
   text-align: center;
@@ -5866,6 +5910,11 @@ body.template-page-keio-x .main-custom-footer:before {
     font-size: 36px;
   }
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--activation h2 {
+    font-size: 30px;
+  }
+}
 .main-custom-energy__content--activation .main-custom-energy-activacion {
   display: flex;
   align-items: center;
@@ -5874,6 +5923,11 @@ body.template-page-keio-x .main-custom-footer:before {
 @media only screen and (max-width: 1500px) {
   .main-custom-energy__content--activation .main-custom-energy-activacion {
     gap: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--activation .main-custom-energy-activacion {
+    flex-wrap: wrap;
   }
 }
 .main-custom-energy__content--activation .main-custom-energy-activacion--item {
@@ -5893,6 +5947,11 @@ body.template-page-keio-x .main-custom-footer:before {
 @media only screen and (max-width: 1500px) {
   .main-custom-energy__content--activation .main-custom-energy-activacion--item {
     padding: 22px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--activation .main-custom-energy-activacion--item {
+    width: 100%;
   }
 }
 .main-custom-energy__content--activation .main-custom-energy-activacion--item__inner {
@@ -5982,6 +6041,13 @@ body.template-page-keio-x .main-custom-footer:before {
   padding-top: 160px;
   padding-bottom: 160px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--contract {
+    width: 100%;
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
+}
 .main-custom-energy__content--contract h2 {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   text-align: center;
@@ -5993,12 +6059,23 @@ body.template-page-keio-x .main-custom-footer:before {
   margin: 0px;
   margin-bottom: 64px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--contract h2 {
+    font-size: 20px;
+  }
+}
 .main-custom-energy__content--contract .main-input-field-container {
   display: flex;
   gap: 20px;
 }
 .main-custom-energy__content--contract .main-input-field-container .main-input-field {
   width: 50%;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-energy__content--contract .main-input-field-container .main-input-field {
+    box-sizing: border-box;
+    width: 46%;
+  }
 }
 .main-custom-energy__content--contract .main-checkbox-field-container {
   margin-bottom: 20px;

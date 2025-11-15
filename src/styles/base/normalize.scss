@@ -198,6 +198,11 @@ html, body {
     font-style: normal;
     font-weight: 400;
     line-height: 24px;
+
+    @media only screen and (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
   .main-input-field__input {
     display: flex;
@@ -268,6 +273,11 @@ html, body {
       font-style: normal;
       font-weight: 400;
       line-height: 24px;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
     }
     input, select {
       display: flex;
@@ -318,6 +328,11 @@ html, body {
       font-weight: 400;
       line-height: 24px;
 
+      @media only screen and (max-width: 1024px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
       a {
         color: var(--Colors-500, var(--Colors-500, #931E31));
         font-family: var(--Family-Font---Body, Nohemi);
@@ -331,6 +346,11 @@ html, body {
         text-decoration-thickness: auto;
         text-underline-offset: auto;
         text-underline-position: from-font;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
 
       &:before {

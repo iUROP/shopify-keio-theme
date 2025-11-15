@@ -293,6 +293,22 @@
       width: auto;
       padding: var(--Space-4000, 160px) var(--Space-2400, 96px);
 
+      @media only screen and (max-width: 1600px) {
+        margin-left: -56px;
+        margin-right: -56px;
+      }
+      @media only screen and (max-width: 1400px) {
+        margin-left: -46px;
+        margin-right: -46px;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        padding: 64px 16px;
+        margin-left: -16px;
+        margin-right: -16px;
+        gap: 48px;
+      }
+
       h2 {
         color: var(--Colors-White, var(--Colors-white, #FFF));
         text-align: center;
@@ -306,6 +322,9 @@
         @media only screen and (max-width: 1400px) {
           font-size: 36px;
         }
+        @media only screen and (max-width: 1024px) {
+          font-size: 30px;
+        }
       }
       .main-custom-energy-activacion {
         display: flex;
@@ -314,6 +333,9 @@
 
         @media only screen and (max-width: 1500px) {
           gap: 20px;
+        }
+        @media only screen and (max-width: 1024px) {
+          flex-wrap: wrap;
         }
 
         &--item {
@@ -332,6 +354,9 @@
 
           @media only screen and (max-width: 1500px) {
             padding: 22px;
+          }
+          @media only screen and (max-width: 1024px) {
+            width: 100%;
           }
 
           &__inner {
@@ -422,6 +447,12 @@
       padding-top: 160px;
       padding-bottom: 160px;
 
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+        padding-top: 96px;
+        padding-bottom: 96px;
+      }
+
       h2 {
         color: var(--Colors-1000, var(--Colors-1000, #000));
         text-align: center;
@@ -432,6 +463,10 @@
         line-height: 120%;
         margin: 0px;
         margin-bottom: 64px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 20px;
+        }
       }
 
       .main-input-field-container {
@@ -440,6 +475,11 @@
 
         .main-input-field {
           width: 50%;
+
+          @media only screen and (max-width: 1024px) {
+            box-sizing: border-box;
+            width: 46%;
+          }
         }
       }
       .main-checkbox-field-container {
