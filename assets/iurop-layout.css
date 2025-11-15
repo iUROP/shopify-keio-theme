@@ -3872,7 +3872,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
 }
 @media only screen and (max-width: 1024px) {
   .blog-page__posts--inner__article--image {
-    aspect-ratio: 2/1;
+    aspect-ratio: 2/1.4;
     position: relative;
     height: auto;
     min-height: 10px;
