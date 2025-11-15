@@ -486,7 +486,7 @@ html .main-custom-button, body .main-custom-button {
 }
 html .main-custom-button:hover, body .main-custom-button:hover {
   border-radius: var(--Corner-Extra-small, 4px);
-  background: var(--Colors-600, #751D28);
+  background: var(--Colors-600, #931E31);
 }
 html .main-custom-button svg, body .main-custom-button svg {
   margin-top: -6px;
@@ -3925,6 +3925,75 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   font-weight: 400;
   line-height: 24px;
   text-decoration: underline;
+}
+
+body.template-article .article-template {
+  width: 1000px;
+  padding-top: 96px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+body.template-article .article-template .article-template__hero-adapt {
+  padding: 0px !important;
+}
+body.template-article .article-template .article-template__hero-adapt img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+body.template-article .article-template header.page-width {
+  border-bottom: 1px solid #CDCDCD;
+  padding-bottom: 18px;
+}
+body.template-article .article-template .page-width {
+  margin-top: 48px;
+}
+body.template-article .article-template .page-width .article-template__title {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H2, 39px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 0px;
+}
+body.template-article .article-template .page-width .caption-author {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-L, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+}
+body.template-article .article-template .page-width time {
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+body.template-article .article-template .article-template__social-sharing {
+  display: none !important;
+}
+body.template-article .article-template .article-template__content p span {
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-L, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+}
+body.template-article .article-template .article-template__content h2 span {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H3, 31px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+body.template-article .article-template__link.link {
+  display: none !important;
 }
 
 .main-custom-reviews {

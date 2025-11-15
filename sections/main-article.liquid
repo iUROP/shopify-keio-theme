@@ -53,12 +53,12 @@
           </h1>
           {%- if block.settings.blog_show_date -%}
             <span class="circle-divider caption-with-letter-spacing">
+
+              <span class="caption-author">
+                <span>{{ article.author }}</span>
+              </span>
+
               {{- article.published_at | time_tag: format: 'date' -}}
-            </span>
-          {%- endif -%}
-          {%- if block.settings.blog_show_author -%}
-            <span class="caption-with-letter-spacing">
-              <span>{{ article.author }}</span>
             </span>
           {%- endif -%}
         </header>

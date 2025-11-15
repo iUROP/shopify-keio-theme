@@ -199,3 +199,84 @@
     }
   }
 }
+body.template-article {
+  .article-template {
+    width: 1000px;
+    padding-top: 96px;
+    margin: 0 auto;
+    max-width: 100%;
+
+    .article-template__hero-adapt {
+      padding: 0px !important;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    header.page-width {
+      border-bottom: 1px solid #CDCDCD;
+      padding-bottom: 18px;
+    }
+
+    .page-width {
+      margin-top: 48px;
+      .article-template__title {
+        color: var(--Colors-1000, var(--Colors-1000, #000));
+        font-family: var(--Family-Font, Nohemi);
+        font-size: var(--Typo-H2, 39px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-bottom: 0px;
+      }
+      .caption-author {
+        color: var(--Colors-1000, var(--Colors-1000, #000));
+        font-family: var(--Family-Font---Body, Nohemi);
+        font-size: var(--Typo-Body-L, 20px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 35px;
+      }
+      time {
+        color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+        font-family: var(--Family-Font---Body, Nohemi);
+        font-size: var(--Typo-Body-M, 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+      }
+    }
+
+    .article-template__social-sharing {
+      display: none !important;
+    }
+    .article-template__content {
+      p {
+        span {
+          color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+          font-family: var(--Family-Font---Body, Nohemi);
+          font-size: var(--Typo-Body-L, 20px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 35px;
+        }
+      }
+      h2 {
+        span {
+          color: var(--Colors-1000, var(--Colors-1000, #000));
+          font-family: var(--Family-Font, Nohemi);
+          font-size: var(--Typo-H3, 31px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+  }
+  .article-template__link.link {
+    display: none !important;
+  }
+}
