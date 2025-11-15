@@ -5,7 +5,8 @@
         <p>Contrata luz 100% Endesa , sin permanencia y con hasta 170€ en beneficios para ti</p>
         <button class="main-custom-button">Contrata ahora</button>
       </div>
-      <img src="{{ section.settings.primary_banner | image_url: width: 1200 }}" class="full-banner" />
+      <img src="{{ section.settings.primary_banner | image_url: width: 1200 }}" class="full-banner show-only-desktop" />
+      <img src="{{ section.settings.primary_banner_m | image_url: width: 1200 }}" class="full-banner show-only-mobile" />
     </div>
 
     <div class="main-custom-energy__content pl pr pt pb" id="content-section">
@@ -193,8 +194,18 @@
     },
     {
       "type": "image_picker",
+      "id": "primary_banner_m",
+      "label": "Banner principal (mobile)"
+    },
+    {
+      "type": "image_picker",
       "id": "banner_grid",
       "label": "Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_grid_m",
+      "label": "Banner (mobile)"
     },
   ],
   "presets": [
