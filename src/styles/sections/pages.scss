@@ -545,7 +545,6 @@ body.template-product {
             }
           }
         }
-
         .product-form__input--pill input[type=radio]:checked+label {
 
           &:after {
@@ -558,6 +557,16 @@ body.template-product {
             top: 20px;
             position: absolute;
             border-radius: 20px;
+          }
+        }
+        .form__label {
+          span {
+            div {
+              position: absolute;
+              top: 11px;
+              right: 66px;
+              opacity: 0.5;
+            }
           }
         }
       }
@@ -592,6 +601,13 @@ body.template-product {
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
+
+            div {
+              position: absolute;
+              top: 11px;
+              right: 66px;
+              opacity: 0.5;
+            }
           }
           svg {
             position: absolute;
@@ -667,7 +683,7 @@ body.template-product {
           }
         }
       }
-      .shopify_subscriptions_fieldset {
+      .shopify_subscriptions_fieldsets {
         position: relative;
         margin-bottom: -20px;
 
@@ -712,6 +728,9 @@ body.template-product {
         & > div {
           border: 0px !important;
         }
+        .shopify_subscriptions_app_policy {
+          display: none;
+        }
         .shopify_subscriptions_app_block_label {
           border-radius: var(--Corner-Extra-small, 4px);
           border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
@@ -731,51 +750,52 @@ body.template-product {
           font-style: normal;
           font-weight: 400;
           line-height: 24px;
-          padding-left: 60px;
+          padding-left: 50px;
           text-align: left;
           margin-bottom: 8px;
-          display: none;
           cursor: pointer;
           position: relative;
+          display: none;
 
-          &:before {
-            content: '';
-            width: 17px;
-            height: 17px;
-            aspect-ratio: 1/1;
-            border: 1px solid #931E31;
-            left: 30px;
-            top: 13px;
-            position: absolute;
-            z-index: 1;
-            border-radius: 30px;
-          }
-
-          &.active {
-            &:after {
-              content: "";
-              width: 11px;
-              height: 11px;
-              aspect-ratio: 1 / 1;
-              background-color: #931e31;
-              left: 33px;
-              top: 16px;
-              position: absolute;
-              border-radius: 20px;
-            }
-          }
-
-          .allocation_price {
-            display: none !important;
+          .shopify_subscriptions_purchase_option_wrapper {
+            display: none;
           }
           .shopify_subscriptions_app_block_label_children {
-            display: none !important;
+            li {
+              label {
+                input[type="radio"] {
+                  -webkit-appearance: none;
+                  appearance: none;
+                  background-color: transparent;
+                  margin: 0;
+                  font: inherit;
+                  color: currentColor;
+                  width: 17px;
+                  height: 17px;
+                  border: 1px solid #931E31;
+                  border-radius: 50%;
+                  transform: translate(-28px, 2px);
+                  display: grid;
+                  place-content: center;
+                  position: absolute;
+
+                  &:before {
+                    content: "";
+                    width: 11px;
+                    height: 11px;
+                    border-radius: 50%;
+                    transform: scale(0);
+                    transition: 120ms transform ease-in-out;
+                    background-color: #931E31;
+                  }
+                }
+                input[type="radio"]:checked::before {
+                  transform: scale(1);
+                }
+              }
+            }
           }
         }
-        .shopify_subscriptions_app_policy {
-          display: none;
-        }
-
         &.active {
           &::after {
             transform: rotate(180deg);

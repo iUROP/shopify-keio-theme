@@ -37,7 +37,10 @@
 
       <fieldset class="js product-form__input product-form__input--pill">
         <legend class="form__label">
-          <span>{{ option.name }}</span>
+          <span>
+            {{ option.name }}
+            <div class="selected-option"></div>
+          </span>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <mask id="mask0_13558_5736" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
               <rect width="24" height="24" fill="#D9D9D9"/>
@@ -59,3 +62,19 @@
     <script type="application/json" data-selected-variant>{{ product.selected_or_first_available_variant | json }}</script>
   </variant-selects>
 {%- endunless -%}
+
+
+<script>
+  $( window ).on( "ready", function() {
+    setInterval(() => {
+      $('.product-form__input').each(function() {
+        const selected = $(this).find('input[type="radio"]:checked').val();
+
+        $(this).find('.selected-option').html(`${selected}`)
+      });
+
+
+    }, 1000);
+  });
+
+</script>

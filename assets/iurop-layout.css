@@ -2162,7 +2162,7 @@ i-minicart .i-minicart-container__overlay.open {
   position: fixed;
   right: 50px;
   bottom: 100px;
-  z-index: 2;
+  z-index: 5;
   animation: float 2s ease-in-out infinite;
 }
 @media only screen and (max-width: 1024px) {
@@ -6558,6 +6558,12 @@ body.template-product .i-container-product .product .product-form__buttons--vari
   position: absolute;
   border-radius: 20px;
 }
+body.template-product .i-container-product .product .product-form__buttons--variant-picker .form__label span div {
+  position: absolute;
+  top: 11px;
+  right: 66px;
+  opacity: 0.5;
+}
 body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading {
   border-radius: var(--Corner-Extra-small, 4px);
   border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
@@ -6588,6 +6594,12 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span div {
+  position: absolute;
+  top: 11px;
+  right: 66px;
+  opacity: 0.5;
 }
 body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading svg {
   position: absolute;
@@ -6655,11 +6667,11 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
 body.template-product .i-container-product .product .product-form__buttons--sim-selector.active .product-form__buttons--sim-selector__options {
   display: block;
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset {
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets {
   position: relative;
   margin-bottom: -20px;
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset::before {
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets::before {
   content: "Frecuencia de pago";
   border-radius: var(--Corner-Extra-small, 4px);
   border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
@@ -6684,7 +6696,7 @@ body.template-product .i-container-product .product .shopify_subscriptions_field
   width: 100%;
   margin-bottom: 10px;
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset::after {
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets::after {
   content: "";
   width: 26px;
   height: 26px;
@@ -6697,10 +6709,13 @@ body.template-product .i-container-product .product .shopify_subscriptions_field
   background-repeat: no-repeat;
   background-size: 100%;
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset > div {
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets > div {
   border: 0px !important;
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset .shopify_subscriptions_app_block_label {
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets .shopify_subscriptions_app_policy {
+  display: none;
+}
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets .shopify_subscriptions_app_block_label {
   border-radius: var(--Corner-Extra-small, 4px);
   border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
   background: var(--Colors-100, #FAFAFA);
@@ -6719,49 +6734,48 @@ body.template-product .i-container-product .product .shopify_subscriptions_field
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  padding-left: 60px;
+  padding-left: 50px;
   text-align: left;
   margin-bottom: 8px;
-  display: none;
   cursor: pointer;
   position: relative;
+  display: none;
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset .shopify_subscriptions_app_block_label:before {
-  content: "";
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets .shopify_subscriptions_app_block_label .shopify_subscriptions_purchase_option_wrapper {
+  display: none;
+}
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets .shopify_subscriptions_app_block_label .shopify_subscriptions_app_block_label_children li label input[type=radio] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
   width: 17px;
   height: 17px;
-  aspect-ratio: 1/1;
   border: 1px solid #931E31;
-  left: 30px;
-  top: 13px;
+  border-radius: 50%;
+  transform: translate(-28px, 2px);
+  display: grid;
+  place-content: center;
   position: absolute;
-  z-index: 1;
-  border-radius: 30px;
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset .shopify_subscriptions_app_block_label.active:after {
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets .shopify_subscriptions_app_block_label .shopify_subscriptions_app_block_label_children li label input[type=radio]:before {
   content: "";
   width: 11px;
   height: 11px;
-  aspect-ratio: 1/1;
-  background-color: #931e31;
-  left: 33px;
-  top: 16px;
-  position: absolute;
-  border-radius: 20px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  background-color: #931E31;
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset .shopify_subscriptions_app_block_label .allocation_price {
-  display: none !important;
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets .shopify_subscriptions_app_block_label .shopify_subscriptions_app_block_label_children li label input[type=radio]:checked::before {
+  transform: scale(1);
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset .shopify_subscriptions_app_block_label .shopify_subscriptions_app_block_label_children {
-  display: none !important;
-}
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset .shopify_subscriptions_app_policy {
-  display: none;
-}
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset.active::after {
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets.active::after {
   transform: rotate(180deg);
 }
-body.template-product .i-container-product .product .shopify_subscriptions_fieldset.active .shopify_subscriptions_app_block_label {
+body.template-product .i-container-product .product .shopify_subscriptions_fieldsets.active .shopify_subscriptions_app_block_label {
   display: flex !important;
 }
 body.template-product .related-products {

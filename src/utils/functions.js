@@ -327,12 +327,17 @@ document.addEventListener('click', function(event) {
 });
 
 document.addEventListener('click', function(event) {
-  const option = event.target.closest('.shopify_subscriptions_fieldset');
-  console.log("Click to suscription:", option)
+  const fieldset = event.target.closest('.shopify_subscriptions_fieldset');
+  if (!fieldset) return;
 
-  if (!option) return;
-  option.classList.toggle('active');
+  if (event.target === fieldset) {
+    fieldset.classList.toggle('active');
+  }
 });
+
+
+
+
 
 document.addEventListener('click', function(event) {
   const mobileNav = event.target.closest('.main-custom-header__top--container__mobile-menu');
