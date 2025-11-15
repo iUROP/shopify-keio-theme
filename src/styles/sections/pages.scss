@@ -105,6 +105,11 @@ body.template-product {
                 gap: 22px;
               }
 
+              @media only screen and (max-width: 380px) {
+                gap: 15px;
+                padding: 18px;
+              }
+
               .product__media-wrapper-master--tooltip__heading {
                 color: var(--Colors-700, var(--Colors-700, #000));
                 font-family: var(--Family-Font, Nohemi);
@@ -117,6 +122,9 @@ body.template-product {
 
                 @media only screen and (max-width: 1500px) {
                   font-size: 26px;
+                }
+                @media only screen and (max-width: 1024px) {
+                  font-size: 20px;
                 }
 
                 strong {
@@ -153,6 +161,9 @@ body.template-product {
 
                     @media only screen and (max-width: 1500px) {
                       font-size: 14px;
+                    }
+                    @media only screen and (max-width: 1024px) {
+                      line-height: 18px;
                     }
 
                     img {
@@ -873,6 +884,28 @@ body.template-collection {
   .facets-wrapper.page-width {
     display: none !important;
   }
+  .collection-hero__inner {
+    .collection-hero__title {
+      color: var(--Colors-700, var(--Colors-700, #000));
+      font-family: var(--Family-Font, Nohemi);
+      font-size: var(--Typo-H3, 28px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    .collection-hero__description {
+      margin: 10px 0px;
+
+      p {
+        margin: 10px 0px;
+        color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+        font-family: var(--Family-Font---Body, Nohemi);
+        font-size: var(--Typo-Body-M, 16px);
+        font-style: normal;
+        font-weight: 400;
+      }
+    }
+  }
   #product-grid {
     margin: 0;
     padding: 0;
@@ -890,6 +923,14 @@ body.template-collection {
         width: 100%;
       }
     }
+  }
+  .collection-filter {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  .main-custom-product-list__container--filter {
+    margin: 20px auto;
   }
 }
 

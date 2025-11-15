@@ -44,6 +44,17 @@
   </div>
 </div>
 
+
+<div class="collection-filter">
+  <div class="main-custom-product-list__container--filter">
+    {% assign menu_collectins = linklists['menu-colecciones'] %}
+
+    {%- for link in menu_collectins.links -%}
+      <a href="{{ link.url }}" class="{% if link.active %}active{% endif %}">{{ link.title }}</a>
+    {%- endfor -%}
+  </div>
+</div>
+
 {% schema %}
 {
   "name": "t:sections.main-collection-banner.name",

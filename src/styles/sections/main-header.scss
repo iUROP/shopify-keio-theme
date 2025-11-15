@@ -24,6 +24,13 @@
     flex-shrink: 0;
     background: var(--Colors-white, #FFF);
 
+    @media only screen and (max-width: 1600px) {
+      padding: 16px 56px;
+    }
+    @media only screen and (max-width: 1400px) {
+      padding: 16px 46px;
+    }
+
     @media only screen and (max-width: 1024px) {
       padding: var(--Space-400, 16px);
       padding-bottom: 0;
@@ -92,6 +99,14 @@
     flex-shrink: 0;
     border-top: 1px solid var(--Colors-ligth_grey, #CDCDCD);
     background: var(--Colors-white, #FFF);
+
+    @media only screen and (max-width: 1600px) {
+      padding: 0 56px;
+    }
+    @media only screen and (max-width: 1400px) {
+      padding: 0 46px;
+    }
+    
 
     @media only screen and (max-width: 1024px) {
       position: absolute;
