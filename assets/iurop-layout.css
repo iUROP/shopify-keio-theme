@@ -3796,7 +3796,8 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
     background: transparent;
   }
 }
-.blog-page__filter button {
+.blog-page__filter button,
+.blog-page__filter a {
   display: flex;
   height: var(--sds-size-icon-large);
   max-width: var(--Buttons-D-MaxW, 300px);
@@ -3814,15 +3815,18 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   border: 0px;
   cursor: pointer;
   background-color: transparent;
+  text-decoration: none;
 }
 @media only screen and (max-width: 1024px) {
-  .blog-page__filter button {
+  .blog-page__filter button,
+  .blog-page__filter a {
     padding: 8px 12px;
     font-size: 14px;
     line-height: 13px;
   }
 }
-.blog-page__filter button.active {
+.blog-page__filter button.active,
+.blog-page__filter a.active {
   border-radius: var(--Corner-Full, 10000px);
   border: var(--Strokes-Medium, 2px) solid var(--Colors-500, #931E31);
   background: var(--Colors-500, #931E31);

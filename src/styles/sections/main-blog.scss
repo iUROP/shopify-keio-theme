@@ -38,7 +38,8 @@
       background: transparent;
     }
 
-    button {
+    button,
+    a {
       display: flex;
       height: var(--sds-size-icon-large);
       max-width: var(--Buttons-D-MaxW, 300px);
@@ -56,6 +57,7 @@
       border: 0px;
       cursor: pointer;
       background-color: transparent;
+      text-decoration: none;
 
       @media only screen and (max-width: 1024px) {
         padding: 8px 12px;
