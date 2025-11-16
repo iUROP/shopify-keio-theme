@@ -335,7 +335,13 @@ document.addEventListener('click', function(event) {
   }
 });
 
+document.addEventListener('click', function(event) {
+  const fieldset = event.target.closest('.open-search');
+  if (!fieldset) return;
 
+  console.log("clcik to open search", fieldset.closest('.main-custom-header'))
+  fieldset.closest('.main-custom-header').querySelector('.global-search').classList.toggle('active');
+});
 
 
 

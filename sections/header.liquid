@@ -1,11 +1,27 @@
 <header class="main-custom-header custom-section">
     <div class="main-custom-header__top b-box">
       <div class="main-custom-header__top--container">
+
+        <div class="global-search">
+          <form id="search-form">
+            <input
+              id="search-input"
+              type="text"
+              placeholder="Buscar en Keio..."
+            />
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+                <path d="M14.8568 14.2085L10.5528 9.90452C11.495 8.80402 11.9925 7.45477 11.9925 6C11.9925 4.40201 11.3668 2.89447 10.2362 1.75628C9.10553 0.61809 7.59799 0 5.99246 0C4.38693 0 2.89447 0.625628 1.75628 1.75628C0.61809 2.88693 0 4.40201 0 6C0 7.59799 0.625628 9.10553 1.75628 10.2437C2.88693 11.3819 4.39447 12 6 12C7.4397 12 8.8191 11.4874 9.90452 10.5603L14.2085 14.8643C14.2915 14.9548 14.4196 15 14.5327 15C14.6533 15 14.7739 14.9472 14.8568 14.8643C14.9472 14.7739 15 14.6608 15 14.5402C15 14.4121 14.9472 14.2915 14.8568 14.2085ZM9.58794 9.58794C8.63065 10.5452 7.34925 11.0804 6 11.0804C4.65075 11.0804 3.36935 10.5528 2.41206 9.59548C1.45477 8.63065 0.919598 7.35678 0.919598 6C0.919598 4.64322 1.44724 3.36935 2.40452 2.41206C3.36181 1.45477 4.63568 0.927136 5.99246 0.927136C7.34925 0.927136 8.62312 1.45477 9.5804 2.41206C10.5377 3.36935 11.0653 4.64322 11.0653 6C11.0653 7.35678 10.5452 8.63065 9.58794 9.58794Z" fill="#5C5E5C"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+
         <div class="main-custom-header__top--container__mobile-menu show-only-mobile">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12" fill="none">
             <g clip-path="url(#clip0_13808_13411)">
               <path d="M1 6H19" stroke="#5C5E5C" stroke-linecap="round"/>
-              <path d="M1 1H19" stroke="#5C5E5C" stroke-linecap="round"/>
+              <path d="M1 1H19" stroke="#6c7e6cff" stroke-linecap="round"/>
               <path d="M0.833008 10.9435H10.833" stroke="#5C5E5C" stroke-linecap="round"/>
             </g>
             <defs>
@@ -21,7 +37,7 @@
           </a>
         </div>
         <div class="main-custom-header__top--container__icons">
-          <div>
+          <div class="open-search">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M19.3568 18.7085L15.0528 14.4045C15.995 13.304 16.4925 11.9548 16.4925 10.5C16.4925 8.90201 15.8668 7.39447 14.7362 6.25628C13.6055 5.11809 12.098 4.5 10.4925 4.5C8.88693 4.5 7.39447 5.12563 6.25628 6.25628C5.11809 7.38693 4.5 8.90201 4.5 10.5C4.5 12.098 5.12563 13.6055 6.25628 14.7437C7.38693 15.8819 8.89447 16.5 10.5 16.5C11.9397 16.5 13.3191 15.9874 14.4045 15.0603L18.7085 19.3643C18.7915 19.4548 18.9196 19.5 19.0327 19.5C19.1533 19.5 19.2739 19.4472 19.3568 19.3643C19.4472 19.2739 19.5 19.1608 19.5 19.0402C19.5 18.9121 19.4472 18.7915 19.3568 18.7085ZM14.0879 14.0879C13.1307 15.0452 11.8492 15.5804 10.5 15.5804C9.15075 15.5804 7.86935 15.0528 6.91206 14.0955C5.95477 13.1307 5.4196 11.8568 5.4196 10.5C5.4196 9.14322 5.94724 7.86935 6.90452 6.91206C7.86181 5.95477 9.13568 5.42714 10.4925 5.42714C11.8492 5.42714 13.1231 5.95477 14.0804 6.91206C15.0377 7.86935 15.5653 9.14322 15.5653 10.5C15.5653 11.8568 15.0452 13.1307 14.0879 14.0879Z" fill="black"/>
             </svg>
@@ -72,7 +88,7 @@
 <script>
   window.allProducts = [];
 
-  {% assign my_collection = collections['frontpage'] %}
+  {% assign my_collection = collections['shop'] %}
 
   {% for product in my_collection.products %}
     {% assign related = product.metafields.custom.productos_relacionados.value %}
@@ -86,6 +102,29 @@
       ]
     });
   {% endfor %}
+</script>
+
+<script>
+  const form = document.getElementById("search-form");
+  const input = document.getElementById("search-input");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const query = input.value.trim();
+
+    if (query.length > 0) {
+      const url = `/search?q=${encodeURIComponent(query)}`;
+      window.location.href = url;
+    }
+  });
+
+  input.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      const q = input.value.trim();
+      if (q) window.location.href = `/search?q=${encodeURIComponent(q)}`;
+    }
+  });
 </script>
 
 {% schema %}

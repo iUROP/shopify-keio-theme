@@ -962,6 +962,95 @@ body.template-collection {
   }
 }
 
+body.template-search {
+  .template-search {
+    .template-search__header {
+      h1 {
+        color: var(--Colors-700, var(--Colors-700, #000));
+        font-family: var(--Family-Font, Nohemi);
+        font-size: var(--Typo-H3, 28px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        margin: 0px;
+      }
+      .template-search__search {
+        @media only screen and (max-width: 1024px) {
+          margin-bottom: 50px !important;
+          padding: 0 16px;
+        }
+        form {
+          position: relative;
+          input {
+            display: flex;
+            height: 50px;
+            padding: 0 var(--Space-400, 16px);
+            align-items: center;
+            gap: 101px;
+            align-self: stretch;
+            border-radius: var(--Corner-Small, 8px);
+            color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+            font-family: var(--Family-Font---Body, Nohemi);
+            font-size: var(--Typo-Body-M, 16px);
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            width: 100%;
+            border-radius: var(--Corner-Full, 10000px);
+            border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
+            background: var(--Colors-white, #FFF);
+          }
+          .field__label,
+          .reset__button  {
+            display: none !important;
+          }
+          .search__button  {
+            position: absolute;
+            top: 11px;
+            right: 12px;
+            border: 0;
+          }
+        }
+
+      }
+    }
+  }
+  .facets-container {
+    display: none !important;
+  }
+  .template-search__results {
+    ul {
+      margin: 0;
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      width: 100%;
+      box-sizing: border-box;
+      .main-custom-product-card {
+        width: calc(25% - 23px);
+        margin-bottom: 30px;
+
+        @media only screen and (max-width: 1600px) {
+          font-size: 20px;
+          width: calc(33% - 17px);
+        }
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 20px;
+          width: calc(100% - 0px);
+        }
+
+        .main-custom-product-card--inner__desc {
+          ul {
+            gap: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .custom-product-add-ons {
   display: flex;
   flex-direction: column;

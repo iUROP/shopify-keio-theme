@@ -203,7 +203,7 @@ i-minicart {
         position: absolute;
         left: 0px;
         top: 82px;
-        bottom: 290px;
+        bottom: 490px;
         right: 0px;
         overflow: auto;
         padding: 12px 24px;
@@ -462,13 +462,23 @@ i-minicart {
       &--upsells {
           position: absolute;
           left: 24px;
-          bottom: 257px;
+          bottom: 282px;
           right: 24px;
-          height: 156px;
+          height: 196px;
           overflow: auto;
-          border: var(--Strokes-Medium, 2px) solid #F6F6F6;
-          padding: 22px 16px;
-          display: none;
+          padding: 0;
+          h3 {
+            color: var(--Colors-1000, var(--Colors-1000, #000));
+            font-family: var(--Family-Font---Body, Nohemi);
+            font-size: var(--Typo-Body-L, 20px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 35px;
+            margin: 0px;
+            border-bottom: 1px solid #CDCDCD;
+            padding-bottom:0px;
+            margin-bottom: 8px;
+          }
 
           @media only screen and (max-width: 1024px) {
             margin-bottom: 6px;
@@ -480,19 +490,8 @@ i-minicart {
             visibility: hidden;
           }
 
-          h3 {
-            color: var(--Colors-1000, var(--Colors-1000, #000));
-            font-family: var(--Family-Font---Body, Nohemi);
-            font-size: var(--Typo-Body-M, 16px);
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            text-align: left;
-            margin-top: 0px;
-
-          }
           &--list {
-            height: 50px;
+            height: 150px;
             .slick-slider {
               height: 100%;
               .slick-list {
@@ -511,55 +510,59 @@ i-minicart {
             }
             &__item {
               height: 100%;
-              border-radius: 20px;
-              background: #FFF;
-              padding: 0px 30px;
+              border-radius: var(--Corner-Extra-small, 4px);
+              background: var(--Colors-white, #FFF);
               position: relative;
+              padding: 0px;
               
               &--image {
                 position: absolute;
-                left: 33px;
+                left: 0;
                 top: 0;
                 bottom: 0;
-                width: 50px;
-                height: 50px;
+                width: 100%;
+                height: 70px;
                 border-radius: var(--Corner-Extra-small, 4px);
-                background: #940707;
-                display: flex;
-                align-items: center;
-                justify-content: center;
 
                 img {
                   width: 100%;
                   height: 100%;
-                  object-fit: contain;
+                  object-fit: cover;
                 }
               }
               &--labels {
                 position: absolute;
-                left: 100px;
-                right: 152px;
-                top: 0;
+                left: 0px;
+                right: 0px;
+                top: auto;
                 bottom: 0;
+                height: 80px;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+                border-radius: 0 0 4px 4px;
+                border-right: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+                border-bottom: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+                border-left: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+                padding: 0 10px;
                 h3 {
-                  color: var(--Colors-800, var(--Colors-800, #404040)) !important;
+                  color: var(--Colors-1000, var(--Colors-1000, #000)) !important;
                   font-family: var(--Family-Font---Body, Nohemi) !important;
-                  font-size: var(--Typo-Body-L, 20px) !important;
+                  font-size: var(--Typo-Body-M, 16px) !important;
                   font-style: normal !important;
                   font-weight: 400 !important;
-                  line-height: 20px !important;
-                  margin: 0;
+                  line-height: 24px !important;
+                  margin: 0 !important;
+                  padding: 0px !important;
+                  border: 0px !important;
                 }
                 p {
                   color: var(--Colors-800, var(--Colors-800, #404040));
                   font-family: var(--Family-Font---Body, Nohemi);
-                  font-size: var(--Typo-Body-M, 16px);
+                  font-size: var(--Typo-Body-S, 13px);
                   font-style: normal;
                   font-weight: 400;
-                  line-height: 16px;
+                  line-height: 20px;
                   margin: 5px 0px;
                   margin-bottom: 0px !important;
 
@@ -579,15 +582,17 @@ i-minicart {
               }
               &--actions {
                 position: absolute;
-                right: 30px;
-                top: 11px;
+                right: 13px;
                 bottom: 11px;
-                width: 120px;
+                width: 28px;
+                height: 28px;
                 display: flex;
                 align-items: center;
 
                 button {
-
+                  background: transparent !important;
+                  padding: 0px !important;
+                  border: 0px !important;
                   &:hover {
                     opacity: 0.7;
                   }
@@ -603,7 +608,7 @@ i-minicart {
         left: 0px;
         bottom: 0px;
         right: 0px;
-        height: 238px;
+        height: 270px;
         padding: 30px 24px;
         background: #F5F5F5;
 
@@ -689,6 +694,39 @@ i-minicart {
         visibility: visible;
         opacity: 1;
       }
+    }
+  }
+}
+
+.cart-agree {
+  position: relative;
+  input {
+    position: absolute;
+  }
+  label {
+    color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+    font-family: var(--Family-Font---Body, Nohemi);
+    font-size: var(--Typo-Body-S, 13px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    display: block;
+    position: relative;
+    padding-left: 24px;
+
+    a {
+      color: var(--Colors-500, var(--Colors-500, #931E31));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-S, 13px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+      text-underline-position: from-font;
     }
   }
 }

@@ -121,8 +121,8 @@
                 </svg>
               </button>
               <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
-                <svg class="icon icon-search" aria-hidden="true" focusable="false">
-                  <use xlink:href="#icon-search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M19.3568 18.7085L15.0528 14.4045C15.995 13.304 16.4925 11.9548 16.4925 10.5C16.4925 8.90201 15.8668 7.39447 14.7362 6.25628C13.6055 5.11809 12.098 4.5 10.4925 4.5C8.88693 4.5 7.39447 5.12563 6.25628 6.25628C5.11809 7.38693 4.5 8.90201 4.5 10.5C4.5 12.098 5.12563 13.6055 6.25628 14.7437C7.38693 15.8819 8.89447 16.5 10.5 16.5C11.9397 16.5 13.3191 15.9874 14.4045 15.0603L18.7085 19.3643C18.7915 19.4548 18.9196 19.5 19.0327 19.5C19.1533 19.5 19.2739 19.4472 19.3568 19.3643C19.4472 19.2739 19.5 19.1608 19.5 19.0402C19.5 18.9121 19.4472 18.7915 19.3568 18.7085ZM14.0879 14.0879C13.1307 15.0452 11.8492 15.5804 10.5 15.5804C9.15075 15.5804 7.86935 15.0528 6.91206 14.0955C5.95477 13.1307 5.4196 11.8568 5.4196 10.5C5.4196 9.14322 5.94724 7.86935 6.90452 6.91206C7.86181 5.95477 9.13568 5.42714 10.4925 5.42714C11.8492 5.42714 13.1231 5.95477 14.0804 6.91206C15.0377 7.86935 15.5653 9.14322 15.5653 10.5C15.5653 11.8568 15.0452 13.1307 14.0879 14.0879Z" fill="#931E31"/>
                 </svg>
               </button>
             </div>
@@ -251,70 +251,24 @@
             >
               <div class="loading-overlay gradient"></div>
               <ul
-                class="grid product-grid  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
+                class="grid product-grid pl pr  grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop"
                 role="list"
               >
                 {%- assign skip_card_product_styles = false -%}
+                {%- assign exclude = collections['add-ons'] -%}
+
                 {%- for item in search.results -%}
+
+                  {%- if exclude.products contains item -%}
+                    {%- continue -%}
+                  {%- endif -%}
+
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
 
-                  <li
-                    class="grid__item{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                    {% if settings.animations_reveal_on_scroll %}
-                      data-cascade
-                    {% endif %}
-                  >
-                    {%- case item.object_type -%}
-                      {%- when 'product' -%}
-                        {%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
-                        {% render 'card-product',
-                          card_product: item,
-                          media_aspect_ratio: section.settings.image_ratio,
-                          image_shape: section.settings.image_shape,
-                          show_secondary_image: section.settings.show_secondary_image,
-                          show_vendor: section.settings.show_vendor,
-                          show_rating: section.settings.show_rating,
-                          lazy_load: lazy_load,
-                          skip_styles: skip_card_product_styles
-                        %}
-                        {%- assign skip_card_product_styles = true -%}
-                      {%- when 'article' -%}
-                        {% render 'article-card',
-                          article: item,
-                          show_image: true,
-                          show_date: section.settings.article_show_date,
-                          show_author: section.settings.article_show_author,
-                          show_badge: true,
-                          media_aspect_ratio: 1,
-                          lazy_load: lazy_load
-                        %}
-                      {%- when 'page' -%}
-                        <div class="article-card-wrapper card-wrapper underline-links-hover">
-                          <div
-                            class="card card--card card--text ratio color-{{ settings.blog_card_color_scheme }}"
-                            style="--ratio-percent: 100%;"
-                          >
-                            <div class="card__content">
-                              <div class="card__information">
-                                <h3 class="card__heading">
-                                  <a href="{{ item.url }}" class="full-unstyled-link">
-                                    {{ item.title | truncate: 50 | escape }}
-                                  </a>
-                                </h3>
-                              </div>
-                              <div class="card__badge {{ settings.badge_position }}">
-                                <span class="badge color-{{ settings.color_schemes | first }}">
-                                  {{- 'templates.search.page' | t -}}
-                                </span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                    {%- endcase -%}
-                  </li>
+                  {% render 'custom-product-card' product: item %}
                 {%- endfor -%}
               </ul>
               {%- if paginate.pages > 1 -%}
