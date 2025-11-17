@@ -567,7 +567,7 @@
             let raw = $(this).find('div:last').text();
             raw = raw.replace(/[^\d,.-]/g, '');
             let valor = parseFloat(raw.replace(',', '.'));
-            if (!isNaN(valor)) total += valor;
+            if (!isNaN(valor)) total += valor * 100;
           });
 
           if (text.includes('Alta Nueva')) {
@@ -611,7 +611,7 @@
             let raw = $(this).find('div:last').text();
             raw = raw.replace(/[^\d,.-]/g, '');
             let valor = parseFloat(raw.replace(',', '.'));
-            if (!isNaN(valor)) total += valor;
+            if (!isNaN(valor)) total += valor * 100;
           });
           let optionTypePrice = 0
 
