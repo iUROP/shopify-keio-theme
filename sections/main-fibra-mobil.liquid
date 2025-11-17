@@ -213,7 +213,7 @@
                     </ul>
                   </div>
                   <div class="main-custom-pack-card__pricing">
-                    <div>99,00<span>€/KWH</span></div>
+                    <div>0,141<span>€/KWH</span></div>
                   </div>
                 </div>
                 {% comment %} Card {% endcomment %}
@@ -253,6 +253,15 @@
                 <span>99,00€</span>
               </div>
             </div>
+
+            <div class="main-custom-bundler__pack--totals__inner--resume resume-energy">
+              <div>Keio Energy</div>
+              <div>
+                <span></span>
+                <span>0,00€</span>
+              </div>
+            </div>
+            
 
             <div class="main-custom-bundler__pack--totals__inner--divider"></div>
             <div class="main-custom-bundler__pack--totals__inner--totals">
@@ -296,11 +305,13 @@
           ]
         }
       ];
+      let isKeioEnergy = false
 
       function updateTotalizer (info) {
-        console.log("info!", info)
+        console.log("info!", info, isKeioEnergy)
         $('.resume-fibra').html('')
         $('.resume-mobile').html('')
+        $('.resume-energy').html('')
         let total = 0
 
         $.each(info, function(index, item) {
@@ -349,7 +360,17 @@
           })
         })
 
-        console.log("pre total:", total)
+        if (isKeioEnergy) {
+          let htmLInsert = `
+            <div>Keio Energy</div>
+              <div>
+                <span>Descuento</span>
+                <span class="discounted">-50,00€</span>
+            </div>
+          `
+          $('.resume-energy').html(htmLInsert)
+          total = total - 5000
+        }
 
         $('#total-annual').html(`${formatEuro(total / 100)}€`)
         console.log(total)
@@ -522,6 +543,16 @@
         updateTotalizerFromFibraHTML()
       });
 
+
+      $('.main-custom-pack-card.energy-card input[type="checkbox"]').on('change', function() {
+        if ($(this).is(':checked')) {
+          isKeioEnergy = true;
+          
+        } else {
+          isKeioEnergy = false;
+        }
+        updateTotalizer(packInfo)
+      })
 
 
       $('.main-custom-pack-card.card-movil .main-custom-pack-card__content--select.Tipo select').on('change', function() {
