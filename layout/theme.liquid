@@ -552,9 +552,12 @@
 
       $('.product-form__buttons .product-form__submit_v2').on('click', function (event) {
         event.preventDefault();
+        const bulkerId = Date.now().toString();
         const variantSelect = document.querySelector('form[action="/cart/add"] [name="id"]').value;
         const qty = document.querySelector('.product-form__quantity span').innerHTML;
-        let properties = {}
+        let properties = {
+           _bulker_id: bulkerId
+        }
 
         if (document.querySelector('.product-form__buttons--sim-selector__options--item.active')) {
           properties['Tipo de SIM'] = document.querySelector('.product-form__buttons--sim-selector__options--item.active').innerHTML
@@ -588,7 +591,10 @@
         activeVariants.forEach(variantId => {
           let obj = {
             id: variantId,
-            quantity: 1
+            quantity: 1,
+            properties: {
+              _bulker_id: bulkerId
+            }
           }
           if (Number(variantId) == 55889933173067) {
             obj['selling_plan'] = 690050433355

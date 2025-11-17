@@ -1,5 +1,11 @@
 {{ 'customer.css' | asset_url | stylesheet_tag }}
 
+{% unless customer %}
+  <script>
+    window.location.href="/account/login?return_url=%2Fpages/soporte"
+  </script>
+{% endunless %}
+
 <div class="customer account account-global-page custom-account-page support">
   <div>
     <h1 class="customer__title">Mi cuenta</h1>
@@ -12,7 +18,7 @@
         <div class="account-global-page__content--sidebar__links">
           <a href="{{ routes.account_url }}">Mi cuenta</a>
           <a href="/pages/productos-contratados">Productos contratados</a>
-          <a href="/pages/invitaciones-keio-x">Keio X</a>
+          {% comment %} <a href="/pages/invitaciones-keio-x">Keio X</a> {% endcomment %}
           <a href="/pages/soporte" class="last-link active">Soporte</a>
         </div>
         <div class="account-global-page__content--sidebar__close">

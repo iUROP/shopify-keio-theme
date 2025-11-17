@@ -3680,6 +3680,8 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
 @media only screen and (max-width: 1024px) {
   .account-global-page.account .account-global-page__content--content__row--body__content .support-content .main-custom-button {
     line-height: 41px !important;
+    width: 100%;
+    text-align: center;
   }
 }
 .account-global-page.account .account-global-page__content--content__row--body__content .keio-x-content {

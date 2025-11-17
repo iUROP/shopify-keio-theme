@@ -124,17 +124,28 @@ window.Permalink = function() {
     })
   }
 
-  const clearCart = async function() {
+  const clearCart = async function(bulkerId) {
     return new Promise(async (resolve) => {
-      const request = await fetch(`/cart/clear.js`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
 
-      resolve(await request.json());
+      const cart = await Permalink.getCart();
+      const itemsToDelete = cart.items.filter(
+        item => item.properties && item.properties._bulker_id === bulkerId
+      );
 
+      if (itemsToDelete.length === 0) return;
+
+      for (const item of itemsToDelete) {
+        await fetch('/cart/change.js', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            id: item.key,
+            quantity: 0
+          })
+        });
+      }
+
+      resolve(true);
       reactive();
     });
   };

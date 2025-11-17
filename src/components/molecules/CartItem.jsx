@@ -26,10 +26,10 @@ function CartItem({
     setItemUpdating(false)
   }
 
-  const remove = async () => {
+  const remove = async (bulker_id) => {
     setItemUpdating(true)
     // await Permalink.updateQty(product.id, 0)
-    await Permalink.clearCart()
+    await Permalink.clearCart(bulker_id)
     
     setItemUpdating(false)
   }
@@ -49,7 +49,7 @@ function CartItem({
             <> x{product.quantity}</>
           }
           {product.selling_plan_allocation?.selling_plan?.name &&
-            <span>{product.selling_plan_allocation.selling_plan.name}</span>
+            <span>{product.selling_plan_allocation.selling_plan.name.replace('Entrega c','C')}</span>
           }
           {product.options_with_values &&
             <>
@@ -89,7 +89,9 @@ function CartItem({
         </div>
       </div>
 
-      <div className='i-cart-item--delete' onClick={remove}>
+      <div className='i-cart-item--delete' onClick={() => {
+        remove(product.properties?._bulker_id)
+      }}>
         <Icon name="remove" />
       </div>
     </div>

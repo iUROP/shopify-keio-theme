@@ -646,18 +646,32 @@
 
       $('#bulker').on('click', function() {
         const map = []
-
+        const bulkerId = Date.now().toString();
         const fibra1 = document.querySelector('.fibra-1-card .main-custom-pack-card__content--switcher button.active').getAttribute('rel-variant')
         console.log("fibra1", fibra1)
 
-        map.push({id: Number(fibra1), quantity: 1, selling_plan: 690050466123})
+        map.push({
+          id: Number(fibra1), 
+          quantity: 1, 
+          selling_plan: 690050466123,
+          properties: {
+            _bulker_id: bulkerId
+          }
+        })
 
         if (document.querySelector('.add-fibra-secondary input').checked) {
           const fibra2_content = document.querySelector('#secondaryFibra')
           const fibra2_option = fibra2_content.options[fibra2_content.selectedIndex];
           const fibra2 = fibra2_option.dataset.variant;
           console.log("fibra2", fibra2)
-          map.push({id: Number(fibra2), quantity: 1, selling_plan: 690050466123})
+          map.push({
+            id: Number(fibra2), 
+            quantity: 1, 
+            selling_plan: 690050466123,
+            properties: {
+              _bulker_id: bulkerId
+            }
+          })
         }
 
         const itemsMobile = document.querySelectorAll('.item-movil')
@@ -665,7 +679,9 @@
         for (let i = 0; i < itemsMobile.length; i++) {
           const itemMobile = itemsMobile[i]
 
-          let properties = {}
+          let properties = {
+            _bulker_id: bulkerId
+          }
           properties['Tipo de SIM'] = itemMobile.getAttribute('rel-sim')
         
           const item = {
@@ -681,7 +697,10 @@
           addons.forEach(variantId => {
             let obj = {
               id: variantId,
-              quantity: 1
+              quantity: 1,
+              properties: {
+                _bulker_id: bulkerId
+              }
             }
             if (Number(variantId) == 55889933173067) {
               obj['selling_plan'] = 690050466123
@@ -690,14 +709,17 @@
             map.push(obj)
           });
 
-
         }
-
 
         const keioEnergy = document.querySelector('.main-custom-pack-card.energy-card input')
         if (keioEnergy.checked) {
           console.log("add keyio energy")
-          map.push({id: 55889944969547, quantity: 1})
+          map.push({
+            id: 55889944969547, quantity: 1,
+            properties: {
+              _bulker_id: bulkerId
+            }
+          })
         }
 
         console.log("map to add", map)
