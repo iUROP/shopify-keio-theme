@@ -20,7 +20,7 @@ window.Permalink = function() {
     }
 
     if (document.querySelector('body.template-cart')) {
-      // document.location.href = '/checkout'
+      document.location.href = '/checkout'
     }
 
     setInterval(function () {

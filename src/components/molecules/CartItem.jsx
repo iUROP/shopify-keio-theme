@@ -3,7 +3,8 @@ import Icon from '../atoms/Icon'
 import Stars from '../atoms/Stars'
 
 function CartItem({
-  product
+  product,
+  discounted
 }) {
   const [itemUpdating, setItemUpdating] = useState(false)
 
@@ -50,7 +51,6 @@ function CartItem({
           {product.selling_plan_allocation?.selling_plan?.name &&
             <span>{product.selling_plan_allocation.selling_plan.name}</span>
           }
-
           {product.options_with_values &&
             <>
               {product.options_with_values[0] && product.options_with_values[0].value != 'Default Title' && 
@@ -61,7 +61,6 @@ function CartItem({
               }
             </>
           }
-
         </div>
 
         {product.compare_at_price && product.compare_at_price != product.price
@@ -69,8 +68,11 @@ function CartItem({
               {Permalink.getPrice(product.final_line_price / 100)}
               <span>{Permalink.getPrice(product.compare_at_price / 100)}</span>
             </div>
-          : <div className='i-cart-item--labels--price'>
-              {Permalink.getPrice(product.final_line_price / 100)}
+          : <div className='i-cart-item--labels--price no-discounted'>
+              {product.variant_id == discounted
+                ? Permalink.getPrice(-50)
+                : Permalink.getPrice(product.final_line_price / 100)
+              }
             </div>
         }
         

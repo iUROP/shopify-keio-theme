@@ -120,8 +120,64 @@
     },
     "main_custom_faqs_kVRFYX": {
       "type": "main-custom-faqs",
+      "blocks": {
+        "faq_Yhip46": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Es Keio una empresa confiable?",
+            "answer": "¿Es Keio una empresa confiable?"
+          }
+        },
+        "faq_xgLNer": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Cuál es la cobertura de Keio en mi zona?",
+            "answer": "¿Cuál es la cobertura de Keio en mi zona?"
+          }
+        },
+        "faq_fpy3Nj": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Por qué tengo que pagar un año por adelantado?",
+            "answer": "¿Por qué tengo que pagar un año por adelantado?"
+          }
+        },
+        "faq_kQALfK": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Por qué tengo que pagar un año por adelantado?",
+            "answer": "¿Por qué tengo que pagar un año por adelantado?"
+          }
+        },
+        "faq_z3FKLG": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Por qué tengo que pagar un año por adelantado?",
+            "answer": "¿Por qué tengo que pagar un año por adelantado?"
+          }
+        },
+        "faq_WxCNFU": {
+          "type": "faq",
+          "settings": {
+            "question": "¿Por qué tengo que pagar un año por adelantado?",
+            "answer": "¿Por qué tengo que pagar un año por adelantado?"
+          }
+        }
+      },
+      "block_order": [
+        "faq_Yhip46",
+        "faq_xgLNer",
+        "faq_fpy3Nj",
+        "faq_kQALfK",
+        "faq_z3FKLG",
+        "faq_WxCNFU"
+      ],
       "name": "iUROP - Faqs section",
-      "settings": {}
+      "settings": {
+        "title": "FAQ",
+        "url": "/#",
+        "button_text": "Ver más"
+      }
     },
     "main_custom_reviews_CeTD6W": {
       "type": "main-custom-reviews",

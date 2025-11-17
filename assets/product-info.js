@@ -25,7 +25,7 @@ if (!customElements.get('product-info')) {
           this.handleOptionValueChange.bind(this)
         );
 
-        this.initQuantityHandlers();
+        // this.initQuantityHandlers();
         this.dispatchEvent(new CustomEvent('product-info:loaded', { bubbles: true }));
       }
 

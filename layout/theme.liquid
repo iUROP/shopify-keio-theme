@@ -529,9 +529,31 @@
         event.preventDefault();
       });
 
+      $('.product-form__buttons .product-form__quantity').on('click', function (event) {
+        event.preventDefault();
+      });
+      $('.product-form__buttons .product-form__quantity .more-qty').on('click', function (event) {
+        event.preventDefault();
+        let current = $(this).closest('.product-form__quantity').find('span').html()
+        $(this).closest('.product-form__quantity').find('span').html(
+          Number(current) + 1
+        )
+      });
+      $('.product-form__buttons .product-form__quantity .less-qty').on('click', function (event) {
+        event.preventDefault();
+        let current = $(this).closest('.product-form__quantity').find('span').html()
+        if (Number(current) > 1) {
+          $(this).closest('.product-form__quantity').find('span').html(
+            Number(current) - 1
+          )
+        }
+      });
+
+
       $('.product-form__buttons .product-form__submit_v2').on('click', function (event) {
         event.preventDefault();
         const variantSelect = document.querySelector('form[action="/cart/add"] [name="id"]').value;
+        const qty = document.querySelector('.product-form__quantity span').innerHTML;
         let properties = {}
 
         if (document.querySelector('.product-form__buttons--sim-selector__options--item.active')) {
@@ -541,7 +563,7 @@
         let addObj = [
           {
             id: variantSelect,
-            quantity: 1,
+            quantity: Number(qty),
             properties: properties
           }
         ]

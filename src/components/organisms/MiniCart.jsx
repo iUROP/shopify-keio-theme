@@ -18,6 +18,10 @@ function MiniCart({
   const [upsellProducts, setUpsellProducts] = useState([])
   const [addingUpsell, setAddingUpsell] = useState(false)
   const [termsAgree, setTermsAgree] = useState(false)
+  const [dicsount, setDiscount] = useState(0)
+  const [hasDiscount, setHasDiscount] = useState(false)
+
+  const discounted = 55889944969547
 
   useEffect(() => {
     async function get() {
@@ -49,12 +53,14 @@ function MiniCart({
             }
           }
           items.push(item);
+
+          if (item.variant_id == discounted) {
+            setDiscount(50)
+          }
         }
-        
         setLineItems(items)
       }
       console.log("cart info", cart)
-
       console.log("itemsWithUpsell", itemsWithUpsell)
 
       setUpsellProducts(itemsWithUpsell);
@@ -68,6 +74,11 @@ function MiniCart({
       setFreeShippingAmount(freeShipping)
       setFreeShippingPercent(freePercent)
 
+      const cart_level_discount_applications = cart.cart_level_discount_applications
+      if (cart_level_discount_applications) {
+        const hasCouponEnergy = cart_level_discount_applications.find((item) => item.title == 'KEIOENERGY')
+        if (hasCouponEnergy) setHasDiscount(true)
+      }
     }
     get()
 
@@ -126,13 +137,6 @@ function MiniCart({
     ]
   }
 
-  const list = [
-    {
-      "title": "Envío gratis a todo el mundo en pedidos a partir de 65 €.",
-      "icon": false
-    }
-  ]
-
   return (
     <div className={`i-minicart-container`}>
       <VerticalCenter>
@@ -190,7 +194,7 @@ function MiniCart({
             ? lineItems.length > 0
               ? lineItems.map((item, index) => {
                   return (
-                    <CartItem product={item} key={index} />
+                    <CartItem product={item} key={index} discounted={discounted} />
                   )
                 })
               : <div className='empty-cart-state'>Carrito vacio</div>
@@ -291,12 +295,11 @@ function MiniCart({
           </div>
         </div>
 
-
         <div className='i-minicart-container__snap--footer'>
           <div className='i-minicart-container__snap--footer__subtotals'>
             <div className='i-minicart-container__snap--footer__subtotals--row'>
               <div className='i-minicart-container__snap--footer__subtotals--row__key'>Total</div>
-              <div className='i-minicart-container__snap--footer__subtotals--row__value'>{Permalink.getPrice(cartTotal / 100)}</div>
+              <div className='i-minicart-container__snap--footer__subtotals--row__value'>{Permalink.getPrice( hasDiscount ? (cartTotal / 100) : (cartTotal / 100) - dicsount) }</div>
             </div>
           </div>
           <p>*en la pantalla de pagos se incluye el impuesto y se calculan los gastos de envío.</p>
@@ -305,7 +308,7 @@ function MiniCart({
             <label for="cart-agree"> He leído y acepto la <a href="/#">política de privacidad y la política de contratación*</a></label>
           </div>
           <div className='i-minicart-container__snap--footer__actions'>
-            <a href="/checkout" className='main-custom-button' onClick={checkoutValidator}>
+            <a href={`/checkout${dicsount > 0 ? '?discount=KEIOENERGY' : ''}`} className='main-custom-button' onClick={checkoutValidator}>
               Pago seguro
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M8.25 20.25C8.66421 20.25 9 19.9142 9 19.5C9 19.0858 8.66421 18.75 8.25 18.75C7.83579 18.75 7.5 19.0858 7.5 19.5C7.5 19.9142 7.83579 20.25 8.25 20.25Z" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
