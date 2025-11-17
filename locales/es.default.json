@@ -545,5 +545,14 @@
       "expanded": "Formulario del destinatario de la tarjeta de regalo expandido",
       "collapsed": "Formulario del destinatario de tarjeta de regalo contraído"
     }
+  },
+  "shopify": {
+    "checkout": {
+      "shipping": {
+        "shipping_method_recurring_shipments_group_title": {
+          "many": "Envío"
+        }
+      }
+    }
   }
 }
