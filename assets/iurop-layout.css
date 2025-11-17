@@ -1413,6 +1413,45 @@ html .main-custom-qty button.more, body .main-custom-qty button.more {
   top: 16px;
 }
 
+.shopify-policy__container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 96px var(--Space-2400, 96px);
+  text-align: left;
+}
+.shopify-policy__container .shopify-policy__title h1 {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H2, 39px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-align: left;
+  margin-top: 0px;
+}
+@media only screen and (max-width: 1024px) {
+  .shopify-policy__container .shopify-policy__title h1 {
+    font-size: 25px;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .shopify-policy__container {
+    padding: 56px 56px;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .shopify-policy__container {
+    padding: 46px 46px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .shopify-policy__container {
+    padding: 36px 16px;
+  }
+}
+
 .slow_ani {
   -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
@@ -3782,6 +3821,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
 @media only screen and (max-width: 1024px) {
   .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner {
     gap: 4px;
+    margin-bottom: -10px !important;
   }
 }
 .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary {
@@ -3814,6 +3854,13 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
+}
+@media only screen and (max-width: 1024px) {
+  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-actions a {
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+  }
 }
 .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item.active .order-items-item-body {
   display: flex;

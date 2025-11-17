@@ -1078,3 +1078,40 @@ html, body {
     }
   }
 }
+
+.shopify-policy__container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 96px var(--Space-2400, 96px);
+  text-align: left;
+
+  .shopify-policy__title {
+    h1 {
+      color: var(--Colors-1000, var(--Colors-1000, #000));
+      text-align: center;
+      font-family: var(--Family-Font, Nohemi);
+      font-size: var(--Typo-H2, 39px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-align: left;
+      margin-top: 0px;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 25px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1600px) {
+    padding: 56px 56px;
+  }
+  @media only screen and (max-width: 1400px) {
+    padding: 46px 46px;
+  }
+  @media only screen and (max-width: 1024px) {
+    padding: 36px 16px;
+  }
+
+}

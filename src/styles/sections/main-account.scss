@@ -382,6 +382,7 @@
 
                           @media only screen and (max-width: 1024px) {
                             gap: 4px;
+                            margin-bottom: -10px !important;
                           }
 
                           .order-items-item-body-inner-summary {
@@ -419,6 +420,14 @@
                           justify-content: space-between;
                           align-items: flex-start;
                           align-self: stretch;
+
+                          @media only screen and (max-width: 1024px) {
+                            a {
+                              width: 100%;
+                              text-align: center;
+                              line-height: 40px;
+                            }
+                          }
                         }
                       }
 
