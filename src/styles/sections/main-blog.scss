@@ -60,9 +60,10 @@
       text-decoration: none;
 
       @media only screen and (max-width: 1024px) {
-        padding: 8px 12px;
-        font-size: 14px;
-        line-height: 13px;
+        padding: 11px 14px !important;
+        padding-bottom: 10px !important;
+        font-size: 14px !important;
+        line-height: 13px !important;
       }
       
       &.active {

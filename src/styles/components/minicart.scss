@@ -494,12 +494,16 @@ i-minicart {
             height: 150px;
             .slick-slider {
               height: 100%;
+              overflow: hidden;
               .slick-list {
                 height: 100%;
+                margin-left: -8px;
+                margin-right: -8px;
                 .slick-track {
                   height: 100%;
                   .slick-slide {
                     height: 100%;
+                    padding: 0 8px;
 
                     & > div {
                       height: 100%;

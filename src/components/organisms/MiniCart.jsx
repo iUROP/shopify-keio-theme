@@ -137,6 +137,10 @@ function MiniCart({
     ]
   }
 
+  const add = (handle) => {
+    window.location.href = `/products/${handle}`
+  }
+
   return (
     <div className={`i-minicart-container`}>
       <VerticalCenter>
@@ -226,7 +230,7 @@ function MiniCart({
                           </div>
                           <div className='i-minicart-container__snap--upsells--list__item--actions'>
                             <button onClick={() => {
-                              add(p.variants[0].id)
+                              add(p.handle)
                             }} className='main-custom-button'>
                               {addingUpsell
                                 ? '...'
@@ -278,11 +282,18 @@ function MiniCart({
                           </div>
                           <div className='i-minicart-container__snap--upsells--list__item--actions'>
                             <button onClick={() => {
-                              add(p.variants[0].id)
+                              add(p.handle)
                             }} className='main-custom-button'>
                               {addingUpsell
                                 ? '...'
-                                : Shopify.locale == 'es' ? 'Añadir' : 'ADD'
+                                : <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                                    <mask maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="29">
+                                      <rect width="28.7209" height="28.7209" fill="#D9D9D9"/>
+                                    </mask>
+                                    <g mask="url(#mask0_13905_5136)">
+                                      <path d="M13.1029 24.1047V15.1294H4V12.9753H13.1029V4.00006H15.2876V12.9753H24.3905V15.1294H15.2876V24.1047H13.1029Z" fill="#931E31"/>
+                                    </g>
+                                  </svg>
                               }
                             </button>
                           </div>

@@ -258,17 +258,23 @@
                 {%- assign exclude = collections['add-ons'] -%}
 
                 {%- for item in search.results -%}
+                  {% assign show_item = true %}
 
-                  {%- if exclude.products contains item -%}
-                    {%- continue -%}
-                  {%- endif -%}
+                  {% if item.object_type == 'product' %}
+                    {% assign first_variant = item.variants.first %}
+                    {%  if first_variant.id == 55889944969547 or first_variant.id == 55889939890507 or first_variant.id == 55889935270219 or first_variant.id == 55889933173067 or first_variant.id == 55901036544331 %}
+                      {% assign show_item = false %}
+                    {%- endif -%}
+                  {% endif %}
 
                   {% assign lazy_load = false %}
                   {%- if forloop.index > 2 -%}
                     {%- assign lazy_load = true -%}
                   {%- endif -%}
 
-                  {% render 'custom-product-card' product: item %}
+                  {% if show_item and item.object_type == 'product' %}
+                    {% render 'custom-product-card' product: item %}
+                  {%- endif -%}
                 {%- endfor -%}
               </ul>
               {%- if paginate.pages > 1 -%}
