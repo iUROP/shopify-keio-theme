@@ -8,6 +8,17 @@
   }
   &__banner {
     position: relative;
+
+    .banner-tag {
+      position: absolute;
+      right: 32px;
+      top: 32px;
+
+      @media only screen and (max-width: 1024px) {
+        display: none;
+      }
+    }
+
     &--frame {
       position: absolute;
       left: 20px;

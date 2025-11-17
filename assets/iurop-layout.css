@@ -6210,6 +6210,16 @@ body.template-page-keio-x .main-custom-footer:before {
 .main-hero-title__banner {
   position: relative;
 }
+.main-hero-title__banner .banner-tag {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-hero-title__banner .banner-tag {
+    display: none;
+  }
+}
 .main-hero-title__banner--frame {
   position: absolute;
   left: 20px;
