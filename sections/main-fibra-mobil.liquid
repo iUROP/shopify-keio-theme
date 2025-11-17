@@ -341,11 +341,15 @@
           }
         })
 
+        console.log("Info to sume:", info)
+
         info.forEach(group => {
           group.items.forEach(item => {
-            total += (item.price * item.qty)
+            total += (item.price * (item.qty ? item.qty : 1))
           })
         })
+
+        console.log("pre total:", total)
 
         $('#total-annual').html(`${formatEuro(total / 100)}€`)
         console.log(total)
