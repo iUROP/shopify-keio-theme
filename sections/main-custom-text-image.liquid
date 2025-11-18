@@ -25,7 +25,9 @@
             6. Ventajas extra <span>- Plan Amigo y opciones para tu negocio con WiFi KEIO.</span>
           </li>
         </ul>
-        {% comment %} <a href="/pages/fibra-y-mobil" class="main-custom-button is-primary">Contratar ahora</a> {% endcomment %}
+        {% if section.settings.show_button %}
+          <a href="{{ section.settings.button_url }}" class="main-custom-button is-primary">{{ section.settings.button_text }}</a>
+        {% endif %}
       </div>
       <div class="main-custom-text-image--content__image">
         <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/banner-updated.png?v=1762233258" />
@@ -38,7 +40,25 @@
   "name": "main-custom-text-image",
   "tag": "section",
   "class": "section",
-  "settings": [],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_button",
+      "label": "Mostrar botón",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Texto del botón",
+      "default": "Contratar ahora"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "URL del botón"
+    },
+  ],
   "presets": [
     {
       "name": "main-custom-text-image"

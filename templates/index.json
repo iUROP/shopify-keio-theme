@@ -40,7 +40,11 @@
     "main_custom_text_image_8nWyBG": {
       "type": "main-custom-text-image",
       "name": "main-custom-text-image",
-      "settings": {}
+      "settings": {
+        "show_button": true,
+        "button_text": "Contratar ahora",
+        "button_url": ""
+      }
     },
     "main_custom_simple_banner_GiiLUb": {
       "type": "main-custom-simple-banner",
@@ -54,7 +58,9 @@
       "type": "main-custom-blog-feed",
       "disabled": true,
       "name": "main-custom-blog-feed",
-      "settings": {}
+      "settings": {
+        "custom_title": ""
+      }
     },
     "1759955518a288ef11": {
       "type": "apps",

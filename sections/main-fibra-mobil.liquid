@@ -292,6 +292,51 @@
     }
 
     $(document).on( "ready", function() {
+      const section = document.querySelector('.main-custom-fibra-mobile');
+      const stickyBar = document.querySelector('.main-custom-bundler__pack--totals');
+      let observer = null;
+      
+      function initStickyBarObserver() {
+        if (observer) {
+          observer.disconnect();
+          observer = null;
+        }
+        
+        if (section && stickyBar && window.innerWidth <= 1024) {
+          if (!stickyBar.classList.contains('is-hidden')) {
+            stickyBar.classList.remove('is-hidden');
+          }
+          
+          observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  stickyBar.classList.remove('is-hidden');
+                } else {
+                  stickyBar.classList.add('is-hidden');
+                }
+              });
+            },
+            {
+              threshold: 0.1, // Se activa cuando al menos el 10% de la sección es visible
+              rootMargin: '0px'
+            }
+          );
+          
+          observer.observe(section);
+        } else if (stickyBar) {
+          stickyBar.classList.remove('is-hidden');
+        }
+      }
+      
+      initStickyBarObserver();
+      
+      let resizeTimer;
+      $(window).on('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(initStickyBarObserver, 250);
+      });
+
       const packInfo = [
         {
           title: "Fibra",
@@ -392,11 +437,15 @@
             const name = movilCard.querySelector('.main-custom-pack-card__heading').innerText.replace(/\n\d+/g, '');
             const option1 = movilCard.querySelectorAll('.main-custom-pack-card__content--select')[0].querySelector('select').value
             const option2 = movilCard.querySelectorAll('.main-custom-pack-card__content--select')[1].querySelector('select').value
-            const cardPrice = movilCard.querySelector('.main-custom-pack-card__pricing .bestPrice').innerHTML.replace('<span>€/año</span>','').replace('&gt;','').replace(',','') 
+            
+            const bestPriceElement = movilCard.querySelector('.main-custom-pack-card__pricing .bestPrice')
+            let cardPriceText = bestPriceElement ? bestPriceElement.textContent || bestPriceElement.innerText : '0'
+            cardPriceText = cardPriceText.replace(/€\/año/gi, '').replace(/\s/g, '').replace(',', '.')
+            const cardPrice = parseFloat(cardPriceText) || 0 
 
             console.log("cardPrice", cardPrice)
 
-            let price = Number(cardPrice)
+            let price = Math.round(cardPrice * 100)
             let variant = 0
             let qty = 0
 
@@ -487,11 +536,12 @@
         const newPrice = $(this).attr('rel-price')
         packInfo[0].items[0].price = Number(newPrice)
 
-        $(this).closest('.main-custom-pack-card').find('.main-custom-pack-card__pricing').html(
-          `
-            ${formatEuro(Number(newPrice) / 100)}<span>€/año</span>
-          `
-        )
+        const fibraCard = $(this).closest('.main-custom-pack-card.fibra-1-card')
+        if (fibraCard.length) {
+          fibraCard.find('.main-custom-pack-card__pricing > div').html(
+            `${formatEuro(Number(newPrice) / 100)}<span>€/año</span>`
+          )
+        }
         updateTotalizer(packInfo)
       });
 
@@ -633,8 +683,11 @@
         let option = $(this).find('option:selected');
         let oldPrice = option.data('old');
 
-        $('.main-custom-pack-card__pricing .listPrice').html(`${formatEuro(Number(oldPrice) / 100)}<span>€/año</span>`)
-        $('.main-custom-pack-card__pricing .bestPrice').html(`${formatEuro(Number($(this).val()) / 100)}<span>€/año</span>`)
+        const fibra2Card = $(this).closest('.main-custom-pack-card.fibra-2-card')
+        if (fibra2Card.length) {
+          fibra2Card.find('.main-custom-pack-card__pricing .listPrice').html(`${formatEuro(Number(oldPrice) / 100)}<span>€/año</span>`)
+          fibra2Card.find('.main-custom-pack-card__pricing .bestPrice').html(`${formatEuro(Number($(this).val()) / 100)}<span>€/año</span>`)
+        }
 
         const getPrice = $(this).closest('.main-custom-pack-card').find('.bestPrice').html().replace('<span>€/año</span>','').replace('&gt;','').replace(',','') 
         const secondaryFibra = packInfo[0].items.find((item) => item.name == 'Fibra Secundaria')
@@ -644,7 +697,20 @@
         updateTotalizer(packInfo)
       });
 
-      $('#bulker').on('click', function() {
+      let isProcessing = false;
+      let lastTouchTime = 0;
+      
+      function handleBulkerClick(e) {
+        if (e.type === 'touchend') {
+          const now = Date.now();
+          if (now - lastTouchTime < 300) return;
+          lastTouchTime = now;
+          e.preventDefault();
+        }
+        
+        if (isProcessing) return;
+        isProcessing = true;
+        
         const map = []
         const bulkerId = Date.now().toString();
         const fibra1 = document.querySelector('.fibra-1-card .main-custom-pack-card__content--switcher button.active').getAttribute('rel-variant')
@@ -724,9 +790,14 @@
 
         console.log("map to add", map)
 
-        Permalink.addItems(map, true)
+        Permalink.addItems(map, true).then(() => {
+          isProcessing = false;
+        }).catch(() => {
+          isProcessing = false;
+        });
+      }
       
-      });
+      $('#bulker').on('click touchend', handleBulkerClick);
       
     
     });

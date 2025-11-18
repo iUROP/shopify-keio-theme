@@ -2808,7 +2808,7 @@ body.show-mobile-menu .main-custom-header__bottom {
 .main-custom-product-list {
   display: flex;
   width: 100%;
-  padding: var(--Space-0, 0) var(--Space-2400, 96px) var(--Space-2400, 96px) var(--Space-2400, 96px);
+  padding: var(--Space-0, 76px) var(--Space-2400, 96px) var(--Space-2400, 96px) var(--Space-2400, 96px);
   flex-direction: column;
   align-items: center;
   gap: var(--Space-1600, 64px);
@@ -4620,6 +4620,9 @@ body.template-article .article-template__link.link {
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
 }
 @media only screen and (max-width: 1400px) {
   .main-custom-bundler__pack--totals {
@@ -4634,6 +4637,11 @@ body.template-article .article-template__link.link {
     right: 0px;
     width: auto;
     z-index: 5;
+    top: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  .main-custom-bundler__pack--totals.is-hidden {
+    transform: translateY(100%);
   }
 }
 .main-custom-bundler__pack--totals__inner {
@@ -4641,7 +4649,7 @@ body.template-article .article-template__link.link {
   padding: 24px;
   flex-direction: column;
   align-items: center;
-  gap: var(--Space-800, 22px);
+  gap: 22px;
   align-self: stretch;
   border-radius: var(--Corner-Large, 16px);
   border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
@@ -4654,7 +4662,7 @@ body.template-article .article-template__link.link {
     border-top: 1px solid var(--Colors-ligth_grey, #CDCDCD);
     background: var(--Colors-white, #FFF);
     box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
-    gap: 14px;
+    gap: 8px !important;
   }
 }
 .main-custom-bundler__pack--totals__inner--title {
@@ -4676,7 +4684,6 @@ body.template-article .article-template__link.link {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 12px;
   width: 100%;
 }
 .main-custom-bundler__pack--totals__inner--resume div {
@@ -4764,6 +4771,11 @@ body.template-article .article-template__link.link {
   font-weight: 400;
   line-height: 20px;
   width: 100%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .main-custom-pack-card {
