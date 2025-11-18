@@ -92,10 +92,28 @@ function MiniCart({
   }, [])
 
   useEffect(() => {
+    const body = document.querySelector('body')
+    const isMobile = window.innerWidth <= 1024
+    
     if (showCart) {
-      document.querySelector('body').classList.add('open-cart')
+      if (isMobile) {
+        const scrollY = window.scrollY
+        body.style.top = `-${scrollY}px`
+        body.classList.add('open-cart')
+      } else {
+        body.classList.add('open-cart')
+      }
     } else {
-      document.querySelector('body').classList.remove('open-cart')
+      if (isMobile) {
+        const scrollY = body.style.top
+        body.classList.remove('open-cart')
+        body.style.top = ''
+        if (scrollY) {
+          window.scrollTo(0, parseInt(scrollY || '0') * -1)
+        }
+      } else {
+        body.classList.remove('open-cart')
+      }
     }
   }, [showCart])
   
@@ -323,8 +341,25 @@ function MiniCart({
             <label for="cart-agree"> He leído y acepto la <a href="/#">política de privacidad y la política de contratación*</a></label>
           </div>
           <div className='i-minicart-container__snap--footer__actions'>
-            <a href={`/checkout${dicsount > 0 ? '?discount=KEIOENERGY' : ''}`} className='main-custom-button' onClick={checkoutValidator}>
-              Pago seguro
+            <div className='checkout-button-wrapper'>
+              {!termsAgree && (
+                <div className='checkout-tooltip'>
+                  <div className='checkout-tooltip__content'>
+                    Aceptar póliticas para poder continuar
+                  </div>
+                  <div className='checkout-tooltip__beak'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M5.65723 0L11.3141 5.65685L5.65723 11.3137L0.00037241 5.65685L5.65723 0Z" fill="#5C5E5C"/>
+                    </svg>
+                  </div>
+                </div>
+              )}
+              <a 
+                href={termsAgree ? `/checkout${dicsount > 0 ? '?discount=KEIOENERGY' : ''}` : '#'} 
+                className={`main-custom-button ${!termsAgree ? 'disabled' : ''}`} 
+                onClick={checkoutValidator}
+              >
+                Pago seguro
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M8.25 20.25C8.66421 20.25 9 19.9142 9 19.5C9 19.0858 8.66421 18.75 8.25 18.75C7.83579 18.75 7.5 19.0858 7.5 19.5C7.5 19.9142 7.83579 20.25 8.25 20.25Z" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M18.75 20.25C19.1642 20.25 19.5 19.9142 19.5 19.5C19.5 19.0858 19.1642 18.75 18.75 18.75C18.3358 18.75 18 19.0858 18 19.5C18 19.9142 18.3358 20.25 18.75 20.25Z" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
@@ -332,6 +367,7 @@ function MiniCart({
                 <path d="M7.13327 12.75H18.8902C18.9774 12.7501 19.062 12.7201 19.1294 12.6651C19.1969 12.6101 19.2431 12.5336 19.2602 12.4486L20.6177 5.69859C20.6286 5.64417 20.6273 5.588 20.6138 5.53414C20.6002 5.48029 20.5749 5.43009 20.5395 5.38717C20.5041 5.34426 20.4595 5.30969 20.4091 5.28597C20.3586 5.26225 20.3035 5.24996 20.2477 5.25H5.625" stroke="white" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </a>
+            </div>
           </div>
           <div className='i-minicart-container__snap--footer__cards'>
             <Icon name="footer-cards" />

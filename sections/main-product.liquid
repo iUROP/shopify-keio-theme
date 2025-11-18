@@ -209,25 +209,29 @@
                   <h2 class="upsells-title">Completa tu servicio Keio</h2>
 
                   <div class="custom-product-upsells">
-                    {% for prod in products_upsell limit: 2 %}
-                      <a href="{{ prod.url }}" class="product-upsell-card">
-                        <div class="thumbnail-upsell">
-                          {{ product.featured_image | image_url: width: 600 | image_tag }}
-                        </div>
-                        <div class="labels-upsell">
-                         <h3>{{ prod.title }}</h3>
-                          <p>{{ prod.price | money }}</p>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
-                            <mask id="mask0_13962_9484" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="29">
-                              <rect width="28.7209" height="28.7209" fill="#D9D9D9"/>
-                            </mask>
-                            <g mask="url(#mask0_13962_9484)">
-                              <path d="M13.1029 24.1046V15.1293H4V12.9753H13.1029V4H15.2876V12.9753H24.3905V15.1293H15.2876V24.1046H13.1029Z" fill="#931E31"/>
-                            </g>
-                          </svg>
-                        </div>
+                    {% assign upsell_count = 0 %}
+                    {% for prod in products_upsell %}
+                      {% if prod.id != product.id and upsell_count < 2 %}
+                        {% assign upsell_count = upsell_count | plus: 1 %}
+                        <a href="{{ prod.url }}" class="product-upsell-card">
+                          <div class="thumbnail-upsell">
+                            {{ prod.featured_image | image_url: width: 600 | image_tag }}
+                          </div>
+                          <div class="labels-upsell">
+                           <h3>{{ prod.title }}</h3>
+                            <p>{{ prod.price | money }}</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                              <mask id="mask0_13962_9484" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="29">
+                                <rect width="28.7209" height="28.7209" fill="#D9D9D9"/>
+                              </mask>
+                              <g mask="url(#mask0_13962_9484)">
+                                <path d="M13.1029 24.1046V15.1293H4V12.9753H13.1029V4H15.2876V12.9753H24.3905V15.1293H15.2876V24.1046H13.1029Z" fill="#931E31"/>
+                              </g>
+                            </svg>
+                          </div>
 
-                      </a>
+                        </a>
+                      {% endif %}
                     {% endfor %}
                   </div>
 

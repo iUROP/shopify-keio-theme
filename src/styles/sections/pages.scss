@@ -1,9 +1,31 @@
 body.template-product {
   .i-container-product {
     padding: 0px 96px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media only screen and (min-width: 1600px) {
+      max-width: 1600px;
+    }
+
+    @media only screen and (min-width: 1920px) {
+      max-width: 90%;
+      padding: 0px 5%;
+    }
+
+    @media only screen and (min-width: 2560px) {
+      max-width: 85%;
+      padding: 0px 7.5%;
+    }
+
+    @media only screen and (min-width: 3840px) {
+      max-width: 80%;
+      padding: 0px 10%;
+    }
 
     @media only screen and (max-width: 1024px) {
       padding: 0px 16px;
+      max-width: 100%;
     }
 
     .product {
@@ -201,9 +223,6 @@ body.template-product {
         .product__info-container {
           max-width: 600px;
           width: 100%;
-          &.product__column-sticky {
-
-          }
           .product__title {
             position: relative;
             h1 {
@@ -467,7 +486,7 @@ body.template-product {
             transition: all .25s cubic-bezier(.77,0,.175,1);
 
             @media only screen and (max-width: 1024px) {
-              right: 18px;
+              right: 10px;
             }
           }
 
@@ -504,7 +523,7 @@ body.template-product {
             width: 100%;
 
             @media only screen and (max-width: 1024px) {
-              padding: var(--Space-600, 15px) var(--Space-800, 22px);
+              padding: var(--Space-600, 15px) var(--Space-800, 12px);
             }
 
             svg {
@@ -516,7 +535,7 @@ body.template-product {
               transition: all .25s cubic-bezier(.77,0,.175,1);
 
               @media only screen and (max-width: 1024px) {
-                right: 18px;
+                right: 10px;
               }
             }
 
@@ -560,7 +579,7 @@ body.template-product {
             position: relative;
 
             @media only screen and (max-width: 1024px) {
-              padding: var(--Space-600, 15px) var(--Space-800, 22px);
+              padding: var(--Space-600, 15px) var(--Space-800, 12px);
             }
 
             &:before {
@@ -639,7 +658,7 @@ body.template-product {
           width: 100%;
 
           @media only screen and (max-width: 1024px) {
-            padding: var(--Space-600, 15px) var(--Space-800, 22px);
+            padding: var(--Space-600, 15px) var(--Space-800, 12px);
           }
 
           span {
@@ -679,7 +698,7 @@ body.template-product {
             transition: all .25s cubic-bezier(.77,0,.175,1);
 
             @media only screen and (max-width: 1024px) {
-              right: 18px;
+              right: 10px;
             }
           }
         }
@@ -712,7 +731,7 @@ body.template-product {
             position: relative;
 
             @media only screen and (max-width: 1024px) {
-              padding: var(--Space-600, 15px) var(--Space-800, 22px);
+              padding: var(--Space-600, 15px) var(--Space-800, 12px);
             }
 
             &:before {
@@ -782,7 +801,7 @@ body.template-product {
           margin-bottom: 10px;
 
           @media only screen and (max-width: 1024px) {
-            padding: var(--Space-600, 15px) var(--Space-800, 22px);
+            padding: var(--Space-600, 15px) var(--Space-800, 12px);
           }
         }
         &::after {
@@ -799,7 +818,7 @@ body.template-product {
           background-size: 100%;
 
           @media only screen and (max-width: 1024px) {
-            right: 18px;
+            right: 10px;
           }
         }
         & > div {

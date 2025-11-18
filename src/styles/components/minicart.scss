@@ -18,6 +18,12 @@ i-minicart {
       text-align: left;
       max-width: 90%;
 
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+        max-width: 100%;
+        right: -100%;
+      }
+
       @media only screen and (min-width: 990px) {
         right: -500px;
         width: 500;
@@ -208,6 +214,10 @@ i-minicart {
         overflow: auto;
         padding: 12px 24px;
 
+        @media only screen and (max-width: 1024px) {
+          padding: 12px 16px;
+        }
+
         .i-cart-item {
           height: 116px;
           position: relative;
@@ -215,10 +225,12 @@ i-minicart {
           margin-bottom: 16px;
           padding: 0px;
           box-sizing: border-box;
+          cursor: pointer;
 
           &.is-add-on {
             height: 25px;
             background: #f3f3f3;
+            cursor: default !important;
             .i-cart-item--image {
               display: none !important;
             }
@@ -253,6 +265,10 @@ i-minicart {
             background-repeat: no-repeat;
             display: block;
             border-radius: 4px;
+
+            @media only screen and (max-width: 1024px) {
+              width: 80px;
+            }
           }
           &--labels {
             position: absolute;
@@ -260,6 +276,10 @@ i-minicart {
             right: 0px;
             top: 0px;
             bottom: 0px;
+
+            @media only screen and (max-width: 1024px) {
+              left: 96px;
+            }
 
             &--reviews {
               height: 12px;
@@ -294,6 +314,10 @@ i-minicart {
               text-overflow: ellipsis;
               padding-right: 100px;
 
+              @media only screen and (max-width: 1024px) {
+                padding-right: 50px;
+              }
+
               span {
                 display: block;
                 font-size: 11px;
@@ -322,6 +346,19 @@ i-minicart {
                 margin-left: 7px;
                 text-decoration-line: line-through;
               }
+
+              @media only screen and (max-width: 1024px) {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                line-height: 18px;
+
+                span {
+                  margin-left: 0;
+                  margin-top: 2px;
+                  display: block;
+                }
+              }
             }
           }
           &--actions {
@@ -330,6 +367,10 @@ i-minicart {
             right: 0px;
             height: 26px;
             bottom: 12px;
+
+            @media only screen and (max-width: 1024px) {
+              left: 96px;
+            }
 
             &--qty {
               height: 100%;
@@ -658,6 +699,69 @@ i-minicart {
         }
         &__actions {
           text-align: center;
+          position: relative;
+
+          .checkout-button-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+
+            &:has(.main-custom-button.disabled) {
+              cursor: not-allowed;
+            }
+
+            .checkout-tooltip {
+              position: absolute;
+              bottom: calc(100% - 16px);
+              left: 50%;
+              transform: translateX(-50%);
+              opacity: 0;
+              visibility: hidden;
+              transition: opacity 0.2s, visibility 0.2s;
+              z-index: 10;
+              pointer-events: none;
+              width: max-content;
+
+              &__content {
+                border-radius: var(--sds-size-radius-100, 4px);
+                background: var(--Colors-grey, #5C5E5C);
+                box-shadow: var(--sds-size-depth-0, 0) var(--sds-size-depth-025, 1px) var(--sds-size-depth-100, 4px) var(--sds-size-depth-0, 0) var(--sds-color-black-200, rgba(0, 0, 0, 0.1)), var(--sds-size-depth-0, 0) var(--sds-size-depth-025, 1px) var(--sds-size-depth-100, 4px) var(--sds-size-depth-0, 0) var(--sds-color-black-100, rgba(0, 0, 0, 0.05));
+                padding: 8px 12px;
+                color: var(--Colors-White, var(--Colors-white, #FFF));
+                text-align: center;
+                font-family: var(--Family-Font---Body, Nohemi);
+                font-size: var(--Typo-Body-S, 13px);
+                font-style: normal;
+                font-weight: 300;
+                line-height: 20px;
+                white-space: nowrap;
+                position: relative;
+              }
+
+              &__beak {
+                position: absolute;
+                bottom: -6px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 12px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+          }
+
+          .checkout-button-wrapper:hover .checkout-tooltip {
+            opacity: 1;
+            visibility: visible;
+          }
+
+          .checkout-button-wrapper:has(.main-custom-button.disabled):hover .checkout-tooltip {
+            opacity: 1;
+            visibility: visible;
+          }
+
           a {
             display: flex;
             padding: var(--Space-400, 16px) var(--Space-800, 32px);
@@ -666,8 +770,17 @@ i-minicart {
             gap: var(--Space-300, 12px);
             align-self: stretch;
             margin: 24px 0px;
-            svg {
-              
+            transition: all 0.2s;
+
+            &.disabled {
+              background: var(--Colors-ligth_grey, #CDCDCD) !important;
+              color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C)) !important;
+              cursor: not-allowed;
+              pointer-events: none;
+
+              svg path {
+                stroke: var(--Colors-Grey, var(--Colors-grey, #5C5E5C) !important);
+              }
             }
           }
         }
@@ -693,6 +806,11 @@ i-minicart {
       cursor: pointer;
       visibility: hidden;
       opacity: 0;
+
+      @media only screen and (max-width: 1024px) {
+        touch-action: none;
+        -webkit-overflow-scrolling: touch;
+      }
 
       &.open {
         visibility: visible;
@@ -732,5 +850,15 @@ i-minicart {
       text-underline-offset: auto;
       text-underline-position: from-font;
     }
+  }
+}
+
+body.open-cart {
+  @media only screen and (max-width: 1024px) {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    touch-action: none;
   }
 }

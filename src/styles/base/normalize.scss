@@ -1031,6 +1031,13 @@ html, body {
   margin: auto;
   display: none;
 
+  @media only screen and (max-width: 1024px) {
+    width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
+    margin: 0;
+  }
+
   &.active {
     display: block;
   }

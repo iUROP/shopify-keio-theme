@@ -18,6 +18,12 @@
     gap: 160px;
     width: 100%;
 
+    svg {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
     .slick-list {
       width: 100% !important;
     }

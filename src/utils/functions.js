@@ -1,4 +1,6 @@
 window.Permalink = function() {
+  let updateProductPrice = null;
+
   const init = function() {
     console.log("Init iUROP Theme Functions!")
 
@@ -23,30 +25,64 @@ window.Permalink = function() {
       document.location.href = '/checkout'
     }
 
-    setInterval(function () {
-      if (document.querySelector('body.template-product')) {
-        const productJson = JSON.parse(document.querySelector('[id^="ProductJson"]').textContent);
-        const variantSelect = document.querySelector('form[action="/cart/add"] [name="id"]');
-        const variantSelectValue = document.querySelector('form[action="/cart/add"] [name="id"]').value;
+    updateProductPrice = function() {
+      if (!document.querySelector('body.template-product')) return;
 
-        let variant = productJson.variants.find(v => v.id == variantSelectValue);
-        variantSelect.addEventListener('change', (event) => {
-          const variantId = event.target.value;
-          variant = productJson.variants.find(v => v.id == variantId);
-        });
+      const productJson = JSON.parse(document.querySelector('[id^="ProductJson"]').textContent);
+      const variantSelect = document.querySelector('form[action="/cart/add"] [name="id"]');
+      if (!variantSelect) return;
 
-        let totalForm = variant.price / 100
-        const totalAddOns = getActiveAddOnsTotal();
+      const variantSelectValue = variantSelect.value;
+      const variant = productJson.variants.find(v => v.id == variantSelectValue);
+      if (!variant) return;
 
-        const formattedPrice = (totalForm + totalAddOns).toLocaleString('es-ES', {
-          style: 'currency',
-          currency: 'EUR'
-        });
-        document.querySelectorAll('.print-current-price').forEach(el => {
-          el.textContent = formattedPrice;
-        });
+      let quantity = 1;
+      const customQtySpan = document.querySelector('.product-form__quantity span');
+      const standardQtyInput = document.querySelector('.quantity__input');
+      
+      if (customQtySpan) {
+        quantity = parseInt(customQtySpan.textContent) || 1;
+      } else if (standardQtyInput) {
+        quantity = parseInt(standardQtyInput.value) || 1;
       }
-    }, 1000);
+
+      const totalForm = (variant.price / 100) * quantity;
+      const totalAddOns = getActiveAddOnsTotal() * quantity;
+
+      const formattedPrice = (totalForm + totalAddOns).toLocaleString('es-ES', {
+        style: 'currency',
+        currency: 'EUR'
+      });
+      
+      document.querySelectorAll('.print-current-price').forEach(el => {
+        el.textContent = formattedPrice;
+      });
+    };
+
+    if (document.querySelector('body.template-product')) {
+      const variantSelect = document.querySelector('form[action="/cart/add"] [name="id"]');
+      if (variantSelect) {
+        variantSelect.addEventListener('change', updateProductPrice);
+      }
+
+      document.addEventListener('click', function(event) {
+        const moreQtyBtn = event.target.closest('.product-form__quantity .more-qty');
+        const lessQtyBtn = event.target.closest('.product-form__quantity .less-qty');
+        
+        if (moreQtyBtn || lessQtyBtn) {
+          setTimeout(updateProductPrice, 10);
+        }
+      });
+
+      document.addEventListener('change', function(event) {
+        if (event.target.classList.contains('quantity__input')) {
+          updateProductPrice();
+        }
+      });
+
+      updateProductPrice();
+      setInterval(updateProductPrice, 1000);
+    }
 
     stickyMenu()
     setupHeader()
@@ -314,7 +350,10 @@ window.Permalink = function() {
     stickyMenu,
     setupHeader,
     getPrice,
-    setScrollDragger
+    setScrollDragger,
+    updateProductPrice: function() {
+      if (updateProductPrice) updateProductPrice();
+    }
   }
 }();
 Permalink.init();
@@ -335,6 +374,14 @@ document.addEventListener('click', function(event) {
 
   if (!option) return;
   option.classList.toggle('active');
+  
+  if (document.querySelector('body.template-product')) {
+    setTimeout(() => {
+      if (window.Permalink && window.Permalink.updateProductPrice) {
+        window.Permalink.updateProductPrice();
+      }
+    }, 10);
+  }
 });
 
 document.addEventListener('click', function(event) {

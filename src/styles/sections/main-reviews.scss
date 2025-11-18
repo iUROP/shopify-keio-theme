@@ -146,7 +146,7 @@
           gap: 11.958px;
 
           svg {
-
+            display: block;
           }
           span {
             color: var(--Dark, #050505);
@@ -154,10 +154,14 @@
             font-size: var(--Typo-Body-M, 16px);
             font-style: normal;
             font-weight: 400;
-            line-height: 24px;
+            line-height: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            margin-top: 4px;
           }
         }
-      }
+      } 
     }
 
     &--actions {
