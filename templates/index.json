@@ -90,16 +90,6 @@
       "settings": {
         "include_margins": true
       }
-    },
-    "custom_liquid_MjHwBy": {
-      "type": "custom-liquid",
-      "name": "t:sections.custom-liquid.presets.name",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
@@ -111,7 +101,6 @@
     "main_custom_text_image_8nWyBG",
     "main_custom_simple_banner_GiiLUb",
     "main_custom_blog_feed_Fx6CNd",
-    "1759955518a288ef11",
-    "custom_liquid_MjHwBy"
+    "1759955518a288ef11"
   ]
 }
