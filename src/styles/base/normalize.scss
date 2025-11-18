@@ -1115,3 +1115,8 @@ html, body {
   }
 
 }
+
+.shopify-payment-button__more-options,
+#shopify-buyer-consent {
+  display: none !important;
+}

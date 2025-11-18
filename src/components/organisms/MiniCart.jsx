@@ -215,7 +215,9 @@ function MiniCart({
                 ? <Slider {...settings}>
                     {upsellProducts.map((p, index) => {
                       return (
-                        <div key={index} className='i-minicart-container__snap--upsells--list__item'>
+                        <div key={index} className='i-minicart-container__snap--upsells--list__item' onClick={() => {
+                          add(p.handle)
+                        }}>
                           <div className='i-minicart-container__snap--upsells--list__item--image'>
                             <img src={p.images[0]} />
                           </div>
@@ -267,7 +269,9 @@ function MiniCart({
                       }
                     }).map((p, index) => {
                       return (
-                        <div key={index} className='i-minicart-container__snap--upsells--list__item'>
+                        <div key={index} className='i-minicart-container__snap--upsells--list__item' onClick={() => {
+                          add(p.handle)
+                        }}>
                           <div className='i-minicart-container__snap--upsells--list__item--image'>
                             <img src={p.images[0]} />
                           </div>

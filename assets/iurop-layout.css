@@ -1452,6 +1452,11 @@ html .main-custom-qty button.more, body .main-custom-qty button.more {
   }
 }
 
+.shopify-payment-button__more-options,
+#shopify-buyer-consent {
+  display: none !important;
+}
+
 .slow_ani {
   -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
@@ -6850,6 +6855,19 @@ body.template-product .i-container-product .product .product-form__buttons--vari
   -o-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
 }
+@media only screen and (max-width: 1024px) {
+  body.template-product .i-container-product .product .product-form__buttons--variant-picker .product-form__input .form__label span {
+    position: relative;
+    padding-bottom: 6px;
+  }
+  body.template-product .i-container-product .product .product-form__buttons--variant-picker .product-form__input .form__label span .selected-option {
+    top: 17px;
+    left: 0;
+    right: 0px;
+    white-space: nowrap;
+    font-size: 11px;
+  }
+}
 body.template-product .i-container-product .product .product-form__buttons--variant-picker .product-form__input label {
   border-radius: var(--Corner-Extra-small, 4px);
   border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
@@ -6947,6 +6965,19 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
   top: 11px;
   right: 66px;
   opacity: 0.5;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span {
+    position: relative;
+    padding-bottom: 6px;
+  }
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span .selected-option {
+    top: 17px;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    font-size: 11px;
+  }
 }
 body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading svg {
   position: absolute;
@@ -7162,6 +7193,7 @@ body.template-product .related-products .product-grid {
   display: flex;
   gap: 20px;
   margin-top: 60px;
+  justify-content: center;
 }
 @media only screen and (max-width: 1024px) {
   body.template-product .related-products .product-grid {
@@ -7197,6 +7229,119 @@ body.template-product .related-products .product-grid {
   }
   body.template-product .custom-faqs-section .main-custom-button {
     line-height: 40px !important;
+  }
+}
+body.template-product .custom-product-upsells {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+}
+body.template-product .custom-product-upsells .product-upsell-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+  border-radius: var(--Corner-Extra-small, 4px);
+  background: var(--Colors-white, #FFF);
+  height: 150px;
+  text-decoration: none;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .custom-product-upsells .product-upsell-card {
+    height: 170px;
+  }
+}
+body.template-product .custom-product-upsells .product-upsell-card .thumbnail-upsell {
+  height: 70px;
+  position: relative;
+  width: 100%;
+  border-radius: var(--Corner-Extra-small, 4px) var(--Corner-Extra-small, 4px) var(--Corner-None, 0) var(--Corner-None, 0);
+  overflow: hidden;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .custom-product-upsells .product-upsell-card .thumbnail-upsell {
+    height: 80px;
+  }
+}
+body.template-product .custom-product-upsells .product-upsell-card .thumbnail-upsell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--Corner-Extra-small, 4px) var(--Corner-Extra-small, 4px) var(--Corner-None, 0) var(--Corner-None, 0);
+  overflow: hidden;
+}
+body.template-product .custom-product-upsells .product-upsell-card .labels-upsell {
+  display: flex;
+  padding: var(--Space-600, 17px) 12px;
+  justify-content: space-between;
+  align-items: baseline;
+  align-self: stretch;
+  border-radius: 0 0 4px 4px;
+  border-right: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+  border-bottom: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+  border-left: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+  height: 80px;
+  position: relative;
+  flex-direction: column;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .custom-product-upsells .product-upsell-card .labels-upsell {
+    height: 90px;
+    padding-right: 42px;
+  }
+}
+body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
+  margin: 0px;
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+body.template-product .custom-product-upsells .product-upsell-card .labels-upsell p {
+  margin: 0px;
+  color: var(--Colors-800, var(--Colors-800, #404040));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .custom-product-upsells .product-upsell-card .labels-upsell p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+body.template-product .custom-product-upsells .product-upsell-card .labels-upsell svg {
+  position: absolute;
+  right: 10px;
+  bottom: 26px;
+}
+body.template-product .upsells-title {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-L, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+  margin-top: 32px;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .upsells-title {
+    font-size: 16px;
+    line-height: 30px;
   }
 }
 
