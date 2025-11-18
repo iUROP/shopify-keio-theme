@@ -634,5 +634,36 @@
       window.location.href = '/checkout'
     </script>
   {% endif %}
+
+  {% if template == 'index' %}
+    <script>
+      (function() {
+        const redirectUrl = 'https://keio.wa.ar/';
+        
+        const fromThankYou = sessionStorage.getItem('fromThankYou');
+        if (fromThankYou === 'true') {
+          sessionStorage.removeItem('fromThankYou');
+          window.location.href = redirectUrl;
+          return;
+        }
+        
+        const referrer = document.referrer;
+        const thankYouPatterns = [
+          '/checkout/thank_you',
+          '/orders/',
+          '/thank-you',
+          'thankyou'
+        ];
+        
+        const isFromThankYou = thankYouPatterns.some(pattern => 
+          referrer.toLowerCase().includes(pattern.toLowerCase())
+        );
+        
+        if (isFromThankYou) {
+          window.location.href = redirectUrl;
+        }
+      })();
+    </script>
+  {% endif %}
 </html>
 
