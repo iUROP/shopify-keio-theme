@@ -230,7 +230,7 @@ body.template-product {
               font-size: var(--Typo-Body-L, 20px);
               font-style: normal;
               font-weight: 400;
-              line-height: 35px;
+              line-height: 20px;
 
               @media only screen and (max-width: 1024px) {
                 position: relative;
@@ -465,6 +465,10 @@ body.template-product {
             -moz-transition: all .25s cubic-bezier(.77,0,.175,1);
             -o-transition: all .25s cubic-bezier(.77,0,.175,1);
             transition: all .25s cubic-bezier(.77,0,.175,1);
+
+            @media only screen and (max-width: 1024px) {
+              right: 18px;
+            }
           }
 
           &.active {
@@ -499,6 +503,10 @@ body.template-product {
             position: relative;
             width: 100%;
 
+            @media only screen and (max-width: 1024px) {
+              padding: var(--Space-600, 15px) var(--Space-800, 22px);
+            }
+
             svg {
               position: absolute;
               right: 26px;
@@ -506,6 +514,10 @@ body.template-product {
               -moz-transition: all .25s cubic-bezier(.77,0,.175,1);
               -o-transition: all .25s cubic-bezier(.77,0,.175,1);
               transition: all .25s cubic-bezier(.77,0,.175,1);
+
+              @media only screen and (max-width: 1024px) {
+                right: 18px;
+              }
             }
 
             span {
@@ -546,6 +558,10 @@ body.template-product {
             text-align: left;
             display: none;
             position: relative;
+
+            @media only screen and (max-width: 1024px) {
+              padding: var(--Space-600, 15px) var(--Space-800, 22px);
+            }
 
             &:before {
               content: '';
@@ -622,6 +638,10 @@ body.template-product {
           position: relative;
           width: 100%;
 
+          @media only screen and (max-width: 1024px) {
+            padding: var(--Space-600, 15px) var(--Space-800, 22px);
+          }
+
           span {
             color: var(--Colors-1000, var(--Colors-1000, #000));
             font-family: var(--Family-Font---Body, Nohemi);
@@ -657,6 +677,10 @@ body.template-product {
             -moz-transition: all .25s cubic-bezier(.77,0,.175,1);
             -o-transition: all .25s cubic-bezier(.77,0,.175,1);
             transition: all .25s cubic-bezier(.77,0,.175,1);
+
+            @media only screen and (max-width: 1024px) {
+              right: 18px;
+            }
           }
         }
         &__options {
@@ -686,6 +710,10 @@ body.template-product {
             margin-bottom: 8px;
             cursor: pointer;
             position: relative;
+
+            @media only screen and (max-width: 1024px) {
+              padding: var(--Space-600, 15px) var(--Space-800, 22px);
+            }
 
             &:before {
               content: '';
@@ -752,6 +780,10 @@ body.template-product {
           position: relative;
           width: 100%;
           margin-bottom: 10px;
+
+          @media only screen and (max-width: 1024px) {
+            padding: var(--Space-600, 15px) var(--Space-800, 22px);
+          }
         }
         &::after {
           content: "";
@@ -765,6 +797,10 @@ body.template-product {
           background-position: center center;
           background-repeat: no-repeat;
           background-size: 100%;
+
+          @media only screen and (max-width: 1024px) {
+            right: 18px;
+          }
         }
         & > div {
           border: 0px !important;
@@ -1219,6 +1255,11 @@ body.template-search {
     align-items: flex-start;
     gap: var(--Space-600, 24px);
     align-self: stretch;
+
+    @media only screen and (max-width: 1024px) {
+      padding: var(--Space-300, 10px) var(--Space-800, 20px);
+      gap: var(--Space-600, 20px);
+    }
     &__inner {
       display: flex;
       justify-content: space-between;
@@ -1261,6 +1302,10 @@ body.template-search {
             font-style: normal;
             font-weight: 400;
             line-height: 24px;
+
+            @media only screen and (max-width: 1024px) {
+              font-size: 14px;
+            }
           }
         }
       }

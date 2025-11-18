@@ -92,7 +92,10 @@
       {{ input_dataset }}
     >
     <label for="{{ input_id }}">
-      {{ value }}
+      {{ value }} 
+      {% if value == 'Alta nueva' %}
+        <span style="opacity: 0.5;">(+19,90€)</span>
+      {% endif %}
       {% if value.variant %}
         <strong>{{ value.variant.price | money }}</strong>
       {% endif %}

@@ -53,7 +53,7 @@
                                   <div class="order-items-item-body-inner">
                                     <div class="order-items-item-body-inner-summary">
                                       <div>Próxima factura</div>
-                                      <div>{{ order.created_at | date: "%d/%m/%Y" }}</div>
+                                      <div>{{ order.created_at | date: "%s" | plus: 31536000 | date: "%d/%m/%Y" }}</div>
                                     </div>
                                     <div class="order-items-item-body-inner-summary">
                                       <div>Importe de renovación</div>
@@ -101,8 +101,12 @@
   $( window ).on( "ready", function() {
     
     $(document).on('click', '.order-items-item', function() {
-      $('.order-items-item active').removeClass('active')
-      $(this).addClass('active')
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active');
+      } else {
+        $('.order-items-item.active').removeClass('active');
+        $(this).addClass('active');
+      }
     });
     
   });

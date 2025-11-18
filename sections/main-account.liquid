@@ -14,14 +14,22 @@
   }
 {%- endstyle -%}
 
+<script>
+  setTimeout(() => {
+    const params = new URLSearchParams(window.location.search);
+
+    if (params.get('view') === 'edit') {
+      document.querySelector('.account-global-page__content--content').classList.add('show-edit')
+    }
+  }, 1000);
+</script>
+
 <div class="customer account account-global-page section-{{ section.id }}-padding">
   <div>
     <h1 class="customer__title">{{ 'customer.account.title' | t }}</h1>
-
   </div>
 
   <div class="flex-block">
-
     <div class="account-global-page__content">
       <div class="account-global-page__content--sidebar">
         <div class="account-global-page__content--sidebar__links">
@@ -40,7 +48,7 @@
         <div class="account-global-page__content--content__row">
           <div class="account-global-page__content--content__row--heading">
             <h3>Información personal</h3>
-            <a href="/#" class="global-edit-button">
+            <a href="/account?view=edit" class="global-edit-button">
               Editar
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <mask id="mask0_13530_8956" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
@@ -53,7 +61,8 @@
             </a>
           </div>
           <div class="account-global-page__content--content__row--body">
-            <div class="account-global-page__content--content__row--body__content">
+
+            <div class="account-global-page__content--content__row--body__content view">
               <div>
                 <h4>Nombre completo</h4>
                 <p>{{ customer.first_name }} {{ customer.last_name }}</p>
@@ -67,6 +76,25 @@
                 <p>{{ customer.email }}</p>
               </div>
             </div>
+
+            <div class="account-global-page__content--content__row--body__content edit">
+              {% form 'customer' %}
+                <div class="main-input-field">
+                  <label for="customer_first_name">Nombre</label>
+                  <input type="text" name="customer[first_name]" id="customer_first_name" value="{{ customer.first_name }}">
+                </div>
+                <div class="main-input-field">
+                  <label for="customer_last_name">Apellidos</label>
+                  <input type="text" name="customer[last_name]" id="customer_last_name" value="{{ customer.last_name }}">
+                </div>
+                <div class="main-input-field">
+                  <label for="customer_phone">Teléfono</label>
+                  <input type="text" name="customer[phone]" id="customer_phone" value="{{ customer.phone }}">
+                </div>
+                <button type="submit" class="main-custom-button">Guardar cambios</button>
+              {% endform %}
+            </div>
+
           </div>
         </div>
       </div>

@@ -163,6 +163,20 @@
         border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
         background: var(--Colors-white, #FFF);
 
+        &.show-edit {
+          .account-global-page__content--content__row--body__content.view {
+            display: none !important;
+          }
+          .account-global-page__content--content__row--body__content.edit {
+            display: flex !important;
+          }
+          .account-global-page__content--content__row--heading {
+            .global-edit-button {
+              display: none !important;
+            }
+          }
+        }
+
         @media only screen and (max-width: 1024px) {
           width: 100%;
           padding: 24px;
@@ -208,6 +222,28 @@
               gap: var(--Space-400, 16px);
               align-self: stretch;
 
+              &.edit {
+                display: none;
+                form {
+                  width: 100%;
+                  margin: 0;
+
+                  display: flex;
+                  align-items: baseline;
+                  gap: var(--Space-400, 16px);
+                  align-self: stretch;
+                  position: relative;
+                  padding-bottom: 68px;
+
+                  .main-custom-button {
+                    margin: 0;
+                    position: absolute;
+                    bottom: 0;
+                    line-height: 20px;
+                  }
+                }
+              }
+
               @media only screen and (max-width: 1024px) {
                 flex-direction: column;
               }
@@ -216,7 +252,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
-                gap: var(--Space-600, 18px);
+                gap: var(--Space-600, 10px);
                 flex: 1 0 0;
 
                 @media only screen and (max-width: 1024px) {
@@ -362,6 +398,7 @@
                           -moz-transition: all .25s cubic-bezier(.77,0,.175,1);
                           -o-transition: all .25s cubic-bezier(.77,0,.175,1);
                           transition: all .25s cubic-bezier(.77,0,.175,1);
+                          cursor: pointer;
                         }
                       }
                       .order-items-item-body {
