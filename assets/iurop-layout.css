@@ -2531,12 +2531,12 @@ body.show-mobile-menu .main-custom-header__bottom {
   z-index: 2;
   width: 0;
   height: 0;
-  border-top: 80px solid #f0f0f0;
+  border-top: 80px solid #fff;
   border-right: 80px solid transparent;
 }
 @media only screen and (max-width: 1024px) {
   .main-custom-footer:before {
-    border-top: 30px solid #f0f0f0;
+    border-top: 30px solid #fff;
     border-right: 30px solid transparent;
   }
 }
@@ -2580,7 +2580,7 @@ body.show-mobile-menu .main-custom-header__bottom {
   .main-custom-footer--logo {
     width: 70%;
     height: auto;
-    margin: 0 auto;
+    margin: 0;
     max-width: 224px;
   }
 }
@@ -2657,6 +2657,12 @@ body.show-mobile-menu .main-custom-header__bottom {
   line-height: 20px;
   text-decoration: none;
   text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.main-custom-footer--links__nav ul li a svg {
+  transform: translateY(-1px);
 }
 
 .main-custom-hero {
