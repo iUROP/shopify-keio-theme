@@ -146,7 +146,7 @@ function MiniCart({
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: false,
           dots: false

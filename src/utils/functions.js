@@ -46,8 +46,21 @@ window.Permalink = function() {
         quantity = parseInt(standardQtyInput.value) || 1;
       }
 
-      const totalForm = (variant.price / 100) * quantity;
+      let totalForm = (variant.price / 100) * quantity;
       const totalAddOns = getActiveAddOnsTotal() * quantity;
+      const isSemestral = document.querySelector('.product-form__buttons--subs-selector__options--item.Semestral.active')
+      if (isSemestral) {
+        const semestralPrice = isSemestral.getAttribute('rel-price')
+        const semestralPriceNumber = Math.round(
+          parseFloat(
+            semestralPrice.replace(/[^\d,]/g, "").replace(",", ".")
+          ) * 100
+        );
+
+        if (semestralPriceNumber) {
+          totalForm = semestralPriceNumber / 100
+        }
+      }
 
       const formattedPrice = (totalForm + totalAddOns).toLocaleString('es-ES', {
         style: 'currency',
@@ -56,6 +69,16 @@ window.Permalink = function() {
       
       document.querySelectorAll('.print-current-price').forEach(el => {
         el.textContent = formattedPrice;
+      });
+
+      document.querySelectorAll('.print-current-plan').forEach(el => {
+        let plan = '/Año'
+
+        const isSemestral = document.querySelector('.product-form__buttons--subs-selector__options--item.Semestral.active')
+        if (isSemestral) {
+          plan = '/Semestre'
+        }
+        el.textContent = plan;
       });
     };
 
@@ -417,3 +440,9 @@ document.addEventListener('click', function(event) {
   option.classList.toggle('active');
 });
 
+document.addEventListener('click', function(event) {
+  const option = event.target.closest('.product-form__buttons--subs-selector');
+
+  if (!option) return;
+  option.classList.toggle('active');
+});

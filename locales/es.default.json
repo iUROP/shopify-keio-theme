@@ -37,7 +37,7 @@
         "tiktok": "TikTok"
       }
     },
-    "continue_shopping": "Seguir comprando",
+    "continue_shopping": "Descubrir todas las tarifas",
     "pagination": {
       "label": "Paginación",
       "page": "Página {{ number }}",
@@ -278,8 +278,8 @@
       }
     },
     "404": {
-      "title": "Página no encontrada",
-      "subtext": "404"
+      "title": "A esta página le falta un cable",
+      "subtext": "Pero tranquilo nuestras tarifas te mantienen siempre conectado"
     }
   },
   "sections": {

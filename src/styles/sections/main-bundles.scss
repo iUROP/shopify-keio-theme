@@ -198,7 +198,7 @@
       align-items: flex-start;
       gap: 10px;
       position: sticky;
-      top: 0;
+      top: 24px;
       align-self: flex-start;
 
       @media only screen and (max-width: 1400px) {
@@ -207,6 +207,7 @@
 
       @media only screen and (max-width: 1024px) {
         position: fixed;
+        top: 0px;
         bottom: 0px;
         left: 0px;
         right: 0px;

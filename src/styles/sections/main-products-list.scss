@@ -109,8 +109,11 @@
     padding-left: 0px !important;
     padding-right: 0px !important;
 
+    .slick-list {
+      padding: 0 16px;
+    }
+
     .slick-track {
-      padding: 0 8px;
       box-sizing: border-box;
       .slick-slide {
         padding: 0 8px;

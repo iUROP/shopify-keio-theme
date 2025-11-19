@@ -600,6 +600,12 @@ i-minicart {
                   margin: 0 !important;
                   padding: 0px !important;
                   border: 0px !important;
+
+                  @media only screen and (max-width: 1024px) {
+                    font-size: var(--Typo-Body-M, 14px) !important;
+                    line-height: 20px !important;
+                  }
+
                 }
                 p {
                   color: var(--Colors-800, var(--Colors-800, #404040));
@@ -772,6 +778,10 @@ i-minicart {
             margin: 24px 0px;
             transition: all 0.2s;
 
+            svg {
+              margin-top: -4px;
+            }
+
             &.disabled {
               background: var(--Colors-ligth_grey, #CDCDCD) !important;
               color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C)) !important;
@@ -779,7 +789,7 @@ i-minicart {
               pointer-events: none;
 
               svg path {
-                stroke: var(--Colors-Grey, var(--Colors-grey, #5C5E5C) !important);
+                stroke: #5c5e5c !important;
               }
             }
           }

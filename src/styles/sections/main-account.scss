@@ -9,6 +9,40 @@
     padding: var(--Space-4000, 160px) 0;
     width: 440px;
 
+    p {
+      margin: 0px;
+      color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-M, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    #recover {
+      color: var(--Colors-1000, var(--Colors-1000, #000));
+      text-align: center;
+      font-family: var(--Family-Font, Nohemi);
+      font-size: var(--Typo-H2, 39px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      margin-bottom: 16px;
+    }
+  
+    .form__message {
+      color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-M, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      svg {
+        display: none;
+      }
+    }
+
     @media only screen and (max-width: 1024px) {
       width: 100%;
       padding: 80px 16px;
@@ -22,6 +56,18 @@
     @media only screen and (max-width: 1024px) {
       width: 100%;
       padding: 80px 16px;
+    }
+  }
+
+  &.activate {
+    p {
+      margin: 0px;
+      color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-M, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
     }
   }
 
@@ -43,13 +89,14 @@
     margin: 24px 0px !important;
   }
 
-  &.account {
+  &.account,
+  &.addresses {
     width: 100%;
-    padding: 96px var(--Space-2400, 96px);
+    padding: 96px var(--Space-2400, 96px) !important;
     max-width: 100%;
 
     @media only screen and (max-width: 1024px) {
-      padding: 50px 16px;
+      padding: 50px 16px !important;
     }
 
     .customer__title {
@@ -222,6 +269,31 @@
               gap: var(--Space-400, 16px);
               align-self: stretch;
 
+              &.address {
+                flex-direction: column;
+
+                .add-new {
+                  margin: 0;
+                }
+                
+                #AddAddress {
+                  #AddressNewHeading {
+                    color: var(--Colors-1000, var(--Colors-1000, #000));
+                    font-family: var(--Family-Font, Nohemi);
+                    font-size: var(--Typo-Body-XL, 25px);
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
+                  #address_form_new {
+                    gap: 20px;
+                    .main-input-field {
+                      margin: 0px !important;
+                    }
+                  }
+                }
+              }
+
               &.edit {
                 display: none;
                 form {
@@ -358,7 +430,7 @@
                       .order-items-item-heading {
                         color: var(--Colors-1000, var(--Colors-1000, #000));
                         font-family: var(--Family-Font, Nohemi);
-                        font-size: var(--Typo-Body-XL, 25px);
+                        font-size: var(--Typo-Body-XL, 22px);
                         font-style: normal;
                         font-weight: 400;
                         line-height: normal;
@@ -369,7 +441,9 @@
 
                         @media only screen and (max-width: 1024px) {
                           font-size: 18px;
-                          align-items: center;
+                          align-items: baseline;
+                          flex-direction: column;
+                          padding-right: 42px;
                         }
 
                         span {
@@ -433,10 +507,10 @@
                               &:nth-child(1) {
                                 color: var(--Colors-1000, var(--Colors-1000, #000));
                                 font-family: var(--Family-Font---Body, Nohemi);
-                                font-size: var(--Typo-Body-M, 16px);
+                                font-size: var(--Typo-Body-M, 15px);
                                 font-style: normal;
                                 font-weight: 400;
-                                line-height: 24px;
+                                line-height: 22px;
                               }
                               &:nth-child(2) {
                                 color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
@@ -474,7 +548,7 @@
                         }
                         .order-items-item-heading button {
                           transform: rotate(180deg);
-                          top: 3px;
+                          top: 1px;
                         }
                       }
                     }
@@ -487,6 +561,11 @@
         }
       }
     }
+  }
+
+  &.addresses {
+    width: 100%;
+    max-width: 100% !important;
   }
 
   .form-error-msg {

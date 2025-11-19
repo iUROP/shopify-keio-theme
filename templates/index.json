@@ -43,7 +43,7 @@
       "settings": {
         "show_button": true,
         "button_text": "Contratar ahora",
-        "button_url": ""
+        "button_url": "shopify://collections/best-sellers"
       }
     },
     "main_custom_simple_banner_GiiLUb": {

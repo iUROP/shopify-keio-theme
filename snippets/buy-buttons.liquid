@@ -65,6 +65,9 @@
         >
 
         <div class="product-form__buttons--variant-picker">
+
+          {% render 'subscriptions-selector' %}
+
           {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
 
           {% render 'sim-selector' product: product %}

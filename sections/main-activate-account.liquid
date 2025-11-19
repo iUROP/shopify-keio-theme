@@ -14,7 +14,7 @@
   }
 {%- endstyle -%}
 
-<div class="customer activate section-{{ section.id }}-padding">
+<div class="customer account-global-page activate section-{{ section.id }}-padding">
   <svg style="display: none">
     <symbol id="icon-error" viewBox="0 0 13 13">
       <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
@@ -53,7 +53,7 @@
       </ul>
     {%- endif -%}
 
-    <div class="field">
+    <div class="field main-input-field">
       <input
         type="password"
         name="customer[password]"
@@ -64,10 +64,11 @@
           aria-invalid="true"
           aria-describedby="password-error"
         {% endif %}
+        class="main-input-field__input"
       >
-      <label for="password">
+      {% comment %} <label for="password">
         {{ 'customer.activate_account.password' | t }}
-      </label>
+      </label> {% endcomment %}
       {%- if form.errors contains 'password' -%}
         <small id="password-error" class="form__message">
           <svg aria-hidden="true" focusable="false">
@@ -79,7 +80,7 @@
       {%- endif -%}
     </div>
 
-    <div class="field">
+    <div class="field main-input-field">
       <input
         type="password"
         name="customer[password_confirmation]"
@@ -90,10 +91,11 @@
           aria-invalid="true"
           aria-describedby="password_confirmation-error"
         {% endif %}
+        class="main-input-field__input"
       >
-      <label for="password_confirmation">
+      {% comment %} <label for="password_confirmation">
         {{ 'customer.activate_account.password_confirm' | t }}
-      </label>
+      </label> {% endcomment %}
       {%- if form.errors contains 'password_confirmation' -%}
         <small id="password_confirmation-error" class="form__message">
           <svg aria-hidden="true" focusable="false">
@@ -105,12 +107,12 @@
       {%- endif -%}
     </div>
 
-    <button>
+    <button class="main-global-button">
       {{ 'customer.activate_account.submit' | t }}
     </button>
-    <button name="decline">
+    {% comment %} <button name="decline">
       {{ 'customer.activate_account.cancel' | t }}
-    </button>
+    </button> {% endcomment %}
   {%- endform -%}
 </div>
 

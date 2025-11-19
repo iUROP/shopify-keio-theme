@@ -2048,6 +2048,12 @@ i-minicart .i-minicart-container__snap--upsells--list__item--labels h3 {
   padding: 0px !important;
   border: 0px !important;
 }
+@media only screen and (max-width: 1024px) {
+  i-minicart .i-minicart-container__snap--upsells--list__item--labels h3 {
+    font-size: var(--Typo-Body-M, 14px) !important;
+    line-height: 20px !important;
+  }
+}
 i-minicart .i-minicart-container__snap--upsells--list__item--labels p {
   color: var(--Colors-800, var(--Colors-800, #404040));
   font-family: var(--Family-Font---Body, Nohemi);
@@ -2199,6 +2205,9 @@ i-minicart .i-minicart-container__snap--footer__actions a {
   margin: 24px 0px;
   transition: all 0.2s;
 }
+i-minicart .i-minicart-container__snap--footer__actions a svg {
+  margin-top: -4px;
+}
 i-minicart .i-minicart-container__snap--footer__actions a.disabled {
   background: var(--Colors-ligth_grey, #CDCDCD) !important;
   color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C)) !important;
@@ -2206,7 +2215,7 @@ i-minicart .i-minicart-container__snap--footer__actions a.disabled {
   pointer-events: none;
 }
 i-minicart .i-minicart-container__snap--footer__actions a.disabled svg path {
-  stroke: var(--Colors-Grey, var(--Colors-grey, #5C5E5C) !important);
+  stroke: #5c5e5c !important;
 }
 i-minicart .i-minicart-container__snap--footer__cards {
   text-align: center;
@@ -2461,8 +2470,8 @@ i-minicart .i-minicart-container__overlay.open {
 
 .float-whatsapp {
   position: fixed;
-  right: 50px;
-  bottom: 100px;
+  right: 42px;
+  bottom: 42px;
   z-index: 5;
   animation: float 2s ease-in-out infinite;
 }
@@ -3059,8 +3068,10 @@ body.show-mobile-menu .main-custom-header__bottom {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+  .main-custom-product-list .slick-list {
+    padding: 0 16px;
+  }
   .main-custom-product-list .slick-track {
-    padding: 0 8px;
     box-sizing: border-box;
   }
   .main-custom-product-list .slick-track .slick-slide {
@@ -3601,6 +3612,37 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   padding: var(--Space-4000, 160px) 0;
   width: 440px;
 }
+.account-global-page.login p {
+  margin: 0px;
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.account-global-page.login #recover {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H2, 39px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 16px;
+}
+.account-global-page.login .form__message {
+  color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+.account-global-page.login .form__message svg {
+  display: none;
+}
 @media only screen and (max-width: 1024px) {
   .account-global-page.login {
     width: 100%;
@@ -3616,6 +3658,15 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
     width: 100%;
     padding: 80px 16px;
   }
+}
+.account-global-page.activate p {
+  margin: 0px;
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
 }
 .account-global-page h1 {
   color: var(--Colors-1000, var(--Colors-1000, #000));
@@ -3634,39 +3685,39 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
 .account-global-page button.main-global-button {
   margin: 24px 0px !important;
 }
-.account-global-page.account {
+.account-global-page.account, .account-global-page.addresses {
   width: 100%;
-  padding: 96px var(--Space-2400, 96px);
+  padding: 96px var(--Space-2400, 96px) !important;
   max-width: 100%;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account {
-    padding: 50px 16px;
+  .account-global-page.account, .account-global-page.addresses {
+    padding: 50px 16px !important;
   }
 }
-.account-global-page.account .customer__title {
+.account-global-page.account .customer__title, .account-global-page.addresses .customer__title {
   text-align: left;
   margin-bottom: 56px;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .customer__title {
+  .account-global-page.account .customer__title, .account-global-page.addresses .customer__title {
     margin-bottom: 24px;
   }
 }
-.account-global-page.account .account-global-page__content {
+.account-global-page.account .account-global-page__content, .account-global-page.addresses .account-global-page__content {
   display: flex;
   align-items: flex-start;
   gap: 34px;
   align-self: stretch;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content {
+  .account-global-page.account .account-global-page__content, .account-global-page.addresses .account-global-page__content {
     gap: 24px;
     flex-direction: column;
     flex-wrap: wrap;
   }
 }
-.account-global-page.account .account-global-page__content--sidebar {
+.account-global-page.account .account-global-page__content--sidebar, .account-global-page.addresses .account-global-page__content--sidebar {
   display: flex;
   width: 30%;
   height: 636px;
@@ -3679,13 +3730,13 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   background: var(--Colors-white, #FFF);
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--sidebar {
+  .account-global-page.account .account-global-page__content--sidebar, .account-global-page.addresses .account-global-page__content--sidebar {
     width: 100%;
     padding: 20px;
     height: auto;
   }
 }
-.account-global-page.account .account-global-page__content--sidebar__links {
+.account-global-page.account .account-global-page__content--sidebar__links, .account-global-page.addresses .account-global-page__content--sidebar__links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3693,12 +3744,12 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   align-self: stretch;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--sidebar__links {
+  .account-global-page.account .account-global-page__content--sidebar__links, .account-global-page.addresses .account-global-page__content--sidebar__links {
     gap: 8px;
     margin-bottom: 30px;
   }
 }
-.account-global-page.account .account-global-page__content--sidebar__links a {
+.account-global-page.account .account-global-page__content--sidebar__links a, .account-global-page.addresses .account-global-page__content--sidebar__links a {
   display: flex;
   padding: var(--Space-400, 16px) var(--Space-300, 12px);
   justify-content: space-between;
@@ -3714,28 +3765,28 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   text-decoration: none;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--sidebar__links a {
+  .account-global-page.account .account-global-page__content--sidebar__links a, .account-global-page.addresses .account-global-page__content--sidebar__links a {
     font-size: 16px;
     line-height: 20px;
     padding: 12px 8px;
   }
 }
-.account-global-page.account .account-global-page__content--sidebar__links a.active {
+.account-global-page.account .account-global-page__content--sidebar__links a.active, .account-global-page.addresses .account-global-page__content--sidebar__links a.active {
   background: var(--Colors-100, #FAFAFA);
 }
-.account-global-page.account .account-global-page__content--sidebar__links a.last-link {
+.account-global-page.account .account-global-page__content--sidebar__links a.last-link, .account-global-page.addresses .account-global-page__content--sidebar__links a.last-link {
   border-top: 1px solid #CDCDCD;
   border-radius: 0px;
   padding-top: 24px;
 }
-.account-global-page.account .account-global-page__content--sidebar__close {
+.account-global-page.account .account-global-page__content--sidebar__close, .account-global-page.addresses .account-global-page__content--sidebar__close {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: var(--Space-100, 4px);
 }
-.account-global-page.account .account-global-page__content--sidebar__close a {
+.account-global-page.account .account-global-page__content--sidebar__close a, .account-global-page.addresses .account-global-page__content--sidebar__close a {
   color: var(--Colors-500, var(--Colors-500, #931E31));
   text-align: center;
   font-family: var(--Family-Font---Body, Nohemi);
@@ -3744,7 +3795,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   font-weight: 400;
   line-height: 24px;
 }
-.account-global-page.account .account-global-page__content--content {
+.account-global-page.account .account-global-page__content--content, .account-global-page.addresses .account-global-page__content--content {
   display: flex;
   width: 70%;
   padding: var(--Space-1200, 48px);
@@ -3755,36 +3806,36 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
   background: var(--Colors-white, #FFF);
 }
-.account-global-page.account .account-global-page__content--content.show-edit .account-global-page__content--content__row--body__content.view {
+.account-global-page.account .account-global-page__content--content.show-edit .account-global-page__content--content__row--body__content.view, .account-global-page.addresses .account-global-page__content--content.show-edit .account-global-page__content--content__row--body__content.view {
   display: none !important;
 }
-.account-global-page.account .account-global-page__content--content.show-edit .account-global-page__content--content__row--body__content.edit {
+.account-global-page.account .account-global-page__content--content.show-edit .account-global-page__content--content__row--body__content.edit, .account-global-page.addresses .account-global-page__content--content.show-edit .account-global-page__content--content__row--body__content.edit {
   display: flex !important;
 }
-.account-global-page.account .account-global-page__content--content.show-edit .account-global-page__content--content__row--heading .global-edit-button {
+.account-global-page.account .account-global-page__content--content.show-edit .account-global-page__content--content__row--heading .global-edit-button, .account-global-page.addresses .account-global-page__content--content.show-edit .account-global-page__content--content__row--heading .global-edit-button {
   display: none !important;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content {
+  .account-global-page.account .account-global-page__content--content, .account-global-page.addresses .account-global-page__content--content {
     width: 100%;
     padding: 24px;
     height: auto;
   }
 }
-.account-global-page.account .account-global-page__content--content__row {
+.account-global-page.account .account-global-page__content--content__row, .account-global-page.addresses .account-global-page__content--content__row {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 32px;
   align-self: stretch;
 }
-.account-global-page.account .account-global-page__content--content__row--heading {
+.account-global-page.account .account-global-page__content--content__row--heading, .account-global-page.addresses .account-global-page__content--content__row--heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
 }
-.account-global-page.account .account-global-page__content--content__row--heading h3 {
+.account-global-page.account .account-global-page__content--content__row--heading h3, .account-global-page.addresses .account-global-page__content--content__row--heading h3 {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   font-family: var(--Family-Font, Nohemi);
   font-size: var(--Typo-Body-XL, 25px);
@@ -3794,27 +3845,47 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   margin: 0px;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content__row--heading h3 {
+  .account-global-page.account .account-global-page__content--content__row--heading h3, .account-global-page.addresses .account-global-page__content--content__row--heading h3 {
     font-size: 18px;
   }
 }
-.account-global-page.account .account-global-page__content--content__row--body {
+.account-global-page.account .account-global-page__content--content__row--body, .account-global-page.addresses .account-global-page__content--content__row--body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--Space-800, 32px);
   align-self: stretch;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content {
+.account-global-page.account .account-global-page__content--content__row--body__content, .account-global-page.addresses .account-global-page__content--content__row--body__content {
   display: flex;
   align-items: baseline;
   gap: var(--Space-400, 16px);
   align-self: stretch;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content.edit {
+.account-global-page.account .account-global-page__content--content__row--body__content.address, .account-global-page.addresses .account-global-page__content--content__row--body__content.address {
+  flex-direction: column;
+}
+.account-global-page.account .account-global-page__content--content__row--body__content.address .add-new, .account-global-page.addresses .account-global-page__content--content__row--body__content.address .add-new {
+  margin: 0;
+}
+.account-global-page.account .account-global-page__content--content__row--body__content.address #AddAddress #AddressNewHeading, .account-global-page.addresses .account-global-page__content--content__row--body__content.address #AddAddress #AddressNewHeading {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-Body-XL, 25px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.account-global-page.account .account-global-page__content--content__row--body__content.address #AddAddress #address_form_new, .account-global-page.addresses .account-global-page__content--content__row--body__content.address #AddAddress #address_form_new {
+  gap: 20px;
+}
+.account-global-page.account .account-global-page__content--content__row--body__content.address #AddAddress #address_form_new .main-input-field, .account-global-page.addresses .account-global-page__content--content__row--body__content.address #AddAddress #address_form_new .main-input-field {
+  margin: 0px !important;
+}
+.account-global-page.account .account-global-page__content--content__row--body__content.edit, .account-global-page.addresses .account-global-page__content--content__row--body__content.edit {
   display: none;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content.edit form {
+.account-global-page.account .account-global-page__content--content__row--body__content.edit form, .account-global-page.addresses .account-global-page__content--content__row--body__content.edit form {
   width: 100%;
   margin: 0;
   display: flex;
@@ -3824,18 +3895,18 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   position: relative;
   padding-bottom: 68px;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content.edit form .main-custom-button {
+.account-global-page.account .account-global-page__content--content__row--body__content.edit form .main-custom-button, .account-global-page.addresses .account-global-page__content--content__row--body__content.edit form .main-custom-button {
   margin: 0;
   position: absolute;
   bottom: 0;
   line-height: 20px;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content__row--body__content {
+  .account-global-page.account .account-global-page__content--content__row--body__content, .account-global-page.addresses .account-global-page__content--content__row--body__content {
     flex-direction: column;
   }
 }
-.account-global-page.account .account-global-page__content--content__row--body__content div {
+.account-global-page.account .account-global-page__content--content__row--body__content div, .account-global-page.addresses .account-global-page__content--content__row--body__content div {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3843,13 +3914,13 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   flex: 1 0 0;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content__row--body__content div {
+  .account-global-page.account .account-global-page__content--content__row--body__content div, .account-global-page.addresses .account-global-page__content--content__row--body__content div {
     width: 100%;
     gap: 8px;
     margin-bottom: 12px;
   }
 }
-.account-global-page.account .account-global-page__content--content__row--body__content div h4 {
+.account-global-page.account .account-global-page__content--content__row--body__content div h4, .account-global-page.addresses .account-global-page__content--content__row--body__content div h4 {
   margin: 0px;
   color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
   font-family: var(--Family-Font---Body, Nohemi);
@@ -3858,7 +3929,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   font-weight: 400;
   line-height: 24px;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content div p {
+.account-global-page.account .account-global-page__content--content__row--body__content div p, .account-global-page.addresses .account-global-page__content--content__row--body__content div p {
   margin: 0px;
   color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
   leading-trim: both;
@@ -3869,12 +3940,12 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   font-weight: 300;
   line-height: 24px;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .support-content {
+.account-global-page.account .account-global-page__content--content__row--body__content .support-content, .account-global-page.addresses .account-global-page__content--content__row--body__content .support-content {
   display: flex;
   flex-direction: column;
   gap: var(--Space-800, 16px);
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .support-content .tag-message {
+.account-global-page.account .account-global-page__content--content__row--body__content .support-content .tag-message, .account-global-page.addresses .account-global-page__content--content__row--body__content .support-content .tag-message {
   display: flex;
   padding: var(--Space-400, 16px);
   align-items: center;
@@ -3884,7 +3955,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   background: var(--Colors-100, #FAFAFA);
   flex-direction: row;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .support-content .tag-message span {
+.account-global-page.account .account-global-page__content--content__row--body__content .support-content .tag-message span, .account-global-page.addresses .account-global-page__content--content__row--body__content .support-content .tag-message span {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3897,29 +3968,29 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   line-height: 20px;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content__row--body__content .support-content .main-custom-button {
+  .account-global-page.account .account-global-page__content--content__row--body__content .support-content .main-custom-button, .account-global-page.addresses .account-global-page__content--content__row--body__content .support-content .main-custom-button {
     line-height: 41px !important;
     width: 100%;
     text-align: center;
   }
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .keio-x-content {
+.account-global-page.account .account-global-page__content--content__row--body__content .keio-x-content, .account-global-page.addresses .account-global-page__content--content__row--body__content .keio-x-content {
   display: flex;
   flex-direction: column;
   gap: var(--Space-800, 16px);
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content {
   display: flex;
   flex-direction: column;
   gap: var(--Space-800, 16px);
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card {
   width: 100%;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items {
   width: 100%;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item {
   display: flex;
   width: 100%;
   padding: var(--Space-800, 32px);
@@ -3932,15 +4003,15 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   position: relative;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item {
+  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item {
     padding: 20px;
     gap: 18px;
   }
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   font-family: var(--Family-Font, Nohemi);
-  font-size: var(--Typo-Body-XL, 25px);
+  font-size: var(--Typo-Body-XL, 22px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -3950,12 +4021,14 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   box-sizing: border-box;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading {
+  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading {
     font-size: 18px;
-    align-items: center;
+    align-items: baseline;
+    flex-direction: column;
+    padding-right: 42px;
   }
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading span {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading span, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading span {
   display: flex;
   padding: var(--Space-150, 6px) var(--Space-200, 8px);
   flex-direction: column;
@@ -3970,7 +4043,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   border-radius: var(--Corner-Full, 10000px);
   background: #C2EEB4;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading button {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading button, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading button {
   position: absolute;
   right: 0;
   top: 5px;
@@ -3983,7 +4056,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
   cursor: pointer;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -3992,7 +4065,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   align-self: stretch;
   display: none;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -4000,27 +4073,27 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   align-self: stretch;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner {
+  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner {
     gap: 4px;
     margin-bottom: -10px !important;
   }
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   align-self: stretch;
   flex-direction: initial;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary div:nth-child(1) {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary div:nth-child(1), .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary div:nth-child(1) {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   font-family: var(--Family-Font---Body, Nohemi);
-  font-size: var(--Typo-Body-M, 16px);
+  font-size: var(--Typo-Body-M, 15px);
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 22px;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary div:nth-child(2) {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary div:nth-child(2), .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-inner .order-items-item-body-inner-summary div:nth-child(2) {
   color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
   text-align: right;
   font-family: var(--Family-Font---Body, Nohemi);
@@ -4030,25 +4103,29 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   line-height: 20px;
   align-items: end;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-actions {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-actions, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-actions {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
 }
 @media only screen and (max-width: 1024px) {
-  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-actions a {
+  .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-actions a, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-body .order-items-item-body-actions a {
     width: 100%;
     text-align: center;
     line-height: 40px;
   }
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item.active .order-items-item-body {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item.active .order-items-item-body, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item.active .order-items-item-body {
   display: flex;
 }
-.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item.active .order-items-item-heading button {
+.account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item.active .order-items-item-heading button, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item.active .order-items-item-heading button {
   transform: rotate(180deg);
-  top: 3px;
+  top: 1px;
+}
+.account-global-page.addresses {
+  width: 100%;
+  max-width: 100% !important;
 }
 .account-global-page .form-error-msg {
   border-radius: var(--Corner-Small, 8px);
@@ -4775,7 +4852,7 @@ body.template-article .article-template__link.link {
   align-items: flex-start;
   gap: 10px;
   position: sticky;
-  top: 0;
+  top: 24px;
   align-self: flex-start;
 }
 @media only screen and (max-width: 1400px) {
@@ -4786,6 +4863,7 @@ body.template-article .article-template__link.link {
 @media only screen and (max-width: 1024px) {
   .main-custom-bundler__pack--totals {
     position: fixed;
+    top: 0px;
     bottom: 0px;
     left: 0px;
     right: 0px;
@@ -6582,9 +6660,20 @@ body.template-product .i-container-product {
     padding: 0px 10%;
   }
 }
+@media only screen and (max-width: 1600px) {
+  body.template-product .i-container-product {
+    padding: 0px 56px !important;
+    max-width: 100% !important;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  body.template-product .i-container-product {
+    padding: 0px 46px !important;
+  }
+}
 @media only screen and (max-width: 1024px) {
   body.template-product .i-container-product {
-    padding: 0px 16px;
+    padding: 0px 16px !important;
     max-width: 100%;
   }
 }
@@ -6659,8 +6748,22 @@ body.template-product .i-container-product .product .product__media-wrapper .pro
 body.template-product .i-container-product .product .product__media-wrapper .product__media-wrapper-container .product__media-wrapper-thumbnails {
   display: none !important;
 }
-body.template-product .i-container-product .product .product__media-wrapper .product__media-wrapper-container .product__media-wrapper-master--tooltip {
+body.template-product .i-container-product .product .product__media-wrapper .product__media-wrapper-container .containerToltip {
   position: absolute;
+  z-index: 2;
+  left: 32px;
+  top: 0;
+  height: 100%;
+  display: flex;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .i-container-product .product .product__media-wrapper .product__media-wrapper-container .containerToltip {
+    left: 0;
+    width: 100%;
+  }
+}
+body.template-product .i-container-product .product .product__media-wrapper .product__media-wrapper-container .product__media-wrapper-master--tooltip {
+  position: relative;
   -webkit-backdrop-filter: blur(10.4499998093px);
   backdrop-filter: blur(10.4499998093px);
   border-radius: var(--Corner-Large, 16px);
@@ -6673,18 +6776,11 @@ body.template-product .i-container-product .product .product__media-wrapper .pro
   gap: var(--Space-1200, 38px);
   align-self: stretch;
   z-index: 2;
-  top: 0;
-  left: 28px;
   margin: auto;
-  transform: translate(0, 34%);
-}
-@media only screen and (max-width: 1500px) {
-  body.template-product .i-container-product .product .product__media-wrapper .product__media-wrapper-container .product__media-wrapper-master--tooltip {
-    transform: translate(0, 22%);
-  }
 }
 @media only screen and (max-width: 1024px) {
   body.template-product .i-container-product .product .product__media-wrapper .product__media-wrapper-container .product__media-wrapper-master--tooltip {
+    position: absolute;
     top: auto;
     bottom: 30px;
     transform: translate(0, 0);
@@ -6805,7 +6901,7 @@ body.template-product .i-container-product .product .product__info-wrapper .prod
   font-weight: 400;
   line-height: normal;
   margin: 0px;
-  padding-right: 170px;
+  padding-right: 210px;
 }
 @media only screen and (max-width: 1024px) {
   body.template-product .i-container-product .product .product__info-wrapper .product__info-container .product__title h1 {
@@ -7131,6 +7227,7 @@ body.template-product .i-container-product .product .product-form__buttons--vari
 @media only screen and (max-width: 1024px) {
   body.template-product .i-container-product .product .product-form__buttons--variant-picker .product-form__input label {
     padding: var(--Space-600, 15px) var(--Space-800, 12px);
+    padding-left: 32px;
   }
 }
 body.template-product .i-container-product .product .product-form__buttons--variant-picker .product-form__input label:before {
@@ -7143,6 +7240,11 @@ body.template-product .i-container-product .product .product-form__buttons--vari
   top: 17px;
   position: absolute;
   z-index: 1;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-product .i-container-product .product .product-form__buttons--variant-picker .product-form__input label:before {
+    left: 11px;
+  }
 }
 body.template-product .i-container-product .product .product-form__buttons--variant-picker .product-form__input label strong {
   display: none;
@@ -7164,13 +7266,20 @@ body.template-product .i-container-product .product .product-form__buttons--vari
   position: absolute;
   border-radius: 20px;
 }
+@media only screen and (max-width: 1024px) {
+  body.template-product .i-container-product .product .product-form__buttons--variant-picker .product-form__input--pill input[type=radio]:checked + label:after {
+    left: 14px;
+  }
+}
 body.template-product .i-container-product .product .product-form__buttons--variant-picker .form__label span div {
   position: absolute;
   top: 11px;
   right: 66px;
   opacity: 0.5;
+  font-size: 14px;
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading {
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector__heading {
   border-radius: var(--Corner-Extra-small, 4px);
   border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
   background: var(--Colors-100, #FAFAFA);
@@ -7194,11 +7303,13 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
   width: 100%;
 }
 @media only screen and (max-width: 1024px) {
-  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading {
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading,
+  body.template-product .i-container-product .product .product-form__buttons--subs-selector__heading {
     padding: var(--Space-600, 15px) var(--Space-800, 12px);
   }
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span {
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector__heading span {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   font-family: var(--Family-Font---Body, Nohemi);
   font-size: var(--Typo-Body-M, 16px);
@@ -7206,18 +7317,22 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
   font-weight: 400;
   line-height: 24px;
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span div {
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span div,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector__heading span div {
   position: absolute;
-  top: 11px;
+  top: 12px;
   right: 66px;
   opacity: 0.5;
+  font-size: 14px;
 }
 @media only screen and (max-width: 1024px) {
-  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span {
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span,
+  body.template-product .i-container-product .product .product-form__buttons--subs-selector__heading span {
     position: relative;
     padding-bottom: 6px;
   }
-  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span .selected-option {
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading span .selected-option,
+  body.template-product .i-container-product .product .product-form__buttons--subs-selector__heading span .selected-option {
     top: 17px;
     left: 0;
     right: 0;
@@ -7225,7 +7340,8 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
     font-size: 11px;
   }
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading svg {
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading svg,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector__heading svg {
   position: absolute;
   right: 26px;
   -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
@@ -7234,15 +7350,18 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
   transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
 }
 @media only screen and (max-width: 1024px) {
-  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading svg {
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__heading svg,
+  body.template-product .i-container-product .product .product-form__buttons--subs-selector__heading svg {
     right: 10px;
   }
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector__options {
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__options,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector__options {
   display: none;
   margin-top: 8px;
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item {
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector__options--item {
   border-radius: var(--Corner-Extra-small, 4px);
   border: var(--Strokes-Medium, 2px) solid var(--Colors-100, #FAFAFA);
   background: var(--Colors-100, #FAFAFA);
@@ -7268,11 +7387,14 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
   position: relative;
 }
 @media only screen and (max-width: 1024px) {
-  body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item {
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item,
+  body.template-product .i-container-product .product .product-form__buttons--subs-selector__options--item {
     padding: var(--Space-600, 15px) var(--Space-800, 12px);
+    padding-left: 32px;
   }
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item:before {
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item:before,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector__options--item:before {
   content: "";
   width: 17px;
   height: 17px;
@@ -7284,7 +7406,14 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
   z-index: 1;
   border-radius: 30px;
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item.active:after {
+@media only screen and (max-width: 1024px) {
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item:before,
+  body.template-product .i-container-product .product .product-form__buttons--subs-selector__options--item:before {
+    left: 11px;
+  }
+}
+body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item.active:after,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector__options--item.active:after {
   content: "";
   width: 11px;
   height: 11px;
@@ -7295,15 +7424,42 @@ body.template-product .i-container-product .product .product-form__buttons--sim-
   position: absolute;
   border-radius: 20px;
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector.active .product-form__buttons--sim-selector__heading svg {
+@media only screen and (max-width: 1024px) {
+  body.template-product .i-container-product .product .product-form__buttons--sim-selector__options--item.active:after,
+  body.template-product .i-container-product .product .product-form__buttons--subs-selector__options--item.active:after {
+    left: 14px;
+  }
+}
+body.template-product .i-container-product .product .product-form__buttons--sim-selector.active .product-form__buttons--sim-selector__heading svg,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector.active .product-form__buttons--sim-selector__heading svg {
   transform: rotate(180deg);
 }
-body.template-product .i-container-product .product .product-form__buttons--sim-selector.active .product-form__buttons--sim-selector__options {
+body.template-product .i-container-product .product .product-form__buttons--sim-selector.active .product-form__buttons--sim-selector__options,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector.active .product-form__buttons--sim-selector__options {
+  display: block;
+}
+body.template-product .i-container-product .product .product-form__buttons--sim-selector.active .product-form__buttons--subs-selector__options,
+body.template-product .i-container-product .product .product-form__buttons--subs-selector.active .product-form__buttons--subs-selector__options {
+  display: flex;
+  flex-direction: column;
+}
+body.template-product .i-container-product .product .product-form__buttons--subs-selector {
+  display: none;
+  margin-bottom: 16px;
+}
+body.template-product .i-container-product .product .product-form__buttons--subs-selector .product-form__buttons--subs-selector__options--item.Semestral {
+  order: 2;
+}
+body.template-product .i-container-product .product .product-form__buttons--subs-selector .product-form__buttons--subs-selector__options--item.Anual {
+  order: 1;
+}
+body.template-product .i-container-product .product .product-form__buttons--subs-selector.show {
   display: block;
 }
 body.template-product .i-container-product .product .shopify_subscriptions_fieldset {
   position: relative;
   margin-bottom: -20px;
+  display: none !important;
 }
 body.template-product .i-container-product .product .shopify_subscriptions_fieldset::before {
   content: "Frecuencia de pago";
@@ -7650,6 +7806,7 @@ body.template-collection #product-grid {
   flex-wrap: wrap;
   width: 100%;
   box-sizing: border-box;
+  justify-content: center;
 }
 body.template-collection #product-grid .main-custom-product-card {
   width: calc(33% - 17px);
@@ -7759,7 +7916,7 @@ body.template-search .template-search__results ul .main-custom-product-card .mai
 }
 .custom-product-add-ons--option {
   display: flex;
-  padding: var(--Space-300, 12px) var(--Space-800, 32px);
+  padding: var(--Space-300, 12px) var(--Space-800, 30px);
   flex-direction: column;
   align-items: flex-start;
   gap: var(--Space-600, 24px);
@@ -7834,6 +7991,56 @@ body.template-search .template-search__results ul .main-custom-product-card .mai
 }
 
 /* add-ons */
+body.template-404 .template-404 {
+  position: relative;
+}
+body.template-404 .template-404 .block-not-found {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  width: 815px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body.template-404 .template-404 .block-not-found p {
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  text-align: center;
+  font-family: Nohemi;
+  font-size: 49px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  margin: 0px;
+  margin-top: 48px;
+}
+body.template-404 .template-404 .block-not-found h1 {
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  text-align: center;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-Body-XL, 25px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px;
+  margin-bottom: 48px;
+}
+body.template-404 .template-404 .block-not-found a {
+  text-align: center;
+}
+body.template-404 .template-404 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body.template-search .template-search {
+  min-height: 400px;
+}
+
 .main-custom-product-card {
   position: relative;
   display: flex;

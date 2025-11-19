@@ -475,6 +475,18 @@
         }, 100);
       });
 
+
+      $(document).on('click', '.product-form__buttons--subs-selector__options--item', function () {
+        $('.product-form__buttons--subs-selector__options--item').removeClass('active')
+        $(this).addClass('active')
+
+        setTimeout(() => {
+          const currentSelection = $('.product-form__buttons--subs-selector__options .product-form__buttons--subs-selector__options--item.active').html()
+          $('.product-form__buttons--subs-selector__heading .selected-option').html(currentSelection)
+        }, 100);
+      });
+
+
       $('.shopify_subscriptions_app_block_label label').on('click', function() {
         $('.shopify_subscriptions_app_block_label').removeClass('active')
         $(this).addClass('active')
@@ -572,11 +584,11 @@
         ]
 
         const activeSubscription = document.querySelector(
-          '.shopify_subscriptions_app_block input[type="radio"][data-radio-type="selling_plan"]:checked'
+          '.product-form__buttons--subs-selector__options--item.active'
         );
 
         if (activeSubscription) {
-          const sellingPlanId = activeSubscription.dataset.sellingPlanId;
+          const sellingPlanId = activeSubscription.getAttribute('rel-plan-id');
           console.log("Plan ID:", sellingPlanId);
           addObj[0]['selling_plan'] = Number(sellingPlanId)
 

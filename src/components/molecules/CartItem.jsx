@@ -61,7 +61,7 @@ function CartItem({
             <> x{product.quantity}</>
           }
           {product.selling_plan_allocation?.selling_plan?.name &&
-            <span>{product.selling_plan_allocation.selling_plan.name.replace('Entrega c','C')}</span>
+            <span>{product.selling_plan_allocation.selling_plan.name.replace('Entrega c','C').replace(', 30% de descuento','')}</span>
           }
           {product.options_with_values &&
             <>

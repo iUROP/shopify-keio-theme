@@ -11,13 +11,22 @@
 </style>
 
 <div class="template-404 page-width page-margin center">
-  <p>
-    {{ 'templates.404.subtext' | t }}
-  </p>
-  <h1 class="title">
-    {{ 'templates.404.title' | t }}
-  </h1>
-  <a href="{{ routes.all_products_collection_url }}" class="button">
-    {{ 'general.continue_shopping' | t }}
-  </a>
+
+  <div class="block-not-found">
+    <svg xmlns="http://www.w3.org/2000/svg" width="414" height="140" viewBox="0 0 414 140" fill="none">
+      <path d="M276.945 41.0039V98.9961L235.941 140H177.949L136.945 98.9961V41.0039L177.949 0H235.941L276.945 41.0039ZM103.839 87.6143H124.218V106.538H103.839V139.388H83.459V106.538H0V78.2002L81.1787 0.612305H103.839V87.6143ZM393.512 0.612305V87.6143H413.891V106.538H393.512V139.388H373.132V106.538H289.673V78.2002L370.852 0.612305H393.512ZM157.88 49.6748V90.3203L186.626 119.065H227.271L256.016 90.3203V49.6748L227.271 20.9297H186.626L157.88 49.6748ZM305.979 87.6143H373.132V23.458L305.979 87.6143ZM16.3057 87.6143H83.459V23.458L16.3057 87.6143Z" fill="#931E31"/>
+    </svg>
+    <p>
+      {{ 'templates.404.title' | t }}
+    </p>
+    <h1 class="title">
+      {{ 'templates.404.subtext' | t }}
+    </h1>
+    <a href="{{ routes.all_products_collection_url }}" class="main-custom-button">
+      {{ 'general.continue_shopping' | t }}
+    </a>
+  </div>
+
+  <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/404-background.png?v=1763522209">
+
 </div>
