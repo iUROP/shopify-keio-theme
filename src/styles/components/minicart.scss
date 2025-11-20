@@ -6,6 +6,22 @@ i-minicart {
     display: block;
     height: 100%;
 
+    .toggleCart {
+      position: relative;
+    }
+
+    .qty {
+      position: absolute;
+      top: -2px;
+      right: -15px;
+      color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-XS, 10px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
     &__snap{
       position: fixed;
       right: -500px;

@@ -110,7 +110,7 @@ body.template-product {
             top: 0;
             height: 100%;
             display: flex;
-            max-width: 70%;
+            max-width: 65%;
 
             @media only screen and (max-width: 1024px) {
               left: 0;
@@ -1341,6 +1341,7 @@ body.template-search {
     @media only screen and (max-width: 1024px) {
       padding: var(--Space-300, 10px) var(--Space-800, 20px);
       gap: var(--Space-600, 20px);
+      padding-left: 12px;
     }
     &__inner {
       display: flex;
@@ -1353,6 +1354,10 @@ body.template-search {
           align-items: center;
           gap: var(--Space-400, 16px);
           cursor: pointer;
+
+          @media only screen and (max-width: 1024px) {
+            gap: var(--Space-400, 8px);
+          }
         }
         &:nth-child(2) {
           display: flex;
@@ -1422,6 +1427,10 @@ body.template-404 {
   .template-404 {
     position: relative;
 
+    @media only screen and (max-width: 1024px) {
+      overflow: hidden;
+    }
+
     .block-not-found {
       position: absolute;
       left: 0px;
@@ -1434,6 +1443,18 @@ body.template-404 {
       align-items: center;
       justify-content: center;
 
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding-bottom: 180px;
+
+        svg {
+          width: 220px;
+          margin-top: 60px;
+        }
+      }
+
       p {
         color: var(--Colors-1000, var(--Colors-1000, #000));
         text-align: center;
@@ -1444,6 +1465,14 @@ body.template-404 {
         line-height: 120%;
         margin: 0px;
         margin-top: 48px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 25px;
+          margin-bottom: 24px;
+          padding: 0 16px;
+          margin-top: 0px;
+        }
+        
       }
       h1 {
         color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
@@ -1455,15 +1484,35 @@ body.template-404 {
         line-height: normal;
         margin: 0px;
         margin-bottom: 48px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 18px;
+          margin-bottom: 30px;
+          padding: 0 16px;
+          line-height: 22px;
+        }
       }
       a {
         text-align: center;
+
+        @media only screen and (max-width: 1024px) {
+          line-height: 40px;
+        }
       }
     }
     img {
       width: 100%;
       height: auto;
       display: block;
+
+      @media only screen and (max-width: 1024px) {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 28px;
+        z-index: -1;
+        transform: scale(1.6);
+      }
     }
   }
 }

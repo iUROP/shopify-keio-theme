@@ -162,8 +162,9 @@ function MiniCart({
   return (
     <div className={`i-minicart-container`}>
       <VerticalCenter>
-        <div onClick={cartToggler}>
+        <div onClick={cartToggler} className='toggleCart'>
           <Icon name="cart" />
+          <span className='qty'>({cartQty})</span>
         </div>
       </VerticalCenter>
       {/* {cartQty &&

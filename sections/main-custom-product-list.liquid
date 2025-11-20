@@ -39,12 +39,12 @@
       {% else %}
 
         {% assign collection = section.settings.collection %}
-        <div class="main-custom-product-list__container--row">
+        <div class="main-custom-product-list__container--row row-products-1">
           {% for product in collection.products limit: 4 %}
             {% render 'custom-product-card' product: product %}
           {% endfor %}
         </div>
-        <div class="main-custom-product-list__container--row">
+        <div class="main-custom-product-list__container--row row-products-2">
           {% for product in collection.products limit: 4 offset: 4 %}
             {% render 'custom-product-card' product: product %}
           {% endfor %}
