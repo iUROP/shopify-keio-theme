@@ -3893,6 +3893,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
 }
 .account-global-page.account .account-global-page__content--content__row--body__content.address .add-new, .account-global-page.addresses .account-global-page__content--content__row--body__content.address .add-new {
   margin: 0;
+  line-height: 20px;
 }
 .account-global-page.account .account-global-page__content--content__row--body__content.address #AddAddress #AddressNewHeading, .account-global-page.addresses .account-global-page__content--content__row--body__content.address #AddAddress #AddressNewHeading {
   color: var(--Colors-1000, var(--Colors-1000, #000));
