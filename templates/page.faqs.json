@@ -16,9 +16,58 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "main_faqs_page_xchQXe": {
+      "type": "main-faqs-page",
+      "blocks": {
+        "general_bbHidi": {
+          "type": "general",
+          "settings": {
+            "title": "¿Es Keio una empresa confiable?",
+            "content": "¿Es Keio una empresa confiable?",
+            "category": "1. Confianza y Diferenciación"
+          }
+        },
+        "general_4baFeF": {
+          "type": "general",
+          "settings": {
+            "title": "¿Qué diferencia a Keio de otros operadores como Movistar o Vodafone?",
+            "content": "¿Qué diferencia a Keio de otros operadores como Movistar o Vodafone?",
+            "category": "1. Confianza y Diferenciación"
+          }
+        },
+        "general_nTz77T": {
+          "type": "general",
+          "settings": {
+            "title": "¿Quiénes somos?",
+            "content": "¿Quiénes somos?",
+            "category": "1. Confianza y Diferenciación"
+          }
+        },
+        "general_JP99G7": {
+          "type": "general",
+          "settings": {
+            "title": "¿Por qué Keio es tan barato en comparación con otras compañías?",
+            "content": "¿Por qué Keio es tan barato en comparación con otras compañías?",
+            "category": "2. Precios y Condiciones Comerciales"
+          }
+        }
+      },
+      "block_order": [
+        "general_bbHidi",
+        "general_4baFeF",
+        "general_nTz77T",
+        "general_JP99G7"
+      ],
+      "name": "Faqs page",
+      "settings": {
+        "title": "FAQS",
+        "subtitle": "Resolvemos todas tus dudas en un momento y con la sinceridad por bandera."
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "main_faqs_page_xchQXe"
   ]
 }

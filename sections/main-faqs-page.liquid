@@ -1,0 +1,143 @@
+<section class="blog-page main-custom-faqs">
+  <div class="blog-page__heading">
+    {{ section.settings.title }}
+    <p>{{ section.settings.subtitle }}</p>
+  </div>
+  <div class="blog-page__filter">
+    <button class="general-cat active">General</button>
+    <button class="movil-cat">Móvil</button>
+    <button class="fibra-cat">Fibra</button>
+  </div>
+
+  <div class="faqs-page__items general-cat active">
+    {% assign categories = "" %}
+    {% for block in section.blocks %}
+      {% if block.type == 'general' %}
+        {% unless categories contains block.settings.category %}
+          {% assign categories = categories | append: block.settings.category | append: "," %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    {% assign categories = categories | split: "," %}
+
+    {% for category in categories %}
+      {% unless category == "" %}
+        <div class="faqs-page__items--category">
+          <h3>{{ category }}</h3>
+          {% for block in section.blocks %}
+            {% if block.type == 'general' %}
+              {% if block.settings.category == category %}
+                {% render 'faq-item' title: block.settings.title, content: block.settings.content %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.blog-page__filter button').forEach((el, index) => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('.blog-page__filter button').forEach(e => {
+        e.classList.remove('active')
+      })
+      el.classList.add('active')
+      document.querySelectorAll('.faqs-page__items').forEach(e => {
+        e.classList.remove('active')
+      }) 
+      document.querySelectorAll('.faqs-page__items')[index].classList.add('active')
+    })
+  })
+</script>
+
+{% schema %}
+{
+  "name": "Faqs page",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitulo"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "general",
+      "name": "Preguntas - General",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Pregunta"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Respuesta"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Categoría"
+        }
+      ]
+    },
+    {
+      "type": "mobile",
+      "name": "Preguntas - Móvil",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Pregunta"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Respuesta"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Categoría"
+        }
+      ]
+    },
+    {
+      "type": "fibra",
+      "name": "Preguntas - Fibra",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Pregunta"
+        },
+        {
+          "type": "textarea",
+          "id": "content",
+          "label": "Respuesta"
+        },
+        {
+          "type": "text",
+          "id": "category",
+          "label": "Categoría"
+        }
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "Faqs page",
+      "category": "Custom"
+    }
+  ]
+}
+{% endschema %}
