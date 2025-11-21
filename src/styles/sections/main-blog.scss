@@ -320,4 +320,9 @@ body.template-article {
   .article-template__link.link {
     display: none !important;
   }
+  .main-custom-blog-feed__items {
+    a.main-custom-button {
+      display: none;
+    }
+  }
 }

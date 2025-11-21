@@ -25,59 +25,24 @@
     <div class="main-custom-blog-feed__items">
       <div class="main-custom-blog-feed__items--slider main-arrows">
 
-        <div class="main-custom-blog-feed__items--slider__post">
-          <div class="main-custom-blog-feed__items--slider__post--thumnbail">
-            <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/B1.png?v=1759468729" />
-          </div>
-          <div class="main-custom-blog-feed__items--slider__post--labels">
-            <div class="main-custom-blog-feed__items--slider__post--labels__inner">
-              <h3>7/12/2025</h3>
-              <h2>Lanzamiento Keio Fit</h2>
-              <p>¡Keio Fit ya disponible! Keio Fit es una innovadora aplicación de fitness y bienestar diseñada para…</p>
-              <a href="/#" class="main-custom-link-primary">Leer más</a>
+        {% if section.settings.blog %}
+          {% for article in section.settings.blog.articles %}
+            <div class="main-custom-blog-feed__items--slider__post">
+              <div class="main-custom-blog-feed__items--slider__post--thumnbail">
+                <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
+              </div>
+              <div class="main-custom-blog-feed__items--slider__post--labels">
+                <div class="main-custom-blog-feed__items--slider__post--labels__inner">
+                  <h3>{{ article.published_at | date: "%d/%m/%Y" }}</h3>
+                  <h2>{{ article.title }}</h2>
+                  <p>{{ article.excerpt | strip_html }}</p>
+                  <a href="{{ article.url }}" class="main-custom-link-primary">Leer más</a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="main-custom-blog-feed__items--slider__post">
-          <div class="main-custom-blog-feed__items--slider__post--thumnbail">
-            <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/B2.png?v=1759468729" />
-          </div>
-          <div class="main-custom-blog-feed__items--slider__post--labels">
-            <div class="main-custom-blog-feed__items--slider__post--labels__inner">
-              <h3>7/12/2025</h3>
-              <h2>Revolución Keio</h2>
-              <p>Bienvenido a la revolución.Bienvenido a Keio, únete a la revolución y se parte de nuestra familia.</p>
-              <a href="/#" class="main-custom-link-primary">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class="main-custom-blog-feed__items--slider__post">
-          <div class="main-custom-blog-feed__items--slider__post--thumnbail">
-            <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/B3.png?v=1759468730" />
-          </div>
-          <div class="main-custom-blog-feed__items--slider__post--labels">
-            <div class="main-custom-blog-feed__items--slider__post--labels__inner">
-              <h3>7/12/2025</h3>
-              <h2>Shooting day con Ilia</h2>
-              <p>Shooting Day con Ilia Topuria.Preparando el inminente lanzamiento de nuestra aplicación...</p>
-              <a href="/#" class="main-custom-link-primary">Leer más</a>
-            </div>
-          </div>
-        </div>
-        <div class="main-custom-blog-feed__items--slider__post">
-          <div class="main-custom-blog-feed__items--slider__post--thumnbail">
-            <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/B4.png?v=1759468728" />
-          </div>
-          <div class="main-custom-blog-feed__items--slider__post--labels">
-            <div class="main-custom-blog-feed__items--slider__post--labels__inner">
-              <h3>7/12/2025</h3>
-              <h2>Keio x Kings League</h2>
-              <p>Keio Sponsor oficial de Kings League. Nuestra empresa se ha convertido en sponsor oficial...</p>
-              <a href="/#" class="main-custom-link-primary">Leer más</a>
-            </div>
-          </div>
-        </div>
-        
+          {% endfor %}
+        {% endif %}
+
       </div>
       <a href="/pages/blog" class="main-custom-button">Visita nuestro Blog</a>
     </div>
@@ -93,6 +58,11 @@
       "type": "text",
       "id": "custom_title",
       "label": "Titulo personalizado"
+    },
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "Seleccionar blog"
     }
   ],
   "presets": [

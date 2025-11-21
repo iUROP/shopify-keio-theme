@@ -2,47 +2,78 @@
   <div class="blog-page__heading">Actualidad Keio</div>
   <div class="blog-page__filter">
     <a href="/pages/blog" class="active">Todo</a>
-    <a href="/blogs/noticias-y-novedades">Noticias y novedades</a>
-    <a href="/blogs/consejos-y-guias">Consejos y gúias</a>
-    <a href="/blogs/articulos">Artículos</a>
+
+    {% for block in section.blocks %}
+      {% if block.settings.blog %}
+        <a href="{{ block.settings.blog.url }}">
+          {{ block.settings.blog.title }}
+        </a>
+      {% endif %}
+    {% endfor %}
+
   </div>
   <div class="blog-page__posts">
     <div class="blog-page__posts--inner">
 
-      <a href="/#" class="blog-page__posts--inner__article">
-        <div class="blog-page__posts--inner__article--image">
-          <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/blog-1.png" />
-        </div>
-        <div class="blog-page__posts--inner__article--labels">
-          <div>7/12/2025</div>
-          <div>Lanzamiento Keio Fit</div>
-          <div>¡Keio Fit ya disponible! Keio Fit es una innovadora aplicación de fitness y bienestar diseñada para…</div>
-          <div>Leer más</div>
-        </div>
-      </a>
-      <a href="/#" class="blog-page__posts--inner__article">
-        <div class="blog-page__posts--inner__article--image">
-          <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/blog-2.png" />
-        </div>
-        <div class="blog-page__posts--inner__article--labels">
-          <div>7/12/2025</div>
-          <div>Revolución Keio</div>
-          <div>¡Keio Fit ya disponible! Keio Fit es una innovadora aplicación de fitness y bienestar diseñada para…</div>
-          <div>Leer más</div>
-        </div>
-      </a>
-      <a href="/#" class="blog-page__posts--inner__article">
-        <div class="blog-page__posts--inner__article--image">
-          <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/blog-3.png" />
-        </div>
-        <div class="blog-page__posts--inner__article--labels">
-          <div>7/12/2025</div>
-          <div>Shooting day con Ilia</div>
-          <div>¡Keio Fit ya disponible! Keio Fit es una innovadora aplicación de fitness y bienestar diseñada para…</div>
-          <div>Leer más</div>
-        </div>
-      </a>
+      {% for block in section.blocks %}
+        {% if block.settings.blog %}
+          {% assign blog = block.settings.blog %}
+
+          {% for article in blog.articles %}
+            <a href="{{ article.url }}" class="blog-page__posts--inner__article">
+              <div class="blog-page__posts--inner__article--image">
+                <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
+              </div>
+              <div class="blog-page__posts--inner__article--labels">
+                <div>{{ article.published_at | date: "%d/%m/%Y" }}</div>
+                <div>{{ article.title }}</div>
+                <div>{{ article.excerpt | strip_html }}</div>
+                <div>Leer más</div>
+              </div>
+            </a>
+          {% endfor %}
+
+        {% endif %}
+      {% endfor %}
 
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Blog page",
+  "max_blocks": 6,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Actualidad Keio",
+      "label": "Titulo de la página"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Seleccionar blog"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog page",
+      "blocks": [
+        {
+          "type": "blog"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

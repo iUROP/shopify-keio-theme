@@ -29,6 +29,7 @@
         right: 16px;
         width: auto;
         gap: 18px;
+        bottom: 50px;
       }
 
       h1 {
@@ -36,7 +37,7 @@
         color: #FFF;
         text-align: center;
         font-family: var(--Family-Font, Nohemi);
-        font-size: var(--Typo-Display-XL, 61px);
+        font-size: var(--Typo-Display-XL, 58px);
         font-style: normal;
         font-weight: 400;
         line-height: 120%;
@@ -54,7 +55,7 @@
         font-size: var(--Typo-H3, 31px);
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        line-height: 38px;
         letter-spacing: 0px;
 
         @media only screen and (max-width: 1024px) {
@@ -65,10 +66,45 @@
       }
       button {
         width: 270px;
+        line-height: 19px;
 
         @media only screen and (max-width: 1024px) {
           width: 150px;
+          line-height: 17px;
         }
+      }
+    }
+    &--footer {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      background: rgba(255, 255, 255, 0.50);
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      box-sizing: border-box;
+      padding: var(--Space-300, 8px) 0;
+      justify-content: center;
+      align-items: center;
+      gap: var(--Space-4000, 116px);
+
+      @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 8px;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--Colors-1000, var(--Colors-1000, #000));
+        font-family: var(--Family-Font---Body, Nohemi);
+        font-size: var(--Typo-Body-M, 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
       }
     }
   }
@@ -251,7 +287,7 @@
         margin-top: 35px;
         @media only screen and (max-width: 1024px) {
           width: 100%;
-          margin-top: 0px;
+          margin-top: 56px;
         }
         &__row {
           color: var(--Colors-800, var(--Colors-800, #1E1E1E));
@@ -260,23 +296,110 @@
           font-style: normal;
           font-weight: 400;
           line-height: 35px;
+          border-bottom: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
+          width: 100%;
+          padding-bottom: 6px;
 
           @media only screen and (max-width: 1024px) {
-            display: none;
+            font-size: 14px;
+            line-height: 24px;
+            padding-right: 68%;
           }
         }
 
-        svg {
+        &__table {
           position: absolute;
-          right: 0;
-          bottom: -53px;
-          width: 500px;
-          height: auto;
+          right: 0px;
+          top: -92px;
+          bottom: -22px;
+          width: 480px;
 
           @media only screen and (max-width: 1024px) {
-            width: 100%;
+            width: 64%;
+            top: -70px;
+          }
+
+          &--col {
+            position: absolute;
+            width: 100px;
+            top: 0px;
             bottom: 0px;
-            position: relative;
+
+            @media only screen and (max-width: 1024px) {
+              width: 62px;
+            }
+
+            &.hightlight {
+              border-radius: var(--Corner-Large, 16px);
+              background: var(--Colors-500, #931E31);
+            }
+
+            &:nth-child(1) {
+              left: 0px;
+            }
+            &:nth-child(2) {
+              left: 0px;
+              right: 0px;
+              margin: auto;
+            }
+            &:nth-child(3) {
+              right: 0px;
+            }
+
+            &__row {
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 50px;
+              margin-bottom: 25px;
+
+              @media only screen and (max-width: 1024px) {
+                margin-bottom: 38px;
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+                }
+              }
+
+              &.head {
+                height: 82px;
+                margin-bottom: 0px;
+
+                @media only screen and (max-width: 1024px) {
+                  height: 67px;
+                }
+
+                span {
+                  color: #000;
+                  font-family: var(--Family-Font, Nohemi);
+                  font-size: var(--Typo-Body-XL, 25px);
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+                
+                img {
+                  width: 104px;
+                  height: auto;
+                  display: block;
+                }
+
+                @media only screen and (max-width: 1024px) {
+                  svg {
+                    width: 72%;
+                    height: auto;
+                  }
+                  img {
+                    width: 90%;
+                  }
+                  span {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
           }
         }
       }

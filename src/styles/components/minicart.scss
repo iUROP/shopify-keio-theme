@@ -20,6 +20,11 @@ i-minicart {
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+
+      @media only screen and (max-width: 1024px) {
+        top: -8px;
+        right: -7px;
+      }
     }
 
     &__snap{
@@ -609,17 +614,20 @@ i-minicart {
                 h3 {
                   color: var(--Colors-1000, var(--Colors-1000, #000)) !important;
                   font-family: var(--Family-Font---Body, Nohemi) !important;
-                  font-size: var(--Typo-Body-M, 16px) !important;
+                  font-size: var(--Typo-Body-M, 15px) !important;
                   font-style: normal !important;
                   font-weight: 400 !important;
-                  line-height: 24px !important;
+                  line-height: 18px !important;
                   margin: 0 !important;
                   padding: 0px !important;
                   border: 0px !important;
+                  padding-right: 40px !important;
+                  margin-bottom: -6px !important;
 
                   @media only screen and (max-width: 1024px) {
-                    font-size: var(--Typo-Body-M, 14px) !important;
-                    line-height: 20px !important;
+                    font-size: var(--Typo-Body-M, 12px) !important;
+                    line-height: 15px !important;
+                    padding-right: 24px !important;
                   }
 
                 }

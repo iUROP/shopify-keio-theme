@@ -11,7 +11,34 @@
   "sections": {
     "main": {
       "type": "main-blog-feed",
-      "settings": {}
+      "blocks": {
+        "blog_MPcjVJ": {
+          "type": "blog",
+          "settings": {
+            "blog": "noticias-y-novedades"
+          }
+        },
+        "blog_xF4gxi": {
+          "type": "blog",
+          "settings": {
+            "blog": "consejos-y-guias"
+          }
+        },
+        "blog_wpMtKd": {
+          "type": "blog",
+          "settings": {
+            "blog": "articulos"
+          }
+        }
+      },
+      "block_order": [
+        "blog_MPcjVJ",
+        "blog_xF4gxi",
+        "blog_wpMtKd"
+      ],
+      "settings": {
+        "title": "Actualidad Keio"
+      }
     },
     "apps_y38yAP": {
       "type": "apps",

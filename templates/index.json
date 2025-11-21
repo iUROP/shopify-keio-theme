@@ -56,10 +56,10 @@
     },
     "main_custom_blog_feed_Fx6CNd": {
       "type": "main-custom-blog-feed",
-      "disabled": true,
       "name": "main-custom-blog-feed",
       "settings": {
-        "custom_title": ""
+        "custom_title": "",
+        "blog": "noticias-y-novedades"
       }
     },
     "1759955518a288ef11": {

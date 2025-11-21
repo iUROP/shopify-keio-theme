@@ -58,7 +58,7 @@ window.Permalink = function() {
         );
 
         if (semestralPriceNumber) {
-          totalForm = semestralPriceNumber / 100
+          totalForm = (semestralPriceNumber / 100) * quantity
         }
       }
 

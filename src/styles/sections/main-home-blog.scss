@@ -48,6 +48,7 @@
       align-items: flex-start;
       gap: var(--Space-600, 24px);
       align-self: stretch;
+      align-items: stretch;
 
       &__post {
         display: flex;
@@ -120,7 +121,6 @@
               font-style: normal;
               font-weight: 400;
               line-height: 24px;
-              height: 72px;
             }
           }
         }

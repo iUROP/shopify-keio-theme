@@ -48,7 +48,8 @@
       "type": "main-custom-blog-feed",
       "name": "main-custom-blog-feed",
       "settings": {
-        "custom_title": "Explora más artículos"
+        "custom_title": "Explora más artículos",
+        "blog": "noticias-y-novedades"
       }
     }
   },
