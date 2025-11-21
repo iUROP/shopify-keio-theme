@@ -60,6 +60,9 @@
   }
 
   &.activate {
+    padding: var(--Space-4000, 160px) 0;
+    width: 440px;
+
     p {
       margin: 0px;
       color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
@@ -68,6 +71,53 @@
       font-style: normal;
       font-weight: 400;
       line-height: 24px;
+    }
+
+    .form__message {
+      color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-M, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      text-align: center;
+      svg {
+        display: none;
+      }
+    }
+
+    #password-error,
+    #password_confirmation-error {
+      text-align: left;
+      color: var(--Colors-500, var(--Colors-500, #931E31));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-M, 14px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+
+    ul {
+      padding: 0px;
+      li {
+        list-style: none;
+        width: 100%;
+        text-align: center;
+
+        a{
+          color: var(--Colors-500, var(--Colors-500, #931E31));
+          font-family: var(--Family-Font---Body, Nohemi);
+          font-size: var(--Typo-Body-M, 16px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+      padding: 80px 16px;
     }
   }
 
