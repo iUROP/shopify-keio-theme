@@ -141,7 +141,7 @@
           {%- endif -%}
         {%- endunless -%}
         {%- if search.results_count == 0 and search.filters == empty -%}
-          <p role="status">{{ 'templates.search.no_results' | t: terms: search.terms }}</p>
+          <p role="status">No hemos encontrado resultados relacionados con la búsqueda</p>
         {%- endif -%}
       {%- endif -%}
     </div>

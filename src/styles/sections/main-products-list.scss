@@ -21,6 +21,21 @@
       gap: 12px;
     }
 
+    .section-title {
+      width: 100%;
+      text-align: center;
+      color: #000;
+      leading-trim: both;
+      text-edge: cap;
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-XL, 25px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px;
+      margin: 0;
+      margin-bottom: 24px;
+    }
+
     &--filter {
       display: inline-flex;
       padding: var(--Space-150, 6px);

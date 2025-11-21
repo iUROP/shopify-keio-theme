@@ -21,8 +21,8 @@
       "type": "main-keio-x",
       "name": "main-custom-keio-x",
       "settings": {
-        "primary_banner": "shopify://shop_images/Banner_Keio_x.png",
-        "primary_banner_mobile": "shopify://shop_images/banner-keio-x-mobile.png",
+        "primary_banner": "shopify://shop_images/banner-keio-x-desktop.png",
+        "primary_banner_mobile": "shopify://shop_images/banner-keio-x-mobile-2.png",
         "banner_cta_1": "shopify://shop_images/imagen_2025-11-05_223929986.png",
         "banner_cta_1_mobile": "shopify://shop_images/invitaciones-mobile.png",
         "banner_cta_2": "shopify://shop_images/Comunidad.png",

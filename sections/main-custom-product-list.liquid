@@ -1,6 +1,10 @@
 <section class="main-custom-product-list custom-section pl pr pb">
     <div class="main-custom-product-list__container">
 
+      {% if section.settings.title != blank %}
+        <h3 class="section-title">{{ section.settings.title }}</h3>
+      {% endif %}
+
       {% if section.settings.show_navigation %}
 
         {% assign collection_fibra = collections['fibra'] %}
@@ -44,11 +48,13 @@
             {% render 'custom-product-card' product: product %}
           {% endfor %}
         </div>
-        <div class="main-custom-product-list__container--row row-products-2">
-          {% for product in collection.products limit: 4 offset: 4 %}
-            {% render 'custom-product-card' product: product %}
-          {% endfor %}
-        </div>
+        {% if section.settings.limit == 0 %}
+          <div class="main-custom-product-list__container--row row-products-2">
+            {% for product in collection.products limit: 4 offset: 4 %}
+              {% render 'custom-product-card' product: product %}
+            {% endfor %}
+          </div>
+        {% endif %}
 
       {% endif %}
 
@@ -126,6 +132,11 @@
   "class": "section",
   "settings": [
     {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo (opcional)"
+    },
+    {
       "id": "collection",
       "type": "collection",
       "label": "Colección"
@@ -135,6 +146,12 @@
       "id": "show_navigation",
       "default": false,
       "label": "Mostrar filtrador"
+    },
+    {
+      "type": "number",
+      "id": "limit",
+      "default": 0,
+      "label": "Limitar resultados"
     },
   ],
   "presets": [
