@@ -267,6 +267,110 @@
             "content": "No, los SMS no están incluidos.",
             "category": "1. Tarifas y características"
           }
+        },
+        "fibra_jYW9ge": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Qué es la fibra óptica simétrica?",
+            "content": "La fibra óptica simétrica es el medio de transmisión de datos por cable más avanzado que existe, capaz de transmitir y recibir información a altas velocidades y de largo alcance,\nmanteniendo la misma velocidad de subida y de bajada. Es lo que puede llegar a hacer virales las fiestas de tu pueblo.",
+            "category": "1. Funcionamiento"
+          }
+        },
+        "fibra_EhPLyn": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Qué significa la velocidad de bajada? ¿Y de subida?",
+            "content": "La velocidad de bajada hace referencia a la velocidad a la que puedes descargar archivos de Internet, mientras que la velocidad de subida mide la velocidad de la carga de contenidos a la red.",
+            "category": "1. Funcionamiento"
+          }
+        },
+        "fibra_yTrGfK": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Qué velocidad de fibra óptica necesito en casa?",
+            "content": "Depende de la cantidad de dispositivos que quieras tener conectados de forma simultánea a la red. Lo habitual es que con una velocidad de 500Mb sea más que suficiente para una familia, pero si algún miembro de la familia trabaja en remoto y/o realiza streaming con frecuencia, te recomendamos contratar una oferta de fibra velocidad de 1Gb.",
+            "category": "1. Funcionamiento"
+          }
+        },
+        "fibra_NUMUrg": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Cuánto tarda la instalación de fibra óptica?",
+            "content": "Primero, comprobamos si hay cobertura en tu casa. Segundo, contactamos contigo para acordar la cita de instalación. Suelen ser entre 2-3 horas. Normalmente para nueva numeración el plazo es de 3- 5 días y de 8-9 días para portabilidades.",
+            "category": "2. Instalación, contratación y soporte"
+          }
+        },
+        "fibra_hWAw3d": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿La instalación de fibra tiene coste en Keio?",
+            "content": "No, la instalación de fibra es completamente gratuita y sin cuotas de mantenimiento.",
+            "category": "2. Instalación, contratación y soporte"
+          }
+        },
+        "fibra_i3mBH8": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Existe permanencia al contratar la tarifa de fibra de Keio?",
+            "content": "En el caso de contratar tarifas de Internet, bien sea fibra u otra tecnología, tienes una permanencia de 12 meses. En caso de baja se cobraría una penalización de 99 (+IVA).\nPor otra parte, si te das de baja, tienes que devolver el router en un plazo de 30 días, si decides quedártelo, se cobraría el coste del mismo: 100€ para router Fibra. (+IVA).",
+            "category": "2. Instalación, contratación y soporte"
+          }
+        },
+        "fibra_EWTijp": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Las tarifas de fibra incluyen fijo?",
+            "content": "Sí, todas nuestras tarifas de fibra incluyen un fijo con llamadas ilimitadas a fijos nacionales y 60 minutos a móviles nacionales",
+            "category": "2. Instalación, contratación y soporte"
+          }
+        },
+        "fibra_CLVacN": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Cómo puedo comprobar si me llega la fibra de Keio a casa?",
+            "content": "Rellena nuestro formulario para que comprobemos si nuestra fibra llega a tu casa.",
+            "category": "2. Instalación, contratación y soporte"
+          }
+        },
+        "fibra_dXLtyy": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Qué es la Fibra Simétrica de 500Mbps?",
+            "content": "Es una conexión con 500Mb de bajada y 500Mb de subida simultáneos.",
+            "category": "1. Funcionamiento"
+          }
+        },
+        "fibra_dK3rQU": {
+          "type": "fibra",
+          "settings": {
+            "title": "Tiene permanencia o costes de alta/instalación?",
+            "content": "No, no hay permanencia ni costes de alta o instalación. Darse de baja es gratuito.",
+            "category": "2. Instalación, contratación y soporte"
+          }
+        },
+        "fibra_M78X3m": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Qué pasa si hay un problema con mi fibra?",
+            "content": "Si detectamos un problema, te damos 20GB gratis al día en tu móvil para seguir navegando.",
+            "category": "2. Instalación, contratación y soporte"
+          }
+        },
+        "fibra_DBibUM": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Qué tipo de router se incluye?",
+            "content": "Un router Wifi-n ac 2,4G/5G en cesión gratuita. Si te marchas, devuélvelo en cualquier oficina de correos.",
+            "category": "1. Funcionamiento"
+          }
+        },
+        "fibra_KrYUmA": {
+          "type": "fibra",
+          "settings": {
+            "title": "¿Utilizan CG-NAT y cómo me afecta?",
+            "content": "Sí, utilizamos CG-NAT para ofrecer un servicio más económico. Solo afecta si necesitas redirigir puertos desde tu router. Podemos asignarte una IP pública con un pequeño sobrecoste si lo necesitas. Si necesitas más información puedes llamarnos al teléfono de contacto y nuestr@s operadores te asesoraran encantados.",
+            "category": "1. Funcionamiento"
+          }
         }
       },
       "block_order": [
@@ -300,7 +404,20 @@
         "mobile_9Dmz6B",
         "mobile_zqpDKx",
         "mobile_NRA6HL",
-        "mobile_HHxbHf"
+        "mobile_HHxbHf",
+        "fibra_jYW9ge",
+        "fibra_EhPLyn",
+        "fibra_yTrGfK",
+        "fibra_NUMUrg",
+        "fibra_hWAw3d",
+        "fibra_i3mBH8",
+        "fibra_EWTijp",
+        "fibra_CLVacN",
+        "fibra_dXLtyy",
+        "fibra_dK3rQU",
+        "fibra_M78X3m",
+        "fibra_DBibUM",
+        "fibra_KrYUmA"
       ],
       "name": "Faqs page",
       "settings": {
