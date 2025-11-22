@@ -101,7 +101,7 @@
     
     &--inner {
       display: flex;
-      align-items: flex-start;
+      align-items: stretch;
       gap: var(--Space-600, 24px);
       align-self: stretch;
 

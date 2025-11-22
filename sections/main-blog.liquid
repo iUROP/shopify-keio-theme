@@ -21,9 +21,18 @@
   <div class="blog-page__heading">{{ blog.title | escape }}</div>
   <div class="blog-page__filter">
     <a href="/pages/blog">Todo</a>
-    <a href="/blogs/noticias-y-novedades" class="{% if blog.handle == 'noticias-y-novedades' %}active{% endif %}">Noticias y novedades</a>
-    <a href="/blogs/consejos-y-guias" class="{% if blog.handle == 'consejos-y-guias' %}active{% endif %}">Consejos y gúias</a>
-    <a href="/blogs/articulos" class="{% if blog.handle == 'articulos' %}active{% endif %}">Artículos</a>
+    {% for block in section.blocks %}
+      {% if block.settings.blog %}
+        {% assign is_active = false %}
+        {% if blog and block.settings.blog.handle == blog.handle %}
+          {% assign is_active = true %}
+        {% endif %}
+
+        <a href="{{ block.settings.blog.url }}" class="{% if is_active %}active{% endif %}">
+          {{ block.settings.blog.title }}
+        </a>
+      {% endif %}
+    {% endfor %}
   </div>
   <div class="blog-page__posts">
     <div class="blog-page__posts--inner">
@@ -145,6 +154,19 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
     }
-  ]
+  ],
+  "blocks": [
+    {
+      "type": "blog",
+      "name": "Blog",
+      "settings": [
+        {
+          "type": "blog",
+          "id": "blog",
+          "label": "Seleccionar blog"
+        }
+      ]
+    }
+  ],
 }
 {% endschema %}

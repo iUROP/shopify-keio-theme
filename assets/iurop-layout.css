@@ -4500,7 +4500,7 @@ body.template-page-faqs .faqs-page__items--category details p {
 }
 .blog-page__posts--inner {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: var(--Space-600, 24px);
   align-self: stretch;
 }

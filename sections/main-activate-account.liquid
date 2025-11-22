@@ -31,7 +31,7 @@
   </p>
   {%- form 'activate_customer_password' -%}
     {%- if form.errors -%}
-      <h2 class="form__message" tabindex="-1" autofocus>
+      {% comment %} <h2 class="form__message" tabindex="-1" autofocus>
         <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
           <path d="M0.7025 8.87167L0 8.16917L3.73333 4.43583L0 0.7025L0.7025 0L4.43583 3.73333L8.16917 0L8.87167 0.7025L5.13833 4.43583L8.87167 8.16917L8.16917 8.87167L4.43583 5.13833L0.7025 8.87167Z" fill="#931E31"/>
         </svg>
@@ -50,7 +50,7 @@
             {%- endif -%}
           </li>
         {%- endfor -%}
-      </ul>
+      </ul> {% endcomment %}
     {%- endif -%}
 
     <div class="field main-input-field">
