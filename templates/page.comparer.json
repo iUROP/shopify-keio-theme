@@ -21,7 +21,8 @@
       "type": "main-comparer",
       "name": "main-custom-comparer",
       "settings": {
-        "primary_banner": "shopify://shop_images/comparer-banner.png"
+        "primary_banner": "shopify://shop_images/comparer-banner.png",
+        "primary_banner_m": "shopify://shop_images/comparer-mobile.png"
       }
     }
   },

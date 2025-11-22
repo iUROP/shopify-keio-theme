@@ -3461,6 +3461,11 @@ body.show-mobile-menu .main-custom-header__bottom {
   line-height: 24px;
   margin: 0px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-blog-feed__items--slider__post--labels__inner h3 {
+    font-size: 14px;
+  }
+}
 .main-custom-blog-feed__items--slider__post--labels__inner h2 {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   font-family: var(--Family-Font, Nohemi);
@@ -3470,6 +3475,11 @@ body.show-mobile-menu .main-custom-header__bottom {
   line-height: normal;
   margin: 0px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-blog-feed__items--slider__post--labels__inner h2 {
+    font-size: 18px;
+  }
+}
 .main-custom-blog-feed__items--slider__post--labels__inner p {
   margin: 0px;
   color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
@@ -3478,6 +3488,11 @@ body.show-mobile-menu .main-custom-header__bottom {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-blog-feed__items--slider__post--labels__inner p {
+    font-size: 14px;
+  }
 }
 .main-custom-blog-feed__items .main-custom-button {
   text-align: center;
@@ -3490,7 +3505,7 @@ body.show-mobile-menu .main-custom-header__bottom {
     gap: 22px;
   }
   .main-custom-blog-feed .main-custom-button {
-    line-height: 38px !important;
+    line-height: 42px !important;
   }
   .main-custom-blog-feed .slick-track {
     padding: 0 8px;
@@ -3501,6 +3516,15 @@ body.show-mobile-menu .main-custom-header__bottom {
   }
   .main-custom-blog-feed .main-arrows .slick-arrow {
     top: -41px;
+  }
+}
+
+.template-article .main-custom-blog-feed {
+  padding-top: 70px;
+}
+@media only screen and (max-width: 1024px) {
+  .template-article .main-custom-blog-feed {
+    padding-top: 28px;
   }
 }
 
@@ -3835,13 +3859,28 @@ body.template-page-faqs .faqs-page__items--category details p {
 }
 .account-global-page.activate #password-error,
 .account-global-page.activate #password_confirmation-error {
-  text-align: left;
+  border-radius: var(--Corner-Small, 8px);
+  background: var(--Colors-200, #EED2D2);
+  display: inline-flex;
+  padding: var(--Space-200, 8px) var(--Space-400, 16px) var(--Space-200, 8px) var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-200, 8px);
+  line-height: 20px;
+  padding-top: 10px;
+  position: relative;
+  width: 100%;
   color: var(--Colors-500, var(--Colors-500, #931E31));
   font-family: var(--Family-Font---Body, Nohemi);
-  font-size: var(--Typo-Body-M, 14px);
+  font-size: var(--Typo-Body-S, 13px);
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  text-align: left;
+}
+.account-global-page.activate #password-error svg,
+.account-global-page.activate #password_confirmation-error svg {
+  display: block;
+  width: 22px;
 }
 .account-global-page.activate ul {
   padding: 0px;
@@ -5471,6 +5510,12 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   margin: auto;
   width: 1100px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__banner--frame {
+    width: auto;
+    gap: 20px;
+  }
+}
 .main-custom-comparer__banner--frame h1 {
   margin: 0px;
   color: #FFF;
@@ -5480,6 +5525,11 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__banner--frame h1 {
+    font-size: 38px;
+  }
 }
 .main-custom-comparer__banner--frame p {
   margin: 0px;
@@ -5491,6 +5541,11 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__banner--frame p {
+    font-size: 20px;
+  }
 }
 .main-custom-comparer__banner--frame button {
   width: 270px;
@@ -5504,6 +5559,11 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   align-items: center;
   gap: 16px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__content {
+    padding-top: 40px !important;
+  }
+}
 .main-custom-comparer__content h2 {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   font-family: var(--Family-Font, Nohemi);
@@ -5512,6 +5572,13 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-weight: 400;
   line-height: 120%;
   margin: 0px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__content h2 {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+  }
 }
 .main-custom-comparer__content p {
   margin: 0;
@@ -5522,6 +5589,163 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-weight: 400;
   line-height: 35px;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__content p {
+    font-size: 16px;
+    text-align: center;
+    line-height: 32px;
+  }
+}
+.main-custom-comparer__reviews {
+  display: flex;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-1200, 48px);
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    padding-bottom: 46px !important;
+    gap: 32px;
+  }
+}
+.main-custom-comparer__reviews--head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-1200, 12px);
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--head {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+}
+.main-custom-comparer__reviews--head h2 {
+  margin: 0px;
+  color: #000;
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-H3, 31px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--head h2 {
+    font-size: 20px;
+  }
+}
+.main-custom-comparer__reviews--head p {
+  margin: 0px;
+  color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+  text-align: center;
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-L, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 35px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--head p {
+    font-size: 16px;
+    text-align: center;
+    line-height: 32px;
+  }
+}
+.main-custom-comparer__reviews--head svg {
+  margin-top: 38px;
+  margin-bottom: -26px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--head svg {
+    margin-top: 20px;
+    margin-bottom: -16px;
+  }
+}
+.main-custom-comparer__reviews--table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--Space-600, 24px);
+  width: 90%;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--table {
+    width: 100%;
+    overflow: auto;
+    align-items: normal;
+    box-sizing: border-box;
+    padding: 0 16px;
+  }
+}
+.main-custom-comparer__reviews--table table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #CDCDCD;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--table table {
+    width: 900px;
+  }
+}
+.main-custom-comparer__reviews--table table tr {
+  display: none;
+}
+.main-custom-comparer__reviews--table table tr:nth-child(1), .main-custom-comparer__reviews--table table tr:nth-child(2), .main-custom-comparer__reviews--table table tr:nth-child(3), .main-custom-comparer__reviews--table table tr:nth-child(4) {
+  display: table-row;
+}
+.main-custom-comparer__reviews--table tr th {
+  background-color: #FAFAFA;
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--table tr th {
+    font-size: 14px;
+  }
+}
+.main-custom-comparer__reviews--table td, .main-custom-comparer__reviews--table th {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 13px 24px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--table td, .main-custom-comparer__reviews--table th {
+    font-size: 14px;
+  }
+}
+.main-custom-comparer__reviews--table .link {
+  color: var(--Colors-500, var(--Colors-500, #931E31));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer__reviews--table .link {
+    font-size: 14px;
+  }
+}
+.main-custom-comparer__reviews--footer button {
+  line-height: 100%;
+}
+.main-custom-comparer__reviews.show-all .main-custom-comparer__reviews--table table tr {
+  display: table-row;
+}
+.main-custom-comparer__reviews.show-all .main-custom-comparer__reviews--footer button {
+  display: none;
+}
 
 .main-custom-comparer-canvas {
   display: flex;
@@ -5530,6 +5754,12 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   gap: 32px;
   width: 100%;
   margin-top: 38px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas {
+    margin-top: 20px;
+    flex-direction: column;
+  }
 }
 .main-custom-comparer-canvas__filter {
   display: flex;
@@ -5542,6 +5772,12 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
   background: #FFF;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__filter {
+    width: 100%;
+    padding: 24px 14px;
+  }
+}
 .main-custom-comparer-canvas__filter--item {
   width: 100%;
 }
@@ -5551,6 +5787,11 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   align-items: flex-start;
   gap: var(--Space-600, 24px);
   width: 60%;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results {
+    width: 100%;
+  }
 }
 .main-custom-comparer-canvas__results--item {
   display: flex;
@@ -5564,11 +5805,22 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   background: var(--Colors-white, #FFF);
   position: relative;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results--item {
+    padding: 22px;
+    gap: 18px;
+  }
+}
 .main-custom-comparer-canvas__results--item__heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results--item__heading {
+    align-items: baseline;
+  }
 }
 .main-custom-comparer-canvas__results--item__heading h2 {
   margin: 0px;
@@ -5578,6 +5830,14 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results--item__heading h2 {
+    font-size: 18px;
+    text-align: left;
+    padding-right: 16px;
+    line-height: 22px;
+  }
 }
 .main-custom-comparer-canvas__results--item__heading div {
   display: flex;
@@ -5590,6 +5850,11 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-weight: 400;
   line-height: normal;
 }
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results--item__heading div {
+    font-size: 20px;
+  }
+}
 .main-custom-comparer-canvas__results--item__heading div span {
   color: #000;
   font-family: var(--Family-Font---Body, Nohemi);
@@ -5597,6 +5862,11 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results--item__heading div span {
+    font-size: 14px;
+  }
 }
 .main-custom-comparer-canvas__results--item__body {
   display: flex;
@@ -5611,6 +5881,11 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   align-items: flex-start;
   gap: 24px;
   flex-shrink: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results--item__body--inner {
+    width: 100%;
+  }
 }
 .main-custom-comparer-canvas__results--item__body--inner ul {
   margin: 0px;
@@ -5632,6 +5907,11 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results--item__body--inner ul li {
+    font-size: 14px;
+  }
 }
 .main-custom-comparer-canvas__results--item__body--inner ul li img {
   position: relative;
@@ -5661,6 +5941,15 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
 }
 .main-custom-comparer-canvas__results--item.is-KEIO a {
   display: block;
+}
+@media only screen and (max-width: 1024px) {
+  .main-custom-comparer-canvas__results--item.is-KEIO a {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+    text-align: center;
+    line-height: 41px;
+  }
 }
 
 .main-custom-keio-x {
@@ -6125,6 +6414,9 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  border: 0px !important;
+  box-shadow: none !important;
+  outline: 0px !important;
 }
 .main-custom-keio-x__content--promotions-table__body .inner-card__actions button:hover {
   opacity: 0.8;
@@ -6241,7 +6533,9 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   font-weight: 400;
   line-height: 24px;
   cursor: pointer;
-  border: 0px;
+  border: 0px !important;
+  box-shadow: none !important;
+  outline: 0px !important;
 }
 .main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--body button:hover {
   opacity: 0.8;
@@ -6250,6 +6544,9 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   color: #FFF;
   border-radius: var(--Corner-Extra-small, 4px);
   background: var(--Colors-1000, #000);
+  border: 0px !important;
+  box-shadow: none !important;
+  outline: 0px !important;
 }
 @media only screen and (max-width: 1024px) {
   .main-custom-keio-x__content--banner-cta__inner .main-custom-keio-x__content--banner-cta__inner--body button {

@@ -63,7 +63,7 @@ function MiniCart({
       console.log("cart info", cart)
       console.log("itemsWithUpsell", itemsWithUpsell)
 
-      setUpsellProducts(itemsWithUpsell);
+      // setUpsellProducts(itemsWithUpsell);
       setCartQty(cart.item_count)
       setCartTotal(cart.total_price)
 

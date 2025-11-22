@@ -446,3 +446,16 @@ document.addEventListener('click', function(event) {
   if (!option) return;
   option.classList.toggle('active');
 });
+
+document.addEventListener('click', function(event) {
+  const showMore = event.target.closest('.main-custom-comparer__reviews--footer button');
+  const table = document.querySelector('.main-custom-comparer__reviews ');
+
+  if (!showMore) return;
+
+  if (table) {
+    table.classList.toggle('show-all');
+  }
+  
+});
+
