@@ -9,16 +9,18 @@
     <button class="fibra-cat">Fibra</button>
   </div>
 
+  {% assign sep = "||SEP||" %}
+
   <div class="faqs-page__items general-cat active">
     {% assign categories = "" %}
     {% for block in section.blocks %}
       {% if block.type == 'general' %}
         {% unless categories contains block.settings.category %}
-          {% assign categories = categories | append: block.settings.category | append: "," %}
+          {% assign categories = categories | append: block.settings.category | append: sep %}
         {% endunless %}
       {% endif %}
     {% endfor %}
-    {% assign categories = categories | split: "," %}
+    {% assign categories = categories | split: sep %}
 
     {% for category in categories %}
       {% unless category == "" %}
@@ -26,6 +28,60 @@
           <h3>{{ category }}</h3>
           {% for block in section.blocks %}
             {% if block.type == 'general' %}
+              {% if block.settings.category == category %}
+                {% render 'faq-item' title: block.settings.title, content: block.settings.content %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  <div class="faqs-page__items movil-cat">
+    {% assign categories = "" %}
+    {% for block in section.blocks %}
+      {% if block.type == 'mobile' %}
+        {% unless categories contains block.settings.category %}
+          {% assign categories = categories | append: block.settings.category | append: sep %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    {% assign categories = categories | split: sep %}
+
+    {% for category in categories %}
+      {% unless category == "" %}
+        <div class="faqs-page__items--category">
+          <h3>{{ category }}</h3>
+          {% for block in section.blocks %}
+            {% if block.type == 'mobile' %}
+              {% if block.settings.category == category %}
+                {% render 'faq-item' title: block.settings.title, content: block.settings.content %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endunless %}
+    {% endfor %}
+  </div>
+
+  <div class="faqs-page__items fibra-cat">
+    {% assign categories = "" %}
+    {% for block in section.blocks %}
+      {% if block.type == 'fibra' %}
+        {% unless categories contains block.settings.category %}
+          {% assign categories = categories | append: block.settings.category | append: sep %}
+        {% endunless %}
+      {% endif %}
+    {% endfor %}
+    {% assign categories = categories | split: sep %}
+
+    {% for category in categories %}
+      {% unless category == "" %}
+        <div class="faqs-page__items--category">
+          <h3>{{ category }}</h3>
+          {% for block in section.blocks %}
+            {% if block.type == 'fibra' %}
               {% if block.settings.category == category %}
                 {% render 'faq-item' title: block.settings.title, content: block.settings.content %}
               {% endif %}
@@ -71,7 +127,7 @@
   "blocks": [
     {
       "type": "general",
-      "name": "Preguntas - General",
+      "name": "Faq - General",
       "settings": [
         {
           "type": "text",
@@ -92,7 +148,7 @@
     },
     {
       "type": "mobile",
-      "name": "Preguntas - Móvil",
+      "name": "Faq - Móvil",
       "settings": [
         {
           "type": "text",
@@ -113,7 +169,7 @@
     },
     {
       "type": "fibra",
-      "name": "Preguntas - Fibra",
+      "name": "Faq - Fibra",
       "settings": [
         {
           "type": "text",

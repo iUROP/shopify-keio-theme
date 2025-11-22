@@ -271,7 +271,7 @@ function MiniCart({
                     })}
                   </Slider>
                 : <Slider {...settings}>
-                    {window.allProducts.slice(0, 4).filter((item) => {
+                    {window.allProducts.sort(() => Math.random() - 0.5).filter((item) => {
                       let available = true
                       if (lineItems && lineItems[0]) {
                         lineItems.forEach(lineItem => {
@@ -286,7 +286,7 @@ function MiniCart({
                       } else {
                         return false;
                       }
-                    }).map((p, index) => {
+                    }).slice(0, 3).map((p, index) => {
                       return (
                         <div key={index} className='i-minicart-container__snap--upsells--list__item is-all' onClick={() => {
                           add(p.handle)

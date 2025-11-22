@@ -24,7 +24,7 @@
           "type": "general",
           "settings": {
             "title": "¿Es Keio una empresa confiable?",
-            "content": "¿Es Keio una empresa confiable?",
+            "content": "¡Obvio que sí! Mira, Keio no es una «compañía fantasma», ni mucho menos. Sabemos que cuando algo es nuevo y tiene precios tan buenos, la gente desconfía, pero estamos aquí para quedarnos. Llevamos tiempo construyendo una comunidad con miles de clientes satisfechos, y lo hacemos peleando cada día por dar el mejor servicio al precio más justo. ¿Desapareceremos? Quién sabe. Pero mientras estemos aquí, vamos a hacerlo a lo grande, creando una empresa que marque la diferencia. Así que, ¡bienvenido a la revolución Keio!",
             "category": "1. Confianza y Diferenciación"
           }
         },
@@ -32,7 +32,7 @@
           "type": "general",
           "settings": {
             "title": "¿Qué diferencia a Keio de otros operadores como Movistar o Vodafone?",
-            "content": "¿Qué diferencia a Keio de otros operadores como Movistar o Vodafone?",
+            "content": "Mira, la diferencia es que nosotros no te tratamos como a un número. Aquí vienes a ahorrar, a estar conectado, y a disfrutar de un servicio que te entiende. ¿Movistar? ¿Vodafone? ¡Eso es el pasado! Keio es el presente",
             "category": "1. Confianza y Diferenciación"
           }
         },
@@ -40,7 +40,7 @@
           "type": "general",
           "settings": {
             "title": "¿Quiénes somos?",
-            "content": "¿Quiénes somos?",
+            "content": "Somos gente de a pie, con sueños grandes. Nuestra historia es sencilla, pero llena de pasión. Todo empezó con cinco amigos empresarios  que un día decidieron mezclar sus experiencias y darle forma a Keio:\n\nUno experto en ventas y distribución en telecomunicaciones, que conoce el mercado como la palma de su mano. Otro que domina el mundo del marketing y publicidad, con su propio estudio y agencia de comunicación. Otro más dedicado a la gestión patrimonial y alquiler vacacional, aportando la experiencia y algo de dinero. Aaron, que tiene una empresa de trabajos verticales, ¡sí, el tipo que se cuelga de edificios y lo hace parecer fácil! Y, por supuesto, Alex, el jubilado moderno que sigue dándolo todo.\n\nAh, y no nos olvidemos de Jesús! El tío de las ideas, de los proyectos, y de liarnos a todos. Y así fue, una comida de viernes donde entre risas y charlas sobre nuestras empresas, mientras veíamos una pelea de UFC en la tele, Jesús suelta algo sobre el sector de las telecomunicaciones y… ¡boom! En 30 días, Keio era una realidad. ¡Y lo más irónico de todo! 30 días después, allí estábamos, firmando una inversión inicial de 500 mil euros para arrancar, como si fuera lo más normal del mundo. Y no solo eso, en esos 30’dias firmamos al actual campeón del mundo de UFC. Porque, a veces, las mejores historias empiezan con una idea loca, un equipo apasionado, y un buen empujón.\n\n¡Y recuerda! En Keio hacemos que conectarse sea fácil, barato y sin complicaciones. Aquí pagas menos, disfrutas más, y siempre estamos a un mensaje de distancia para lo que necesites.",
             "category": "1. Confianza y Diferenciación"
           }
         },
@@ -48,8 +48,224 @@
           "type": "general",
           "settings": {
             "title": "¿Por qué Keio es tan barato en comparación con otras compañías?",
-            "content": "¿Por qué Keio es tan barato en comparación con otras compañías?",
+            "content": "¡Porque no creemos en cobrarte por cosas que ni usas! Aquí lo hacemos fácil: solo pagas por lo que necesitas, sin inflar precios. ¡Ni más ni menos! Menos rollos, más ahorro. ¿Te gusta, no?",
             "category": "2. Precios y Condiciones Comerciales"
+          }
+        },
+        "general_f993xz": {
+          "type": "general",
+          "settings": {
+            "title": "¿Por qué tengo que pagar un año por adelantado?",
+            "content": "Porque así te olvidas de líos y mes a mes. ¿No es más fácil pagar una vez y luego relajarte todo el año? Además, es parte de nuestro plan maestro de darte precios imbatibles. ¡Haz cuentas, y ya verás!",
+            "category": "2. Precios y Condiciones Comerciales"
+          }
+        },
+        "general_99TWdH": {
+          "type": "general",
+          "settings": {
+            "title": "¿Qué ocurre después de un año? ¿El precio cambiará?",
+            "content": "Al cabo de un año, puedes renovar a las nuevas tarifas que tengamos. ¡Te seguimos cuidando! Y si quieres cambiar, también eres libre. Aquí no te atamos a nada.",
+            "category": "2. Precios y Condiciones Comerciales"
+          }
+        },
+        "general_M7qjYw": {
+          "type": "general",
+          "settings": {
+            "title": "¿Hay permanencia o contratos a largo plazo?",
+            "content": "¡Ninguna! ¿Te crees que somos esa ex que no te deja ir? Aquí si quieres te quedas, y si no, tan amigos. Nada de ataduras.",
+            "category": "2. Precios y Condiciones Comerciales"
+          }
+        },
+        "general_GxFgMV": {
+          "type": "general",
+          "settings": {
+            "title": "¿Keio ofrece promociones adicionales o descuentos especiales?",
+            "content": "¡Of course! Siempre estamos cocinando algo nuevo. Mantén un ojo en nuestras redes o suscríbete a nuestro newsletter, que aquí el que ahorra siempre gana.",
+            "category": "2. Precios y Condiciones Comerciales"
+          }
+        },
+        "general_eMwV9e": {
+          "type": "general",
+          "settings": {
+            "title": "¿Cuál es la cobertura de Keio en mi zona?",
+            "content": "¡Atención que aquí viene lo bueno! Trabajamos con todas las grandes coberturas: Movistar, Vodafone, Orange y MásMóvil. Esto significa que, estés donde estés, te conectamos sin problemas. Pero ojo: aunque te ofrecemos todas estas opciones, no podemos migrar productos entre ellas, ya que no podríamos ofrecerte estos precios increíbles. Cada una tiene su oferta y su red, ¡y por eso mantenemos nuestros precios tan bajos!",
+            "category": "3. Cobertura, Instalación y Uso"
+          }
+        },
+        "general_VPbKn6": {
+          "type": "general",
+          "settings": {
+            "title": "¿Cómo se realiza el envío de la tarjeta SIM o el equipo de fibra?",
+            "content": "¡Gratis en la península, claro! Y si vives fuera, te lo mandamos igual, solo que te cobramos un poco por el envío. Pero tranqui, que no te vamos a desplumar por eso.",
+            "category": "3. Cobertura, Instalación y Uso"
+          }
+        },
+        "general_ez4kgm": {
+          "type": "general",
+          "settings": {
+            "title": "¿Cuántos días tarda en instalarse la fibra?",
+            "content": "Aquí te vamos a ser claros: la instalación de la fibra es como una lotería. En algunas zonas, como Valencia y Andalucía, a veces te la instalan el mismo día (¡magia pura!). Pero en otras zonas, parece que los instaladores se han esfumado del mapa… o han sido abducidos. ¡No te vamos a mentir! Es algo que no controlamos. Eso sí, nosotros vamos a pelear por ti, hablar con el mayorista, los instaladores y con quien haga falta para que todo se mueva rápido. Lo que podemos garantizarte es que **si no te la instalan, no pagas**. Y si te cansas de esperar, puedes desistir cuando quieras y hacer lo que te haga más feliz. ¡Así de claro!",
+            "category": "3. Cobertura, Instalación y Uso"
+          }
+        },
+        "general_HxbQV3": {
+          "type": "general",
+          "settings": {
+            "title": "¿Cómo es el proceso de portabilidad si ya tengo una línea móvil?",
+            "content": "Portabilidad fácil y rápida. Pides tu línea, te damos la SIM, y en cuestión de nada ya estás con nosotros. ¡Ni te enteras!",
+            "category": "3. Cobertura, Instalación y Uso"
+          }
+        },
+        "general_HwY6jW": {
+          "type": "general",
+          "settings": {
+            "title": "¿Cuáles son las condiciones específicas del plan de datos y llamadas?",
+            "content": "Lo que ves es lo que obtienes. Datos, llamadas ilimitadas y sin rollos. Además, si viajas, el roaming está incluido. Sin sorpresas en la factura, ¡que odiamos eso tanto como tú",
+            "category": "3. Cobertura, Instalación y Uso"
+          }
+        },
+        "general_jzK8dQ": {
+          "type": "general",
+          "settings": {
+            "title": "¿Keio cuenta con alguna app para la gestión de los servicios?",
+            "content": "Mira, te vamos a ser sinceros: tenemos algunas opciones para consultar tus datos, pero sabemos que no lo hacemos perfecto… todavía. ¡Pero tranquiiii! Estamos trabajando duro para crear una app que realmente mole, un global que merezca la pena y te haga la vida más fácil. Confía en nosotros, va a valer la espera",
+            "category": "3. Cobertura, Instalación y Uso"
+          }
+        },
+        "general_ibFnVA": {
+          "type": "general",
+          "settings": {
+            "title": "¿Qué pasa si no estoy satisfecho con el servicio?",
+            "content": "¡Nos dolería en el alma que eso pase! Pero tranquilo, si en los primeros 14 días no te mola, te devolvemos la pasta y aquí no ha pasado nada. ¡Así de guays somos!",
+            "category": "4. Garantía, Soporte y Cambios"
+          }
+        },
+        "general_WVb9BP": {
+          "type": "general",
+          "settings": {
+            "title": "¿Qué sucede si la calidad del servicio no es la esperada?",
+            "content": "A ver, dudamos que eso pase, pero si llega a ocurrir, estamos aquí para ti. Nos lo cuentas, lo solucionamos, y si no te convence, ya sabes: ¡reembolso y a otra cosa!",
+            "category": "4. Garantía, Soporte y Cambios"
+          }
+        },
+        "general_dfcGJ8": {
+          "type": "general",
+          "settings": {
+            "title": "¿Cómo se gestionan las incidencias y el servicio al cliente?",
+            "content": "Mira, en Keio no solo rompemos moldes con nuestros precios, también lo hacemos con cómo te tratamos. Te atendemos en todo momento y por todos lados: WhatsApp, Twitter, Instagram, Telegram, ¡lo que te venga mejor! Aquí no te dejamos colgado con robots ni te hacemos perder tiempo en esperas infinitas. Siempre estamos a un mensaje de distancia, listos para ayudarte, ¡y con buena onda! Pero, seamos sinceros, ¿qué otra compañía te atiende así? Y no es solo eso. En Keio somos como una familia, y nuestra comunidad conoce a nuestras tres chicas de oro al mando del equipo de atención al cliente: Mónica, Arancha y Esme. Ellas no solo forman parte del equipo, ellas lideran con corazón y cabeza. Están al frente del departamento y aseguran que cada cliente reciba una atención única, personalizada y cercana. Ellas se preocupan de verdad, y si alguna vez has tenido la suerte de hablar con ellas, sabrás de lo que te hablamos.\n¿Críticas? Sí, claro, siempre hay, pero seamos sinceros: en personalización y trato cercano, no nos gana nadie. Si algo no va bien, Mónica, Arancha o Esme van a pelear por ti, ya sea hablando con técnicos, el mayorista o quien haga falta, para que todo quede perfecto. Aquí no eres un número, eres parte de nuestra comunidad, y ellas se aseguran de que lo sientas así.",
+            "category": "4. Garantía, Soporte y Cambios"
+          }
+        },
+        "general_QWtzpT": {
+          "type": "general",
+          "settings": {
+            "title": "¿Qué pasa si me mudo o cambio de domicilio?",
+            "content": "¡Nos mudamos contigo! Solo nos avisas y trasladamos el servicio sin complicaciones. Lo importante es que sigas conectado allá donde vayas.",
+            "category": "4. Garantía, Soporte y Cambios"
+          }
+        },
+        "general_W4WwUF": {
+          "type": "general",
+          "settings": {
+            "title": "¿Me devolverán el dinero si pido el desistimiento tras recibir la tarjeta SIM o la instalación de fibra?",
+            "content": "Mira, claro que tienes derecho a desistir, pero antes de lanzarte te pedimos una cosa: saquemos el sentido común. Sabes los precios que ofrecemos, sabes el esfuerzo que hacemos para traerte esta oferta increíble, y como equipo, peleamos para que tengas lo mejor. Antes de tomar una decisión precipitada, piensa que todos tenemos malos días: un técnico puede haber tenido un fallo, alguien del equipo puede haber cometido un error, o incluso tú podrías estar teniendo un mal día. Tenemos miles de clientes felices, y estamos creando algo grande, una comunidad y una súper empresa de telecomunicaciones que es el futuro. Si al final decides irte, no pasa nada, te devolvemos el dinero. Pero piensa en esto: nos gastamos unos 6€ en enviarte la SIM y otros 50€ en instalarte la fibra. ¡Córtate un poco y seamos empáticos!",
+            "category": "4. Garantía, Soporte y Cambios"
+          }
+        },
+        "mobile_AQKcdE": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Qué incluye la Tarifa King de KEIO?",
+            "content": "La Tarifa King incluye 80GB de datos y llamadas ilimitadas por 49€ al año.",
+            "category": "1. Tarifas y características"
+          }
+        },
+        "mobile_En6YWA": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Qué ofrece la Tarifa Champion de KEIO?",
+            "content": "La Tarifa Champion ofrece 120GB de datos y llamadas ilimitadas por 69€ al año.",
+            "category": "1. Tarifas y características"
+          }
+        },
+        "mobile_AnnLQD": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Qué coberturas están disponibles?",
+            "content": "Puedes elegir entre las coberturas de Orange, Movistar o Vodafone.",
+            "category": "1. Tarifas y características"
+          }
+        },
+        "mobile_f9arTz": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Hay permanencia en las tarifas móviles de KEIO?",
+            "content": "No, nuestras tarifas móviles no tienen permanencia.",
+            "category": "1. Tarifas y características"
+          }
+        },
+        "mobile_zEUn4L": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Cómo es posible ofrecer estos precios tan bajos?",
+            "content": "Vendemos 100% online y sin intermediarios, lo que nos permite ahorrar en costos operativos y trasladar esos ahorros a ti.",
+            "category": "1. Tarifas y características"
+          }
+        },
+        "mobile_dyfXYp": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Qué sucede si necesito más datos?",
+            "content": "Si necesitas más datos, puedes contactarnos para revisar opciones adicionales o ajustar tu plan según tus necesidades.",
+            "category": "1. Tarifas y características"
+          }
+        },
+        "mobile_deXeiX": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Cómo puedo realizar el pago de mi tarifa móvil?",
+            "content": "El pago es anual y se realiza de manera sencilla y segura a través de nuestra plataforma online.",
+            "category": "2. Gestión y soporte"
+          }
+        },
+        "mobile_nGTkpF": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Cómo se gestiona la portabilidad de mi número?",
+            "content": "Gestionamos la portabilidad de tu número de forma rápida y sin complicaciones. Solo necesitas proporcionarnos tu número actual y nosotros nos encargamos del resto.",
+            "category": "2. Gestión y soporte"
+          }
+        },
+        "mobile_9Dmz6B": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Qué pasa si la cobertura que elegí no funciona bien?",
+            "content": "Puedes cambiar a una nueva red pagando los gastos de envío de la nueva SIM.",
+            "category": "2. Gestión y soporte"
+          }
+        },
+        "mobile_zqpDKx": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Disponéis de roaming?",
+            "content": "Sí, el roaming está disponible en la Zona 1.",
+            "category": "1. Tarifas y características"
+          }
+        },
+        "mobile_NRA6HL": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Puedo hacer sobreconsumo en mi tarifa ?",
+            "content": "Las tarifas vienen con un máximo de sobreconsumo de 1€. Para ampliarlo, llama a atención al cliente.",
+            "category": "1. Tarifas y características"
+          }
+        },
+        "mobile_HHxbHf": {
+          "type": "mobile",
+          "settings": {
+            "title": "¿Los SMS están incluidos?",
+            "content": "No, los SMS no están incluidos.",
+            "category": "1. Tarifas y características"
           }
         }
       },
@@ -57,7 +273,34 @@
         "general_bbHidi",
         "general_4baFeF",
         "general_nTz77T",
-        "general_JP99G7"
+        "general_JP99G7",
+        "general_f993xz",
+        "general_99TWdH",
+        "general_M7qjYw",
+        "general_GxFgMV",
+        "general_eMwV9e",
+        "general_VPbKn6",
+        "general_ez4kgm",
+        "general_HxbQV3",
+        "general_HwY6jW",
+        "general_jzK8dQ",
+        "general_ibFnVA",
+        "general_WVb9BP",
+        "general_dfcGJ8",
+        "general_QWtzpT",
+        "general_W4WwUF",
+        "mobile_AQKcdE",
+        "mobile_En6YWA",
+        "mobile_AnnLQD",
+        "mobile_f9arTz",
+        "mobile_zEUn4L",
+        "mobile_dyfXYp",
+        "mobile_deXeiX",
+        "mobile_nGTkpF",
+        "mobile_9Dmz6B",
+        "mobile_zqpDKx",
+        "mobile_NRA6HL",
+        "mobile_HHxbHf"
       ],
       "name": "Faqs page",
       "settings": {
