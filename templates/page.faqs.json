@@ -172,22 +172,6 @@
             "category": "4. Garantía, Soporte y Cambios"
           }
         },
-        "mobile_AQKcdE": {
-          "type": "mobile",
-          "settings": {
-            "title": "¿Qué incluye la Tarifa King de KEIO?",
-            "content": "La Tarifa King incluye 80GB de datos y llamadas ilimitadas por 49€ al año.",
-            "category": "1. Tarifas y características"
-          }
-        },
-        "mobile_En6YWA": {
-          "type": "mobile",
-          "settings": {
-            "title": "¿Qué ofrece la Tarifa Champion de KEIO?",
-            "content": "La Tarifa Champion ofrece 120GB de datos y llamadas ilimitadas por 69€ al año.",
-            "category": "1. Tarifas y características"
-          }
-        },
         "mobile_AnnLQD": {
           "type": "mobile",
           "settings": {
@@ -393,8 +377,6 @@
         "general_dfcGJ8",
         "general_QWtzpT",
         "general_W4WwUF",
-        "mobile_AQKcdE",
-        "mobile_En6YWA",
         "mobile_AnnLQD",
         "mobile_f9arTz",
         "mobile_zEUn4L",
