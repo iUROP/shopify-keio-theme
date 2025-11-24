@@ -294,6 +294,10 @@
 
     &--item {
       width: 100%;
+
+      .main-custom-button {
+        line-height: 19px;
+      }
     }
   }
   &__results {
@@ -318,6 +322,10 @@
       border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
       background: var(--Colors-white, #FFF);
       position: relative;
+
+      &.show {
+        display: flex;
+      }
 
       @media only screen and (max-width: 1024px) {
         padding: 22px;

@@ -5781,6 +5781,9 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
 .main-custom-comparer-canvas__filter--item {
   width: 100%;
 }
+.main-custom-comparer-canvas__filter--item .main-custom-button {
+  line-height: 19px;
+}
 .main-custom-comparer-canvas__results {
   display: flex;
   flex-direction: column;
@@ -5804,6 +5807,9 @@ body.template-article .main-custom-blog-feed__items a.main-custom-button {
   border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
   background: var(--Colors-white, #FFF);
   position: relative;
+}
+.main-custom-comparer-canvas__results--item.show {
+  display: flex;
 }
 @media only screen and (max-width: 1024px) {
   .main-custom-comparer-canvas__results--item {
@@ -8546,6 +8552,11 @@ body.template-search .template-search .template-search__header h1 {
   }
 }
 @media only screen and (max-width: 1024px) {
+  body.template-search .template-search .template-search__header .template-search__search.is-empty-content {
+    margin-bottom: 24px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
   body.template-search .template-search .template-search__header .template-search__search {
     margin-bottom: 50px !important;
     padding: 0 16px;
@@ -8594,6 +8605,12 @@ body.template-search .template-search .template-search__header p[role=status] {
   padding: 0 16px;
   margin: 0px;
 }
+@media only screen and (max-width: 1024px) {
+  body.template-search .template-search.template-search--empty {
+    padding-bottom: 0px;
+    margin-bottom: -24px;
+  }
+}
 body.template-search .facets-container {
   display: none !important;
 }
@@ -8626,6 +8643,21 @@ body.template-search .template-search__results ul .main-custom-product-card .mai
 }
 body.template-search .main-custom-product-list__container--row {
   justify-content: center;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-search .main-custom-product-list__container .section-title {
+    margin-bottom: 4px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body.template-search .main-custom-product-list__container .main-custom-product-card {
+    margin-bottom: 14px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body.template-search .main-custom-product-list__container .main-custom-product-card--inner h3 {
+    height: 52px;
+  }
 }
 
 .custom-product-add-ons {

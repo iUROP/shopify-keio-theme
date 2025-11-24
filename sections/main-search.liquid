@@ -67,7 +67,11 @@
 
 {% for result in search.results %}
   {% if result.object_type == 'product' %}
-    {% assign product_count = product_count | plus: 1 %}
+    {% unless result.handle == 'activacion-express' %}
+      {% unless result.handle == 'multi-sim' %}
+        {% assign product_count = product_count | plus: 1 %}
+      {% endunless %}
+    {% endunless %}
   {% endif %}
 {% endfor %}
 
@@ -81,7 +85,7 @@
           {{- 'general.search.search' | t -}}
         {%- endif -%}
       </h1>
-      <div class="template-search__search">
+      <div class="template-search__search {% if product_count == 0 %}is-empty-content{% endif %}">
         {%- if settings.predictive_search_enabled -%}
           <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
         {%- endif -%}
