@@ -2557,7 +2557,7 @@ body.show-mobile-menu .main-custom-header__bottom {
   gap: 50px;
   padding-top: 130px;
   padding-bottom: 130px;
-  margin-top: -56px;
+  margin-top: -76px;
 }
 .main-custom-footer::after {
   content: "";
