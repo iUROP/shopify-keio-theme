@@ -434,7 +434,7 @@
           if (
             Number(movilCard.querySelector('.main-custom-qty span').innerHTML) > 0
           ) {
-            const name = movilCard.querySelector('.main-custom-pack-card__heading').innerText.replace(/\n\d+/g, '');
+            const name = movilCard.querySelector('.main-custom-pack-card__heading').innerText.replace(/\n\d+/g, '').trim().replace(/\s*-\s*$/, '');
             const option1 = movilCard.querySelectorAll('.main-custom-pack-card__content--select')[0].querySelector('select').value
             const option2 = movilCard.querySelectorAll('.main-custom-pack-card__content--select')[1].querySelector('select').value
             
@@ -699,44 +699,49 @@
 
       let isProcessing = false;
       let lastTouchTime = 0;
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
       
       function handleBulkerClick(e) {
+        
+        // Prevenir comportamiento por defecto en touch devices ANTES de cualquier return
         if (e.type === 'touchend') {
-          const now = Date.now();
-          if (now - lastTouchTime < 300) return;
-          lastTouchTime = now;
           e.preventDefault();
+          
+          // Debounce para evitar dobles toques
+          const now = Date.now();
+          if (now - lastTouchTime < 300) {
+            return;
+          }
+          lastTouchTime = now;
         }
         
-        if (isProcessing) return;
+        // Prevenir múltiples ejecuciones simultáneas
+        if (isProcessing) {
+          return;
+        }
+        
         isProcessing = true;
+        
+        updateTotalizerFromFibraHTML()
         
         const map = []
         const bulkerId = Date.now().toString();
         const fibra1 = document.querySelector('.fibra-1-card .main-custom-pack-card__content--switcher button.active').getAttribute('rel-variant')
-        console.log("fibra1", fibra1)
 
         map.push({
           id: Number(fibra1), 
-          quantity: 1, 
-          selling_plan: 690050466123,
-          properties: {
-            _bulker_id: bulkerId
-          }
+          quantity: 1,
+          selling_plan: 690050433355
         })
 
         if (document.querySelector('.add-fibra-secondary input').checked) {
           const fibra2_content = document.querySelector('#secondaryFibra')
           const fibra2_option = fibra2_content.options[fibra2_content.selectedIndex];
           const fibra2 = fibra2_option.dataset.variant;
-          console.log("fibra2", fibra2)
           map.push({
             id: Number(fibra2), 
-            quantity: 1, 
-            selling_plan: 690050466123,
-            properties: {
-              _bulker_id: bulkerId
-            }
+            quantity: 1,
+            selling_plan: 690050433355
           })
         }
 
@@ -745,31 +750,27 @@
         for (let i = 0; i < itemsMobile.length; i++) {
           const itemMobile = itemsMobile[i]
 
-          let properties = {
-            _bulker_id: bulkerId
+          const variantId = Number(itemMobile.getAttribute('rel-variant'))
+          const qty = Number(itemMobile.getAttribute('rel-qty'))
+          
+          // Skip if invalid ID or quantity
+          if (!variantId || variantId === 0 || isNaN(variantId) || !qty || qty === 0) {
+            continue;
           }
-          properties['Tipo de SIM'] = itemMobile.getAttribute('rel-sim')
-        
+
           const item = {
-            id: Number(itemMobile.getAttribute('rel-variant')),
-            quantity: Number(itemMobile.getAttribute('rel-qty')),
-            selling_plan: 690050466123,
-            properties: properties
+            id: variantId,
+            quantity: qty,
+            selling_plan: 690050433355
           }
-          console.log("itemMobile", item)
           map.push(item)
 
           const addons = JSON.parse(itemMobile.getAttribute('rel-addons'))
           addons.forEach(variantId => {
             let obj = {
-              id: variantId,
+              id: Number(variantId),
               quantity: 1,
-              properties: {
-                _bulker_id: bulkerId
-              }
-            }
-            if (Number(variantId) == 55889933173067) {
-              obj['selling_plan'] = 690050466123
+              selling_plan: 690050433355
             }
             
             map.push(obj)
@@ -779,25 +780,27 @@
 
         const keioEnergy = document.querySelector('.main-custom-pack-card.energy-card input')
         if (keioEnergy.checked) {
-          console.log("add keyio energy")
           map.push({
-            id: 55889944969547, quantity: 1,
-            properties: {
-              _bulker_id: bulkerId
-            }
+            id: 55889944969547,
+            quantity: 1
           })
         }
 
-        console.log("map to add", map)
-
-        Permalink.addItems(map, true).then(() => {
+        Permalink.addItems(map, true).then((response) => {
           isProcessing = false;
-        }).catch(() => {
+        }).catch((error) => {
           isProcessing = false;
         });
       }
       
-      $('#bulker').on('click touchend', handleBulkerClick);
+      
+      // Usar el evento apropiado según el dispositivo
+      if (isTouchDevice) {
+        $('#bulker').on('touchend', handleBulkerClick);
+      } else {
+        $('#bulker').on('click', handleBulkerClick);
+      }
+
       
     
     });
