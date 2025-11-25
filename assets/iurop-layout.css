@@ -8962,6 +8962,24 @@ body.template-product .show-shipping-price::after {
   bottom: -28px;
 }
 
+body.template-page-keio-x .main-custom-keio-x__content--banner-cta {
+  padding-bottom: 170px;
+}
+@media only screen and (max-width: 1600px) {
+  body.template-page-keio-x .main-custom-keio-x__content--banner-cta {
+    padding-bottom: 140px;
+  }
+}
+body.template-page-keio-x .main-custom-footer {
+  z-index: 5;
+  margin-top: -100px;
+}
+@media only screen and (max-width: 1600px) {
+  body.template-page-keio-x .main-custom-footer {
+    margin-top: -68px;
+  }
+}
+
 .main-custom-product-card {
   position: relative;
   display: flex;
