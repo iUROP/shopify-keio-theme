@@ -4296,6 +4296,7 @@ body.template-page-faqs .faqs-page__items--category details p {
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  padding-right: 40px;
 }
 @media only screen and (max-width: 1024px) {
   .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading {
