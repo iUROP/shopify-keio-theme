@@ -1627,3 +1627,10 @@ body.template-page-keio-x {
     }
   }
 }
+
+.template-page-blog {
+  .main-custom-footer {
+    z-index: 5;
+    margin-top: -100px;
+  }
+}

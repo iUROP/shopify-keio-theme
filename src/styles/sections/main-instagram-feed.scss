@@ -62,7 +62,7 @@ body.template-page-blog {
         }
 
         &:before {
-          content: 'Encuentranos en Instagram';
+          content: 'Encuéntranos en Instagram';
           font-size: 16px;
 
           @media only screen and (max-width: 1024px) {
@@ -80,6 +80,16 @@ body.template-page-blog {
   .main-custom-product-list {
     @media only screen and (max-width: 1024px) {
       padding-top: 24px;
+    }
+  }
+}
+
+body.template-page-blog {
+  .shopify-app-block {
+    padding-bottom: 180px;
+
+    @media only screen and (max-width: 1024px) {
+      padding-bottom: 150px;
     }
   }
 }

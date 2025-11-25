@@ -3611,7 +3611,7 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a {
 }
 body.template-index .shopify-app-block .instafeed-bottom-link-wrapper a:before,
 body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:before {
-  content: "Encuentranos en Instagram";
+  content: "Encuéntranos en Instagram";
   font-size: 16px;
 }
 @media only screen and (max-width: 1024px) {
@@ -3628,6 +3628,15 @@ body.template-page-blog .shopify-app-block .instafeed-bottom-link-wrapper a:afte
   body.template-index .main-custom-product-list,
   body.template-page-blog .main-custom-product-list {
     padding-top: 24px;
+  }
+}
+
+body.template-page-blog .shopify-app-block {
+  padding-bottom: 180px;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-page-blog .shopify-app-block {
+    padding-bottom: 150px;
   }
 }
 
@@ -8978,6 +8987,11 @@ body.template-page-keio-x .main-custom-footer {
   body.template-page-keio-x .main-custom-footer {
     margin-top: -68px;
   }
+}
+
+.template-page-blog .main-custom-footer {
+  z-index: 5;
+  margin-top: -100px;
 }
 
 .main-custom-product-card {
