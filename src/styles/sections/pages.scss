@@ -1609,3 +1609,21 @@ body.template-product {
     }
   }
 }
+
+body.template-page-keio-x {
+  .main-custom-keio-x__content--banner-cta {
+    padding-bottom: 170px;
+
+    @media only screen and (max-width: 1600px) {
+      padding-bottom: 140px;
+    }
+  }
+  .main-custom-footer {
+    z-index: 5;
+    margin-top: -100px;
+
+    @media only screen and (max-width: 1600px) {
+      margin-top: -68px;
+    }
+  }
+}
