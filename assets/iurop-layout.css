@@ -3640,6 +3640,18 @@ body.template-page-blog .shopify-app-block {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  body.template-page-bundles .main-custom-simple-banner__container--title {
+    text-align: left !important;
+    font-size: 25px !important;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body.template-page-bundles .main-custom-simple-banner__container--title .main-custom-simple-banner.isLast .main-custom-link-white {
+    width: 172px;
+  }
+}
+
 .custom-faqs-section {
   position: relative;
   padding: 0 96px;
@@ -4276,7 +4288,7 @@ body.template-page-faqs .faqs-page__items--category details p {
 .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   font-family: var(--Family-Font, Nohemi);
-  font-size: var(--Typo-Body-XL, 22px);
+  font-size: var(--Typo-Body-XL, 16px);
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -4307,6 +4319,8 @@ body.template-page-faqs .faqs-page__items--category details p {
   line-height: 12px;
   border-radius: var(--Corner-Full, 10000px);
   background: #C2EEB4;
+  position: relative;
+  top: -4px;
 }
 .account-global-page.account .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading button, .account-global-page.addresses .account-global-page__content--content__row--body__content .products-content .order-card .order-items .order-items-item .order-items-item-heading button {
   position: absolute;

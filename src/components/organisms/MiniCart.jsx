@@ -220,7 +220,7 @@ function MiniCart({
                     <CartItem product={item} key={index} discounted={discounted} />
                   )
                 })
-              : <div className='empty-cart-state'>Carrito vacio</div>
+              : <div className='empty-cart-state'>Carrito vacío</div>
             : <>Cargando items...</>
           }
         </div>
@@ -339,7 +339,7 @@ function MiniCart({
           <p>*en la pantalla de pagos se incluye el impuesto y se calculan los gastos de envío.</p>
           <div className="cart-agree">
             <input type="checkbox" id="cart-agree" name="cart-agree" value="agree" onChange={(e) => setTermsAgree(e.target.checked)} />
-            <label for="cart-agree"> He leído y acepto la <a href="/#">política de privacidad y la política de contratación*</a></label>
+            <label for="cart-agree"> He leído y acepto la <a href="/policies/privacy-policy">política de privacidad y la política de contratación*</a></label>
           </div>
           <div className='i-minicart-container__snap--footer__actions'>
             <div className='checkout-button-wrapper'>

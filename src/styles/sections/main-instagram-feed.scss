@@ -93,3 +93,17 @@ body.template-page-blog {
     }
   }
 }
+
+body.template-page-bundles {
+  .main-custom-simple-banner__container--title {
+    @media only screen and (max-width: 1024px) {
+      text-align: left !important;
+      font-size: 25px !important;
+    }
+    @media only screen and (max-width: 1024px) {
+      .main-custom-simple-banner.isLast .main-custom-link-white {
+        width: 172px;
+      }
+    }
+  }
+}

@@ -496,7 +496,7 @@
                       .order-items-item-heading {
                         color: var(--Colors-1000, var(--Colors-1000, #000));
                         font-family: var(--Family-Font, Nohemi);
-                        font-size: var(--Typo-Body-XL, 22px);
+                        font-size: var(--Typo-Body-XL, 16px);
                         font-style: normal;
                         font-weight: 400;
                         line-height: normal;
@@ -526,6 +526,8 @@
                           line-height: 12px;
                           border-radius: var(--Corner-Full, 10000px);
                           background: #C2EEB4;
+                          position: relative;
+                          top: -4px;
                         }
                         button {
                           position: absolute;
