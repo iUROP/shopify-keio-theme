@@ -3,10 +3,12 @@ body.template-page-blog {
   .shopify-app-block {
     background: #F0F0F0;
     padding: 96px;
+    padding-bottom: 150px;
     position: relative;
 
     @media only screen and (max-width: 1024px) {
       padding: 24px 16px;
+      padding-bottom: 74px;
     }
 
     #insta-feed {
@@ -72,6 +74,12 @@ body.template-page-blog {
           display: none;
         }
       }
+    }
+  }
+
+  .main-custom-product-list {
+    @media only screen and (max-width: 1024px) {
+      padding-top: 24px;
     }
   }
 }

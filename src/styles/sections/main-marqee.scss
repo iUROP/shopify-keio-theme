@@ -22,6 +22,14 @@
       height: 40px;
       width: auto;
       display: block;
+
+      @media only screen and (max-width: 1024px) {
+        &.logo-2 {
+          width: 50px !important;
+          display: block !important;
+          margin: 0 auto;
+        }
+      }
     }
 
     .slick-list {

@@ -77,6 +77,9 @@ window.Permalink = function() {
         const isSemestral = document.querySelector('.product-form__buttons--subs-selector__options--item.Semestral.active')
         if (isSemestral) {
           plan = '/Semestre'
+          el.classList.add('show-shipping-price')
+        } else {
+          el.classList.remove('show-shipping-price')
         }
         el.textContent = plan;
       });

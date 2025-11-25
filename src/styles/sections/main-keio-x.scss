@@ -602,17 +602,3 @@
     }
   }
 }
-
-body.template-page-keio-x {
-  .main-custom-footer {
-    &:before {
-      border-top: 80px solid #d6c2a5;
-      border-right: 80px solid transparent;
-
-      @media only screen and (max-width: 1024px) {
-        border-top: 30px solid #dab785;
-        border-right: 30px solid transparent;
-      }
-    }
-  }
-}

@@ -287,6 +287,11 @@
     border: var(--Strokes-Small, 1px) solid var(--Colors-ligth_grey, #CDCDCD);
     background: #FFF;
 
+    @media only screen and (min-width: 1025px) {
+      position: sticky;
+      top: 25px;
+    }
+
     @media only screen and (max-width: 1024px) {
       width: 100%;
       padding: 24px 14px;

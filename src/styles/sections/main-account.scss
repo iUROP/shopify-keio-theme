@@ -671,5 +671,31 @@
 }
 
 #RecoverEmail-email-error {
+  border-radius: var(--Corner-Small, 8px);
+  background: var(--Colors-200, #EED2D2);
+  display: inline-flex;
+  padding: var(--Space-200, 8px) var(--Space-400, 16px) var(--Space-200, 8px) var(--Space-200, 8px);
+  align-items: center;
+  gap: var(--Space-200, 8px);
+  line-height: 20px;
+  padding-top: 10px;
+  position: relative;
+  width: 100%;
+  color: var(--Colors-500, var(--Colors-500, #931E31));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-S, 13px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin-top: 12px;
 
+  svg {
+    display: block;
+    width: 22px;
+  }
+}
+
+.submit-recovery {
+  line-height: 19px;
 }
