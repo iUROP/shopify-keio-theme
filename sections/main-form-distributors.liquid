@@ -1,0 +1,71 @@
+<div class="custom-form-distributors-section" id="{{ section.settings.ancle }}">
+
+
+
+  <div class="main-custom-energy__content--contract" id="content-section">
+
+        <h2>Únete a la red de distribuidores</h2>
+        <p>No necesitas inversión inicial. No hay stock. Solo resultados. Rellena el formulario y empieza a vender con Keio hoy mismo.</p>
+        <form method="post" accept-charset="UTF-8" class="contratalo-form">
+
+          <div class="main-input-field">
+            <label>Nombre completo</label>
+            <input type="text" name="contact[name]" required>
+          </div>
+          <div class="main-input-field">
+            <label>Email</label>
+            <input type="email" name="contact[email]" required>
+          </div>
+          <div class="main-input-field">
+            <label>Teléfono</label>
+            <input type="text" name="contact[phone]" required>
+          </div>
+          <div class="main-input-field">
+            <label>Empresa</label>
+            <input type="text" name="contact[company]" required>
+          </div>
+          <div class="main-input-field">
+            <label>Mi web</label>
+            <input type="text" name="contact[web]" required>
+          </div>
+
+          <div class="main-checkbox-field-container">
+            <div class="main-checkbox-field">
+              <input type="checkbox" required>
+              <label>He leído y acepto la información básica sobre protección de datos*</label>
+            </div>
+            <div class="main-checkbox-field">
+              <input type="checkbox" required>
+              <label>Acepto el envío de información sobre nuestros productos y servicios.</label>
+            </div>
+          </div>
+
+          <button type="submit" class="main-custom-button">Quiero ser distribuidor</button>
+        </form>
+  </div>
+
+
+
+
+
+</div>
+
+{% schema %}
+{
+  "name": "Formulario-Distribuidores",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "ancle",
+      "label": "Ancla"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Formulario-Distribuidores"
+    }
+  ]
+}
+{% endschema %}

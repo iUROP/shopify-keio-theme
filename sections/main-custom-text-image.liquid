@@ -1,36 +1,45 @@
-  <section class="main-custom-text-image custom-section pt pb pl pr">
+  <section class="main-custom-text-image custom-section pt pb pl pr {% if section.settings.transparent_bg %} is-transparent_bg{% endif %}">
     <div class="main-custom-text-image--content">
       <div class="main-custom-text-image--content__text">
         <div class="main-custom-text-image--content__text--title">
-          <h3>Libertad total en tu conexión</h3>
-          <p>Conoce los beneficios de Keio</p>
+          {% if section.settings.title != blank %}
+            <h3>{{ section.settings.title }}</h3>
+          {% endif %}
+          {% if section.settings.subtitle != blank %}
+            <p>{{ section.settings.subtitle }}</p>
+          {% endif %}
         </div>
         <ul>
-          <li>
-            1. Sin cuotas ni permanencia <span>- paga una sola vez al año y olvídate de ataduras.</span>
-          </li>
-          <li>
-            2. Ahorro real todo el año <span>- precios por debajo de las operadoras tradicionales.</span>
-          </li>
-          <li>
-            3. Cobertura que se adapta a ti <span>- acceso a grandes redes y 5G donde esté disponible.</span>
-          </li>
-          <li>
-            4. Tus gigas no se pierden <span>- acumula los que no uses y aprovéchalos después.</span>
-          </li>
-          <li>
-            5. Contratación simple y sin letra pequeña <span>- online, rápida e instalación incluida.</span>
-          </li>
-          <li>
-            6. Ventajas extra <span>- Plan Amigo y opciones para tu negocio con WiFi KEIO.</span>
-          </li>
+          {%- for block in section.blocks -%}
+            <li>
+              {% if section.settings.transparent_bg %}
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="0.5" y="0.5" width="23" height="23" rx="11.5" fill="#751D28"/>
+                  <rect x="0.5" y="0.5" width="23" height="23" rx="11.5" stroke="#751D28"/>
+                  <mask id="mask0_14173_10469" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="6" y="6" width="12" height="12">
+                  <rect x="6" y="6" width="12" height="12" fill="#D9D9D9"/>
+                  </mask>
+                  <g mask="url(#mask0_14173_10469)">
+                  <path d="M10.7737 15.0957L7.82812 12.15L8.63925 11.3389L10.7737 13.4734L15.3583 8.88892L16.1694 9.70004L10.7737 15.0957Z" fill="white"/>
+                  </g>
+                </svg>
+              {% endif %}
+              {{ block.settings.title }} <span> {% if block.settings.subtitle != blank %}- {% endif %}{{ block.settings.subtitle }}</span>
+            </li>
+          {% endfor %}
         </ul>
+
         {% if section.settings.show_button %}
-          <a href="{{ section.settings.button_url }}" class="main-custom-button is-primary">{{ section.settings.button_text }}</a>
+          {% if section.settings.use_as_ancle %}
+            <button class="main-custom-button goToScrollDown" href="{{ section.settings.button_url }}">{{ section.settings.button_text }}</button>
+          {% else %}
+            <a href="{{ section.settings.button_url }}" class="main-custom-button is-primary">{{ section.settings.button_text }}</a>
+          {% endif %}
         {% endif %}
+        
       </div>
       <div class="main-custom-text-image--content__image">
-        <img src="https://cdn.shopify.com/s/files/1/0961/9895/1243/files/banner-updated.png?v=1762233258" />
+        <img src="{{ section.settings.image | image_url: width: 1200 }}" />
       </div>
     </div>
   </section>
@@ -42,9 +51,31 @@
   "class": "section",
   "settings": [
     {
+      "type": "text",
+      "id": "title",
+      "label": "Titulo"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitulo"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Imagen"
+    },
+
+    {
       "type": "checkbox",
       "id": "show_button",
       "label": "Mostrar botón",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "use_as_ancle",
+      "label": "Usar como ancla",
       "default": false
     },
     {
@@ -57,6 +88,36 @@
       "type": "url",
       "id": "button_url",
       "label": "URL del botón"
+    },
+    {
+      "type": "checkbox",
+      "id": "transparent_bg",
+      "label": "Fondo transparente",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bulletes",
+      "label": "Mostrar bullets",
+      "default": false
+    },
+  ],
+  "blocks": [
+    {
+      "type": "Item",
+      "name": "Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titulo"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitulo"
+        }
+      ]
     },
   ],
   "presets": [

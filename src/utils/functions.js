@@ -425,6 +425,7 @@ document.addEventListener('click', function(event) {
 
   console.log("clcik to open search", fieldset.closest('.main-custom-header'))
   fieldset.closest('.main-custom-header').querySelector('.global-search').classList.toggle('active');
+  fieldset.closest('.main-custom-header').classList.toggle('search-open');
 });
 
 

@@ -323,10 +323,10 @@ html, body {
 
       color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
       font-family: var(--Family-Font---Body, Nohemi);
-      font-size: var(--Typo-Body-M, 16px);
+      font-size: var(--Typo-Body-M, 13px);
       font-style: normal;
       font-weight: 400;
-      line-height: 24px;
+      line-height: 20px;
 
       @media only screen and (max-width: 1024px) {
         font-size: 14px;
@@ -1091,6 +1091,7 @@ html, body {
   max-width: 100%;
   margin: 0;
   padding: 96px var(--Space-2400, 96px);
+  padding-bottom: 160px;
   text-align: left;
 
   .shopify-policy__title {
@@ -1113,14 +1114,67 @@ html, body {
 
   @media only screen and (max-width: 1600px) {
     padding: 56px 56px;
+    padding-bottom: 140px;
   }
   @media only screen and (max-width: 1400px) {
     padding: 46px 46px;
+    padding-bottom: 120px;
   }
   @media only screen and (max-width: 1024px) {
     padding: 36px 16px;
+    padding-bottom: 88px;
   }
 
+}
+.template-page-custom-page {
+  .i-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 96px var(--Space-2400, 96px);
+    padding-bottom: 160px;
+    text-align: left;
+
+    a {
+      color: var(--Colors-500, var(--Colors-500, #931E31));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-M, 16px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .i-page-hero {
+      .main-page-title {
+        color: var(--Colors-1000, var(--Colors-1000, #000));
+        text-align: center;
+        font-family: var(--Family-Font, Nohemi);
+        font-size: var(--Typo-H2, 39px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: left;
+        margin-top: 0px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 25px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1600px) {
+      padding: 56px 56px;
+      padding-bottom: 140px;
+    }
+    @media only screen and (max-width: 1400px) {
+      padding: 46px 46px;
+      padding-bottom: 120px;
+    }
+    @media only screen and (max-width: 1024px) {
+      padding: 36px 16px;
+      padding-bottom: 88px;
+    }
+  }
 }
 
 .shopify-payment-button__more-options,

@@ -13,6 +13,12 @@
     z-index: 9;
   }
 
+  &.search-open {
+    .main-custom-header__top--container__icons {
+      opacity: 0 !important;
+    }
+  }
+
   &__top {
     display: flex;
     width: 100%;

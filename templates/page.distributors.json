@@ -1,0 +1,114 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "main_hero_title_CpQwRW": {
+      "type": "main-hero-title",
+      "name": "main-custom-hero-title",
+      "settings": {
+        "primary_banner": "shopify://shop_images/banner-distribuidores.png",
+        "primary_banner_mobile": "shopify://shop_images/banner-distribuidores-m.png",
+        "title": "Haz crecer tu negociovendiendo Keio",
+        "subtitle": "No ofrecemos las comisiones más altas delmercado. Pero con Keio, vendes 10 veces más.",
+        "button_label": "Ser distribuidor",
+        "button_link": "#form",
+        "is_anchor": true,
+        "is_popup": false
+      }
+    },
+    "main_distributors_MRaKbN": {
+      "type": "main-distributors",
+      "name": "Section Distribuidores",
+      "settings": {
+        "banner_cta_1": "shopify://shop_images/banner-fats.png",
+        "banner_cta_1_mobile": "shopify://shop_images/banner-fats-m.png"
+      }
+    },
+    "main_custom_text_image_m7ER3T": {
+      "type": "main-custom-text-image",
+      "blocks": {
+        "item_LhcxPG": {
+          "type": "Item",
+          "settings": {
+            "title": "Tarifas anuales ultra competitivas",
+            "subtitle": ""
+          }
+        },
+        "item_7TqxKj": {
+          "type": "Item",
+          "settings": {
+            "title": "Servicios sin permanencia ni letra pequeña",
+            "subtitle": ""
+          }
+        },
+        "item_gR8pC9": {
+          "type": "Item",
+          "settings": {
+            "title": "Instalación gratuita y facilidad de pago",
+            "subtitle": ""
+          }
+        },
+        "item_hGiCTM": {
+          "type": "Item",
+          "settings": {
+            "title": "Productos pensados para convertir",
+            "subtitle": ""
+          }
+        }
+      },
+      "block_order": [
+        "item_LhcxPG",
+        "item_7TqxKj",
+        "item_gR8pC9",
+        "item_hGiCTM"
+      ],
+      "name": "main-custom-text-image",
+      "settings": {
+        "title": "¿Por qué se vende más con Keio?",
+        "subtitle": "",
+        "image": "shopify://shop_images/banner-minimal.png",
+        "show_button": false,
+        "use_as_ancle": false,
+        "button_text": "Contratar ahora",
+        "button_url": "",
+        "transparent_bg": true,
+        "show_bulletes": true
+      }
+    },
+    "main_grid_distributors_dERc6Q": {
+      "type": "main-grid-distributors",
+      "name": "Grid-distributors",
+      "settings": {}
+    },
+    "main_form_distributors_6REkcC": {
+      "type": "main-form-distributors",
+      "name": "Formulario-Distribuidores",
+      "settings": {
+        "ancle": "form"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_hero_title_CpQwRW",
+    "main_distributors_MRaKbN",
+    "main_custom_text_image_m7ER3T",
+    "main_grid_distributors_dERc6Q",
+    "main_form_distributors_6REkcC"
+  ]
+}

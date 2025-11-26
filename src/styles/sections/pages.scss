@@ -61,6 +61,11 @@ body.template-product {
         padding: 0px;
         padding-top: 60px;
 
+        @media only screen and (min-width: 1025px) {
+          position: sticky;
+          top: 0px;
+          height: fit-content;
+        }
         @media only screen and (max-width: 1500px) {
           width: 55% !important;
           max-width: 55% !important;
@@ -1181,6 +1186,7 @@ body.template-collection {
       font-weight: 400;
       line-height: normal;
       text-align: center;
+      text-transform: uppercase;
     }
     .collection-hero__description {
       margin: 10px 0px;
@@ -1563,7 +1569,7 @@ body.template-page-bundles {
     height: 84%;
   }
   .main-custom-footer {
-    margin-top: -82px;
+    margin-top: -100px;
 
     @media only screen and (max-width: 1600px) {
       margin-top: -74px;
@@ -1628,9 +1634,163 @@ body.template-page-keio-x {
   }
 }
 
+body.template-page-comparer {
+  .main-custom-footer {
+    z-index: 5;
+    margin-top: -20px;
+
+    @media only screen and (max-width: 1600px) {
+      margin-top: 0px;
+    }
+  }
+}
+
+
+body.template-customers-account,
+body.template-customers-addresses,
+body.template-page-purchased-product,
+body.template-page-support,
+body.template-customers-activate_account,
+body.template-customers-reset_password {
+  .main-custom-footer {
+    z-index: 5;
+    margin-top: -20px;
+
+    @media only screen and (max-width: 1600px) {
+      margin-top: 0px;
+    }
+  }
+}
+
 .template-page-blog {
   .main-custom-footer {
     z-index: 5;
     margin-top: -100px;
+  }
+}
+
+body.template-page-faqs {
+  .main-custom-footer {
+    margin-top: -20px;
+
+    @media only screen and (max-width: 1024px) {
+      margin-top: 0px;
+    }
+  }
+}
+
+body.template-page-affiliates {
+  .custom-form-afiliates-section {
+    .account-global-page {
+      margin: 0 auto;
+      margin-bottom: 50px;
+      width: 500px;
+
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+      }
+
+      #login{
+        margin-top: 0px;
+      }
+
+      .field.main-input-field {
+        margin-bottom: 22px;
+      }
+
+      form {
+        width: 440px;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+body.template-page-affiliates {
+  .main-custom-button.goToScrollDown {
+    line-height: 16px;
+  }
+}
+body.template-page-distributors {
+  .main-custom-button.goToScrollDown {
+    line-height: 16px; 
+  }
+  .main-custom-text-image--content {
+    .main-custom-text-image--content__text--title {
+      @media only screen and (max-width: 1024px) {
+        text-align: center;
+
+        h3 {
+          font-size: 20px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .custom-afiliates-section__head {
+    @media only screen and (max-width: 1024px) {
+      h2 {
+        font-size: 20px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+body.template-page-distributors {
+  .main-custom-energy__content--contract {
+    width: 810px;
+
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin-bottom: 0;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 25px;
+        margin-bottom: 14px;
+      }
+    }
+    p {
+      color: var(--Colors-Grey, var(--Colors-grey, #5C5E5C));
+      text-align: center;
+      leading-trim: both;
+      text-edge: cap;
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-L, 20px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px;
+      margin-top: 5px;
+      margin-bottom: 40px;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+    }
+
+    .contratalo-form {
+      width: 450px;
+      margin: 0 auto;
+
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+  .contratalo-form {
+    .main-custom-button {
+      line-height: 19px;
+    }
   }
 }

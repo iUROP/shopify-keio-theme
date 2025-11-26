@@ -56,7 +56,8 @@
           font-size: 44px;
         }
         @media only screen and (max-width: 1024px) {
-          font-size: 39px;
+          font-size: 36px;
+          line-height: 40px;
         }
       }
       p {
@@ -78,6 +79,7 @@
         }
         @media only screen and (max-width: 1024px) {
           font-size: 20px;
+          line-height: 22px;
         }
       }
       button {

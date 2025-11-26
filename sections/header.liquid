@@ -58,25 +58,38 @@
         </div>
       </div>
     </div>
-    <div class="main-custom-header__bottom b-box">
-      {% if section.settings.menu != blank %}
-        <nav class="main-custom-header__bottom--container">
-          <ul class="main-custom-header__bottom--container__list">
-            {%- for link in section.settings.menu.links -%}
-              {% assign is_active = false %}
+<div class="main-custom-header__bottom b-box">
+  {% if section.settings.menu != blank %}
+    <nav class="main-custom-header__bottom--container">
+      <ul class="main-custom-header__bottom--container__list">
+        {%- for link in section.settings.menu.links -%}
+          
+          {%- assign is_active = false -%}
+          {%- if link.current or link.child_active -%}
+            {% assign is_active = true %}
+          {%- endif -%}
 
-              {%- if link.current or link.child_active -%}
-                {% assign is_active = true %}
-              {%- endif -%}
+          {%- comment -%}
+            Mostrar este link solo si el usuario está logeado
+          {%- endcomment -%}
 
+          {% if link.handle == "keio-x" %}
+            {% if customer %}
               <li class="main-custom-header__bottom--container__list--item {{ link.title }} {% if is_active %} level-2{% endif %}">
                 <a href="{{ link.url }}">{{ link.title }}</a>
               </li>
-            {%- endfor -%}
-          </ul>
-        </nav>
-      {% endif %}
-    </div>
+            {% endif %}
+          {% else %}
+            <li class="main-custom-header__bottom--container__list--item {{ link.title }} {% if is_active %} level-2{% endif %}">
+              <a href="{{ link.url }}">{{ link.title }}</a>
+            </li>
+          {% endif %}
+
+        {%- endfor -%}
+      </ul>
+    </nav>
+  {% endif %}
+</div>
   </header>
 
 <div class="float-whatsapp">

@@ -3,7 +3,9 @@
   {% assign characteristics = product.metafields.custom.grupo_de_caracteristicas.value %}
 
   <div class="main-custom-product-card--inner">
-    <span class="main-custom-product-card--inner__tag-offer">¡Oferta!</span>
+    {% if product.tags contains "Oferta" %}
+      <span class="main-custom-product-card--inner__tag-offer">¡Oferta!</span>
+    {% endif %}
     <svg class="corner-svg" xmlns="http://www.w3.org/2000/svg" width="119" height="130" viewBox="0 0 119 130" fill="none">
       <path d="M212.135 130H87.8654L0 42.1346V-82.1346L87.8654 -170H212.135L300 -82.1346V42.1346L212.135 130ZM106.457 85.1407H193.553L255.151 23.5428V-63.553L193.553 -125.151H106.457L44.8592 -63.553V23.5428L106.457 85.1407Z" fill="#FBF3F3"/>
     </svg>

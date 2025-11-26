@@ -100,7 +100,7 @@
             <th>Participación</th>
             <th></th>
           </tr>
-          {% render 'row-table-review' brand: 'Keio', customers: '40.000', reviews: '172', review: 3, participation: '4.25 (TP/1000)', url: '/#' %}
+          {% render 'row-table-review' brand: 'Keio', customers: '40.000', reviews: '172', review: 3, participation: '4.25 (TP/1000)', url: 'https://es.trustpilot.com/review/keio.es' %}
           {% render 'row-table-review' brand: 'Movistar', customers: '16.170.000', reviews: '1.801', review: 2, participation: '0.11 (TP/1000)', url: 'https://es.trustpilot.com/review/movistarplus.es' %}
           {% render 'row-table-review' brand: 'Vodafone', customers: '12.500.000', reviews: '3.000', review: 2, participation: '0.24 (TP/1000)', url: 'https://es.trustpilot.com/review/www.vodafone.es' %}
           {% render 'row-table-review' brand: 'Orange', customers: '12.500.000', reviews: '3.000', review: 2, participation: '0.24 (TP/1000)', url: 'https://es.trustpilot.com/review/www.orange.es' %}
@@ -170,7 +170,7 @@
         let resulterItems = []
 
         if (type == 'Fibra + Móvil') {
-          resulterItems = rates.filter((item) => item.nombre.includes('FIBRA') || item.nombre.includes('MÓVIL'))
+          resulterItems = rates.filter((item) => item.nombre.includes('FIBRA') && item.nombre.includes('MÓVIL'))
         }
         if (type == 'Fibra') {
           resulterItems = rates.filter((item) => item.nombre.includes('FIBRA'))
@@ -195,12 +195,23 @@
         resulterItems = resulterItems.filter((item) => Number(item.megas) >= fibra_min && Number(item.megas) <= fibra)
         resulterItems = resulterItems.filter((item) => (Number(item.datos_moviles) >= dates_m && Number(item.datos_moviles) <= dates) || Number(item.datos_moviles) == 9999 )
         
-        console.log("List of rates", resulterItems)
+        console.log("List of rates", JSON.stringify(resulterItems))
+
+        const uniqueByCompany = Object.values(
+          resulterItems.reduce((acc, item) => {
+            const company = item.compania[0];
+            if (!acc[company]) {
+              acc[company] = item;
+            }
+            return acc;
+          }, {})
+        );
+
 
         let htmLInsert = ``
 
-        if (resulterItems && resulterItems[0]) {
-          $.each(resulterItems, function(index, item) {
+        if (uniqueByCompany && uniqueByCompany[0]) {
+          $.each(uniqueByCompany, function(index, item) {
             htmLInsert += `
               <div class="main-custom-comparer-canvas__results--item is-${item.compania[0]}" rel-company="${item.compania[0]}" rel-megas="${item.megas}" rel-minutos="${item.minutos}" rel-datos_moviles="${item.datos_moviles}">
                 <a href="/#" class="main-custom-button">Contratar ahora</a>

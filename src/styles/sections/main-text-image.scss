@@ -124,13 +124,48 @@
       flex-direction: column;
     }
   }
+
+  &.is-transparent_bg {
+    background-color: transparent;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+
+    @media only screen and (max-width: 1024px) {
+      padding-bottom: 10px !important;
+    }
+
+    .main-custom-text-image--content__text--title h3 {
+      color: #000 !important;
+    }
+    .main-custom-text-image--content__text ul li {
+      color: var(--Colors-Grey, var(--Colors-grey, #4E4E4E));
+      font-family: var(--Family-Font---Body, Nohemi);
+      font-size: var(--Typo-Body-L, 20px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 35px;
+      padding-top: 18px;
+      padding-bottom: 18px;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      svg {
+        margin-right: 6px;
+        position: relative;
+        top: 4px;
+      }
+    }
+  }
 }
 
 .main-custom-reviews__body--actions {
   @media only screen and (max-width: 1024px) {
     .main-custom-button {
-        height: 40px !important;
-        padding: 11px 24px !important;
+      height: 40px !important;
+      padding: 11px 24px !important;
     }
   }
 }

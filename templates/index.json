@@ -33,14 +33,71 @@
       "type": "main-custom-product-list",
       "name": "main-custom-product-list",
       "settings": {
+        "title": "",
         "collection": "shop",
-        "show_navigation": false
+        "show_navigation": false,
+        "limit": 0
       }
     },
     "main_custom_text_image_8nWyBG": {
       "type": "main-custom-text-image",
+      "blocks": {
+        "item_xpKjyz": {
+          "type": "Item",
+          "settings": {
+            "title": "1. Sin cuotas ni permanencia ",
+            "subtitle": "paga una sola vez al año y olvídate de ataduras."
+          }
+        },
+        "item_ymj64n": {
+          "type": "Item",
+          "settings": {
+            "title": "2. Ahorro real todo el año",
+            "subtitle": "precios por debajo de las operadoras tradicionales."
+          }
+        },
+        "item_mVJqWY": {
+          "type": "Item",
+          "settings": {
+            "title": "3. Cobertura que se adapta a ti",
+            "subtitle": "acceso a grandes redes y 5G donde esté disponible."
+          }
+        },
+        "item_9kE8Jd": {
+          "type": "Item",
+          "settings": {
+            "title": "4. Tus gigas no se pierden ",
+            "subtitle": "acumula los que no uses y aprovéchalos después."
+          }
+        },
+        "item_MdHbKr": {
+          "type": "Item",
+          "settings": {
+            "title": "5. Contratación simple y sin letra pequeña",
+            "subtitle": "online, rápida e instalación incluida."
+          }
+        },
+        "item_a8pi7y": {
+          "type": "Item",
+          "settings": {
+            "title": "6. Ventajas extra",
+            "subtitle": "Plan Amigo y opciones para tu negocio con WiFi KEIO."
+          }
+        }
+      },
+      "block_order": [
+        "item_xpKjyz",
+        "item_ymj64n",
+        "item_mVJqWY",
+        "item_9kE8Jd",
+        "item_MdHbKr",
+        "item_a8pi7y"
+      ],
       "name": "main-custom-text-image",
       "settings": {
+        "title": "Libertad total en tu conexión",
+        "subtitle": "Conoce los beneficios de Keio",
+        "image": "shopify://shop_images/banner-updated_1fa114f0-cba0-488e-b315-be4881cba407.png",
         "show_button": true,
         "button_text": "Contratar ahora",
         "button_url": "shopify://collections/best-sellers"

@@ -1,0 +1,27 @@
+<div class="custom-afiliates-section pt pb pl pr">
+  <div class="custom-afiliates-section__head">
+    <h2>Cómo funciona</h2>
+  </div>
+  <div class="custom-afiliates-section__body">
+    {% render 'card-item' title: 'Paso 1', subtitle: 'Regístrate como afiliado', text: 'Obtén tu enlace o código único para compartir.', icon: 'step-1' %}
+    {% render 'card-item' title: 'Paso 2', subtitle: 'Recomienda Keio', text: 'Tus amigos reciben un 10% de descuento al usar tu enlace.', icon: 'step-2' %}
+    {% render 'card-item' title: 'Paso 3', subtitle: 'Gana crédito', text: 'Tú recibes un 10% del valor de cada compra como crédito interno.', icon: 'step-3' %}
+    {% render 'card-item' title: 'Paso 4', subtitle: 'Usa tu crédito', text: 'Canjea tu saldo en productos Keio o en el Marketplace Keio.', icon: 'step-4' %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Section Afiliados",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    
+  ],
+  "presets": [
+    {
+      "name": "Section Afiliados"
+    }
+  ]
+}
+{% endschema %}

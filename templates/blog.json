@@ -18,10 +18,10 @@
             "blog": "noticias-y-novedades"
           }
         },
-        "blog_MNT66k": {
+        "blog_JFdTdj": {
           "type": "blog",
           "settings": {
-            "blog": "consejos-y-guias"
+            "blog": "consejos-y-guias-1"
           }
         },
         "blog_RwqUPD": {
@@ -33,7 +33,7 @@
       },
       "block_order": [
         "blog_FW99jN",
-        "blog_MNT66k",
+        "blog_JFdTdj",
         "blog_RwqUPD"
       ],
       "settings": {
