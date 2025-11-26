@@ -115,13 +115,71 @@
         "padding_bottom": 28
       }
     },
-    "main_custom_text_image_UXVzMx": {
+    "main_custom_text_image_HjmzAc": {
       "type": "main-custom-text-image",
+      "blocks": {
+        "item_4mcAgF": {
+          "type": "Item",
+          "settings": {
+            "title": "1. Sin cuotas ni permanencia ",
+            "subtitle": "paga una sola vez al año y olvídate de ataduras."
+          }
+        },
+        "item_wmFqVX": {
+          "type": "Item",
+          "settings": {
+            "title": "2. Ahorro real todo el año",
+            "subtitle": "precios por debajo de las operadoras tradicionales."
+          }
+        },
+        "item_bJJwQC": {
+          "type": "Item",
+          "settings": {
+            "title": "3. Cobertura que se adapta a ti",
+            "subtitle": "acceso a grandes redes y 5G donde esté disponible."
+          }
+        },
+        "item_L9V7Eg": {
+          "type": "Item",
+          "settings": {
+            "title": "4. Tus gigas no se pierden ",
+            "subtitle": "acumula los que no uses y aprovéchalos después."
+          }
+        },
+        "item_tYy7BE": {
+          "type": "Item",
+          "settings": {
+            "title": "5. Contratación simple y sin letra pequeña",
+            "subtitle": "online, rápida e instalación incluida."
+          }
+        },
+        "item_qmm7Xg": {
+          "type": "Item",
+          "settings": {
+            "title": "6. Ventajas extra",
+            "subtitle": "Plan Amigo y opciones para tu negocio con WiFi KEIO."
+          }
+        }
+      },
+      "block_order": [
+        "item_4mcAgF",
+        "item_wmFqVX",
+        "item_bJJwQC",
+        "item_L9V7Eg",
+        "item_tYy7BE",
+        "item_qmm7Xg"
+      ],
       "name": "main-custom-text-image",
       "settings": {
+        "title": "Libertad total en tu conexión",
+        "subtitle": "Conoce los beneficios de Keio",
+        "image": "shopify://shop_images/banner-updated_1fa114f0-cba0-488e-b315-be4881cba407.png",
         "show_button": false,
+        "use_as_ancle": false,
         "button_text": "Contratar ahora",
-        "button_url": ""
+        "button_url": "shopify://collections/best-sellers",
+        "transparent_bg": false,
+        "show_bulletes": false
       }
     },
     "main_custom_marquee_Jez4Jw": {
@@ -254,7 +312,7 @@
   "order": [
     "main",
     "related-products",
-    "main_custom_text_image_UXVzMx",
+    "main_custom_text_image_HjmzAc",
     "main_custom_marquee_Jez4Jw",
     "main_custom_faqs_kVRFYX",
     "main_custom_reviews_CeTD6W",
