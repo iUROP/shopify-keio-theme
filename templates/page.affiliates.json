@@ -24,7 +24,7 @@
         "primary_banner": "shopify://shop_images/banner-afiliados.png",
         "primary_banner_mobile": "shopify://shop_images/banner-afiliados-m.png",
         "title": "Gana beneficios recomendando Keio",
-        "subtitle": "Únete a nuestro programa de afiliados y gana comisiones por cada cliente que nos recomiendes.",
+        "subtitle": "Únete a nuestro programa de afiliados y gana comisiones por cada cliente que nos recomiendes",
         "button_label": "Regístrate ahora",
         "button_link": "#form",
         "is_anchor": true,
@@ -90,7 +90,9 @@
         "show_button": true,
         "use_as_ancle": true,
         "button_text": "Acceder ahora",
-        "button_url": "#form"
+        "button_url": "#form",
+        "transparent_bg": false,
+        "show_bulletes": false
       }
     },
     "main_form_afiliates_KxhNbW": {
@@ -103,13 +105,9 @@
   },
   "order": [
     "main",
-<<<<<<< HEAD
     "main_hero_title_CtUQJk",
     "main_afiliates_LdgGMt",
     "main_custom_text_image_rHmbBL",
     "main_form_afiliates_KxhNbW"
-=======
-    "main_energy_kcKKAU"
->>>>>>> e5c23f6180c3f5f58a3ed1c31fad2776328668df
   ]
 }

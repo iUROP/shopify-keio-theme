@@ -24,7 +24,7 @@
         "primary_banner": "shopify://shop_images/banner-distribuidores.png",
         "primary_banner_mobile": "shopify://shop_images/banner-distribuidores-m.png",
         "title": "Haz crecer tu negociovendiendo Keio",
-        "subtitle": "No ofrecemos las comisiones más altas delmercado. Pero con Keio, vendes 10 veces más.",
+        "subtitle": "No ofrecemos las comisiones más altas delmercado. Pero con Keio, vendes 10 veces más",
         "button_label": "Ser distribuidor",
         "button_link": "#form",
         "is_anchor": true,
@@ -105,14 +105,10 @@
   },
   "order": [
     "main",
-<<<<<<< HEAD
     "main_hero_title_CpQwRW",
     "main_distributors_MRaKbN",
     "main_custom_text_image_m7ER3T",
     "main_grid_distributors_dERc6Q",
     "main_form_distributors_6REkcC"
-=======
-    "main_energy_kcKKAU"
->>>>>>> e5c23f6180c3f5f58a3ed1c31fad2776328668df
   ]
 }
