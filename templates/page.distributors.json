@@ -105,10 +105,14 @@
   },
   "order": [
     "main",
+<<<<<<< HEAD
     "main_hero_title_CpQwRW",
     "main_distributors_MRaKbN",
     "main_custom_text_image_m7ER3T",
     "main_grid_distributors_dERc6Q",
     "main_form_distributors_6REkcC"
+=======
+    "main_energy_kcKKAU"
+>>>>>>> e5c23f6180c3f5f58a3ed1c31fad2776328668df
   ]
 }

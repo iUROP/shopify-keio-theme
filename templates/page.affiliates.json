@@ -103,9 +103,13 @@
   },
   "order": [
     "main",
+<<<<<<< HEAD
     "main_hero_title_CtUQJk",
     "main_afiliates_LdgGMt",
     "main_custom_text_image_rHmbBL",
     "main_form_afiliates_KxhNbW"
+=======
+    "main_energy_kcKKAU"
+>>>>>>> e5c23f6180c3f5f58a3ed1c31fad2776328668df
   ]
 }
