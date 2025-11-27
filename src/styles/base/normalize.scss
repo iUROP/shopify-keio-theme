@@ -108,6 +108,11 @@ html, body {
     -moz-transition: all .45s cubic-bezier(.77,0,.175,1);
     -o-transition: all .45s cubic-bezier(.77,0,.175,1);
     transition: all .45s cubic-bezier(.77,0,.175,1);
+
+    &.disabled {
+      background-color: #CDCDCD !important;
+      cursor: no-drop;
+    }
     &:hover {
       border-radius: var(--Corner-Extra-small, 4px);
       background: var(--Colors-600, #751D28);

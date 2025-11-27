@@ -632,6 +632,7 @@ i-minicart {
 
                 @media only screen and (max-width: 1024px) {
                   border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+                  border-radius: 4px !important;
                 }
 
                 h3 {

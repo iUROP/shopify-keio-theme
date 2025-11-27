@@ -485,6 +485,10 @@ html .main-custom-button, body .main-custom-button {
   -o-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
   transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
 }
+html .main-custom-button.disabled, body .main-custom-button.disabled {
+  background-color: #CDCDCD !important;
+  cursor: no-drop;
+}
 html .main-custom-button:hover, body .main-custom-button:hover {
   border-radius: var(--Corner-Extra-small, 4px);
   background: var(--Colors-600, #751D28);
@@ -2135,6 +2139,7 @@ i-minicart .i-minicart-container__snap--upsells--list__item--labels {
 @media only screen and (max-width: 1024px) {
   i-minicart .i-minicart-container__snap--upsells--list__item--labels {
     border: 1px solid var(--Colors-ligth_grey, #CDCDCD);
+    border-radius: 4px !important;
   }
 }
 i-minicart .i-minicart-container__snap--upsells--list__item--labels h3 {
@@ -3650,6 +3655,7 @@ body.show-mobile-menu .main-custom-header__bottom {
 @media only screen and (max-width: 1024px) {
   .template-article .main-custom-blog-feed {
     padding-top: 28px;
+    padding-bottom: 60px;
   }
 }
 
@@ -4130,6 +4136,74 @@ body.template-page-faqs .faqs-page__items--category details p {
     padding: 80px 16px;
   }
 }
+.account-global-page .lists-addreses {
+  width: 100%;
+  text-align: left;
+}
+.account-global-page .lists-addreses li {
+  margin-top: 30px;
+}
+.account-global-page .lists-addreses li h2 {
+  text-align: left;
+  color: var(--Colors-1000, var(--Colors-1000, #000));
+  font-family: var(--Family-Font, Nohemi);
+  font-size: var(--Typo-Body-XL, 25px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+}
+.account-global-page .lists-addreses li button {
+  position: relative;
+  height: var(--Buttons-D-H, auto);
+  padding: 8px 20px;
+  border-radius: var(--Corner-Extra-small, 4px);
+  color: var(--Colors-White, var(--Colors-white, #931E31));
+  font-family: var(--Family-Font---Body, Nohemi);
+  font-size: var(--Typo-Body-M, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  border-radius: var(--Corner-Extra-small, 4px);
+  border: var(--Strokes-Small, 1px) solid var(--Colors-500, #931E31);
+  background: var(--Colors-white, #FFF);
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  margin-left: 0;
+}
+.account-global-page .lists-addreses li button:hover {
+  opacity: 0.8;
+}
+@media only screen and (max-width: 1024px) {
+  .account-global-page .lists-addreses li button {
+    font-size: 14px;
+    height: 40px;
+    padding: 11px 24px;
+  }
+}
+.account-global-page .lists-addreses li form {
+  gap: 20px;
+}
+.account-global-page .lists-addreses li form .field.main-input-field {
+  margin: 0 !important;
+}
+.account-global-page .lists-addreses li form .actions-new-address {
+  display: block;
+  width: 100%;
+  flex: none;
+}
+.account-global-page .lists-addreses li form .actions-new-address button {
+  margin-top: 0px;
+}
+.account-global-page .lists-addreses .row-fields {
+  margin-top: 24px;
+}
 .account-global-page h1 {
   color: var(--Colors-1000, var(--Colors-1000, #000));
   text-align: center;
@@ -4239,7 +4313,20 @@ body.template-page-faqs .faqs-page__items--category details p {
 .account-global-page.account .account-global-page__content--sidebar__links a.last-link, .account-global-page.addresses .account-global-page__content--sidebar__links a.last-link {
   border-top: 1px solid #CDCDCD;
   border-radius: 0px;
-  padding-top: 24px;
+  margin-top: 10px;
+}
+.account-global-page.account .account-global-page__content--sidebar__links a.last-link.active, .account-global-page.addresses .account-global-page__content--sidebar__links a.last-link.active {
+  border: 0px;
+  position: relative;
+}
+.account-global-page.account .account-global-page__content--sidebar__links a.last-link.active::before, .account-global-page.addresses .account-global-page__content--sidebar__links a.last-link.active::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  height: 1px;
+  background-color: #CDCDCD;
+  left: 0px;
+  width: 100%;
 }
 .account-global-page.account .account-global-page__content--sidebar__close, .account-global-page.addresses .account-global-page__content--sidebar__close {
   display: flex;
@@ -7980,8 +8067,8 @@ body.template-page-distributors .main-custom-keio-x__content--banner-cta__inner-
 }
 @media only screen and (max-width: 1600px) {
   body.template-page-distributors .main-custom-keio-x__content--banner-cta.invitations {
-    padding-bottom: 46px;
-    padding-top: 46px;
+    padding-bottom: 72px;
+    padding-top: 60px;
   }
 }
 
@@ -9624,9 +9711,24 @@ body.template-page-affiliates .custom-form-afiliates-section .account-global-pag
     width: 100%;
   }
 }
+body.template-page-affiliates .custom-form-afiliates-section .account-global-page .global-color-link {
+  display: none !important;
+}
 
 body.template-page-affiliates .main-custom-button.goToScrollDown {
   line-height: 16px;
+}
+@media only screen and (max-width: 1024px) {
+  body.template-page-affiliates .main-custom-button.goToScrollDown {
+    margin-top: 12px;
+    margin-bottom: 16px;
+    line-height: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  body.template-page-affiliates .custom-afiliates-section {
+    gap: var(--Space-1200, 22px);
+  }
 }
 
 body.template-page-distributors .main-custom-button.goToScrollDown {
@@ -9639,12 +9741,18 @@ body.template-page-distributors .main-custom-button.goToScrollDown {
   body.template-page-distributors .main-custom-text-image--content .main-custom-text-image--content__text--title h3 {
     font-size: 20px;
     width: 100%;
+    font-weight: 400;
   }
 }
 @media only screen and (max-width: 1024px) {
   body.template-page-distributors .custom-afiliates-section__head h2 {
     font-size: 20px;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  body.template-page-distributors .main-custom-keio-x__content--banner-cta__inner--body svg {
+    width: auto;
   }
 }
 
@@ -9699,7 +9807,11 @@ body.template-page-distributors .main-custom-energy__content--contract .contrata
 body.template-page-distributors .contratalo-form .main-custom-button {
   line-height: 19px;
 }
-
+@media only screen and (min-width: 1024px) {
+  body.template-page-distributors .main-custom-keio-x__content--banner-cta__inner {
+    gap: var(--Space-1200, 37px) !important;
+  }
+}
 .main-custom-product-card {
   position: relative;
   display: flex;

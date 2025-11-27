@@ -126,6 +126,9 @@
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    document.querySelector('.main-custom-header .global-search').classList.remove('active');
+    document.querySelector('.main-custom-header').classList.remove('search-open');
+
     const query = input.value.trim();
 
     if (query.length > 0) {
@@ -137,6 +140,9 @@
   input.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
       const q = input.value.trim();
+      document.querySelector('.main-custom-header .global-search').classList.remove('active');
+      document.querySelector('.main-custom-header').classList.remove('search-open');
+
       if (q) window.location.href = `/search?q=${encodeURIComponent(q)}`;
     }
   });

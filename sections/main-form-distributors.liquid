@@ -31,24 +31,39 @@
 
           <div class="main-checkbox-field-container">
             <div class="main-checkbox-field">
-              <input type="checkbox" required>
+              <input type="checkbox" required id="term-distributors-1">
               <label>He leído y acepto la información básica sobre protección de datos*</label>
             </div>
             <div class="main-checkbox-field">
-              <input type="checkbox" required>
+              <input type="checkbox" required id="term-distributors-2">
               <label>Acepto el envío de información sobre nuestros productos y servicios.</label>
             </div>
           </div>
 
-          <button type="submit" class="main-custom-button">Quiero ser distribuidor</button>
+          <button type="submit" class="main-custom-button disabled">Quiero ser distribuidor</button>
         </form>
   </div>
-
-
-
-
-
 </div>
+
+<script>
+
+  function getChecks () {
+    const check1 = document.getElementById('term-distributors-1')
+    const check2 = document.getElementById('term-distributors-2')
+
+    if (check1.checked && check2.checked) {
+      document.querySelector('.template-page-distributors .contratalo-form .main-custom-button').classList.remove('disabled')
+    } else {
+      document.querySelector('.template-page-distributors .contratalo-form .main-custom-button').classList.add('disabled')
+    }
+  }
+  document.getElementById('term-distributors-1').addEventListener('change', (e) => {
+    getChecks()
+  });
+  document.getElementById('term-distributors-2').addEventListener('change', (e) => {
+    getChecks()
+  });
+</script>
 
 {% schema %}
 {

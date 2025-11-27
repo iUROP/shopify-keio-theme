@@ -186,10 +186,10 @@
           resulterItems = resulterItems.filter((item) => item.compania[0].includes('KEIO'))
         }
         if (company == 'Movistar') {
-          resulterItems = resulterItems.filter((item) => item.compania[0].includes('MOVISTAR'))
+          resulterItems = resulterItems.filter((item) => item.compania[0].includes('KEIO') || item.compania[0].includes('MOVISTAR'))
         }
         if (company == 'Vodafone') {
-          resulterItems = resulterItems.filter((item) => item.compania[0].includes('VODAFONE'))
+          resulterItems = resulterItems.filter((item) => item.compania[0].includes('KEIO') || item.compania[0].includes('VODAFONE'))
         }
 
         resulterItems = resulterItems.filter((item) => Number(item.megas) >= fibra_min && Number(item.megas) <= fibra)

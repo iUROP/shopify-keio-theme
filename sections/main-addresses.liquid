@@ -194,7 +194,7 @@
                   </div>
                 </div>
 
-                <ul role="list" style="display: none;">
+                <ul role="list" class="lists-addreses">
                   {%- for address in customer.addresses -%}
                     <li data-address>
                       {%- if address == customer.default_address -%}
@@ -219,10 +219,10 @@
                       >
                         {{ 'customer.addresses.delete' | t }}
                       </button>
-                      <div id="EditAddress_{{ address.id }}">
+                      <div id="EditAddress_{{ address.id }}" class="row-fields">
                         <h2>{{ 'customer.addresses.edit_address' | t }}</h2>
                         {%- form 'customer_address', address -%}
-                          <div class="field">
+                          <div class="field main-input-field">
                             <input
                               type="text"
                               id="AddressFirstName_{{ form.id }}"
@@ -231,9 +231,9 @@
                               autocomplete="given-name"
                               placeholder="{{ 'customer.addresses.first_name' | t }}"
                             >
-                            <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label>
+                            {% comment %} <label for="AddressFirstName_{{ form.id }}">{{ 'customer.addresses.first_name' | t }}</label> {% endcomment %}
                           </div>
-                          <div class="field">
+                          <div class="field main-input-field">
                             <input
                               type="text"
                               id="AddressLastName_{{ form.id }}"
@@ -242,9 +242,9 @@
                               autocomplete="family-name"
                               placeholder="{{ 'customer.addresses.last_name' | t }}"
                             >
-                            <label for="AddressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</label>
+                            {% comment %} <label for="AddressLastName_{{ form.id }}">{{ 'customer.addresses.last_name' | t }}</label> {% endcomment %}
                           </div>
-                          <div class="field">
+                          <div class="field main-input-field">
                             <input
                               type="text"
                               id="AddressCompany_{{ form.id }}"
@@ -253,9 +253,9 @@
                               autocomplete="organization"
                               placeholder="{{ 'customer.addresses.company' | t }}"
                             >
-                            <label for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</label>
+                            {% comment %} <label for="AddressCompany_{{ form.id }}">{{ 'customer.addresses.company' | t }}</label> {% endcomment %}
                           </div>
-                          <div class="field">
+                          <div class="field main-input-field">
                             <input
                               type="text"
                               id="AddressAddress1_{{ form.id }}"
@@ -264,9 +264,9 @@
                               autocomplete="address-line1"
                               placeholder="{{ 'customer.addresses.address1' | t }}"
                             >
-                            <label for="AddressAddress1_{{ form.id }}">{{ 'customer.addresses.address1' | t }}</label>
+                            {% comment %} <label for="AddressAddress1_{{ form.id }}">{{ 'customer.addresses.address1' | t }}</label> {% endcomment %}
                           </div>
-                          <div class="field">
+                          <div class="field main-input-field">
                             <input
                               type="text"
                               id="AddressAddress2_{{ form.id }}"
@@ -275,9 +275,9 @@
                               autocomplete="address-line2"
                               placeholder="{{ 'customer.addresses.address2' | t }}"
                             >
-                            <label for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label>
+                            {% comment %} <label for="AddressAddress2_{{ form.id }}">{{ 'customer.addresses.address2' | t }}</label> {% endcomment %}
                           </div>
-                          <div class="field">
+                          <div class="field main-input-field">
                             <input
                               type="text"
                               id="AddressCity_{{ form.id }}"
@@ -286,13 +286,13 @@
                               autocomplete="address-level2"
                               placeholder="{{ 'customer.addresses.city' | t }}"
                             >
-                            <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label>
+                            {% comment %} <label for="AddressCity_{{ form.id }}">{{ 'customer.addresses.city' | t }}</label> {% endcomment %}
                           </div>
                           <div>
                             <label for="AddressCountry_{{ form.id }}">
                               {{ 'customer.addresses.country' | t }}
                             </label>
-                            <div class="select">
+                            <div class="select main-input-field">
                               <select
                                 id="AddressCountry_{{ form.id }}"
                                 name="address[country]"
@@ -303,28 +303,28 @@
                               >
                                 {{ all_country_option_tags }}
                               </select>
-                              <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                              {% comment %} <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
                                 <use href="#icon-caret" />
-                              </svg>
+                              </svg> {% endcomment %}
                             </div>
                           </div>
                           <div id="AddressProvinceContainer_{{ form.id }}" style="display:none;">
                             <label for="AddressProvince_{{ form.id }}">
                               {{ 'customer.addresses.province' | t }}
                             </label>
-                            <div class="select">
+                            <div class="select main-input-field">
                               <select
                                 id="AddressProvince_{{ form.id }}"
                                 name="address[province]"
                                 data-default="{{ form.province }}"
                                 autocomplete="address-level1"
                               ></select>
-                              <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                              {% comment %} <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
                                 <use href="#icon-caret" />
-                              </svg>
+                              </svg> {% endcomment %}
                             </div>
                           </div>
-                          <div class="field">
+                          <div class="field main-input-field">
                             <input
                               type="text"
                               id="AddressZip_{{ form.id }}"
@@ -334,9 +334,9 @@
                               autocomplete="postal-code"
                               placeholder="{{ 'customer.addresses.zip' | t }}"
                             >
-                            <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label>
+                            {% comment %} <label for="AddressZip_{{ form.id }}">{{ 'customer.addresses.zip' | t }}</label> {% endcomment %}
                           </div>
-                          <div class="field">
+                          <div class="field main-input-field">
                             <input
                               type="tel"
                               id="AddressPhone_{{ form.id }}"
@@ -345,17 +345,17 @@
                               autocomplete="tel"
                               placeholder="{{ 'customer.addresses.phone' | t }}"
                             >
-                            <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label>
+                            {% comment %} <label for="AddressPhone_{{ form.id }}">{{ 'customer.addresses.phone' | t }}</label> {% endcomment %}
                           </div>
-                          <div>
+                          {% comment %} <div>
                             {{ form.set_as_default_checkbox }}
                             <label for="address_default_address_{{ form.id }}">
                               {{ 'customer.addresses.set_default' | t }}
                             </label>
-                          </div>
-                          <div>
-                            <button>{{ 'customer.addresses.update' | t }}</button>
-                            <button type="reset">{{ 'customer.addresses.cancel' | t }}</button>
+                          </div> {% endcomment %}
+                          <div class="actions-new-address">
+                            <button class="main-custom-button">{{ 'customer.addresses.update' | t }}</button>
+                            <button type="reset" class="main-custom-button-secondary">{{ 'customer.addresses.cancel' | t }}</button>
                           </div>
                         {%- endform -%}
                       </div>

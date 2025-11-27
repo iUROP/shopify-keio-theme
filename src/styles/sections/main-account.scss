@@ -213,6 +213,77 @@
     }
   }
 
+  .lists-addreses {
+      width: 100%;
+      text-align: left;
+
+      li {
+        margin-top: 30px;
+
+        h2 {
+          text-align: left;
+          color: var(--Colors-1000, var(--Colors-1000, #000));
+          font-family: var(--Family-Font, Nohemi);
+          font-size: var(--Typo-Body-XL, 25px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin: 0;
+          width: 100%;
+          text-align: left;
+        }
+        button {
+          position: relative;
+          height: var(--Buttons-D-H, auto);
+          padding: 8px 20px;
+          border-radius: var(--Corner-Extra-small, 4px);
+          color: var(--Colors-White, var(--Colors-white, #931E31));
+          font-family: var(--Family-Font---Body, Nohemi);
+          font-size: var(--Typo-Body-M, 16px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          border-radius: var(--Corner-Extra-small, 4px);
+          border: var(--Strokes-Small, 1px) solid var(--Colors-500, #931E31);
+          background: var(--Colors-white, #FFF);
+          cursor: pointer;
+          text-decoration: none;
+          -webkit-transition: all .45s cubic-bezier(.77,0,.175,1);
+          -moz-transition: all .45s cubic-bezier(.77,0,.175,1);
+          -o-transition: all .45s cubic-bezier(.77,0,.175,1);
+          transition: all .45s cubic-bezier(.77,0,.175,1);
+          margin-left: 0;
+          &:hover {
+            opacity: 0.8;
+          }
+
+          @media only screen and (max-width: 1024px) {
+            font-size: 14px;
+            height: 40px;
+            padding: 11px 24px;
+          }
+        }
+        form {
+          gap: 20px;
+          .field.main-input-field {
+            margin: 0 !important;
+          }
+          .actions-new-address {
+            display: block;
+            width: 100%;
+            flex: none;
+
+            button {
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+      .row-fields {
+        margin-top: 24px;
+      }
+  }
+
   h1 {
     color: var(--Colors-1000, var(--Colors-1000, #000));
     text-align: center;
@@ -320,7 +391,22 @@
             &.last-link {
               border-top: 1px solid #CDCDCD;
               border-radius: 0px;
-              padding-top: 24px;
+              margin-top: 10px;
+
+              &.active {
+                border: 0px;
+                position: relative;
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  top: -14px;
+                  height: 1px;
+                  background-color: #CDCDCD;
+                  left: 0px;
+                  width: 100%;
+                }
+              }
             }
           }
         }

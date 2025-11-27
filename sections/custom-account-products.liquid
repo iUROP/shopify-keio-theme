@@ -60,14 +60,14 @@
                                       <div>Importe de renovación</div>
                                       <div>{{ order.total_price | money }}</div>
                                     </div>
-                                    <div class="order-items-item-body-inner-summary">
+                                    {% comment %} <div class="order-items-item-body-inner-summary">
                                       <div>Método de pago</div>
                                       <div>{{ order.payment_gateway_names | join: ', ' }}</div>
-                                    </div>
+                                    </div> {% endcomment %}
                                   </div>
 
                                   <div class="order-items-item-body-actions">
-                                    <a href="https://apps.orderprinterpro.com/a/print/{{ shop.permanent_domain }}/{{ order.id }}?document_type=invoice" class="main-custom-button">Descargar factura</a>
+                                    <a target="_blank" href="{{ shop.url }}/apps/download-pdf/orders/6e2db94915deb891c639/{{ order.id | times: 1536 }}/{{ order.name | handleize }}.pdf" class="main-custom-button">Descargar factura</a>
                                   </div>
                                 </div>
                               </div>
