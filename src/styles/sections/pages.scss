@@ -1651,7 +1651,8 @@ body.template-customers-addresses,
 body.template-page-purchased-product,
 body.template-page-support,
 body.template-customers-activate_account,
-body.template-customers-reset_password {
+body.template-customers-reset_password,
+body.template-page-purchased-products {
   .main-custom-footer {
     z-index: 5;
     margin-top: -20px;
@@ -1705,9 +1706,6 @@ body.template-page-affiliates {
         @media only screen and (max-width: 1024px) {
           width: 100%;
         }
-      }
-      .global-color-link {
-        display: none !important;
       }
     }
   }

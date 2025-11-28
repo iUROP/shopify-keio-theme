@@ -689,6 +689,11 @@
                           line-height: 12px;
                           border-radius: var(--Corner-Full, 10000px);
                           background: #C2EEB4;
+
+                          &.cancelled {
+                            background: var(--Colors-200, #EED2D2);
+                            color: var(--Colors-500, var(--Colors-500, #931E31));
+                          }
                         }
                         button {
                           position: absolute;
