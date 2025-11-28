@@ -551,7 +551,8 @@
       "shipping": {
         "shipping_method_recurring_shipments_group_title": {
           "many": "Envío",
-          "other": "Envío"
+          "other": "Envío",
+          "one": "Envío"
         }
       }
     }
