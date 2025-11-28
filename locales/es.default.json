@@ -550,7 +550,8 @@
     "checkout": {
       "shipping": {
         "shipping_method_recurring_shipments_group_title": {
-          "many": "Envío"
+          "many": "Envío",
+          "other": "Envío"
         }
       }
     }
