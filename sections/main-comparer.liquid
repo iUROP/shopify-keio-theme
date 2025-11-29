@@ -146,6 +146,7 @@
             megas: '{{ rate.megas }}',
             minutos: '{{ rate.minutos }}',
             datos_moviles: '{{ rate.datos_moviles }}',
+            product: '{{ rate.producto_relacionado.value.handle }}',
 
             characteristics: [
               {% for item in rate.caracteristicas.value %}
@@ -214,7 +215,7 @@
           $.each(uniqueByCompany, function(index, item) {
             htmLInsert += `
               <div class="main-custom-comparer-canvas__results--item is-${item.compania[0]}" rel-company="${item.compania[0]}" rel-megas="${item.megas}" rel-minutos="${item.minutos}" rel-datos_moviles="${item.datos_moviles}">
-                <a href="/#" class="main-custom-button">Contratar ahora</a>
+                <a href="/products/${item.product}" class="main-custom-button">Contratar ahora</a>
                 <div class="main-custom-comparer-canvas__results--item__heading">
                   <h2>${item.nombre}</h2>
                   <div>
@@ -236,7 +237,7 @@
             }
             htmLInsert += `
                     </ul>
-                    <a class="anchor" href="/#">Ver más detalles</a>
+                    <a class="anchor" href="/products/${item.product}">Ver más detalles</a>
                   </div>
                 </div>
               </div>
