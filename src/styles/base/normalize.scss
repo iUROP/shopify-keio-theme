@@ -1102,6 +1102,10 @@ html, body {
         line-height: 24px;
       }
     }
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
     button {
       background: transparent;
       border: 0px;

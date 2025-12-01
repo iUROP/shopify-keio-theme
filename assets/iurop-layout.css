@@ -1431,6 +1431,10 @@ html .main-custom-qty button.more, body .main-custom-qty button.more {
   font-weight: 300;
   line-height: 24px;
 }
+.global-search form input[type=search]::-webkit-search-decoration,
+.global-search form input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
 .global-search form button {
   background: transparent;
   border: 0px;
@@ -2611,7 +2615,7 @@ i-minicart .i-minicart-container__overlay.open {
 
 .search-overlay {
   position: fixed;
-  top: 0px;
+  top: 122px;
   left: 0px;
   right: 0px;
   bottom: 0px;
@@ -2619,6 +2623,11 @@ i-minicart .i-minicart-container__overlay.open {
   z-index: 3;
   visibility: hidden;
   opacity: 0;
+}
+@media only screen and (max-width: 1024px) {
+  .search-overlay {
+    top: 70px;
+  }
 }
 
 .float-whatsapp {

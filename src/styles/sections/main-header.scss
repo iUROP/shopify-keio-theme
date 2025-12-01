@@ -184,7 +184,7 @@
 
 .search-overlay {
   position: fixed;
-  top: 0px;
+  top: 122px;
   left: 0px;
   right: 0px;
   bottom: 0px;
@@ -192,6 +192,10 @@
   z-index: 3;
   visibility: hidden;
   opacity: 0;
+
+  @media only screen and (max-width: 1024px) {
+    top: 70px;
+  }
 }
 
 .float-whatsapp {
