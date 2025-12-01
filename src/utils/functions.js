@@ -423,10 +423,30 @@ document.addEventListener('click', function(event) {
   const fieldset = event.target.closest('.open-search');
   if (!fieldset) return;
 
-  console.log("clcik to open search", fieldset.closest('.main-custom-header'))
+  fieldset.closest('body').classList.toggle('search-is-open');
   fieldset.closest('.main-custom-header').querySelector('.global-search').classList.toggle('active');
   fieldset.closest('.main-custom-header').classList.toggle('search-open');
 });
+
+
+document.addEventListener('click', function(event) {
+  const fieldset = event.target.closest('.search-overlay');
+  if (!fieldset) return;
+
+  fieldset.closest('body').classList.remove('search-is-open');
+  fieldset.closest('.main-custom-header').querySelector('.global-search').classList.toggle('active');
+  fieldset.closest('.main-custom-header').classList.toggle('search-open');
+});
+document.addEventListener('click', function(event) {
+  const fieldset = event.target.closest('.close-search-button');
+  if (!fieldset) return;
+
+  fieldset.closest('body').classList.remove('search-is-open');
+  fieldset.closest('.main-custom-header').querySelector('.global-search').classList.toggle('active');
+  fieldset.closest('.main-custom-header').classList.toggle('search-open');
+});
+
+
 
 
 

@@ -1375,10 +1375,16 @@ html .main-custom-qty button.more, body .main-custom-qty button.more {
   position: absolute;
   left: 0px;
   right: 0px;
-  z-index: 2;
+  z-index: 4;
   width: 700px;
   margin: auto;
   display: none;
+}
+.global-search .close-search-button {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 1024px) {
   .global-search {
@@ -1429,6 +1435,21 @@ html .main-custom-qty button.more, body .main-custom-qty button.more {
   position: absolute;
   right: 18px;
   top: 16px;
+}
+
+body.search-is-open {
+  overflow: hidden;
+}
+
+body.search-is-open .search-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+body.search-is-open svg {
+  display: none;
+}
+body.search-is-open .close-search-button {
+  display: block !important;
 }
 
 .shopify-policy__container {
@@ -2583,6 +2604,18 @@ i-minicart .i-minicart-container__overlay.open {
 }
 .main-custom-header__bottom--container__list--item.level-2 a {
   color: var(--Colors-500, var(--Colors-500, #931E31));
+}
+
+.search-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 3;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .float-whatsapp {
