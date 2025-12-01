@@ -66,10 +66,13 @@
 {% assign product_count = 0 %}
 
 {% for result in search.results %}
+
   {% if result.object_type == 'product' %}
     {% unless result.handle == 'activacion-express' %}
       {% unless result.handle == 'multi-sim' %}
-        {% assign product_count = product_count | plus: 1 %}
+        {% unless result.handle == 'proteccion-de-linea' %}
+          {% assign product_count = product_count | plus: 1 %}
+        {% endunless %}
       {% endunless %}
     {% endunless %}
   {% endif %}
