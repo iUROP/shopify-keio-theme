@@ -618,6 +618,9 @@ html .main-global-button, body .main-global-button {
 html .main-global-button:hover, body .main-global-button:hover {
   opacity: 0.8;
 }
+html .main-global-button.no-link, body .main-global-button.no-link {
+  text-decoration: none !important;
+}
 html .main-global-title-section, body .main-global-title-section {
   color: #000;
   text-align: center;

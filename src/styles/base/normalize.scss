@@ -242,6 +242,10 @@ html, body {
     &:hover {
       opacity: 0.8;
     }
+
+    &.no-link {
+      text-decoration: none !important;
+    }
   }
 
   .main-global-title-section {
