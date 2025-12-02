@@ -105,6 +105,18 @@
               </svg>
             </button>
           </div>
+
+          {% assign shipping_variant = product.metafields.custom.servicio_de_envio.value %}
+          {% assign installation_variant = product.metafields.custom.servicio_de_instalacion.value %}
+
+          {% if shipping_variant %}
+            <input id="shipping_variant" value="{{ shipping_variant.id }}" type="hidden" />
+          {% endif %}
+          {% if installation_variant %}
+            <input id="installation_variant" value="{{ installation_variant.id }}" type="hidden" />
+          {% endif %}
+
+
           <button class="product-form__submit_v2">
             Agregar al carrito <strong class="print-current-price"></strong>
           </button>

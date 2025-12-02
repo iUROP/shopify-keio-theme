@@ -1431,9 +1431,15 @@ html .main-custom-qty button.more, body .main-custom-qty button.more {
   font-weight: 300;
   line-height: 24px;
 }
-.global-search form input[type=search]::-webkit-search-decoration,
-.global-search form input[type=search]::-webkit-search-cancel-button {
+.global-search form input[type=search] {
   -webkit-appearance: none;
+  appearance: none;
+}
+.global-search form input[type=search]::-webkit-search-decoration,
+.global-search form input[type=search]::-webkit-search-cancel-button,
+.global-search form input[type=search]::-webkit-search-results-button,
+.global-search form input[type=search]::-webkit-search-results-decoration {
+  display: none !important;
 }
 .global-search form button {
   background: transparent;

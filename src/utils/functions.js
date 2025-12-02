@@ -122,6 +122,8 @@ window.Permalink = function() {
         method: "GET"
       })
 
+      removeShipping()
+
       resolve(await request.json())
     })
   }
@@ -212,6 +214,19 @@ window.Permalink = function() {
     });
   };
 
+  const resetCart = async function() {
+    return new Promise(async (resolve) => {
+
+      const request = await fetch('/cart/clear.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+      });
+
+      resolve(await request.json())
+      reactive();
+    });
+  };
+
   const updateNote = async function() {
 
     return new Promise((resolve) => {
@@ -250,6 +265,18 @@ window.Permalink = function() {
         message: 'Cart is updated'
       }
     }))
+  }
+
+  const removeShipping = async function() {
+    const cart = await Permalink.getCart()
+    if (cart) {
+      if (cart.item_count == 1) {
+        const isShipping = cart.items.find((item) => (item.variant_id == 56023547871563 || item.variant_id == 56023553245515 || item.variant_id == 56023554457931))
+        if (isShipping) {
+          Permalink.resetCart()
+        }
+      }
+    }
   }
 
   const openMenu = function() {
@@ -366,6 +393,7 @@ window.Permalink = function() {
     updateItems,
     updateQty,
     clearCart,
+    resetCart,
     updateNote,
     updateAttributes,
     removeItems,
@@ -445,9 +473,6 @@ document.addEventListener('click', function(event) {
   fieldset.closest('.main-custom-header').querySelector('.global-search').classList.toggle('active');
   fieldset.closest('.main-custom-header').classList.toggle('search-open');
 });
-
-
-
 
 
 document.addEventListener('click', function(event) {
