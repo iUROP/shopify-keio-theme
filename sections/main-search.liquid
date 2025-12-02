@@ -71,7 +71,13 @@
     {% unless result.handle == 'activacion-express' %}
       {% unless result.handle == 'multi-sim' %}
         {% unless result.handle == 'proteccion-de-linea' %}
-          {% assign product_count = product_count | plus: 1 %}
+          {% unless result.handle == 'servicio-de-envio' %}
+            {% unless result.handle == 'servicio-de-instalacion-fibra-600' %}
+              {% unless result.handle == 'servicio-de-instalacion-fibra-1000' %}
+                {% assign product_count = product_count | plus: 1 %}
+              {% endunless %}
+            {% endunless %}
+          {% endunless %}
         {% endunless %}
       {% endunless %}
     {% endunless %}
