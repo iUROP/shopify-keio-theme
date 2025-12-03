@@ -769,8 +769,11 @@
           addons.forEach(variantId => {
             let obj = {
               id: Number(variantId),
-              quantity: 1,
-              selling_plan: 690050433355
+              quantity: 1
+            }
+
+            if (Number(variantId) != 55889935270219) {
+              obj['selling_plan'] = 690050433355
             }
             
             map.push(obj)

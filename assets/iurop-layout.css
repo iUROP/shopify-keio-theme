@@ -1458,7 +1458,7 @@ body.search-is-open .search-overlay {
   visibility: visible;
   opacity: 1;
 }
-body.search-is-open svg {
+body.search-is-open .main-custom-header__top--container svg {
   display: none;
 }
 body.search-is-open .close-search-button {
@@ -1557,6 +1557,11 @@ body.search-is-open .close-search-button {
     padding: 36px 16px;
     padding-bottom: 88px;
   }
+}
+
+body.template-page-distributors .main-hero-title__banner--frame p {
+  width: 690px;
+  max-width: 100%;
 }
 
 .shopify-payment-button__more-options,
@@ -2621,7 +2626,7 @@ i-minicart .i-minicart-container__overlay.open {
 
 .search-overlay {
   position: fixed;
-  top: 122px;
+  top: 121px;
   left: 0px;
   right: 0px;
   bottom: 0px;

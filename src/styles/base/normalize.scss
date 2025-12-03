@@ -1134,9 +1134,12 @@ body.search-is-open {
     opacity: 1;
   }
 
-  svg {
-    display: none;
+  .main-custom-header__top--container {
+    svg {
+      display: none;
+    }
   }
+  
   .close-search-button {
     display: block !important;
   }
@@ -1229,6 +1232,14 @@ body.search-is-open {
     @media only screen and (max-width: 1024px) {
       padding: 36px 16px;
       padding-bottom: 88px;
+    }
+  }
+}
+body.template-page-distributors {
+  .main-hero-title__banner--frame {
+    p {
+      width: 690px;
+      max-width: 100%;
     }
   }
 }
