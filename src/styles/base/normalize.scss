@@ -790,6 +790,25 @@ html, body {
   padding: 0px;
   text-decoration: underline;
   cursor: pointer;
+
+  &.hightliht {
+    position: relative;
+    top: -2px;
+    margin-left: 4px;
+    color: var(--Colors-500, var(--Colors-500, #931E31));
+    font-family: var(--Family-Font---Body, Nohemi);
+    font-size: var(--Typo-Body-M, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+
+    @media only screen and (max-width: 1024px) {
+      display: block;
+      margin-left: 0px;
+      top: auto;
+      margin-bottom: 12px;
+    }
+  }
 }
 
 .global-color-text {

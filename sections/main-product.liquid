@@ -72,6 +72,10 @@
                 <div class="custom-product-reviews">
                   {% render 'review-star' star: 5 %}
                   <span>(25)</span>
+
+                  <a href="/pages/comparador-de-tarifas" class="global-color-link hightliht">
+                    Comparar tarifas y reseñas
+                  </a>
                 </div>
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -180,9 +184,6 @@
                       </svg>
                       Revisa tu email después de comprar para completar tu contratación
                     </p>
-                    <a href="/pages/comparador-de-tarifas" class="global-color-link hightliht">
-                      Comparar tarifas y reseñas
-                    </a>
                   </div>
                 {%- endif -%}
               {%- when 'sku' -%}
