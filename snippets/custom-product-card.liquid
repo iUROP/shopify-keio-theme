@@ -3,6 +3,7 @@
   {% assign characteristics = product.metafields.custom.grupo_de_caracteristicas.value %}
 
   <div class="main-custom-product-card--inner">
+
     {% if product.tags contains "Oferta" %}
       <span class="main-custom-product-card--inner__tag-offer">¡Oferta!</span>
     {% endif %}
@@ -12,24 +13,40 @@
     <h3>
       {{ product.title }}
     </h3>
-    <div class="main-custom-product-card--inner__desc">
-      <ul>
-        {% for characteristic in characteristics %}
-          <li>
-            {% if characteristic.icono != blank %}
-              <img src="{{ characteristic.icono | image_url: width: 24 }}" />
-            {% endif %}
-            {{ characteristic.titulo }}
-          </li>
-        {% endfor %}
-      </ul>
-      <a href="{{ product.url }}" class="main-custom-link-primary">Ver más detalles</a>
-    </div>
-    <div class="main-custom-product-card--inner__actions">
-      <div>
-        {{ product.price | money }}<span>/año</span>
+    {% if custom_product %}
+      <div class="custom-product-image">
+        <img src="{{ product.featured_image | img_url: '600x' }}" alt="{{ product.title }}">
       </div>
-      <a href="{{ product.url }}" class="main-custom-button is-primary">Contratar</a>
+    {% endif %}
+    {% unless custom_product %}
+      <div class="main-custom-product-card--inner__desc">
+        <ul>
+          {% for characteristic in characteristics %}
+            <li>
+              {% if characteristic.icono != blank %}
+                <img src="{{ characteristic.icono | image_url: width: 24 }}" />
+              {% endif %}
+              {{ characteristic.titulo }}
+            </li>
+          {% endfor %}
+        </ul>
+        <a href="{{ product.url }}" class="main-custom-link-primary">Ver más detalles</a>
+      </div>
+    {% endunless %}
+
+    <div class="main-custom-product-card--inner__actions">
+      {% if custom_product %}
+        <div>
+          {{ product.price | money }}<span></span>
+        </div>
+        <a href="{{ product.url }}" class="main-custom-button is-primary">Comprar</a>
+      {% else %}
+        <div>
+          {{ product.price | money }}<span>/año</span>
+        </div>
+        <a href="{{ product.url }}" class="main-custom-button is-primary">Contratar</a>
+      {% endif %}
+
     </div>
   </div>
 </div>

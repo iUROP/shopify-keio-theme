@@ -36,7 +36,12 @@
   }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
+{% assign is_custom_product = false %}
+{% unless collection.handle == 'fibra' or collection.handle == 'movil' or collection.handle == 'fibra-y-movil' or collection.handle == 'best-sellers' or collection.handle == 'add-ons' %}
+  {% assign is_custom_product = true %}
+{% endunless %}
+
+<div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }} {% if is_custom_product %} is-custom-product-collection{% endif %}">
   {%- paginate collection.products by section.settings.products_per_page -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
@@ -137,8 +142,25 @@
             </div>
           </div>
         {%- else -%}
+          {% if is_custom_product %}
+            <div class="collection-filters">
+              <h3>Categorias</h3>
+              <ul>
+                <li class="{% if collection.handle == 'all' %}active{% endif %}">
+                  <a class="main-custom-link-primary" href="{{ routes.all_products_collection_url }}">Todos</a>
+                </li>
+                {% for coll in collections %}
+                  {% if coll.all_products_count > 0 %}
+                    <li class="{% if collection.handle == coll.handle %}active{% endif %}">
+                      <a class="main-custom-link-primary" href="{{ coll.url }}">{{ coll.title }}</a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          {% endif %}
           <div
-            class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %}"
+            class="collection{% if section.settings.filter_type != 'vertical' %} page-width{% endif %} collection-grid"
           >
             <div class="loading-overlay gradient"></div>
             <ul
@@ -151,13 +173,33 @@
               "
             >
               {% assign skip_card_product_styles = false %}
+
+              {%- assign blocked_collections = "fibra,movil,fibra-y-movil,best-sellers,add-ons" | split: "," -%}
+
               {%- for product in collection.products -%}
-                {% assign lazy_load = false %}
+
+                {%- if collection.handle == 'all' -%}
+                  {%- assign skip_product = false -%}
+
+                  {%- for c in product.collections -%}
+                    {%- if blocked_collections contains c.handle -%}
+                      {%- assign skip_product = true -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+
+                  {%- if skip_product -%}
+                    {%- continue -%}
+                  {%- endif -%}
+                {%- endif -%}
+
+                {%- assign lazy_load = false -%}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-                {% render 'custom-product-card' product: product %}
+
+                {% render 'custom-product-card' product: product, custom_product: is_custom_product %}
                 {%- assign skip_card_product_styles = true -%}
+
               {%- endfor -%}
             </ul>
 
