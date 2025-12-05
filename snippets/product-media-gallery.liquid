@@ -3,23 +3,26 @@
 
 <div class="product__media-wrapper-container">
 
-  <div class="containerToltip">
-    <div class="product__media-wrapper-master--tooltip">
-      <div class="product__media-wrapper-master--tooltip__heading">{{ product.title }}</div>
-      <div class="product__media-wrapper-master--tooltip__features">
-        <ul>
-          {% for characteristic in characteristics %}
-            <li>
-              {% if characteristic.icono != blank %}
-                <img src="{{ characteristic.icono | image_url: width: 24 }}" />
-              {% endif %}
-              {{ characteristic.titulo }}
-            </li>
-          {% endfor %}
-        </ul>
+  {% unless is_custom_product %}
+    <div class="containerToltip">
+      <div class="product__media-wrapper-master--tooltip">
+        <div class="product__media-wrapper-master--tooltip__heading">{{ product.title }}</div>
+        <div class="product__media-wrapper-master--tooltip__features">
+          <ul>
+            {% for characteristic in characteristics %}
+              <li>
+                {% if characteristic.icono != blank %}
+                  <img src="{{ characteristic.icono | image_url: width: 24 }}" />
+                {% endif %}
+                {{ characteristic.titulo }}
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  {% endunless %}
+
 
   <div class="product__media-wrapper-master gallery-slick">
     {% for image in product.images %}
