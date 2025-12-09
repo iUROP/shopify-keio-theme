@@ -150,7 +150,13 @@
                   <a class="main-custom-link-primary" href="{{ routes.all_products_collection_url }}">Todos</a>
                 </li>
                 {% for coll in collections %}
-                  {% if coll.all_products_count > 0 %}
+
+                  {% assign hidde_link = false %}
+                  {% unless coll.handle == 'fibra' or coll.handle == 'movil' or coll.handle == 'fibra-y-movil' or coll.handle == 'best-sellers' or coll.handle == 'add-ons' or coll.handle == 'black-friday' or coll.handle == 'fibra-1' or coll.handle == 'fibra-y-movil-1' or coll.handle == 'movil-1' or coll.handle == 'keio-energy' or coll.handle == 'shop' %}
+                    {% assign hidde_link = true %}
+                  {% endunless %}
+
+                  {% if coll.all_products_count > 0 and hidde_link %}
                     <li class="{% if collection.handle == coll.handle %}active{% endif %}">
                       <a class="main-custom-link-primary" href="{{ coll.url }}">{{ coll.title }}</a>
                     </li>
