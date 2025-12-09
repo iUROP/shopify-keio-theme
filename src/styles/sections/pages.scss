@@ -1331,6 +1331,13 @@ body.template-collection {
               object-fit: contain;
             }
           }
+          .main-custom-product-card--inner h3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         }
       }
     }

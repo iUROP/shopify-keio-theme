@@ -37,7 +37,7 @@
 {%- endstyle -%}
 
 {% assign is_custom_product = false %}
-{% unless collection.handle == 'fibra' or collection.handle == 'movil' or collection.handle == 'fibra-y-movil' or collection.handle == 'best-sellers' or collection.handle == 'add-ons' %}
+{% unless collection.handle == 'fibra' or collection.handle == 'movil' or collection.handle == 'fibra-y-movil' or collection.handle == 'best-sellers' or collection.handle == 'add-ons' or collection.handle == 'black-friday' or collection.handle == 'fibra-1' or collection.handle == 'fibra-y-movil-1' or collection.handle == 'movil-1' or collection.handle == 'keio-energy' or collection.handle == 'shop' %}
   {% assign is_custom_product = true %}
 {% endunless %}
 

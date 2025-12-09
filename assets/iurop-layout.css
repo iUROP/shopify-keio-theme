@@ -9454,6 +9454,13 @@ body.template-collection .is-custom-product-collection .product-grid-container .
   height: 100%;
   object-fit: contain;
 }
+body.template-collection .is-custom-product-collection .product-grid-container .collection-grid .main-custom-product-card .main-custom-product-card--inner h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 body.template-search .template-search .template-search__header h1 {
   color: var(--Colors-700, var(--Colors-700, #000));
