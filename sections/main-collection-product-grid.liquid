@@ -179,8 +179,7 @@
               "
             >
               {% assign skip_card_product_styles = false %}
-
-              {%- assign blocked_collections = "fibra,movil,fibra-y-movil,best-sellers,add-ons" | split: "," -%}
+              {%- assign blocked_collections = "fibra,movil,fibra-y-movil,best-sellers,add-ons,black-friday,fibra-1,fibra-y-movil-1,movil-1,keio-energy" | split: "," -%}
 
               {%- for product in collection.products -%}
 
@@ -202,7 +201,7 @@
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}
                 {%- endif -%}
-
+                
                 {% render 'custom-product-card' product: product, custom_product: is_custom_product %}
                 {%- assign skip_card_product_styles = true -%}
 
