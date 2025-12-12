@@ -9393,7 +9393,7 @@ body.template-collection .is-custom-product-collection .product-grid-container .
     display: flex;
   }
   body.template-collection .is-custom-product-collection .product-grid-container .toggle-filters span {
-    width: 24px;
+    width: 18px;
     height: 29px;
     display: inline-block;
     vertical-align: middle;
