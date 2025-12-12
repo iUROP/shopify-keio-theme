@@ -10053,6 +10053,10 @@ body.template-page-distributors .contratalo-form .main-custom-button {
     gap: var(--Space-1200, 37px) !important;
   }
 }
+body.toggle-active {
+  overflow: hidden;
+}
+
 .main-custom-product-card {
   position: relative;
   display: flex;

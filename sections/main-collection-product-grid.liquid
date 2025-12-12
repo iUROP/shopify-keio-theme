@@ -239,10 +239,13 @@
   $( window ).on( "ready", function() {
     $('.toggle-filters').on('click', function (event) {
       $('.collection-filters').addClass('active')
+      $('body').addClass('toggle-active')
+      $(window).scrollTop(0)
     });
 
     $('.close-categories').on('click', function (event) {
       $('.collection-filters').removeClass('active')
+      $('body').removeClass('toggle-active')
     });
     
   });
