@@ -143,8 +143,22 @@
           </div>
         {%- else -%}
           {% if is_custom_product %}
+            <div class="toggle-filters show-only-mobile">
+              <span>
+                <div></div>
+                <div></div>
+                <div></div>
+              </span>
+              Categorías
+            </div>
             <div class="collection-filters">
-              <h3>Categorias</h3>
+              <h3>Categorías</h3>
+              <button class="close-categories">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                  <rect x="0.708252" y="0.189941" width="16" height="1" transform="rotate(45 0.708252 0.189941)" fill="#1C1C1C"/>
+                  <rect width="16" height="1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 11.3137 0.199951)" fill="#1C1C1C"/>
+                </svg>
+              </button>
               <ul>
                 <li class="{% if collection.handle == 'all' %}active{% endif %}">
                   <a class="main-custom-link-primary" href="{{ routes.all_products_collection_url }}">Todos</a>
@@ -220,6 +234,21 @@
     {% render 'mask-arch' %}
   {%- endif -%}
 </div>
+
+<script>
+  $( window ).on( "ready", function() {
+    $('.toggle-filters').on('click', function (event) {
+      $('.collection-filters').addClass('active')
+    });
+
+    $('.close-categories').on('click', function (event) {
+      $('.collection-filters').removeClass('active')
+    });
+    
+  });
+
+
+</script>
 
 {% schema %}
 {
