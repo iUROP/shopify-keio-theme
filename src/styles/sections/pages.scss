@@ -1353,6 +1353,17 @@ body.template-collection {
         }
 
         .main-custom-product-card {
+          position: relative;
+
+          .custom-anchor-product {
+            position: absolute;
+            left: 0px;
+            width: 100%;
+            top: 0px;
+            height: 100%;
+            z-index: 3;
+            display: block;
+          }
           .custom-product-image {
             position: absolute;
             top: 97px;
