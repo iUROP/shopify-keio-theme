@@ -521,6 +521,16 @@
           infinite: false
         });
 
+        $('.main-custom-energy__content--products__list').slick({
+          slidesToShow: 1.1,
+          slidesToScroll: 1,
+          dots: false,
+          arrows: true,
+          centerMode: false,
+          infinite: false
+        });
+        
+
         setInterval(function() {
           if (!document.querySelector('.related-products .product-grid.slick-initialized')) {
             $('.related-products .product-grid').slick({
