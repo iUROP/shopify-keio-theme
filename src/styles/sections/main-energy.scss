@@ -243,6 +243,23 @@
         }
       }
     }
+    &--products {
+      margin-top: 96px;
+
+      &__list {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+
+        .main-custom-product-card {
+          width: calc(25% - 11px);
+
+          .main-custom-product-card--inner__desc ul {
+            height: 172px;
+          }
+        }
+      }
+    }
     &--table {
       display: flex;
       width: 100%;

@@ -108,6 +108,16 @@
         </div>
       </div>
 
+      <div class="main-custom-energy__content--products">
+        <div class="main-custom-energy__content--products__list">
+          {% assign energy_collection = collections['keio-energy'] %}
+
+          {% for product in energy_collection.products %}
+            {% render 'custom-product-card' product: product %}
+          {% endfor %}
+        </div>
+      </div>
+
       <div class="main-custom-energy__content--table">
         <h2>Por qué <span>Keio</span> es la mejor opción</h2>
         <div class="main-custom-table">
@@ -351,6 +361,11 @@
       "id": "logo_endesa",
       "label": "Logo endesa"
     },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Productos Energy"
+    }
   ],
   "presets": [
     {
