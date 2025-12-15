@@ -1671,6 +1671,9 @@ body.template-page-distributors .main-hero-title__banner--frame p {
   max-height: 100%;
   overflow: auto;
 }
+.limit-description-wrapper.is-expanded .limit-description-wrapper__description:after {
+  display: none !important;
+}
 .limit-description-wrapper.is-expanded .limit-description-wrapper__toggle .more {
   display: none;
 }
