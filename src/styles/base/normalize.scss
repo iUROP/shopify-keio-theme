@@ -1345,6 +1345,10 @@ body.template-page-distributors {
     margin-top: 32px;
     cursor: pointer;
 
+    span {
+      text-decoration: underline;
+    }
+
     .more {
       display: block;
     }

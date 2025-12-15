@@ -1658,6 +1658,9 @@ body.template-page-distributors .main-hero-title__banner--frame p {
   margin-top: 32px;
   cursor: pointer;
 }
+.limit-description-wrapper__toggle span {
+  text-decoration: underline;
+}
 .limit-description-wrapper__toggle .more {
   display: block;
 }
