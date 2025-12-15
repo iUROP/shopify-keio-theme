@@ -190,8 +190,42 @@
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
 
+                    {% if is_custom_product %}
+                      {% assign description_length = product.description | strip_html | size %}
+
+                      {% if description_length > 300 %}
+
+                        <div class="limit-description-wrapper">
+                          <div class="limit-description-wrapper__description">
+                            {{ product.description }}
+                          </div>
+                          <span 
+                            class="limit-description-wrapper__toggle main-custom-link-primary"
+                          >
+                            <span class="more">Ver más</span>
+                            <span class="less">Ver menos</span>
+                          </span>
+                        </div>
+
+                        <script>
+                          document.addEventListener('click', function (e) {
+                            const button = e.target.closest('.limit-description-wrapper__toggle');
+                            if (!button) return;
+
+                            document.querySelector('.limit-description-wrapper').classList.toggle('is-expanded');
+                          });
+                        </script>
+
+
+                      {% else %}
+                        {{ product.description }}
+                      {% endif %}
+
+                    {% else %}
+                      {{ product.description }}
+                    {% endif %}
+                    
                     {% unless is_custom_product %}
                       <button id="anchor-view-conditions" class="global-color-link">Ver condiciones</button>
                       <p class="global-color-disclaimer">

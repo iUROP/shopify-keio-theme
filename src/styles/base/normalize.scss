@@ -1320,3 +1320,51 @@ body.template-page-distributors {
     }
   }
 }
+
+.limit-description-wrapper {
+  &__description {
+    position: relative;
+    max-height: 300px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40px;
+      background: linear-gradient(transparent, white);
+    }
+  }
+  &__toggle {
+    margin: 20px auto;
+    width: 100%;
+    text-align: center;
+    display: block;
+    margin-top: 32px;
+    cursor: pointer;
+
+    .more {
+      display: block;
+    }
+    .less {
+      display: none;
+    }
+  }
+
+  &.is-expanded {
+    .limit-description-wrapper__description {
+      max-height: 100%;
+      overflow: auto;
+    }
+    .limit-description-wrapper__toggle {
+      .more {
+        display: none;
+      }
+      .less {
+        display: block;
+      }
+    }
+  }
+}

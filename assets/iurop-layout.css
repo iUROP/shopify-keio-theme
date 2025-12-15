@@ -1636,6 +1636,45 @@ body.template-page-distributors .main-hero-title__banner--frame p {
   display: block !important;
 }
 
+.limit-description-wrapper__description {
+  position: relative;
+  max-height: 300px;
+  overflow: hidden;
+}
+.limit-description-wrapper__description::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(transparent, white);
+}
+.limit-description-wrapper__toggle {
+  margin: 20px auto;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-top: 32px;
+  cursor: pointer;
+}
+.limit-description-wrapper__toggle .more {
+  display: block;
+}
+.limit-description-wrapper__toggle .less {
+  display: none;
+}
+.limit-description-wrapper.is-expanded .limit-description-wrapper__description {
+  max-height: 100%;
+  overflow: auto;
+}
+.limit-description-wrapper.is-expanded .limit-description-wrapper__toggle .more {
+  display: none;
+}
+.limit-description-wrapper.is-expanded .limit-description-wrapper__toggle .less {
+  display: block;
+}
+
 .slow_ani {
   -webkit-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
   -moz-transition: all 0.25s cubic-bezier(0.77, 0, 0.175, 1);
