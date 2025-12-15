@@ -1630,6 +1630,7 @@ body.template-page-distributors .main-hero-title__banner--frame p {
   content: "";
   position: absolute;
   top: -8px;
+  left: 47%;
 }
 .energy-tooltip:hover span {
   display: block !important;
