@@ -1267,3 +1267,55 @@ body.template-page-distributors {
 #shopify-buyer-consent {
   display: none !important;
 }
+
+.energy-tooltip {
+  position: relative;
+  display: inline-block !important;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-left: 5px;
+
+  span {
+    position: absolute !important;
+    border-radius: 4px !important;
+    background: var(--Colors-grey, #5C5E5C) !important;
+    box-shadow: var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-200), var(--sds-size-depth-0) var(--sds-size-depth-025) var(--sds-size-depth-100) var(--sds-size-depth-0) var(--sds-color-black-100) !important;
+    display: flex !important;
+    padding: var(--sds-size-space-200) var(--sds-size-space-300) !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: var(--sds-size-space-0) !important;
+    color: var(--Colors-White, var(--Colors-white, #FFF)) !important;
+    font-family: var(--Family-Font---Body, Nohemi) !important;
+    font-size: var(--Typo-Body-S, 12px) !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    line-height: 16px !important;
+    width: 280px;
+    text-align: center;
+    padding: 6px 8px !important;
+    box-sizing: border-box;
+    left: -133px;
+    z-index: 2;
+    top: 27px;
+    display: none !important;
+
+    &::before {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 12px solid #5C5E5C;
+      content: '';
+      position: absolute;
+      top: -8px;
+    }
+  }
+
+  &:hover {
+    span {
+      display: block !important;
+    }
+  }
+}

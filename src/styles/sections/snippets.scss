@@ -67,6 +67,14 @@
       height: 56px;
       min-height: 56px;
 
+      @media only screen and (min-width: 1500px) {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+
       @media only screen and (max-width: 1500px) {
         font-size: 25px;
         height: auto;
@@ -164,6 +172,22 @@
           line-height: 39px !important;
         }
       }
+    }
+  }
+
+  .custom-product-image {
+    position: absolute;
+    top: 97px;
+    left: 25px;
+    right: 25px;
+    bottom: 98px;
+    z-index: 1;
+    transform: scale(.8);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
   }
 }
