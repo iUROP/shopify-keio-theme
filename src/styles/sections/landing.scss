@@ -1,0 +1,245 @@
+.custom-landing-section {
+
+  .primary-logo {
+    position: absolute;
+    top: 37px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+  }
+  &__vieport {
+    position: relative;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    @media only screen and (max-width: 1024px) {
+      height: 100vh;
+
+      &.antena {
+        height: 86vh;
+      }
+    }
+
+    &--content {
+      z-index: 2;
+      position: relative;
+
+      .pre-button {
+        color: #FFF;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: var(--Family-Font---Body, Nohemi);
+        font-size: var(--Typo-Body-M, 16px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-transform: uppercase;
+        display: flex;
+        padding: var(--Space-300, 12px) var(--Space-400, 16px);
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: var(--Corner-Large-increased, 20px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: rgba(250, 250, 250, 0.20);
+        margin: 0 auto;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 13px;
+          padding: 8px 12px;
+        }
+      }
+
+      h1 {
+        color: #FFF;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: var(--Family-Font, Nohemi);
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 120%;
+        margin: 24px 0px;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 44px;
+          line-height: 120%;
+          margin-bottom: 10px;
+        }
+      }
+
+      .labels-list {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        opacity: 0.5;
+
+        @media only screen and (max-width: 1024px) {
+          gap: 4px;
+        }
+
+        span {
+          color: #FFF;
+          text-align: right;
+          leading-trim: both;
+          text-edge: cap;
+          font-family: var(--Family-Font, Nohemi);
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+
+          @media only screen and (max-width: 1024px) {
+            font-size: 10px;
+          }
+        }
+        div {
+          color: #FFF;
+          text-align: center;
+          leading-trim: both;
+          text-edge: cap;
+          font-family: var(--Family-Font, Nohemi);
+          font-size: var(--Typo-Body-XL, 25px);
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+
+          @media only screen and (max-width: 1024px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .date-list {
+        display: flex;
+        padding: 12px 32px;
+        align-items: flex-start;
+        gap: 44px;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.00);
+        background: linear-gradient(78deg, rgba(126, 24, 41, 0.15) -0.53%, rgba(118, 24, 40, 0.15) 102.46%);
+        backdrop-filter: blur(2px);
+        width: 324px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        margin-top: 48px;
+
+        @media only screen and (max-width: 1024px) {
+          width: 267px;
+        }
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 10px;
+
+          &.w-w {
+            width: 56px;
+          }
+
+          div {
+            &:nth-child(1) {
+              color: #FFF;
+              font-family: Nohemi;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+            }
+            &:nth-child(2) {
+              color: #FFF;
+              font-family: Nohemi;
+              font-size: 44px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 44px;
+              letter-spacing: -1.32px;
+
+              @media only screen and (max-width: 1024px) {
+                font-size: 32px;
+              }
+            }
+          }
+        }
+
+        & > span {
+          width: 0.5px;
+          height: 78px;
+          background: rgba(255, 255, 255, 0.50);
+        }
+      }
+
+      h2 {
+        color: #FFF;
+        font-family: Nohemi;
+        font-size: var(--Typo-H1, 49px);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 60.8px;
+        position: relative;
+        top: -10%;
+
+        @media only screen and (max-width: 1024px) {
+          font-size: 19px;
+          line-height: 35px;
+          padding: 0 12px;
+          top: -100%;
+        }
+      }
+    }
+
+    .last-gradient {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 20%;
+      background: rgba(0, 0, 0, 10);
+      background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=0);
+      z-index: 2;
+      display: block !important;
+    }
+  }
+
+  .bg-section-big {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    object-fit: cover;
+    z-index: 1;
+  }
+}
+
+body.template-index {
+  .main-custom-footer {
+    margin-top: 0 !important;
+    background: #000000;
+  }
+}
+
+footer.is-landing-footer {
+
+  @media only screen and (min-width: 1024px) {
+    justify-content: space-between;
+
+    .main-custom-footer--links {
+      width: 700px;
+    }
+  }
+
+}

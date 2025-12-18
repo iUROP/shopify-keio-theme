@@ -11,26 +11,31 @@
   "sections": {
     "main_custom_hero_9dTT7Y": {
       "type": "main-custom-hero",
+      "disabled": true,
       "name": "main-custom-hero",
       "settings": {}
     },
     "main_custom_marquee_qM8Bmc": {
       "type": "main-custom-marquee",
+      "disabled": true,
       "name": "main-custom-marquee",
       "settings": {}
     },
     "main_custom_banner_seo_6wiPkt": {
       "type": "main-custom-banner-seo",
+      "disabled": true,
       "name": "main-custom-banner-seo",
       "settings": {}
     },
     "main_custom_categories_EYp63D": {
       "type": "main-custom-categories",
+      "disabled": true,
       "name": "main-custom-categories",
       "settings": {}
     },
     "main_custom_product_list_eHBpz8": {
       "type": "main-custom-product-list",
+      "disabled": true,
       "name": "main-custom-product-list",
       "settings": {
         "title": "",
@@ -93,18 +98,23 @@
         "item_MdHbKr",
         "item_a8pi7y"
       ],
+      "disabled": true,
       "name": "main-custom-text-image",
       "settings": {
         "title": "Libertad total en tu conexión",
         "subtitle": "Conoce los beneficios de Keio",
         "image": "shopify://shop_images/banner-updated_1fa114f0-cba0-488e-b315-be4881cba407.png",
         "show_button": true,
+        "use_as_ancle": false,
         "button_text": "Contratar ahora",
-        "button_url": "shopify://collections/best-sellers"
+        "button_url": "shopify://collections/best-sellers",
+        "transparent_bg": false,
+        "show_bulletes": false
       }
     },
     "main_custom_simple_banner_GiiLUb": {
       "type": "main-custom-simple-banner",
+      "disabled": true,
       "name": "main-custom-simple-banner",
       "settings": {
         "isLast": false,
@@ -113,6 +123,7 @@
     },
     "main_custom_blog_feed_Fx6CNd": {
       "type": "main-custom-blog-feed",
+      "disabled": true,
       "name": "main-custom-blog-feed",
       "settings": {
         "custom_title": "",
@@ -144,9 +155,15 @@
       "block_order": [
         "instafeed_app_block_Jw4TDJ"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
+    },
+    "landing_section_reQxJp": {
+      "type": "landing-section",
+      "name": "iUROP landing",
+      "settings": {}
     }
   },
   "order": [
@@ -158,6 +175,7 @@
     "main_custom_text_image_8nWyBG",
     "main_custom_simple_banner_GiiLUb",
     "main_custom_blog_feed_Fx6CNd",
-    "1759955518a288ef11"
+    "1759955518a288ef11",
+    "landing_section_reQxJp"
   ]
 }
