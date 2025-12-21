@@ -208,7 +208,7 @@
       },
       "7615545993697021613": {
         "type": "shopify://apps/kommo/blocks/kommo_crm_plugin/fec83a15-018d-44d7-84c7-a37d127b1bc1",
-        "disabled": true,
+        "disabled": false,
         "settings": {}
       }
     }
