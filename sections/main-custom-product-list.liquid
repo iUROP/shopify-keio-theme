@@ -37,7 +37,7 @@
           {% endfor %}
         </div>
         <div class="main-custom-product-list__container--row energy">
-          {% for product in collection_keio_energy.products limit: 4 %}
+          {% for product in collection_keio_energy.products %}
             {% render 'custom-product-card' product: product %}
           {% endfor %}
         </div>
