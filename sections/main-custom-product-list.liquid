@@ -122,6 +122,15 @@
 
       $('.main-custom-product-list__container--filter button.packs-btn').click()
     }
+    
+    if (filter == 'energy') {
+      $('.main-custom-product-list__container--filter button').removeClass('active')
+      $('.main-custom-product-list__container--row').removeClass('active')
+
+      $('.main-custom-product-list__container--filter button.energy-btn').click()
+    }
+
+    
     if (filter == 'best') {
       $('.main-custom-product-list__container--filter button').removeClass('active')
       $('.main-custom-product-list__container--row').removeClass('active')
