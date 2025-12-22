@@ -296,6 +296,15 @@
 
     {{ 'iurop-layout.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'iurop-layout.js' | asset_url }}" defer></script>
+
+    <style>
+      @media only screen and (max-width: 1024px) {
+        .main-custom-product-list__container--filter {
+          gap: 0px;
+        }
+      }
+
+    </style>
   </head>
 
   <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} template-{{ template | replace: '.', '-' | replace: '/', '-' }}">
