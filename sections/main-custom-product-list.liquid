@@ -10,6 +10,7 @@
         {% assign collection_fibra = collections['fibra'] %}
         {% assign collection_movil = collections['movil'] %}
         {% assign collection_fibra_y_movil = collections['fibra-y-movil'] %}
+        {% assign collection_keio_energy = collections['keio-energy'] %}
         {% assign collection_best = collections['best-sellers'] %}
 
         <div class="main-custom-product-list__container--filter">
@@ -36,7 +37,7 @@
           {% endfor %}
         </div>
         <div class="main-custom-product-list__container--row energy">
-          {% for product in collection_fibra_y_movil.products %}
+          {% for product in collection_keio_energy.products limit: 4 %}
             {% render 'custom-product-card' product: product %}
           {% endfor %}
         </div>
