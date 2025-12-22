@@ -298,14 +298,17 @@
     <script src="{{ 'iurop-layout.js' | asset_url }}" defer></script>
 
     <style>
-      .custom-landing-section__vieport--content .pre-button {
-        line-height: 19px;
-        padding: var(--Space-300, 10px) var(--Space-400, 16px);
+      @media only screen and (min-width: 1025px) {
+        .custom-landing-section__vieport--content .pre-button {
+          line-height: 19px;
+          padding: var(--Space-300, 10px) var(--Space-400, 16px);
+        }
+        .custom-landing-section__vieport--content .labels-list {
+          align-items: center;
+          justify-content: center;
+        }
       }
-      .custom-landing-section__vieport--content .labels-list {
-        align-items: center;
-        justify-content: center;
-      }
+
       .date-list {
         color: var(--Colors-White, var(--Colors-white, #FFF));
         text-align: center;
