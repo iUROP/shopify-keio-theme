@@ -99,8 +99,11 @@
         "subtitle": "Conoce los beneficios de Keio",
         "image": "shopify://shop_images/banner-updated_1fa114f0-cba0-488e-b315-be4881cba407.png",
         "show_button": true,
+        "use_as_ancle": false,
         "button_text": "Contratar ahora",
-        "button_url": "shopify://collections/best-sellers"
+        "button_url": "shopify://collections/best-sellers",
+        "transparent_bg": false,
+        "show_bulletes": false
       }
     },
     "main_custom_simple_banner_GiiLUb": {
@@ -113,6 +116,7 @@
     },
     "main_custom_blog_feed_Fx6CNd": {
       "type": "main-custom-blog-feed",
+      "disabled": true,
       "name": "main-custom-blog-feed",
       "settings": {
         "custom_title": "",
