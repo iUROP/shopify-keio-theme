@@ -16,6 +16,7 @@
           <button class="fibra-btn active">Fibra</button>
           <button class="movil-btn">Móvil</button>
           <button class="packs-btn">Packs combinados</button>
+          <button class="energy-btn">Energy</button>
           <button class="best-btn">Best sellers</button>
         </div>
 
@@ -30,6 +31,11 @@
           {% endfor %}
         </div>
         <div class="main-custom-product-list__container--row fibra-y-movil">
+          {% for product in collection_fibra_y_movil.products %}
+            {% render 'custom-product-card' product: product %}
+          {% endfor %}
+        </div>
+        <div class="main-custom-product-list__container--row energy">
           {% for product in collection_fibra_y_movil.products %}
             {% render 'custom-product-card' product: product %}
           {% endfor %}
