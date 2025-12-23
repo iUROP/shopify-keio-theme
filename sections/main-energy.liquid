@@ -330,6 +330,55 @@
     });
 </script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contrataloForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+
+      const data = {
+        name: formData.get('contact[name]'),
+        phone: formData.get('contact[phone]'),
+        email: formData.get('contact[email]'),
+        codigo_postal: formData.get('contact[codigo_postal]'),
+        disponibilidad: formData.get('contact[disponibilidad]'),
+      };
+
+      const checkboxes = form.querySelectorAll('input[type="checkbox"]');
+      data.acepta_datos = checkboxes[0].checked;
+      data.factura_electronica = checkboxes[1].checked;
+      data.registro_app = checkboxes[2].checked;
+
+      console.log('Payload:', data);
+
+      try {
+        const response = await fetch('https://appwebhook.keiomobile.com/webhook/keio-energy-1', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (!response.ok) {
+          throw new Error('Error en el envío');
+        }
+
+        const result = await response.json();
+        console.log('response keio api:', result);
+
+        alert('Formulario enviado correctamente');
+
+      } catch (error) {
+        console.error(error);
+        alert('Hubo un error al enviar el formulario');
+      }
+    });
+  });
+</script>
+
 {% schema %}
 {
   "name": "main-custom-energy",
