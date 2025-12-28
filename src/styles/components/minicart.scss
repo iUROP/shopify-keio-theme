@@ -649,9 +649,15 @@ i-minicart {
                   margin-bottom: -6px !important;
 
                   @media only screen and (max-width: 1024px) {
-                    font-size: var(--Typo-Body-M, 12px) !important;
-                    line-height: 15px !important;
+                    font-size: 10px !important;
+                    line-height: 13px !important;
                     padding-right: 24px !important;
+                    display: -webkit-box !important;
+                    -webkit-line-clamp: 3 !important;
+                    line-clamp: 3 !important;
+                    -webkit-box-orient: vertical !important;
+                    overflow: hidden !important;
+                    text-overflow: ellipsis !important;
                   }
 
                 }

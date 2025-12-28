@@ -1070,7 +1070,7 @@ body.template-product {
       text-decoration: none;
 
       @media only screen and (max-width: 1024px) {
-        height: 170px;
+        height: 190px;
       }
 
       .thumbnail-upsell {
@@ -1081,7 +1081,7 @@ body.template-product {
         overflow: hidden;
 
         @media only screen and (max-width: 1024px) {
-          height: 80px;
+          height: 70px;
         }
         img {
           width: 100%;
@@ -1107,7 +1107,7 @@ body.template-product {
         flex-direction: column;
 
         @media only screen and (max-width: 1024px) {
-          height: 90px;
+          height: 120px;
           padding-right: 42px;
         }
 
@@ -1122,8 +1122,14 @@ body.template-product {
           text-decoration: none;
 
           @media only screen and (max-width: 1024px) {
-            font-size: 14px;
-            line-height: 20px;
+            font-size: 11px;
+            line-height: 14px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
         p {
