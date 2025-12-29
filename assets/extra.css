@@ -1,0 +1,6 @@
+body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
