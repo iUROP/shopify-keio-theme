@@ -3,6 +3,7 @@ body.template-product .custom-product-upsells .product-upsell-card .labels-upsel
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  font-size: var(--Typo-Body-M, 13px);
 }
 
 @media only screen and (max-width: 1024px) {
