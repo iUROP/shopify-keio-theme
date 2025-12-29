@@ -17,8 +17,14 @@
         "padding_bottom": 0
       }
     },
+    "main_links_zrhKbT": {
+      "type": "main-links",
+      "name": "main-links",
+      "settings": {}
+    }
   },
   "order": [
     "main",
+    "main_links_zrhKbT"
   ]
 }
