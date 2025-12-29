@@ -1,8 +1,12 @@
 body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
   display: -webkit-box;
-  -webkit-line-clamp: 1;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  padding-right: 32px;
+  height: 36px;
+  min-height: 36px;
+  line-height: 18px;
   font-size: var(--Typo-Body-M, 13px);
 }
 
