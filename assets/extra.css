@@ -14,4 +14,7 @@ body.template-product .custom-product-upsells .product-upsell-card .labels-upsel
   body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
     -webkit-line-clamp: 4;
   }
+  .main-custom-hero--container__texts--icons {
+    justify-content: center;
+  }
 }
