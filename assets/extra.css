@@ -67,4 +67,8 @@ body.template-product .custom-product-upsells .product-upsell-card .labels-upsel
   .template-blog .blog-page__posts .blog-page__posts--inner .blog-page__posts--inner__article {
     width: calc(100% - 0px);
   }
+
+  .template-blog .blog-page__posts--inner__article--image {
+    aspect-ratio: 2 / 2;
+  }
 }
