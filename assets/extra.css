@@ -43,6 +43,13 @@ body.template-product .custom-product-upsells .product-upsell-card .labels-upsel
   overflow: hidden;
 }
 
+.blog-page__posts--inner__article--labels div:nth-child(3) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 1024px) {
   body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
     -webkit-line-clamp: 4;
