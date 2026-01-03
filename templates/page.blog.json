@@ -14,12 +14,14 @@
       "blocks": {
         "blog_MPcjVJ": {
           "type": "blog",
+          "disabled": true,
           "settings": {
             "blog": "noticias-y-novedades"
           }
         },
         "blog_kq7AfQ": {
           "type": "blog",
+          "disabled": true,
           "settings": {
             "blog": "consejos-y-guias-1"
           }
@@ -27,7 +29,7 @@
         "blog_wpMtKd": {
           "type": "blog",
           "settings": {
-            "blog": "articulos"
+            "blog": "noticias"
           }
         }
       },
