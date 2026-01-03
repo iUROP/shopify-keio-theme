@@ -12,6 +12,7 @@ body.template-product .custom-product-upsells .product-upsell-card .labels-upsel
 
 .main-custom-blog-feed .main-custom-blog-feed__items--slider__post--thumnbail {
   min-height: 10px;
+  aspect-ratio: 2 / 1.9;
 }
 
 @media only screen and (max-width: 1024px) {
