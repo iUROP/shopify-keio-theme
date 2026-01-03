@@ -15,6 +15,13 @@ body.template-product .custom-product-upsells .product-upsell-card .labels-upsel
   aspect-ratio: 2 / 1.9;
 }
 
+.main-custom-blog-feed .main-custom-blog-feed__items--slider__post--labels__inner h2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 1024px) {
   body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
     -webkit-line-clamp: 4;
