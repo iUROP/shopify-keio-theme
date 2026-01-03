@@ -29,6 +29,13 @@ body.template-product .custom-product-upsells .product-upsell-card .labels-upsel
   overflow: hidden;
 }
 
+.template-page-blog .blog-page__posts .blog-page__posts--inner {
+  flex-wrap: wrap;
+}
+.template-page-blog .blog-page__posts .blog-page__posts--inner .blog-page__posts--inner__article {
+  width: calc(25% - 18px);
+}
+
 @media only screen and (max-width: 1024px) {
   body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
     -webkit-line-clamp: 4;
