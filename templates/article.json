@@ -49,7 +49,7 @@
       "name": "main-custom-blog-feed",
       "settings": {
         "custom_title": "Explora más artículos",
-        "blog": "noticias-y-novedades"
+        "blog": "noticias"
       }
     }
   },
