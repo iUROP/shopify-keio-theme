@@ -26,7 +26,7 @@
       <div class="main-custom-blog-feed__items--slider main-arrows">
 
         {% if section.settings.blog %}
-          {% for article in section.settings.blog.articles %}
+          {% for article in section.settings.blog.articles limit: 4 %}
             <div class="main-custom-blog-feed__items--slider__post">
               <div class="main-custom-blog-feed__items--slider__post--thumnbail">
                 <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
