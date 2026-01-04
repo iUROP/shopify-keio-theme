@@ -64,7 +64,13 @@ body.template-article .article-template .article-template__hero-adapt img {
 }
 
 html a.main-custom-button, body a.main-custom-button {
-  padding: 0 26px;
+  padding: 0 24px;
+}
+
+@media only screen and (min-width: 1025px) {
+  .main-custom-product-card--inner__actions>div {
+    font-size: var(--Typo-H3, 23px);
+  }
 }
 
 @media only screen and (max-width: 1024px) {
