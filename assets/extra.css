@@ -63,6 +63,10 @@ body.template-article .article-template .article-template__hero-adapt img {
   max-width: 100%;
 }
 
+html a.main-custom-button, body a.main-custom-button {
+  padding: 0 26px;
+}
+
 @media only screen and (max-width: 1024px) {
   body.template-product .custom-product-upsells .product-upsell-card .labels-upsell h3 {
     -webkit-line-clamp: 4;
