@@ -76,7 +76,7 @@ body.template-article .article-template .article-template__hero-adapt img {
   }
 
   .template-blog .blog-page__posts .blog-page__posts--inner .blog-page__posts--inner__article {
-    width: calc(100% - 0px);
+    width: calc(100% - 0px) !important;
   }
 
   .template-blog .blog-page__posts--inner__article--image {
