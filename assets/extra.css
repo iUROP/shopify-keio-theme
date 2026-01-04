@@ -86,4 +86,13 @@ body.template-article .article-template .article-template__hero-adapt img {
   .template-blog .blog-page__posts--inner__article--image {
     aspect-ratio: 2 / 2;
   }
+
+  .blog-page__posts--inner__article--image img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .blog-page__posts--inner__article--image {
+    aspect-ratio: 2 / 1.8;
+  }
 }
