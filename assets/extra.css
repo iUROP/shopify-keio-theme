@@ -15,6 +15,10 @@ body.template-product .custom-product-upsells .product-upsell-card .labels-upsel
   aspect-ratio: 2 / 1.9;
 }
 
+.main-custom-blog-feed__items--slider__post {
+  padding: 2px;
+}
+
 .main-custom-blog-feed .main-custom-blog-feed__items--slider__post--labels__inner h2 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
