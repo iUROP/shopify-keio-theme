@@ -1342,7 +1342,25 @@
         "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "Després de completar el pagament, rebràs un SMS de confirmació. Fes seguiment de la teva comanda usant l'aplicació Shop.",
         "order_status_payments_app_failed_pending_payment_payment": "No se't va cobrar la comanda. Torna a la cistella per revisar la comanda i pagar de nou.",
         "order_status_payments_app_failed_pending_payment_pick_up": "No se't va cobrar la comanda. Torna a la cistella per revisar la comanda i pagar de nou.",
-        "order_status_confirmed_order_local_pick_up": "Estem preparant la teva comanda."
+        "order_status_confirmed_order_local_pick_up": "Estem preparant la teva comanda.",
+        "title": "Gràcies per la teva compra!",
+        "confirmation_email_sent_text": "S'ha enviat un correu electrònic de confirmació a %{email}",
+        "return_to_store_link_label": "Seguir comprant",
+        "payment_information_title": "Informació de pagament",
+        "shipping_information_title": "Informació d'enviament",
+        "page_title": "Gràcies, %{display_name}!",
+        "page_title_no_name": "Gràcies!",
+        "cancelled_page_title": "Comanda cancel·lada",
+        "customer_information_title": "Detalls de la comanda",
+        "contact_information_title": "Informació de contacte",
+        "billing_address_title": "Adreça de facturació",
+        "shipping_address_title": "Direcció d'enviament",
+        "shipping_address_map_title": "El mapa de Google mostra la ubicació exacta de l'adreça d'enviament: %{address}",
+        "payment_method_title": "Mètodes de pagament",
+        "shipping_method_title": "Mètode d'enviament",
+        "tracking_number": "Número de seguiment:",
+        "company_tracking_number": "Número de seguiment de %{company}:",
+        "estimated_arrival": "Data de lliurament estimada:"
       },
       "review": {
         "review_title": "Completa la teva comanda",
@@ -1579,7 +1597,31 @@
       },
       "shipping_errors": {
         "shipping_method": "Les opcions d'enviament de la comanda han canviat. Reviseu la vostra selecció.",
-        "shipping_method_not_available": "La teva cistella s'ha actualitzat i els articles que vas afegir no es poden enviar a la teva adreça. Elimina els articles per completar la comanda."
+        "shipping_method_not_available": "La teva cistella s'ha actualitzat i els articles que vas afegir no es poden enviar a la teva adreça. Elimina els articles per completar la comanda.",
+        "shipping_method_not_available_generic": {
+          "one": "La comanda no es pot enviar a ladreça seleccionada. Revisa la teva adreça per comprovar que sigui correcta i intenta-ho de nou, o bé en selecciona una altra.",
+          "other": "Alguns articles de la cistella no es poden enviar a l'adreça que heu indicat. Revisa la teva adreça per comprovar que sigui correcta i intenta-ho de nou, o bé en selecciona una altra.",
+          "many": "Alguns articles de la cistella no es poden enviar a l'adreça que heu indicat. Revisa la teva adreça per comprovar que sigui correcta i intenta-ho de nou, o bé en selecciona una altra."
+        },
+        "shipping_method_not_available_updated": {
+          "one": "L'article que heu afegit no es pot enviar a la vostra ubicació. Elimina'l per completar el pagament, o posa't en contacte amb la botiga.",
+          "other": "Un o més articles que vas afegir no es poden enviar a la teva ubicació. Elimina'ls per completar el pagament, o posa't en contacte amb la botiga.",
+          "many": "Un o més articles que vas afegir no es poden enviar a la teva ubicació. Elimina'ls per completar el pagament, o posa't en contacte amb la botiga."
+        },
+        "payment_method_not_supported": "No podeu utilitzar aquesta forma de pagament a %{country}. Utilitza una altra forma de pagament per fer l'enviament a aquest país.",
+        "empty_state": "Introduïu la vostra adreça d'enviament per veure els mètodes disponibles.",
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Els articles del carretó no compleixen amb els requisits de preu o pes per qualificar per a l'enviament. Modifica el carret i torna-ho a intentar.",
+        "title": "L'enviament no està disponible",
+        "invalid_selected_address": "L'adreça d'enviament seleccionada no és vàlida",
+        "invalid_selected_address_with_update_link": "L'adreça d'enviament seleccionada no és vàlida. %{update_address_link} o seleccioneu una adreça diferent",
+        "unavailable_selected_address": "No hi ha cap enviament disponible per a l'adreça seleccionada",
+        "unavailable_selected_address_for_region": "No hi ha servei d'enviament disponible per a {{region}} . Selecciona una adreça diferent per continuar",
+        "unavailable_addresses_only_countries": "La teva comanda només es pot enviar a {{countriesList}} . Per continuar, afegiu una adreça nova.",
+        "must_use_address_banner": {
+          "one": "La vostra comanda només es pot enviar a l'adreça de %{name}.",
+          "other": "La vostra comanda només es pot enviar a una d'aquestes adreces.",
+          "many": "La vostra comanda només es pot enviar a una d'aquestes adreces."
+        }
       },
       "shop_policies": {
         "refund_policy": "Política de reemborsament",
@@ -1663,6 +1705,83 @@
         "credit_card_expires_on_notice": "Venç el %{month}/%{year}",
         "express_payment_gateway_label": "Express",
         "billing_address_title": "Adreça de facturació"
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Pagament exprés",
+        "show_more_options": "Mostra més opcions",
+        "hide_more_options": "Amagar més opcions",
+        "or_pay_another_way": "O paga d'una altra manera",
+        "or_check_out_another_way": "O completa el procés de pagament d'una altra manera",
+        "or_pay_with_credit_card": "O paga amb targeta de crèdit"
+      },
+      "processing": {
+        "redirecting_page_title": "Redirigint…",
+        "redirecting_title": "Redirigint…",
+        "redirecting_notice": "Espera mentre et redirigim.",
+        "complete_your_purchase_title": "Completar la teva compra.",
+        "continue_to_payment_gateway_notice": "Continua amb la pantalla de pagament per afegir la teva informació de pagament.",
+        "continue_to_payment_gateway_button_label": "Continuar amb el pagament",
+        "complete_your_purchase_title_error": "Corregir la teva informació de pagament",
+        "continue_to_payment_gateway_notice_error": "No s'ha pogut verificar la informació de pagament.",
+        "continue_to_payment_gateway_button_label_error": "Actualitza la informació de pagament",
+        "page_title": "Tramitació de la comanda",
+        "title": "Tramitació de la comanda",
+        "your_order_has_been_received_title": "Gràcies per la teva comanda",
+        "you_will_receive_confirmation": "Estem rebent moltes comandes en aquest moment. Hauries de rebre la confirmació per correu electrònic o missatge de text ben aviat. Si no la rep abans d'una hora, contacta'ns.",
+        "wait": {
+          "short": "La teva comanda està sent processada.",
+          "medium": {
+            "one": "La teva comanda s'està processant. El temps estimat estimat és de %{count} minut.",
+            "other": "La teva comanda està sent processada. El temps estimat estimat és de %{count} minuts.",
+            "many": "La teva comanda està sent processada. El temps estimat estimat és de %{count} minuts."
+          },
+          "long": "Rebràs un correu electrònic quan es processi la teva comanda. Actualment hi ha un alt volum de comandes.",
+          "no_auto_refresh_html": "Si no ets redirigit automàticament, %{link}.",
+          "refresh_this_page": "torna a carregar aquesta pàgina"
+        },
+        "you_will_not_be_charged": "Encara no se't cobrarà",
+        "action_required": "Mesura necessària",
+        "modal_notice": "Ens estem connectant amb {{paymentMethod}}",
+        "remote_shops_payments_processing": "Processant pagaments"
+      },
+      "failed_payment": {
+        "page_title": "No s'ha pogut processar el pagament",
+        "title": "No s'ha pogut processar el pagament",
+        "payment_not_processed_title": "El teu pagament no es va poder processar",
+        "payment_not_processed_text": "No t'has cobrat. Torna a la teva cistella per finalitzar la transacció.",
+        "return_to_cart_button_label": "Tornar a la cistella"
+      },
+      "payment_gateway": {
+        "credit_card_label": "Targeta de crèdit",
+        "bank_deposit_label": "Dipòsit Bancari",
+        "cash_on_delivery_label": "Pagament contra lliurament",
+        "money_order_label": "Gir Postal",
+        "debit_card_label": "Targeta de dèbit",
+        "deferred_payment_label": "Escollir la forma de pagament més tard",
+        "generic_payment_terms": "Estàs sota els termes de {{translatedName}} . El teu pagament vencerà el {{dueDate}} .",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} en un compte amb accés a aquesta sucursal per afegir o utilitzar formes de pagament guardades.",
+            "link": "Inicia sessió"
+          }
+        },
+        "direct_payment_terms": "Estàs sota els termes de {{translatedName}} . S'efectuarà el càrrec a la teva targeta el dia {{dueDate}} .",
+        "order_due_on_fulfillment_choose_later": "El pagament s'haurà de fer quan s'hagi preparat la comanda.",
+        "order_due_on_fulfillment_payment": "S'efectuarà el càrrec a la targeta quan s'hagi preparat la comanda.",
+        "draft_order_payment_due_later_no_terms": "El pagament s'haurà de fer quan s'hagi confirmat la comanda.",
+        "draft_order_payment_due_later_no_terms_payment_selected": "S'efectuarà el càrrec a la targeta quan s'hagi confirmat la comanda.",
+        "draft_order_payment_due_later_terms": "Quan es confirmi la comanda, estaràs sota els termes de {{translatedName}} .",
+        "draft_order_payment_due_on_fulfillment": "El pagament s'haurà de fer quan s'hagi confirmat i preparat la comanda.",
+        "fixed_payment_label": "El teu pagament vencerà el {{dueDate}} .",
+        "fixed_direct_payment_terms": "S'efectuarà el càrrec a la teva targeta el {{dueDate}} .",
+        "order_deposit_due_now": "El {{depositAmount}} deu abonar-se avui. El saldo està subjecte a les condicions de pagament {{translatedName}} i venç el {{dueDate}} .",
+        "order_deposit_due_on_fulfillment": "El {{depositAmount}} deu abonar-se avui. El saldo s'haurà de pagar una vegada s'hagi preparat la comanda.",
+        "order_due_on_receipt_choose_later": "Hauràs de fer el pagament al moment de la recepció.",
+        "draft_order_deposit_due_later": "El dipòsit de {{depositAmount}} s'haurà d'abonar quan es confirmi la teva comanda. El saldo estarà a les condicions de {{translatedName}} .",
+        "draft_order_deposit_due_on_fulfillment": "El dipòsit de {{depositAmount}} s'haurà d'abonar quan es confirmi la teva comanda. El saldo s'haurà de pagar una vegada s'hagi preparat la comanda.",
+        "order_deposit_due_on_receipt": "Avui és la data límit per a abonar el {{depositAmount}} . La data de pagament del saldo venç més endavant.",
+        "order_deposit_due_on_fixed_date": "Avui és la data límit per a abonar el {{depositAmount}} . La data de pagament del saldo és el {{dueDate}} .",
+        "bank_account_label": "Compte bancari"
       }
     },
     "checkpoint": {
