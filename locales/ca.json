@@ -1750,15 +1750,166 @@
       "hide_bar": "Amagar barra",
       "navigate_to_admin": "Navegar fins al tauler de control",
       "previewing": "Vista prèvia de:",
-      "saved_at": "Desat el {{date}} a les {{time}}"
+      "saved_at": "Desat el {{date}} a les {{time}}",
+      "viewing": "Estàs veient:",
+      "not_available": "Dades del perfil no disponibles",
+      "close_preview": "Tancar vista prèvia",
+      "actions_button": "Accions"
     },
     "sign_in": {
       "error": {
         "invalid": {
-          "invalid_code": "Introdueix el codi de 6 dígits correcte"
+          "invalid_code": "Introdueix el codi de 6 dígits correcte",
+          "invalid_email": "Introduïu una adreça de correu electrònic vàlida"
         }
       },
-      "processing": "Processant…"
+      "processing": "Processant…",
+      "step_one": {
+        "page_title": "Inicia sessió - %{shop_name}",
+        "heading": "Iniciar sessió",
+        "subheading": "Introdueix el teu correu electrònic i t'enviarem un codi de verificació",
+        "input_field_label": "Correu electrònic",
+        "subheading_with_sign_in_options": "Inicia sessió o crea un compte"
+      },
+      "step_two": {
+        "page_title": "Introduir codi - %{shop_name}",
+        "heading": "Introduir codi",
+        "subheading": "Enviat a %{email}",
+        "restart_link": "Iniciar sessió amb un altre correu electrònic",
+        "input_field_label": "Codi de sis dígits"
+      }
+    },
+    "settings": {
+      "loading_accessibility_message": "Carregant pàgina de configuració",
+      "title": "Configuració",
+      "log_out_everywhere": {
+        "title": "Tancar totes les sessions",
+        "description": "Si heu perdut un dispositiu o teniu inquietuds relacionades amb la seguretat, tanqueu totes les sessions per garantir la seguretat del vostre compte.",
+        "button": "Tancar totes les sessions",
+        "warning_message": "També es tancarà la sessió en aquest dispositiu."
+      }
+    },
+    "date": {
+      "humanize": {
+        "lessThanOneMinuteAgo": "Ara",
+        "yesterday": "Ahir a la(es) {{time}}",
+        "today": "Avui a la(es) {{time}}",
+        "tomorrow": "Matí a la(es) {{time}}",
+        "lessThanOneHourAgo": {
+          "one": "Fa {{count}} minut",
+          "other": "Fa {{count}} minuts",
+          "many": "Fa {{count}} minuts"
+        }
+      }
+    },
+    "active_inspector": {
+      "extension": {
+        "select": "Seleccioneu l'extensió anomenada \" {{extensionName}} \"",
+        "unselect": "Suprimeix la selecció de l'extensió anomenada \" {{extensionName}} \"",
+        "move_down": "Mou l'extensió a la propera posició",
+        "move_up": "Mou l'extensió a la posició anterior",
+        "remove": "Elimina l'extensió",
+        "move_down_tooltip": "Mou a la posició següent",
+        "move_up_tooltip": "Mou a la posició anterior"
+      }
+    },
+    "editor": {
+      "link_new_tab_confirmation": "Aquest enllaç no es pot obrir dins de l'editor. S'obrirà en una finestra nova ( {{resolved_to_link}} ). Feu clic a D'acord per continuar."
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "Massa intents",
+        "description": "Torneu-ho a intentar en uns minuts"
+      }
+    },
+    "shop_ads": {
+      "title": "Altres productes que podrien interessar-te",
+      "subtitle": "Disponible per temps limitat",
+      "button": "Explora a Shop",
+      "next_button": "Següent"
+    },
+    "knowledge_base": {
+      "self_serve_returns": {
+        "enabled": "Els clients poden sol·licitar i gestionar les devolucions directament.",
+        "disabled": "Els clients han de posar-se en contacte amb el comerciant per sol·licitar una devolució."
+      }
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "Preferències de cookies"
+    },
+    "announcement_bar": {
+      "expand_label": "Expandir barra d'anuncis",
+      "collapse_label": "Contreure barra d'anuncis",
+      "close_label": "Tanca barra d'anuncis"
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "title": "Reemplaçar forma de pagament",
+        "loading": "Carregant formes de pagament",
+        "no_payment_methods_available": "No hi ha cap forma de pagament disponible",
+        "select_new_payment_method": "Seleccioneu una forma de pagament nova",
+        "cancel": "Cancel·la",
+        "save": "Desa",
+        "success": "Forma de pagament actualitzada",
+        "use_new_payment_method": "+ Utilitzar nova forma de pagament"
+      },
+      "subscription_contracts": {
+        "title": "Usa forma de pagament per a les comandes recurrents",
+        "subscription_contracts_updated": "S'han actualitzat {{succeeded}} de {{total}} subscripcions",
+        "product_details": "Detalls del producte",
+        "load_more": "Carregar més",
+        "more_items": {
+          "one": "{{count}} producte més",
+          "other": "{{count}} productes més",
+          "many": "{{count}} productes més"
+        },
+        "product_count": {
+          "one": "{{count}} producte",
+          "other": "{{count}} productes",
+          "many": "{{count}} productes"
+        }
+      },
+      "contracts_update_failed": "No es van poder actualitzar alguns contractes de subscripció",
+      "updating_contracts": {
+        "one": "Actualitzant {{count}} contracte de subscripció...",
+        "other": "Actualitzant {{count}} contractes de subscripció...",
+        "many": "Actualitzant {{count}} contractes de subscripció..."
+      },
+      "contracts_updated": {
+        "one": "S'ha actualitzat correctament {{count}} contracte de subscripció",
+        "other": "S'han actualitzat correctament {{count}} contractes de subscripció",
+        "many": "S'han actualitzat correctament {{count}} contractes de subscripció"
+      },
+      "invalid_wallet_type_error": "Tipus de cartera no vàlid."
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "sheet_title": "Iniciar sessió o crear compte",
+        "section_divider": "Més maneres d'iniciar sessió",
+        "email_field_label": "Correu electrònic",
+        "orders_button": "Comandes"
+      },
+      "signed_in_state": {
+        "greeting_with_name": "Hola, {{first_name}}",
+        "orders_button": "Comandes"
+      },
+      "location_picker": {
+        "sheet_title": "Sucursals",
+        "search_field_placeholder": "Cerca"
+      }
+    },
+    "intents": {
+      "subscription_replace_payment_method": {
+        "card_number": "Número de targeta",
+        "title": "Reemplaçar forma de pagament",
+        "replace_with": "Reemplaçar amb",
+        "add_new_payment_method": "Afegeix una nova forma de pagament",
+        "save_button": "Desa",
+        "close_button": "Tancar",
+        "loading": "Carregant el modal de reemplaçament de forma de pagament",
+        "success": "Forma de pagament actualitzada",
+        "invalid_subscription_contract": "No s'ha pogut trobar la subscripció"
+      }
     }
   },
   "sections": {
