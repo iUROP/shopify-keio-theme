@@ -1110,6 +1110,131 @@
           "description": "Els preus i les quantitats disponibles d'aquests articles van canviar i es van actualitzar a la cistella."
         },
         "out_of_stock_in_context_label": "Aquest producte no està disponible al vostre país o regió."
+      },
+      "thank_you": {
+        "order_status_confirmed_order_local_payment": "Estem preparant la teva comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing": "Comunica't amb nosaltres per correu electrònic o per telèfon per rebre una confirmació de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing_payment": "Comunica't amb nosaltres per correu electrònic o per telèfon per rebre una confirmació de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing_pick_up": "Comunica't amb nosaltres per correu electrònic o per telèfon per rebre una confirmació de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone": "Rebràs aviat un correu electrònic de confirmació amb el número de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_payment": "Rebràs aviat un correu electrònic de confirmació amb el número de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "Rebràs aviat un correu electrònic de confirmació amb el número de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_email": "Rebràs aviat un correu electrònic de confirmació amb el número de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_payment": "Rebràs aviat un correu electrònic de confirmació amb el número de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_pick_up": "Rebràs aviat un correu electrònic de confirmació amb el número de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone": "Rebreu en breu un missatge de text de confirmació amb el vostre número de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_payment": "Rebreu en breu un missatge de text de confirmació amb el vostre número de comanda.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_pick_up": "Rebreu en breu un missatge de text de confirmació amb el vostre número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing": "Comunica't amb nosaltres per correu electrònic o per telèfon per rebre una confirmació de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "Comunica't amb nosaltres per correu electrònic o per telèfon per rebre una confirmació de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "Comunica't amb nosaltres per correu electrònic o per telèfon per rebre una confirmació de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "Després de completar el pagament, rebràs un correu electrònic de confirmació amb el teu número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "Després de completar el pagament, rebràs un correu electrònic de confirmació amb el teu número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "Després de completar el pagament, rebràs un correu electrònic de confirmació amb el teu número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email": "Després de completar el pagament, rebràs un correu electrònic de confirmació amb el teu número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "Després de completar el pagament, rebràs un correu electrònic de confirmació amb el teu número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "Després de completar el pagament, rebràs un correu electrònic de confirmació amb el teu número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone": "Després de completar el pagament, rebràs un missatge de text de confirmació amb el teu número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "Després de completar el pagament, rebràs un missatge de text de confirmació amb el teu número de comanda.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "Després de completar el pagament, rebràs un missatge de text de confirmació amb el teu número de comanda.",
+        "vat_invoices": {
+          "title": "Factures amb IVA"
+        },
+        "thank_you_payments_app_pending_payment_description_provider_action_required_default": "El pagament s'està processant. Rebràs un correu electrònic quan es confirmi el pagament.",
+        "verify_shop_account_title": "Verifica el teu compte de Shop",
+        "verify_shop_account_message": "La teva informació s'ha desat a Shop. Verifica el teu compte per utilitzar-lo automàticament en milions de botigues.",
+        "verify_shop_account_cta": "Verificar compte",
+        "verify_shop_account_confirmation": "Es va guardar la informació de pagament",
+        "company_location_section_title": "Empresa i sucursal",
+        "announcement": {
+          "close": "Tancar",
+          "collapse": "Contreure"
+        },
+        "confirmed_items_count": "%{confirmed_count} de %{total_count} articles estan confirmats",
+        "thank_you_confirmed_orders_with_email": "Aviat rebràs correus electrònics de confirmació per separat amb els teus números de comanda",
+        "thank_you_confirmed_orders_with_phone": "Aviat rebràs missatges de text de confirmació per separat amb els teus números de comanda",
+        "thank_you_confirmed_orders_with_email_and_phone": "Aviat rebràs correus electrònics de confirmació per separat amb els teus números de comanda",
+        "track_your_order_link_text": "Fer seguiment de la comanda",
+        "checkout_on_remote_shop_link_text": "Pagar a %{remoteShopName}",
+        "confirmed_orders_title": "Les teves comandes estan confirmades",
+        "thank_you_unconfirmed_items_heading": {
+          "one": "1 article no està confirmat",
+          "other": "Alguns articles no estan confirmats",
+          "many": "Alguns articles no estan confirmats"
+        },
+        "thank_you_unconfirmed_items_description": {
+          "one": "L'article no se't va cobrar",
+          "other": "Els articles no se't van cobrar",
+          "many": "Els articles no se't van cobrar"
+        },
+        "thank_you_item_label": {
+          "one": "%{count} article",
+          "other": "%{count} articles",
+          "many": "%{count} articles"
+        },
+        "payment_method_not_charged": "No cobrat",
+        "items_fulfilled_by_store": {
+          "one": "Els articles que has comprat provenen de %{remote_shop_name}.",
+          "other": "Els articles que vau comprar provenen d'altres botigues.",
+          "many": "Els articles que vau comprar provenen d'altres botigues."
+        },
+        "thank_you_from_other_store": "D'una altra botiga",
+        "checkout_on_another_store": "Pagar a una altra botiga",
+        "thank_you_confirmed_with_email_description": {
+          "single_store": "Aviat rebràs un correu electrònic de confirmació",
+          "multi_store": "Aviat rebràs correus electrònics de confirmació de cada botiga per separat"
+        },
+        "thank_you_confirmed_with_phone_description": {
+          "single_store": "Aviat rebràs un missatge de text de confirmació",
+          "multi_store": "Aviat rebràs missatges de text de confirmació de cada botiga per separat"
+        },
+        "thank_you_confirmed_with_email_and_phone_description": {
+          "single_store": "Aviat rebràs un correu electrònic de confirmació",
+          "multi_store": "Aviat rebràs correus electrònics de confirmació de cada botiga per separat"
+        },
+        "checkout_again": "Tornar a pagar"
+      },
+      "review": {
+        "review_title": "Completa la teva comanda",
+        "checkout_as_guest": "Pagar com a convidat",
+        "blocks": {
+          "contact_method_title": "Contacte",
+          "billing_address_title": "Facturació",
+          "shipping_method_title": "Mètode d'enviament",
+          "payment_method_title": "Forma de pagament",
+          "change_link_label": "Canviar",
+          "change_contact_method_link_label": "Canviar informació de contacte",
+          "change_billing_address_link_label": "Canviar adreça de facturació",
+          "change_shipping_address_link_label": "Canviar adreça d'enviament",
+          "change_shipping_method_link_label": "Canviar mètode d'enviament",
+          "change_payment_method_link_label": "Canviar mètode de pagament",
+          "pick_up_in_store_shipping_method_html": "Retir a la botiga · %{location_name}",
+          "purchase_order_number_title": "Número d'ordre de compra",
+          "change_purchase_order_number_label": "Canviar número d'ordre de compra",
+          "change_delivery_method_link_label": "Canviar forma de lliurament",
+          "no_address": "(No hi ha cap adreça)",
+          "no_purchase_order_number": "(Sense número d'ordre de compra)",
+          "due_after_order_reviewed_html": "Venç una vegada revisada la comanda",
+          "review_title_free_order": "Revisar i completar la comanda",
+          "payment_method_saved_company_location": "Guardar targeta per a aquesta sucursal",
+          "company_location": "Ubicació de l'empresa",
+          "change_company_location_link_label": "Canviar sucursal de l'empresa"
+        },
+        "block_title": "Revisa la teva informació",
+        "checkout_a_different_way": "Pagar d'una altra manera",
+        "item_header": {
+          "change_value": "Canviar valor",
+          "section": "Secció"
+        },
+        "review_and_confirm_title": "Revisar i confirmar",
+        "account_more_actions": "Més accions per a aquest compte"
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Enviar-me novetats i ofertes per correu electrònic",
+        "unsubscribe": {
+          "title": "Heu cancel·lat la vostra subscripció",
+          "description": "No rebrà més recordatoris de cistelles de compra nostres."
+        }
       }
     },
     "checkpoint": {
@@ -2039,6 +2164,108 @@
     "continue_shopping": "Descobrir totes les tarifes",
     "pagination": {
       "label": "Paginació"
+    }
+  },
+  "customer": {
+    "addresses": {
+      "set_default": "Establir com a adreça predeterminada",
+      "add": "Afegir adreça",
+      "update": "Actualitzar adreça",
+      "cancel": "Cancel·la",
+      "edit": "Edita",
+      "delete_confirm": "Esteu segur/a que voleu eliminar aquesta adreça?"
+    },
+    "log_in": "Iniciar sessió",
+    "log_out": "Tancar sessió",
+    "login_page": {
+      "cancel": "Cancel·la",
+      "create_account": "Crear compte",
+      "forgot_password": "Has oblidat la contrasenya?",
+      "guest_title": "Continuar com a convidat",
+      "password": "Contrasenya",
+      "title": "Accedeix al teu compte",
+      "sign_in": "Iniciar sessió"
+    },
+    "orders": {
+      "title": "Historial de comandes",
+      "order_number": "Comanda",
+      "order_number_link": "Número de comanda {{ number }}",
+      "date": "Data",
+      "payment_status": "Estat del pagament",
+      "fulfillment_status": "Estat de preparació de la comanda",
+      "none": "Encara no has fet cap comanda."
+    },
+    "recover_password": {
+      "title": "Restablir la contrasenya",
+      "subtext": "T'enviarem un correu electrònic per restablir la contrasenya",
+      "success": "T'hem enviat un correu electrònic amb un enllaç per actualitzar la contrasenya."
+    },
+    "register": {
+      "title": "Crear compte",
+      "first_name": "Nom",
+      "last_name": "Cognom",
+      "email": "Correu electrònic",
+      "password": "Contrasenya"
+    },
+    "reset_password": {
+      "title": "Restablir contrasenya de compte",
+      "subtext": "Introduïu una contrasenya nova.",
+      "password": "Contrasenya",
+      "password_confirm": "Confirmar contrasenya",
+      "submit": "Restablir contrasenya"
+    },
+    "order": {
+      "title": "Comanda {{ name }}",
+      "date_html": "Realitzat el {{ date }}",
+      "cancelled_html": "Comanda cancel·lada el {{ date }}",
+      "cancelled_reason": "Motiu: {{ reason }}",
+      "billing_address": "Adreça de facturació",
+      "payment_status": "Estat del pagament",
+      "shipping_address": "Direcció d'enviament",
+      "fulfillment_status": "Estat de preparació de la comanda",
+      "discount": "Descompte",
+      "shipping": "Enviament",
+      "tax": "Impost",
+      "product": "Producte",
+      "price": "Preu",
+      "quantity": "Quantitat",
+      "fulfilled_at_html": "Preparat el {{ date }}",
+      "track_shipment": "Fer seguiment de l'enviament",
+      "tracking_url": "Enllaç de seguiment",
+      "tracking_company": "Empresa de transport",
+      "tracking_number": "Número de seguiment",
+      "total_duties": "Aranzels",
+      "total_refunded": "Reemborsat"
+    }
+  },
+  "gift_cards": {
+    "issued": {
+      "title": "Aquest és el saldo de la teva targeta de regal de {{ value }} per a {{ shop }} .",
+      "subtext": "La teva targeta de regal",
+      "gift_card_code": "Codi de targeta de regal",
+      "shop_link": "Visitar la botiga online",
+      "add_to_apple_wallet": "Afegir a Apple Wallet",
+      "qr_image_alt": "Codi QR: escaneja per bescanviar la targeta de regal",
+      "copy_code": "Copiar el codi de la targeta de regal",
+      "expired": "Vençut",
+      "copy_code_success": "El codi es va copiar correctament",
+      "how_to_use_gift_card": "Usar el codi de la targeta de regal online o el codi QR a la botiga",
+      "expiration_date": "Caduca l' {{ expires_on }}"
+    }
+  },
+  "recipient": {
+    "form": {
+      "checkbox": "Vull enviar això com un regal.",
+      "email_label": "Correu electrònic de la persona destinatària",
+      "email": "Correu electrònic",
+      "name_label": "Nom de la persona destinatària (opcional)",
+      "name": "Nom",
+      "message_label": "Missatge (opcional)",
+      "message": "Missatge",
+      "max_characters": "{{ max_chars }} caràcters màx.",
+      "email_label_optional_for_no_js_behavior": "Correu electrònic de la persona destinatària (opcional)",
+      "expanded": "Formulari del destinatari de la targeta de regal expandit",
+      "collapsed": "Formulari del destinatari de targeta de regal contret"
     }
   }
 }
