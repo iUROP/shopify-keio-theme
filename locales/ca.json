@@ -353,6 +353,259 @@
         "pickup_unavailable_banner_body": {
           "ship_to_address": "Envia-ho a una adreça"
         }
+      },
+      "shipping": {
+        "subscription_delivery_description": {
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Enviament gratuït per a %{count} lliurament i després per %{recurring_order_shipping_price}",
+            "other": "Enviament gratuït per a %{count} lliuraments i després per %{recurring_order_shipping_price}",
+            "many": "Enviament gratuït per a %{count} lliuraments i després per %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} lliura més per %{shipping_price}",
+            "other": "%{count} lliuraments més per %{shipping_price} cadascuna",
+            "many": "%{count} lliuraments més per %{shipping_price} cadascuna"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{count} lliurament per %{shipping_price}",
+            "other": "%{count} lliuraments més per %{shipping_price} cadascuna",
+            "many": "%{count} lliuraments més per %{shipping_price} cadascuna"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Enviament gratuït durant el primer %{cycle} i després per %{recurring_order_shipping_price}",
+            "other": "Enviament gratuït durant el primer %{cycle} i després per %{recurring_order_shipping_price}",
+            "many": "Enviament gratuït durant el primer %{cycle} i després per %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} per a %{count} entrega més",
+            "other": "%{shipping_price} per a %{count} lliuraments més (%{per_delivery_cost})",
+            "many": "%{shipping_price} per a %{count} lliuraments més (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} per a %{count} lliurament",
+            "other": "%{shipping_price} per a %{count} lliuraments (%{per_delivery_cost})",
+            "many": "%{shipping_price} per a %{count} lliuraments (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} per a %{count} lliura més i després per %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} per a %{count} lliuraments més (%{per_delivery_cost}) i després per %{recurring_order_shipping_price}",
+            "many": "%{shipping_price} per a %{count} lliuraments més (%{per_delivery_cost}) i després per %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} per a %{count} lliurament i després per %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} per a %{count} lliuraments (%{per_delivery_cost}) i després per %{recurring_order_shipping_price}",
+            "many": "%{shipping_price} per a %{count} lliuraments (%{per_delivery_cost}) i després per %{recurring_order_shipping_price}"
+          }
+        },
+        "one_time_purchase_shipping": "Enviament únic",
+        "estimated_delivery_time": "Data de lliurament estimada: %{time}",
+        "estimated_delivery_time_range": "Data de lliurament estimada: %{min_time}–%{max_time}",
+        "arrives_time": "Arriba a %{time}",
+        "arrives_time_range": "Arriba entre %{min_time}–%{max_time}",
+        "estimated_time": "Arribada prevista: %{time}",
+        "subscription_local_delivery": "Subscripció amb lliurament local",
+        "subscription_pickup": "Subscripció amb retir",
+        "delivery_today": "Lliurament al mateix dia %{time}",
+        "delivery_tomorrow": "Lliurament al dia següent %{time}",
+        "two_day_delivery": "Lliurament en dos dies a les %{time}",
+        "delivery": "Lliurament a les %{time}",
+        "duties_and_taxes_title": "Aranzels i impostos",
+        "shipping_information_required_notice": "La informació d'enviament és obligatòria. {{link}} .",
+        "shipping_information_redirect_link": "Ingressa la teva informació aquí",
+        "loading_progressive_rates": "Buscant més tarifes...",
+        "no_other_methods_available": "No hi ha altres mètodes d'enviament disponibles",
+        "duties_and_taxes_options": {
+          "ddu_title": "Pagar al moment del lliurament",
+          "ddu_caption": "És possible que s'apliquin càrrecs addicionals",
+          "ddp_title": "Pagar ara",
+          "ddp_caption": "No hi ha càrrecs addicionals pel lliurament"
+        },
+        "shipping_method_combinations": {
+          "combination": "%{rest} i %{current}"
+        },
+        "shipping_used_as_billing_notice": "També s'utilitzarà com a adreça de facturació per a aquesta comanda.",
+        "address_update": "Modificar adreça",
+        "add_address": "Usar una adreça diferent",
+        "add_delivery_instructions": "Afegir instruccions de lliurament",
+        "edit": "Edita",
+        "address_more": "Més accions per a aquesta direcció",
+        "address_edit": "Editar direcció",
+        "address_delete": "Eliminar adreça",
+        "address_confirm": "Confirmes que vols eliminar aquesta adreça del compte?",
+        "address_form": {
+          "add_address": "Afegir adreça",
+          "save": "Desa",
+          "cancel": "Cancel·la",
+          "generic_error": "S'ha produït un problema en desar l'adreça. Intenta-ho de nou.",
+          "one_time_address_subtitle": "Usar una adreça una sola vegada per a aquesta comanda",
+          "edit": "Editar direcció",
+          "update": "Desar canvis",
+          "max_address": "S'assolí el límit de {{max_addresses}} adreces. Elimina una adreça per afegir-ne una de nova."
+        },
+        "different_shipping_method_summary": "Introduïu una adreça d'enviament diferent per veure els mètodes d'enviament disponibles.",
+        "invalid_shipping_method_summary": "Introduïu una adreça d'enviament vàlida per veure els mètodes d'enviament disponibles",
+        "method_summary": {
+          "incomplete_address_entered": "Introduïu una adreça d'enviament completa per veure els mètodes d'enviament disponibles.",
+          "incomplete_address_selected": "Seleccioneu una adreça d'enviament completa per veure els mètodes d'enviament disponibles."
+        },
+        "local_pickup": {
+          "search_address": "Buscar l'adreça",
+          "rollup_title": "Lloc de retir",
+          "rollup_accessibility_label": "Opcions de lloc de retirada"
+        },
+        "missing_shipping_address": "Manca la direcció d'enviament.",
+        "delivery_title": "Lliurament",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Primer enviament",
+          "other": "Primers enviaments",
+          "many": "Primers enviaments"
+        },
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Enviament",
+          "other": "Enviament",
+          "many": "Enviament"
+        },
+        "address_default": "Establir com a predeterminada",
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} articles",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} més",
+        "split_shipping_merchandise_shipment_number": "Enviament %{number} de %{total}",
+        "pre_order_ships_now": "S'envia ara",
+        "pre_order_ships_later": "S'envia més tard",
+        "pre_order_ships_date": "S'envia el %{date}",
+        "split_shipping_shipped_by_shop": "Enviament realitzat per %{shop_name}",
+        "split_shipping_multiple_shipment_label": "Diversos enviaments",
+        "split_shipping_shipping_label": "Mètode",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} enviaments",
+        "split_shipping_multiple_shipment_notice": "La teva comanda arribarà en diversos enviaments",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "La teva comanda arribarà a %{quantity} enviaments",
+        "split_shipping_more_shipping_options": "Més opcions d'enviament",
+        "split_shipping_shipment_number": "Enviament %{number}",
+        "split_shipping_merchandise_quantity_label_inline_primary": "Quantitat: %{quantity}"
+      },
+      "payment": {
+        "gift_card_wrapper": {
+          "manage_label": "Gestionar targetes de regal"
+        },
+        "custom_onsite_payment_method_modal": {
+          "title": "Confirmació de pagament al lloc personalitzada"
+        },
+        "markets_pro_disclaimer_label": "Quan feu una comanda, accepteu utilitzar Global-e com a responsable del processament de pagaments, els %{markets_pro_terms} i la %{privacy_policy} de Global-e i compartir les vostres dades amb %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Termes i condicions",
+        "markets_pro_disclaimer_privacy_policy": "Política de privadesa",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Termes i condicions del responsable del processament de pagaments",
+        "markets_pro_disclaimer_privacy_policy_title": "Política de privadesa del responsable del processament de pagaments",
+        "purchase_order_number": {
+          "title": "Número d'ordre de compra",
+          "label": "Número d'ordre de compra (opcional)"
+        },
+        "alternative_payment_currency_total_notice": "Nota: Se us cobrarà %{amount_due}.",
+        "waiting_on_taxes_message": "Si els vostres impostos no es calculen en els propers segons, actualitzeu la pàgina.",
+        "waiting_on_taxes_notice": "Calculant impostos",
+        "order_edit_banner_single_item_returned": "Tornat",
+        "order_edit_banner_multiple_items_returned": "Es retornar {{amount}} .",
+        "shop_pay_installments_label": "Quotes de Shop Pay",
+        "add_credit_card_modal": {
+          "title": "Afegeix targeta",
+          "cancel": "Cancel·la",
+          "save": "Desa"
+        },
+        "delete_credit_card_modal": {
+          "title": "Eliminar targeta",
+          "confirmation": "Confirmes que desitges eliminar la {{brandName}} que acaba a {{lastDigits}} ?",
+          "cancel": "Cancel·la"
+        },
+        "order_edit_banner_items_added": {
+          "one": "Agregat",
+          "other": "S'ha afegit %{count}.",
+          "many": "S'ha afegit %{count}."
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Eliminat",
+          "with_quantities": "S'eliminar {{delta}} de {{quantity}} ."
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Es van tornar {{quantity}}",
+          "with_quantities": "Es retornar {{delta}} de {{quantity}} ."
+        },
+        "saved_credit_card_actions": {
+          "edit": "Edita"
+        },
+        "edit_credit_card_modal": {
+          "title": "Editar targeta",
+          "done": "A punt",
+          "cancel": "Cancel·la",
+          "description": "Només podeu modificar l'adreça de facturació de la vostra targeta.",
+          "fields": {
+            "default": "Establir com a predeterminat",
+            "card_number": "Número de targeta",
+            "expiry": "Data de venciment",
+            "security_code": "Codi de seguretat",
+            "name": "Nom del titular de la targeta"
+          }
+        },
+        "payment_method": "Forma de pagament",
+        "expired_payment_method": "La forma de pagament seleccionada va expirar.",
+        "subscription_heading": "Acord de subscripció",
+        "use_order_billing_address_label": "Usar l'adreça de facturació de la comanda",
+        "use_location_billing_address_label": "Usar l'adreça de facturació de la sucursal",
+        "use_location_shipping_address_label": "Usar la direcció d'enviament de la sucursal",
+        "purchase_options_agreement_label_wallets": "En continuar amb el pagament, accepteu els càrrecs futurs que figuren en aquesta pàgina i la política de cancel·lació.",
+        "gift_card_store_credit": {
+          "add_label": "Afegir una targeta de regal o crèdit a la botiga",
+          "manage_label": "Gestionar targetes de regal o crèdit a la botiga"
+        },
+        "saved_credit_card_cvv_verification": "Per a finalitats de verificació, introduïu el codi de seguretat de la vostra targeta.",
+        "order_edit_banner_updated_order_label": "Comanda actualitzada",
+        "card_nickname_label": "Sobrenom (opcional)",
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Es va eliminar de la devolució",
+          "with_quantities": "S'eliminà {{delta}} de la devolució."
+        },
+        "order_edit_banner_single_item_return_line_item_removed": "Es va eliminar de la devolució",
+        "order_edit_banner_multiple_items_return_line_item_removed": "S'eliminà {{amount}} de la devolució.",
+        "proposed_gateway_unavailable": "La passarel·la de pagament proposada no està disponible.",
+        "pay_in_installments_split_pay_short": "Quatre pagaments de %{amount}",
+        "payment_method_not_available_for_shipping_address_error": "La forma de pagament no està disponible per a l'adreça d'enviament seleccionada. Trieu una altra forma de pagament.",
+        "shop_pay_ideal_unavailable_error": "L'opció iDEAL no està disponible per a aquesta comanda. Trieu una altra forma de pagament.",
+        "paypal_disconnect": "Desconnectar",
+        "paypal_wallet_label": "Bitlletera de PayPal",
+        "payment_method_update_failed": "Error en tractar dactualitzar la forma de pagament.",
+        "alternative_payment_currency_total_manual_payment_notice": "Nota: El total després de la conversió és %{amount_due}.",
+        "gift_cards_unavailable": "La teva targeta de regal ja no es pot aplicar a aquesta comanda, així que s'ha eliminat",
+        "network_card_payment_options": "Trieu una xarxa de targetes",
+        "payment_flexibility_terms_id_mismatch": "Error de coincidència en la identificació dels termes de flexibilitat de pagaments",
+        "offsite_gateway_review_page_redirect_hint": "Després que reviseu la comanda, se us redirigirà a %{gateway_label} per completar la vostra compra de forma segura.",
+        "gift_card_checkbox_label": "Aplicar targeta de regal",
+        "simulated_express_checkout": "Les bitlleteres no estan disponibles a la vista prèvia de l'editor a causa de la vostra regió o navegador",
+        "kcp_creditcard_label": "Targeta de crèdit KCP",
+        "offsite_gateway_redirect_hint_no_button_label": "Després de continuar, se us redirigirà a %{gateway_label} per completar la vostra compra de forma segura.",
+        "network_card_persistence_description": "La xarxa seleccionada es desarà amb la teva forma de pagament per a futures transaccions.",
+        "payment_method_incompatible_with_payment_terms": "La forma de pagament no és compatible amb les condicions de pagament.",
+        "payment_option": {
+          "accessibility_label": "Trieu una opció de pagament"
+        },
+        "billing_address_rollup_accessibility_label": "Opcions de direcció de facturació",
+        "payment_method_rollup_accessibility_label": "Opcions de forma de pagament",
+        "crypto_modal": {
+          "header": "Paga a %{shop_name} %{total_price} USDC",
+          "error": {
+            "refresh": "Actualitzar",
+            "close": "tancar",
+            "sandbox_error": "Alguna cosa va sortir malament",
+            "web_component_error": "S'ha produït un problema en carregar aquesta pàgina"
+          }
+        },
+        "bank_account_type": {
+          "checking": "Corrent",
+          "savings": "Estalvi"
+        },
+        "bank_account_choose": "Trieu un compte per completar la vostra compra de manera segura",
+        "bank_account_connect_another": "Connecta un altre compte bancari",
+        "bank_account_connect": "Connecta un compte bancari",
+        "crypto_payment_method": {
+          "description": "Connecta la teva cartera digital de manera segura a la xarxa de Base",
+          "tooltip": "El saldo de la teva cartera digital i la teva adreça no es compartiran i només es pot deduir la suma sol·licitada"
+        }
       }
     }
   }
