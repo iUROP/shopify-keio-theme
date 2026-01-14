@@ -352,6 +352,36 @@
         "discount_code_aria_text": "Codi de descompte",
         "pickup_unavailable_banner_body": {
           "ship_to_address": "Envia-ho a una adreça"
+        },
+        "pickup_unavailable_banner_title": {
+          "one": "No hi ha botigues disponibles amb el teu article",
+          "other": "No hi ha botigues disponibles amb els teus articles",
+          "many": "No hi ha botigues disponibles amb els teus articles"
+        },
+        "deposit_label": "Dipòsit",
+        "total_due_today_label": "Total a pagar avui",
+        "total_due_later_label": "Total a pagar més endavant",
+        "discount_code_allocations_mismatch": "El vostre codi de descompte <strong style=\"text-transform:uppercase\">%{code}</strong> ha canviat. Revisa el teu carret i torna-ho a intentar.",
+        "deferred_total_due_date_label_next": "Venç el %{date}",
+        "total_due_label": "Total per pagar",
+        "total_price_label": "Preu total",
+        "for_add_on": "Per a: %{group_title}",
+        "unconfirmed_label": "Sense confirmar",
+        "total_paid_label": "Total pagat",
+        "from_other_stores_heading": "D'altres botigues",
+        "order_discounts_apply_to_local_shop": "Els descomptes de comanda només s'apliquen a articles de %{shop_name}",
+        "gift_cards_apply_to_local_shop": "Les targetes de regal només s'apliquen a articles de %{shop_name}",
+        "estimated_taxes_label_short": "Benvolgut",
+        "discount_code_removed": "S'ha eliminat el codi de descompte %{code}",
+        "discount_code_replaced": "S'ha eliminat el codi de descompte %{old_code} i s'ha aplicat %{code}",
+        "discount_code_replaced_multiple": "S'han eliminat diversos codis de descompte i s'ha aplicat %{code}",
+        "from_multiple_stores_heading": "De diverses botigues",
+        "discount_applies_to_subscription_items_only": "Aquest descompte només s'aplica a articles de subscripció",
+        "estimated_taxes_finalization_tooltip_content_short": "Impostos definitius després del pagament",
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "No hi ha botigues disponibles a %{country} amb el teu article",
+          "other": "No hi ha botigues disponibles a %{country} amb els teus articles",
+          "many": "No hi ha botigues disponibles a %{country} amb els teus articles"
         }
       },
       "shipping": {
@@ -395,6 +425,69 @@
             "one": "%{shipping_price} per a %{count} lliurament i després per %{recurring_order_shipping_price}",
             "other": "%{shipping_price} per a %{count} lliuraments (%{per_delivery_cost}) i després per %{recurring_order_shipping_price}",
             "many": "%{shipping_price} per a %{count} lliuraments (%{per_delivery_cost}) i després per %{recurring_order_shipping_price}"
+          },
+          "prepaid_delivery_frequency": {
+            "one": "per a %{count} lliurament",
+            "other": "per a %{count} lliuraments",
+            "many": "per a %{count} lliuraments"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "cada dia",
+              "other": "cada %{count} dies",
+              "many": "cada %{count} dies"
+            },
+            "week": {
+              "one": "cada setmana",
+              "other": "cada %{count} setmanes",
+              "many": "cada %{count} setmanes"
+            },
+            "month": {
+              "other": "cada %{count} mesos",
+              "many": "cada %{count} mesos"
+            },
+            "year": {
+              "one": "cada any",
+              "other": "cada %{count} anys",
+              "many": "cada %{count} anys"
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} per entrega",
+          "prepaid_shipping_price_label": "%{shipping_price} per entrega x %{delivery_interval_count}",
+          "initial_order_discounted": "Cost del primer enviament %{discounted_shipping_cost}, després %{frequency_description}",
+          "prepaid_initial_order_discounted": "Cost del primer enviament %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Cost del primer enviament %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Cost del primer enviament %{discounted_shipping_price} %{prepaid_delivery_frequency}, després %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Cost del primer enviament %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), després %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "Inclòs",
+          "recurring_order_shipping_price": "seguit de %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "Primera comanda inclosa, seguida de %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} per lliurament), seguit de %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Primera comanda gratis",
+            "other": "Primers %{count} comandes gratuïtes",
+            "many": "Primers %{count} comandes gratuïtes"
+          },
+          "free_for_first_n_order": {
+            "one": "Per a la primera comanda",
+            "other": "Per als primers comandes comandes",
+            "many": "Per als primers comandes comandes"
+          },
+          "subscription_free_with_frequency_label": "Enviament gratuït %{delivery_frequency}",
+          "free_shipping_cycles": {
+            "one": "Enviament gratuït per a %{count} entrega més",
+            "other": "Enviament gratuït per a %{count} lliuraments més",
+            "many": "Enviament gratuït per a %{count} lliuraments més"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Enviament gratuït per a %{count} lliurament",
+            "other": "Enviament gratuït per a %{count} lliuraments",
+            "many": "Enviament gratuït per a %{count} lliuraments"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Enviament gratuït per a %{count} lliura més i després per %{recurring_order_shipping_price}",
+            "other": "Enviament gratuït per a %{count} lliuraments més i després per %{recurring_order_shipping_price}",
+            "many": "Enviament gratuït per a %{count} lliuraments més i després per %{recurring_order_shipping_price}"
           }
         },
         "one_time_purchase_shipping": "Enviament únic",
@@ -480,7 +573,39 @@
         "split_shipping_multiple_shipment_notice_one_time_purchase": "La teva comanda arribarà a %{quantity} enviaments",
         "split_shipping_more_shipping_options": "Més opcions d'enviament",
         "split_shipping_shipment_number": "Enviament %{number}",
-        "split_shipping_merchandise_quantity_label_inline_primary": "Quantitat: %{quantity}"
+        "split_shipping_merchandise_quantity_label_inline_primary": "Quantitat: %{quantity}",
+        "title": "Enviament",
+        "shipping_method_title": "Mètodes d'enviament",
+        "waiting_on_rate_notice": "Obtenint les tarifes d'enviament disponibles...",
+        "waiting_on_pickup_location_notice": "Obtenció de les sucursals per retirar disponibles...",
+        "no_rates_for_cart_or_destination_notice": "No hi ha mètodes d'enviament disponibles per a la cistella o adreça",
+        "no_pickup_location_notice": "Almenys un dels teus productes no està disponible per ser retirat",
+        "no_rates_for_country_notice": "No s'han trobat tarifes d'enviament per a aquesta adreça.",
+        "no_rates_contact_notice": "Poseu-vos en contacte amb nosaltres per obtenir més informació",
+        "cheapest_rate_label": "Més econòmic",
+        "please_enter_your_shipping_information_notice": "Introduïu la vostra informació d'enviament.",
+        "estimated_delivery_date": {
+          "one": "%{count} dia hàbil",
+          "other": "%{count} dies hàbils",
+          "many": "%{count} dies hàbils"
+        },
+        "estimated_delivery_date_range": "%{minimum} a %{maximum} dies hàbils",
+        "shipping_line_phone_label": "Número de telèfon mòbil (obligatori)",
+        "shipping_line_phone": "El vostre servei de missatgeria i paqueteria pot utilitzar aquest número per contactar-vos.",
+        "other_method": {
+          "zero": "No hi ha altres mètodes d'enviament disponibles",
+          "one": "%{count} mètode diferent disponible per",
+          "other": "Altres %{count} mètodes d'enviament disponibles a partir de",
+          "many": "Altres %{count} mètodes d'enviament disponibles a partir de"
+        },
+        "shipping_rate_discounted_amount": "Abans: %{original_amount}. Ara: %{amount}",
+        "shipping_line_delivery_phone": "És possible que us poseu en contacte amb tu amb informació actualitzada sobre el vostre lliurament.",
+        "optional_shipping_line_delivery_instructions_label": "Instruccions de lliurament (opcional)",
+        "shipping_line_delivery_phone_label": "Número de telèfon",
+        "shipping_line_delivery_instructions": "Introdueix les dades necessàries com a codis de portes o instruccions per al lliurament.",
+        "local_delivery": "Lliurament local",
+        "subscription_shipping": "Enviament per subscripció",
+        "shipping_method_subscription_group_title": "Subscripció"
       },
       "payment": {
         "gift_card_wrapper": {
@@ -605,6 +730,176 @@
         "crypto_payment_method": {
           "description": "Connecta la teva cartera digital de manera segura a la xarxa de Base",
           "tooltip": "El saldo de la teva cartera digital i la teva adreça no es compartiran i només es pot deduir la suma sol·licitada"
+        }
+      },
+      "post_purchase": {
+        "escape_confirmation": "Has pagat la teva comanda.",
+        "escape_action": "Veure confirmació de comanda ›",
+        "components": {
+          "close": "Tancar",
+          "expand": "Veure més",
+          "processing": "En procés…"
+        }
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "La teva cistella s'ha actualitzat segons el país de destinació.",
+        "cart_and_currency_updated_based_on_country": "La cistella i la moneda s'han modificat en funció del país d'enviament.",
+        "currency_updated_for_country": "Moneda actualitzada per a %{country}"
+      },
+      "subscriptions": {
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Primer pagament %{total_price}",
+            "other": "Primers %{count} pagaments %{total_price} cadascun",
+            "many": "Primers %{count} pagaments %{total_price} cadascun"
+          },
+          "following_cycles": ", després %{total_price} cada %{interval}"
+        },
+        "recurring_total_intervals": {
+          "day": {
+            "one": "dia",
+            "other": "%{count} dies",
+            "many": "%{count} dies"
+          },
+          "week": {
+            "one": "setmana",
+            "other": "%{count} setmanes",
+            "many": "%{count} setmanes"
+          },
+          "month": {
+            "other": "%{count} mesos",
+            "many": "%{count} mesos"
+          },
+          "year": {
+            "one": "any",
+            "other": "%{count} anys",
+            "many": "%{count} anys"
+          }
+        },
+        "recurring_totals_with_initial_order_shipping_discount": "Primer pagament %{total_price_with_discount}, després %{recurring_total}",
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", després %{count} pagament de %{total_price}",
+            "other": ", després %{count} pagaments de %{total_price} cadascun",
+            "many": ", després %{count} pagaments de %{total_price} cadascun"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "Formes de pagament",
+        "title": "Formes de pagament",
+        "update_card_button_label": "Actualitzar targeta",
+        "delete_customer_mandate": {
+          "generic_error": "S'ha produït un error en processar la sol·licitud.",
+          "success_message": "La vostra forma de pagament s'ha eliminat correctament."
+        }
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Termes i condicions del responsable del processament de pagaments",
+        "privacy_policy": "Política de privadesa del responsable del processament de pagaments"
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Producte no disponible",
+          "other": "Productes no disponibles",
+          "many": "Productes no disponibles"
+        },
+        "products_not_available": {
+          "one": "Aquest producte s'eliminarà de la cistella perquè no està disponible al vostre país o regió.",
+          "other": "Aquests productes s'eliminaran de la cistella perquè no estan disponibles al teu país o regió.",
+          "many": "Aquests productes s'eliminaran de la cistella perquè no estan disponibles al teu país o regió."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Aquest producte no està disponible al vostre país o regió.",
+          "other": "Aquests productes no estan disponibles al vostre país o regió.",
+          "many": "Aquests productes no estan disponibles al vostre país o regió."
+        }
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "El teu país o regió es va modificar. Introduïu la vostra adreça d'enviament per continuar amb el pagament."
+      },
+      "throttle": {
+        "line_to_check_out": "Estàs en fila per pagar",
+        "cart_summary_heading": "El teu carret",
+        "merchandise": {
+          "sold_out": "Esgotat"
+        },
+        "inventory": {
+          "partial_inventory_banner": "Alguns articles a la cistella estan esgotats i no estaran disponibles a la pantalla de pagament.",
+          "sold_out": {
+            "heading": "Els articles a la cistella estan esgotats",
+            "storefront_body": "Tornar a la botiga per continuar comprant",
+            "no_storefront_body": "Malauradament, l'article que voleu comprar ja no està disponible.",
+            "link": "Tornar a la botiga"
+          }
+        },
+        "title": "Llista d'espera",
+        "time_to_checkout_title": "Hora de pagar - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Calculant temps estimat estimat",
+          "less_than_one": "Temps esperat estimat: menys d'un minut",
+          "one": "Temps d'espera estimat: {{count}} minut",
+          "other": "Temps d'espera estimat: {{count}} minuts",
+          "many": "Temps d'espera estimat: {{count}} minuts"
+        },
+        "last_checked": "(Verificat per última vegada: {{time}} )",
+        "footer": {
+          "heading": "No refresquis la pàgina; s'actualitzarà automàticament.",
+          "body": "Els articles a la cistella no es reserven fins que completis el procés de pagament."
+        },
+        "too_many_attempts": {
+          "message": "Massa intents.",
+          "description": "Torna a intentar en 30 minuts"
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Hi ha hagut un problema en processar la sol·licitud. Contacta amb la persona propietària de la botiga."
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "No hi ha entrega disponible per a %{count} article",
+            "other": "No hi ha lliurament disponible per a %{count} articles",
+            "many": "No hi ha lliurament disponible per a %{count} articles"
+          },
+          "message": {
+            "one": "Aquest article s'eliminarà del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça.",
+            "other": "Aquests articles s'eliminaran del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça.",
+            "many": "Aquests articles s'eliminaran del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça."
+          },
+          "label": "Sense entrega"
+        }
+      },
+      "no_address_location": {
+        "title": "Sucursal sense adreça",
+        "header": "No tens cap adreça d'enviament per a aquesta sucursal",
+        "message": "Poseu-vos en contacte amb nosaltres per afegir una adreça per a aquesta sucursal i així poder acabar el pagament.",
+        "email_us_button_label": "Envia'ns un correu electrònic",
+        "alt_header": "Manca la direcció d'enviament"
+      },
+      "order_errors": {
+        "creation_failure": "Hi va haver un problema en crear la teva comanda. Intenta de nou o contacta'ns per conèixer més detalls.",
+        "network_failure": "La comanda no s'ha pogut enviar per un error de xarxa. Comproveu la vostra connexió i torneu-ho a provar.",
+        "inventory_reservation_failure": "Alguns articles ja no estan disponibles."
+      },
+      "session_errors": {
+        "session_not_unique": "Hi ha hagut un problema en processar la comanda. Actualitza aquesta pàgina per tornar a la botiga.",
+        "session_already_finished": "Aquesta comanda ja ha estat enviada. Pots tornar a la botiga per iniciar una nova comanda."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Tancat",
+        "business_hours": "Horari de la botiga",
+        "title": "Punt de retir",
+        "search_button": "Cerca",
+        "selector_tabs": "Selector de punts de retir",
+        "selector_tab_list": "Llista",
+        "could_not_resolve_address": "No s'ha trobat l'adreça. Torneu-ho a provar o feu servir una altra adreça.",
+        "no_pickup_points_near_you": "No s'ha trobat cap punt de retirada a prop de l'adreça seleccionada",
+        "no_pickup_points_near_location": "No s'ha trobat cap punt de retirada a prop de la vostra ubicació",
+        "no_pickup_points_found": "No s'han trobat punts de retirada",
+        "paginator": {
+          "next_accessibility_label": "Pàgina següent",
+          "previous_accessibility_label": "Pàgina anterior"
         }
       }
     }
