@@ -1189,6 +1189,139 @@
       "buyer_consent_product": "Aquest article és una compra recurrent o diferida. En continuar, accepto la %{cancellationPolicyLink} i autoritzo a realitzar càrrecs en la meva forma de pagament segons els preus, la freqüència i les dates indicades en aquesta pàgina fins que es prepari la meva comanda o jo la cancel·li, si està permès.",
       "buyer_consent_cart": "Un o més dels articles que hi ha a la cistella formen part d'una compra recurrent o diferida. En continuar, accepto la %{cancellationPolicyLink} i autoritzo a realitzar càrrecs en la meva forma de pagament segons els preus, la freqüència i les dates indicades en aquesta pàgina fins que es prepari la meva comanda o jo la cancel·li, si està permès.",
       "cancellation_policy": "política de cancel·lació"
+    },
+    "attributes": {
+      "password": "contrasenya",
+      "password_confirmation": "la confirmació de la contrasenya",
+      "first_name": "Nom",
+      "last_name": "Cognom",
+      "body": "missatge",
+      "signature": "Direcció"
+    },
+    "addresses": {
+      "zip_code": "Codi postal",
+      "postal_code": "Codi postal",
+      "postcode": "Codi postal",
+      "pincode": "Codi postal",
+      "region": "Regió",
+      "province": "Província",
+      "state": "Estat",
+      "state_and_territory": "Estat/Territori",
+      "county": "Comtat",
+      "emirate": "Emirat",
+      "governorate": "Província",
+      "confirm": "Estàs segur que vols eliminar aquesta adreça?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Característiques",
+        "best_selling": "Més venuts",
+        "az": "Alfabèticament, AZ",
+        "za": "Alfabèticament, ZA",
+        "price_ascending": "Preu, menor a major",
+        "price_descending": "Preu, major a menor",
+        "date_ascending": "Data: antic(a) a recent",
+        "date_descending": "Data: recent a antic(a)"
+      }
+    },
+    "errors": {
+      "blank": "no pot estar en blanc",
+      "credit_card_session_expired": "L'autorització de la targeta de crèdit ha caducat. Si us plau, introdueix la teva informació de pagament una vegada més. No s'ha efectuat el càrrec a la targeta.",
+      "empty": "no pot quedar buit",
+      "invalid_email": "Ha de ser una adreça de correu electrònic vàlida",
+      "discount_disabled": "Aquest descompte s'ha desactivat",
+      "discount_expired": "Aquest descompte ja no és vàlid",
+      "discount_limit_reached": "Aquest descompte ha arribat al límit del seu ús",
+      "discount_not_found": "No ha estat possible trobar un descompte vàlid que coincideixi amb el codi introduït",
+      "customer_already_used_once_per_customer_discount_notice": "Aquest descompte ha arribat al límit del seu ús",
+      "gift_card_already_applied": "El codi ja s'ha aplicat a la comanda",
+      "gift_card_code_invalid": "Codi no vàlid",
+      "gift_card_currency_mismatch": "La teva targeta de regal és a %{gift_card_currency}. Contacta amb nosaltres perquè tornem a emetre-la a %{checkout_currency}.",
+      "gift_card_depleted": "No queden fons disponibles en aquesta targeta de regal",
+      "gift_card_disabled": "La targeta de regal està desactivada",
+      "gift_card_expired": "La targeta de regal ha caducat",
+      "invalid": "no vàlid",
+      "bad_domain": "conté un nom de domini invàlid",
+      "taken": "ja s'ha pres",
+      "contains_html_tags": "no pot contenir etiquetes HTML",
+      "too_short": "és massa curt (ha de contenir un mínim de %{count} caràcters)",
+      "too_long": "és massa llarg (el màxim són %{count} caràcters)",
+      "password_mismatch": "ha de coincidir amb la contrasenya subministrada",
+      "contains_spaces": "comença o acaba amb espais.",
+      "invalid_for_country": "no és vàlid per a %{country}",
+      "invalid_for_country_and_province": "no és vàlid per a %{province} i %{country}",
+      "invalid_province_in_country": "no és una província vàlida a %{country}",
+      "invalid_state_in_country": "no és un estat vàlid a %{country}",
+      "invalid_region_in_country": "no és una regió vàlida a %{country}",
+      "less_than_or_equal_to": "ha de ser menor o igual a %{count}",
+      "not_supported": "no és compatible",
+      "full_name_required": "Introdueix un nom i cognom",
+      "invalid_for_card_type": "no és vàlid per a aquest tipus de targeta",
+      "invalid_type": "Ho sentim, no acceptem targetes d'aquest tipus",
+      "invalid_format": "no és un número de targeta de crèdit",
+      "expired": "La targeta de crèdit ha caducat",
+      "invalid_start_date_or_issue_number_for_debit": "Cal una data d'inici o un número d'expedició vàlids",
+      "invalid_expiry_year": "no és un any de venciment vàlid",
+      "reset_password_html": "Aquesta adreça de correu electrònic ja ha estat associada amb un compte. Si el compte és teu, pots <a href=\"/account/login#recover\">restablir la teva contrasenya aquí</a>",
+      "verify_email": "Hem enviat un correu electrònic a %{customer_email} si us plau fes clic a l'enllaç inclòs per verificar la teva adreça de correu electrònic.",
+      "blocked_address": "No s'admet aquesta ubicació",
+      "product_not_available": "el producte no apareix publicat per a aquest client.",
+      "shop_404": {
+        "title": "Crea un lloc web d'ecommerce i ven en línia! Programari d'Ecommerce fet per Shopify",
+        "heros": {
+          "store_unavailable": "Ho sentim, actualment aquesta botiga no està disponible.",
+          "store_not_exist": "Aquesta botiga no existeix.",
+          "no_storefront": "Aquesta botiga encara no té lloc web."
+        },
+        "links": {
+          "explore_other_stores": "Explorar altres botigues",
+          "start_free_trial": "Començar una prova gratis"
+        },
+        "owner_ctas": {
+          "header": "Ets el propietari de la botiga?",
+          "fix_domain": "Per acabar de configurar la vostra nova adreça web, aneu a %{domain_settings_link}. Fes clic a \"Connect domain\" (Connectar domini) i introdueix: %{domain}.<br> Si teniu problemes per accedir a la botiga, proveu la pàgina %{forgot_your_store_link}.",
+          "fix_domain_link_text": "la configuració del teu domini",
+          "forgot_your_store_link_text": "Has oblidat la teva botiga?",
+          "add_storefront": "Per configurar el teu lloc web pots configurar el canal de Botiga online al %{admin_link}. Si tens problemes per accedir a la botiga, prova la pàgina %{forgot_your_store_link}.",
+          "admin_link_text": "panell de control"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Ven en persona",
+            "caption": "Obtingues les funcions que necessites per gestionar la teva botiga física, tant si està començant com si està creixent.",
+            "link_text": "Començar prova gratis"
+          },
+          "open_a_store": {
+            "header": "Obre una nova botiga Shopify",
+            "caption": "Comença una prova gratuïta de 3 dies i continua per $1/mes durant els 3 mesos següents.",
+            "link_text": "Registra't ara"
+          },
+          "editions": {
+            "header": "Coneix Shopify Editions",
+            "caption": "Amb més de 100 actualitzacions de productes, pots ser més productiu, creatiu i poderós en el comerç del que mai vas imaginar.",
+            "link_text": "Explorar el més recent de Editions"
+          },
+          "store_owner": {
+            "header": "Ets el propietari de la botiga?",
+            "caption": "Tens problemes per accedir a la botiga?Prova la funció %{forgot_your_store_link}. Si vols reactivar la teva botiga contacta amb %{shopify_support_link}.",
+            "shopify_support_link_text": "atenció al client de Shopify"
+          }
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Error en restablir la contrasenya",
+        "no_account_found": "No s'ha trobat cap compte amb aquesta adreça electrònica.",
+        "invalid_credentials": "Correu electrònic o contrasenya incorrectes.",
+        "denylisted_reset_password": "No es pot accedir al vostre compte perquè la contrasenya actual no és segura. Rebràs un correu electrònic per actualitzar la teva contrasenya.",
+        "signup_disabled": "S'ha desactivat la creació del compte de client.",
+        "subscribe_error": "Error de subscripció",
+        "unsubscribe_error": "Error en cancel·lar la subscripció"
+      },
+      "address": {
+        "updated": "Adreça actualitzada amb èxit."
+      }
     }
   },
   "customer_accounts": {
