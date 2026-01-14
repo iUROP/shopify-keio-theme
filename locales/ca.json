@@ -2419,7 +2419,71 @@
             "estimated_delivery": "S'estima pel {{date}}"
           }
         }
-      }
+      },
+      "order_status": {
+        "delivery_promise": {
+          "details_modal": {
+            "shop_cash_claim": {
+              "no_longer_guaranteed_label": "Aquests articles ja no compten amb el suport de la garantia de lliurament.",
+              "claim_shop_cash_title": "Escaneja per reclamar {{amount}} a Shop Cash",
+              "claim_shop_cash_description": "Pots utilitzar el teu Shop Cash en compres futures a l'aplicació Shop."
+            },
+            "delivery_guarantee_label": "Garantia de lliurament"
+          }
+        },
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Gestionar a Amazon"
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "Lliurament garantit per",
+            "external_promise_brand_label": "Lliurament abans del",
+            "not_delivered_by_label": "Lliurat després del {{date}}",
+            "delivery_guarantee_expired_label": "La garantia de lliurament va vèncer",
+            "modal_accessibility_button_label": "Informació sobre la promesa de lliurament",
+            "download_shop_app_button_label": "Descarregar Shop per fer seguiment"
+          },
+          "details_modal": {
+            "title": "Garantia de lliurament",
+            "active_delivery_guarantee_label": "Lliurament per al {{date}}",
+            "expired_delivery_guarantee_description": "La garantia de 30 dies de Shop Promise d'aquesta comanda va vèncer.",
+            "expired_badge_label": "Vençut",
+            "order_includes_guarantees_label": "La teva comanda inclou {{deliveryAgreementsCount}} garanties",
+            "order_includes_guarantees_description": "Shop Promise garanteix un lliurament ràpid i fiable. Reclama Shop Cash si la teva comanda arriba després del {{date}} .",
+            "delivered_after_label": "Lliurat després del {{date}}",
+            "delivered_after_description": "Com la teva comanda va arribar amb retard, ets elegible per a reclamar {{amount}} de Shop Cash.",
+            "claimed_shop_cash_description": "Com aquesta comanda va arribar amb retard, vas reclamar {{amount}} de Shop Cash.",
+            "eligible_to_claim_shop_cash_description": "Com la teva comanda va arribar amb retard, ets elegible per a reclamar {{amount}} de Shop Cash.",
+            "learn_more_button_label": "Més informació",
+            "view_balance_in_shop_button_label": "Veure saldo a Shop",
+            "scan_to_claim_shop_cash_label": "Escaneja per reclamar {{amount}} a Shop Cash"
+          }
+        },
+        "tracking_number": {
+          "one": "Número de seguiment",
+          "other": "Números de seguiment",
+          "many": "Números de seguiment"
+        },
+        "gift_card_resend_button": {
+          "one": "Reenviar targeta de regal",
+          "other": "Reenviar targetes de regal",
+          "many": "Reenviar targetes de regal"
+        },
+        "expected_by": "Prevista per al {{date}}",
+        "was_expected_by": "Estava prevista per {{date}}"
+      },
+      "status_mark_as_delivered": "Marcar com a lliurat",
+      "buy_again": "Tornar a comprar",
+      "buy_again_accessibility_label": "Tornar a comprar per a la comanda {{orderId}}",
+      "manage_accessiblity_label": "Gestionar comanda {{orderId}}",
+      "fulfillment_status_title": "Estat de preparació de la comanda: {{status}}",
+      "list_title_with_pending_orders": "Comandes:",
+      "list_title_confirmed_orders_accessibility_label": "Comandes: confirmades",
+      "list_title_pending_orders_accessibility_label": "Comandes: pendents",
+      "switch_order_type_pending_orders_accessibility_label": "Canvia el tipus de comanda. Actualment es mostren les comandes pendents.",
+      "switch_order_type_confirmed_orders_accessibility_label": "Canvia el tipus de comanda. Actualment es mostren les comandes confirmades.",
+      "group_title_label": "Part de: {{groupTitle}}",
+      "group_title_label_with_parent": "Per a: {{groupTitle}}"
     },
     "payment_methods": {
       "card_fields": {
@@ -3058,7 +3122,62 @@
       "due_on_date": "Venç el {{date}}",
       "due_on_fulfillment": "Pagament després de la preparació de la comanda",
       "due_on_receipt": "Pagament després de la recepció",
-      "group_title_label_with_parent": "Per a: {{groupTitle}}"
+      "group_title_label_with_parent": "Per a: {{groupTitle}}",
+      "addresses_section_title": "Facturació i enviament",
+      "billing_address": "Adreça de facturació",
+      "card_ending_with": "que acaba a {{lastDigits}}",
+      "contact": "Contacte",
+      "hide_items": "Amagar articles",
+      "loading": "Carregant detalls de la comanda",
+      "loading_finished_accessibility_message": "Els detalls de la comanda es van carregar.",
+      "payment": {
+        "status_in_review": "Venciment del pagament després de la revisió",
+        "status_unpaid": "Venciment del pagament el {{date}}",
+        "title": "Pagament",
+        "card_payment_details": "acabada en {{lastDigits}} - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Pagat amb Quotes de Shop Pay",
+          "view_schedule": "Veure cronograma"
+        },
+        "gift_card_payment_details": "acabada en {{lastDigits}} - {{formattedTransactionAmount}}",
+        "manual_payment_methods": {
+          "money_order": "Gir postal: {{formattedTransactionAmount}}",
+          "cash_on_delivery": "Pagament contra lliurament (COD): {{formattedTransactionAmount}}",
+          "bank_deposit": "Dipòsit bancari: {{formattedTransactionAmount}}",
+          "manual": "Manual - {{formattedTransactionAmount}}"
+        },
+        "store_credit_payment_details": "Crèdit a la botiga: {{formattedTransactionAmount}}",
+        "transactions": {
+          "show_all": "Mostra-ho tot",
+          "show_less": "Mostrar menys",
+          "details": "Detalls",
+          "payment_details": "Detalls de pagament"
+        },
+        "payment_type": {
+          "gift_card": "Targeta de regal",
+          "store_credit": "Crèdit a la botiga",
+          "money_order": "Gir postal",
+          "cash_on_delivery": "Pagament contra lliurament",
+          "bank_deposit": "Dipòsit bancari"
+        }
+      },
+      "shipping": {
+        "address": "Direcció d'enviament",
+        "address_map_marker": "Direcció d'enviament",
+        "method": "Mètode d'enviament",
+        "summary": "Enviament",
+        "free_shipping_discount": "Enviament gratuït",
+        "one_time": "Enviament únic",
+        "subscription": "Enviament per subscripció"
+      },
+      "show_items": "Mostrar articles",
+      "subtitle": "Data de confirmació: {{date}}",
+      "summary_list_title_accessibility_label": "Articles de la comanda",
+      "summary_title": "Resum de la comanda",
+      "summary_totals_title_accessibility_label": "Totals de la comanda",
+      "taxes": "Impostos",
+      "title": "Comanda {{name}}",
+      "unit_price": "{{price}} /unitat"
     },
     "B2B": {
       "purchase_order_number": {
