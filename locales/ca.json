@@ -2909,7 +2909,8 @@
       "company_and_location": "Empresa i sucursal",
       "due_on_date": "Venç el {{date}}",
       "due_on_fulfillment": "Pagament després de la preparació de la comanda",
-      "due_on_receipt": "Pagament després de la recepció"
+      "due_on_receipt": "Pagament després de la recepció",
+      "group_title_label_with_parent": "Per a: {{groupTitle}}"
     },
     "B2B": {
       "purchase_order_number": {
@@ -2921,6 +2922,52 @@
         "modal_po_number_input_max_length_error": "Els números d'ordres de compra tenen un màxim de {{maxLength}} caràcters.",
         "save": "Desa",
         "title": "Núm. d'ordre de compra: {{poNumber}}"
+      },
+      "account_information": {
+        "company_card_name_label": "Nom de l'empresa"
+      },
+      "locations": {
+        "contact_email": "Correu electrònic",
+        "contact_list_title": "Gent",
+        "contact_name": "Nom",
+        "contact_phone_number": "Número de telèfon",
+        "location_picker_label": "Nom de la sucursal",
+        "net_payment_terms_description": "{{name}} : pagaments que vencen a {{numberOfDays}} dies",
+        "payment_details_title": "Detalls del pagament",
+        "payment_terms": "Condicions del pagament",
+        "permissions_label": "Els seus permisos",
+        "shipping_address_required": "Afegeix una adreça de facturació a aquesta sucursal per començar a fer comandes.",
+        "tax_details_title": "Informació fiscal",
+        "tax_id": "Identificació fiscal",
+        "tax_exemptions": "Exempcions d'impostos",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} més",
+        "tax_exemptions_modal_close": "Tancar",
+        "taxes_none": "Cap",
+        "tax_exemptions_modal_button_accessibility_label": "Veure totes les exempcions fiscals",
+        "pagination": {
+          "load_more": "Carregar més",
+          "load_more_accessibility_label": "Carregar més sucursals"
+        },
+        "own_role_contact_name": "Tu",
+        "staff_and_permissions_title": "Empleats i permisos",
+        "location_picker_accessibility_label": "Nom de la sucursal: {{locationName}}",
+        "deposit_percentage": "Dipòsit del {{percentage}}"
+      },
+      "location_selection": {
+        "description": "Si ja teniu articles a la cistella, el canvi de sucursal pot afectar els preus i les quantitats del carret.",
+        "list_accessibility_label": "Llista de sucursals",
+        "list_item_without_address_accessibility_label": "{{name}} : sense adreça",
+        "list_loading_accessibility_message": "Carregant llista de sucursals",
+        "list_loading_address_accessibility_message": "Carregant adreça per a {{locationName}}",
+        "list_loading_finished_accessibility_message": "Es va carregar la llista de sucursals.",
+        "loading_store_accessibility_message": "Anar a la botiga",
+        "selection_cancel_button": "Cancel·la",
+        "selection_confirmation_button": "Triar sucursal",
+        "title": "Per a què sucursal compres?",
+        "continue_to_store": "Continuar a la botiga",
+        "no_location_title": "Només comandes personals",
+        "no_location_description": "Ja no tens permís per a realitzar comandes per a {{company}} . Encara pots fer comandes personals.",
+        "no_locations_found": "No s'ha trobat cap sucursal"
       }
     },
     "errors": {
@@ -2981,6 +3028,71 @@
         "description": "No s'ha pogut carregar el formulari d'adreça.",
         "refresh_button": "Actualitzar pàgina"
       }
+    },
+    "addresses": {
+      "add_button": "Afegir adreça",
+      "address_deleted_notification": "Adreça eliminada",
+      "cancel_adding_address_accessibility_label": "Cancel·la addició de direcció",
+      "cancel_deletion_button": "Cancel·la",
+      "cancel_deletion_button_accessibility_label": "Cancel·lar eliminació de {{address}}",
+      "default_address": {
+        "title": "Adreça predeterminada",
+        "title_accessibility_label": "Adreça predeterminada: {{address}}"
+      },
+      "delete_button_accessibility_label": "Eliminar {{address}}",
+      "delete_confirmation_button": "Eliminar adreça",
+      "delete_confirmation_button_accessibility_label": "Eliminar {{address}}",
+      "delete_confirmation_message": "Eliminar adreça? Les comandes existents no es veuran afectades.",
+      "edit_button": "Edita",
+      "edit_button_accessibility_label": "Editar {{address}}",
+      "edit_section_accessibility_label": "Editar {{address}}",
+      "loading_accessibility_message": "Carregant direcció",
+      "loading_addresses_accessibility_message": "Carregant adreces",
+      "loading_billing_accessibility_message": "Carregant adreces de facturació",
+      "loading_finished_accessibility_message": "Es va carregar una nova pàgina d'adreces",
+      "loading_shipping_accessibility_message": "Carregant direcció d'enviament",
+      "pagination": {
+        "load_more": "Carregar més",
+        "load_more_accessibility_label": "Carregar més adreces"
+      },
+      "save_new_address_accessibility_label": "Desar direcció",
+      "title": "Adreces",
+      "delete_confirmation_title": "Esborrar direcció?",
+      "delete_confirmation_description": "Les comandes existents no es veuran afectades.",
+      "edit_modal_title": {
+        "default": "Editar direcció",
+        "billing": "Edita adreça de facturació",
+        "shipping": "Edita adreça d'enviament"
+      },
+      "add_address_banner": "Afegir les adreces que vols utilitzar a la pantalla de pagament",
+      "billing_address_dropdown_placeholder": "Adreça de facturació",
+      "add_button_text": "Afegir",
+      "add_button_accessibility_label": "Afegir adreça",
+      "back_button": "Enrere",
+      "back_button_accessibility_label": "Tornar a l'edició de l'adreça {{address}}",
+      "no_addresses_banner": "No s'hi van afegir adreces."
+    },
+    "address_form": {
+      "auto_complete_close_accessibility_label": "Tanca els suggeriments.",
+      "auto_complete_title": "Suggeriments",
+      "billing_address": "Usar com a adreça de facturació",
+      "cancel": "Cancel·la",
+      "cancel_accessibility_label": "Cancel·lar l'edició de l'adreça {{address}}",
+      "creation_success_notification": "Adreça agregada",
+      "default_address": "Aquesta és la meva adreça predeterminada.",
+      "default_address_creation_success_notification": "Adreça predeterminada agregada",
+      "default_address_update_success_notification": "Adreça predeterminada actualitzada",
+      "loading_add_form_accessibility_message": "Carregant formulari de nova adreça",
+      "loading_edit_form_accessibility_message": "Carregant formulari d'edició d'adreça",
+      "loading_finished_accessibility_message": "Formulari de direcció carregat",
+      "save": "Desa",
+      "save_accessibility_label": "Desar l'adreça {{address}}",
+      "section_title_accessibility_label": "Afegir adreça",
+      "update_success_notification": "Adreça actualitzada",
+      "attention": "Atenció",
+      "attention_help_text": "Nom d'una persona o departament",
+      "loading_form_accessibility_message": "Carregant formulari d'adreça",
+      "attention_company": "Empresa/A l'atenció de"
     }
   },
   "sections": {
