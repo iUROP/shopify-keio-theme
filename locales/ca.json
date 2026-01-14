@@ -1782,6 +1782,143 @@
         "order_deposit_due_on_receipt": "Avui és la data límit per a abonar el {{depositAmount}} . La data de pagament del saldo venç més endavant.",
         "order_deposit_due_on_fixed_date": "Avui és la data límit per a abonar el {{depositAmount}} . La data de pagament del saldo és el {{dueDate}} .",
         "bank_account_label": "Compte bancari"
+      },
+      "shop_pay_external": {
+        "errors": {
+          "problem_loading": "Hi ha un problema per carregar Shop Pay.",
+          "try_again_later": "Comproveu la connexió o tanqueu aquesta finestra i torneu-ho a provar en uns minuts.",
+          "checkout_has_expired": "El teu procés de pagament ha expirat. Tanca aquesta finestra i intenta tornar a realitzar el pagament des de {{shopName}} ."
+        },
+        "return_to_store": "Tornar a {{shopName}}",
+        "return_to_store_simple": "Tornar a la botiga",
+        "title": "Pagament de Shop Pay"
+      },
+      "company_location": {
+        "location_title": "Ubicació de l'empresa",
+        "location_rollup_accessibility_label": "Opcions de sucursal de l'empresa"
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "El preu de la targeta de regal ha de ser superior a 0.",
+            "subtotal_limit_reached": "S'han aconseguit el màxim de línies d'articles.",
+            "gift_card_price_must_not_exceed_limit": "El preu de la targeta de regal no pot ser superior a %{gift_card_limit}.",
+            "signature_mismatch": "La signatura de la mercaderia promocional no coincideix a la línia %{stable_id}."
+          }
+        }
+      },
+      "clipboard": {
+        "copied": "Copiat",
+        "failed_to_copy": "Error en copiar"
+      },
+      "payment_challenge_modal": {
+        "instructions": "Completa la compra usant el teu codi de {{paymentMethod}}",
+        "timer_message": "Tens {{timeLeft}} per pagar",
+        "copy_text": "Copiar el codi de {{paymentMethod}}",
+        "header": "Pagar amb {{paymentMethod}}",
+        "qr_code": {
+          "instructions": "Completa la compra usant el teu codi de {{paymentMethod}}"
+        },
+        "external": {
+          "instructions": "Confirma el pagament a la teva aplicació per completar aquesta compra"
+        },
+        "close": "Tancar el desafiament",
+        "open_app_text": "Obrir l'aplicació {{paymentMethod}}"
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "Hi ha hagut un problema en processar la comanda. Torneu-ho a intentar en uns minuts."
+      },
+      "merchant_instruction_errors": {
+        "empty_stable_id": "La instrucció de mercaderies promocionals %{position} %{name} conté una identificació estable buida.",
+        "invalid_stable_id_target": "La instrucció de mercaderia promocional %{position} %{name} fa referència a la identificació estable %{stable_id}, però aquesta identificació estable no és a les línies de mercaderia promocional.",
+        "duplicate_variant_id": "La instrucció de mercaderies promocionals %{position} %{name} conté una identificació de variant %{variant_id} duplicada.",
+        "invalid_variant_id_target": "La instrucció de mercaderia promocional %{name} fa referència a la identificació de variant %{variant_id}, però aquesta variant no es troba a les línies de mercaderia promocional.",
+        "invalid_price_override_target": "El preu anul·la la instrucció de la mercaderia promocional per a la línia d'article %{stable_id} i no és vàlida perquè és un component d'un paquet."
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "El lliurament d'aquest producte no està disponible per a %{location_name}.",
+          "some_products_other": "El lliurament d'aquests productes no està disponible per a %{location_name}.",
+          "all_products_one": "El lliurament del producte de la cistella no està disponible per a %{location_name}.",
+          "all_products_other": "El lliurament dels productes de la cistella no està disponible per a %{location_name}."
+        },
+        "missing_country_fallback": "el teu país",
+        "indeterminate_location_fallback": "la teva ubicació",
+        "cart_updated": "Es va actualitzar el carretó.",
+        "change_address_only": "Canvia la direcció de lliurament per continuar.",
+        "change_address_or_remove": "Canvieu l'adreça de lliurament o %{remove_action}.",
+        "empty_cart_action": "buida el carretó i torna a la botiga",
+        "remove_items_action": {
+          "one": "elimina l'article no disponible",
+          "other": "elimina els articles no disponibles",
+          "many": "elimina els articles no disponibles"
+        }
+      },
+      "b2b_errors": {
+        "lost_b2b_purchasing_permissions": "Ja no tens permís per fer comandes B2B. %{logout_url} per fer una comanda personal.",
+        "log_out_link_text": "Tancar sessió",
+        "lost_permissions_subtitle": "Ja no tens permís per fer comandes B2B. Tanca sessió per fer una comanda personal.",
+        "lost_permissions_title": "No hi ha permisos de sucursal"
+      },
+      "units": {
+        "foot": "peus",
+        "yard": "id",
+        "square_foot": "peus²",
+        "item": "article"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "L'adreça no és compatible amb els membres actuals.",
+        "items_split_across_locations_unsupported": "El lliurament amb Prime no està disponible per a la teva comanda. S'han actualitzat les vostres opcions d'enviament."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Anar a la botiga online"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Més informació sobre %{context}",
+        "additional_payment_methods": "Formes de pagament addicionals"
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "El pagament només conté mercaderies promocionals d'una botiga remota. És necessari un redireccionament a la botiga remota per completar el pagament.",
+          "currency_mismatch": "Aquest article no es pot afegir a la cistella perquè és una botiga que utilitza una altra moneda.",
+          "max_remote_shops_exceeded": "No es pot afegir aquest producte perquè el teu carret ja va assolir el màxim permès a altres botigues.",
+          "currency_mismatch_removal": "Es va treure un article del teu carretó perquè pertany a una botiga que utilitza una moneda diferent."
+        }
+      },
+      "remote_merchandise_only": {
+        "remote_only_notice": "Aquests articles es venen i s'envien des d'altres botigues. Per completar la compra has de pagar a les botigues corresponents.",
+        "return_to_store_label": "Tornar a la botiga",
+        "checkout_on_shop_label": "Pagar a %{shop_name}",
+        "single_shop_transition": "Se us redirigeix ​​a %{advertiser} per completar la vostra compra.",
+        "detail_item_label": {
+          "one": "{{count}} article",
+          "other": "{{count}} articles",
+          "many": "{{count}} articles"
+        }
+      },
+      "remote_policies": {
+        "unavailable_policy": "No s'ha proporcionat cap %{policy_name} per a aquesta botiga. Per a més informació, contacteu directament amb %{shop_name}."
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_title": "Pagament fallit",
+        "payment_not_processed_text": "Intenta tornar a escanejar el codi QR. Si encara no funciona, informa al nostre personal i prova amb una altra forma de pagament.",
+        "payment_link_expired_title": "L'enllaç de pagament va caducar",
+        "payment_link_expired_text": "Intenta tornar a escanejar el codi QR.",
+        "title": "Error en el pagament extern"
+      },
+      "taxes": {
+        "tax_details": "Informació fiscal addicional",
+        "vat_number": {
+          "field": {
+            "label": "Número d'IVA (opcional)",
+            "tooltip": "Valida el número d'IVA i aplica automàticament la inversió del subjecte passiu a les comandes elegibles"
+          },
+          "add": "Afegir un número d'IVA",
+          "vaulted": "Número d'IVA: %{number}",
+          "badge": "Número d'IVA: %{number}"
+        }
       }
     },
     "checkpoint": {
@@ -1868,7 +2005,8 @@
       "first_name": "Nom",
       "last_name": "Cognom",
       "body": "missatge",
-      "signature": "Direcció"
+      "signature": "Direcció",
+      "email": "correu electrònic"
     },
     "addresses": {
       "zip_code": "Codi postal",
@@ -2116,6 +2254,16 @@
     "challenge": {
       "message": "Per continuar, indica'ns que no ets un robot.",
       "error": "La teva resposta no va ser la correcta, si us plau intenta de nou."
+    },
+    "pagination": {
+      "next": "Següent"
+    },
+    "links": {
+      "powered_by_shopify": "Tecnologia de Shopify",
+      "learn_more": "Llegir més"
+    },
+    "feed": {
+      "more": "Més"
     }
   },
   "customer_accounts": {
