@@ -1159,6 +1159,144 @@
           }
         }
       }
+    },
+    "payment_methods": {
+      "card_fields": {
+        "card_verification_value_label": "Codi de seguretat",
+        "card_verification_value_placeholder": "Codi de seguretat",
+        "card_start_label": "Inici (MM/AA)",
+        "card_start_placeholder": "Inici (MM/AA)",
+        "tooltip": {
+          "tooltip_accessibility_label": "Més informació",
+          "card_verification_value_explanation_amex": "Codi de seguretat de 4 dígits a la part frontal de la targeta",
+          "card_verification_value_explanation_other": "Codi de seguretat de 3 dígits al revers de la targeta",
+          "card_verification_value_explanation": "Codi de seguretat de 3 dígits ubicat normalment al revers de la targeta. Les targetes American Express tenen un codi de 4 dígits ubicat a l'anvers.",
+          "card_security_notice": "Totes les transaccions són segures i estan encriptades."
+        },
+        "field_errors": {
+          "credit_card_name_invalid": "Introdueix el teu nom exactament com apareix a la targeta",
+          "credit_card_number_invalid": "Introdueix un número de targeta vàlid",
+          "credit_card_expiry_invalid": "Introdueix una data d'expiració de targeta vàlida",
+          "credit_card_verification_value_blank": "Introdueix el codi de seguretat (CVV) de la targeta"
+        },
+        "unavailable": {
+          "text": "Els pagaments amb targeta de crèdit i dèbit no estan disponibles en aquest moment.",
+          "link_text": "Recarrega la pàgina",
+          "suffix": "o intenta-ho de nou més tard."
+        }
+      },
+      "add_payment_method": {
+        "title": "Afegir forma de pagament",
+        "payment_method_added_confirmation": "Forma de pagament agregada",
+        "billing_address": {
+          "title": "Adreça de facturació",
+          "add_billing_address_button": "Afegeix nova",
+          "add_billing_address_button_accessibility_label": "Afegeix una nova adreça de facturació",
+          "choose_billing_address_from_list_button": "Triar de la llista",
+          "choose_billing_address_from_list_button_accessibility_label": "Triar una adreça de facturació de la llista",
+          "missing_billing_address_error_message": "Escriu una adreça de facturació.",
+          "default_checkbox": "Establir com a forma de pagament predeterminada"
+        },
+        "replace_mode_warning": "Eliminar aquesta forma de pagament afectarà les subscripcions i les comandes en prevenda Reemplaça-la per una altra forma de pagament alternatiu per continuar rebent les properes comandes.",
+        "choose_from_list": "Triar de la llista",
+        "add_new_button": "Afegeix nova",
+        "button_title": "Afegir"
+      },
+      "expires_soon": "Aquesta targeta expirarà aviat",
+      "expired": "Aquesta targeta va expirar",
+      "card_update_consent": "Aquesta forma de pagament es guardarà per a futures compres.",
+      "digital_wallet_title": "Bitlletera digital",
+      "credit_or_debit_card_title": "Targeta de crèdit o dèbit",
+      "google_pay": {
+        "errors": {
+          "generic": "S'ha produït un error amb Google Pay. Intenta-ho de nou o utilitza una altra forma de pagament.",
+          "missing_billing_address": "Google Pay requereix una adreça de facturació. Afegeix-ne una al teu compte."
+        },
+        "loading": "Carregant Google Pay",
+        "iframe_title_accessibility_label": "Afegir forma de pagament Google Pay",
+        "loading_accessibility_message": "Carregant Google Pay"
+      },
+      "apple_pay": {
+        "loading": "Carregant Apple Pay",
+        "errors": {
+          "generic": "S'ha produït un problema amb Apple Pay. Intenta-ho de nou o utilitza una altra forma de pagament.",
+          "not_available": "Apple Pay no està disponible en aquest dispositiu.",
+          "missing_billing_address": "Apple Pay requereix una adreça de facturació. Afegeix-ne una al teu compte."
+        }
+      },
+      "add_payment_method_banner": "Afegeix una forma de pagament per agilitzar el procés de pagament o els serveis amb autorització prèvia.",
+      "edit_payment_method_button_accessibility_label": "Editar {{paymentMethodName}} que acaba a {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Edita {{paymentMethodName}}",
+      "expiration_warning_button_accessibility_label": "Mostrar avís de venciment per {{paymentMethodName}} que acaba a {{lastDigits}}",
+      "no_payment_methods_banner": "No s'han afegit formes de pagament.",
+      "default": "Per defecte",
+      "store_credit": {
+        "label": "Crèdit a la botiga",
+        "accesibility_label": "Crèdit a la botiga: {{formattedBalance}}",
+        "expirable_amounts_button": "Veure munts que poden vèncer",
+        "details_modal": {
+          "title": "Crèdit a la botiga que pot vèncer",
+          "expiration_date_label": "Data de venciment",
+          "expirable_balance_info": "Una part del saldo venç més endavant",
+          "expirable_amount_label": "Muntanya total que pot vèncer",
+          "expirable_amounts_info": "Les sumes que vencen abans s'apliquen primer durant el pagament",
+          "expired_amounts_button": "Veure munts vençuts",
+          "pagination": {
+            "load_more_label": "Carregar més",
+            "load_more_accessibility_label": "Carregar més sumes que poden vèncer"
+          },
+          "date_label": "Data",
+          "expirable_amounts_button": "Veure",
+          "event_label": "Esdeveniment",
+          "events": {
+            "adjustment": "Ajust",
+            "order_payment": "Pagament de la comanda",
+            "order_refund": "Reemborsament de la comanda",
+            "payment_failure": "Error en el pagament",
+            "payment_returned": "Pagament tornat",
+            "order_cancellation": "Cancel·lació de la comanda",
+            "tax_finalization": "Determinació d'impostos"
+          }
+        },
+        "expirable_amounts_label": "Munts que poden vèncer"
+      },
+      "three_d_secure": {
+        "verification_failed": "No s'ha pogut verificar el pagament. Torneu-ho a provar o utilitzeu una forma de pagament diferent."
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "Afegir forma de pagament PayPal",
+        "loading_accessibility_message": "Carregant PayPal",
+        "errors": {
+          "generic": "Hi va haver un problema amb PayPal. Torneu-ho a provar o utilitzeu una forma de pagament diferent."
+        }
+      },
+      "card_update_consent_subscriptions": "Aquesta forma de pagament es guardarà per a futures compres i es podrà utilitzar per a qualsevol compra recurrent o diferida.",
+      "add_payment_method_dropdown": {
+        "bank_account_consent": "Quan afegeixes una forma de pagament, autoritzes que les compres futures que aprovis es cobrin a la targeta o s'abiten del teu compte bancari fins que el cancel·lis."
+      },
+      "replacement_payment_method_title": "Reemplaçar la forma de pagament",
+      "bank_account": {
+        "loading_accessibility_message": "El botó de compte bancari s'està carregant",
+        "iframe_title_accessibility_label": "Configuració de compte bancari",
+        "display_name": "Compte bancari",
+        "generic_error": "No s'ha pogut afegir un compte bancari. Torneu-ho a provar més tard."
+      },
+      "update_payment_method": {
+        "title": "Actualitzar forma de pagament",
+        "button_title": "Actualitzar",
+        "billing_address": "Adreça de facturació",
+        "disclaimer": "Aquesta forma de pagament es guardarà per a futures compres i es podrà utilitzar per a qualsevol compra recurrent o diferida.",
+        "error_message": "No es pot modificar la forma de pagament",
+        "loading_form_accessibility_message": "Carregant formulari d'actualització de forma de pagament",
+        "loading_current_payment_method": "Carregant forma de pagament actual",
+        "loading_digital_wallets": "Carregant opcions de cartera digital",
+        "loading_card_fields": "Carregant camps de targeta de crèdit",
+        "subscriptions_title": "Subscripcions",
+        "subscriptions_list_accessibility_label": "Llista de productes de subscripció",
+        "pre_orders_title": "Propers",
+        "pre_orders_list_accessibility_label": "Llista de productes de la comanda pendents",
+        "resources_list_accessibility_label": "Productes de subscripció i productes de la comanda pendents que usen aquesta forma de pagament"
+      }
     }
   }
 }
