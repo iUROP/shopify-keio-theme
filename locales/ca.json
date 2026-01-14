@@ -2416,9 +2416,39 @@
         "order_status_message": {
           "list_view": {
             "view_order_for_details": "Veure la comanda per obtenir informació",
-            "estimated_delivery": "S'estima pel {{date}}"
+            "estimated_delivery": "S'estima pel {{date}}",
+            "last_updated": "Darrera actualització: {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Lliurament estimat: {{date}}"
           }
-        }
+        },
+        "more_than_three_products_accessibility_label": "La comanda inclou {{lineItemName1}} , {{lineItemName2}} i {{numberOfAdditionalProducts}} productes més",
+        "plus_more": "Més de {{numberOfAdditionalProducts}}",
+        "filter": {
+          "clear_section": "Esborrar secció",
+          "clear_all": "Esborrar-ho tot",
+          "date": {
+            "start_date": "Data d'inici",
+            "end_date": "Data de finalització",
+            "title": "Data de la comanda",
+            "today": "Avui",
+            "last_7_days": "Últims set dies",
+            "last_30_days": "Últims 30 dies",
+            "last_90_days": "Últims 90 dies",
+            "last_365_days": "Últims 12 mesos",
+            "custom": "Personalitzat"
+          }
+        },
+        "no_order_banner": "Crea una comanda per provar la teva extensió a la pàgina d'estat de la comanda.",
+        "location_filter_picker": {
+          "all_location": "Totes les ubicacions",
+          "current_location": "Ubicació actual",
+          "switch_view": "Canviar vista"
+        },
+        "empty_state_with_location_title": "No hi ha comandes per a {{locationName}}",
+        "view_order": "Veure comanda",
+        "view_order_accessibility_label": "Veure comanda {{orderName}}"
       },
       "order_status": {
         "delivery_promise": {
@@ -2426,9 +2456,29 @@
             "shop_cash_claim": {
               "no_longer_guaranteed_label": "Aquests articles ja no compten amb el suport de la garantia de lliurament.",
               "claim_shop_cash_title": "Escaneja per reclamar {{amount}} a Shop Cash",
-              "claim_shop_cash_description": "Pots utilitzar el teu Shop Cash en compres futures a l'aplicació Shop."
+              "claim_shop_cash_description": "Pots utilitzar el teu Shop Cash en compres futures a l'aplicació Shop.",
+              "may_be_eligible_label": "Shop Promise garanteix un lliurament ràpid i fiable. Demana Shop Cash si la teva comanda arriba amb retard.",
+              "may_be_eligible_not_authorized_label": "És possible que siguis elegible per reclamar Shop Cash perquè aquesta comanda va arribar amb demora. Inicieu sessió per veure tota la informació.",
+              "redeemed_label": "Ja vas reclamar Shop Cash perquè aquesta comanda va arribar tard.",
+              "expired_label": "Aquesta comanda no compleix els requisits per a la reclamació de lliurament endarrerit perquè la garantia de 30 dies va vèncer.",
+              "no_shop_cash_label": "Aquesta comanda no compleix els requisits per a la reclamació de lliurament endarrerit perquè no es va pagar amb Shop Pay."
             },
-            "delivery_guarantee_label": "Garantia de lliurament"
+            "delivery_guarantee_label": "Garantia de lliurament",
+            "title": "Lliurament recolzat per",
+            "modal_accessiblity_label": "Informació sobre la promesa de lliurament",
+            "delivery_by_label": "Lliurament per al {{date}}",
+            "delivery_guaranteed_by_label": "Data de lliurament assegurada pel {{date}}"
+          },
+          "promise_line": {
+            "single_brand_label": "Lliurament recolzat per",
+            "mixed_brands_label": "Lliurament garantit",
+            "not_delivered_by_label": "Encara no lliurat el {{date}}",
+            "modal_accessibility_button_label": "Informació sobre la promesa de lliurament"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Reclamar el teu Shop Cash",
+            "no_shop_app_label": "{{appDownloadLink}} per reclamar Shop Cash",
+            "download_shop_app_label": "Descarregar Shop"
           }
         },
         "external_promise_manage_button_label": {
@@ -2470,7 +2520,85 @@
           "many": "Reenviar targetes de regal"
         },
         "expected_by": "Prevista per al {{date}}",
-        "was_expected_by": "Estava prevista per {{date}}"
+        "was_expected_by": "Estava prevista per {{date}}",
+        "canceled_label": "Cancel·lat",
+        "canceled_title": "La teva comanda es va cancel·lar",
+        "come_back": "Torna a aquesta pàgina per rebre actualitzacions sobre l'estat de l'enviament.",
+        "company_tracking_number": "Número de seguiment de {{company}} :",
+        "confirmed_label": "Confirmat",
+        "confirmed_title": "La teva comanda està confirmada",
+        "delivered_label": "Lliurat",
+        "estimated_delivery": "S'estima pel {{date}}",
+        "in_review_label": "En revisió",
+        "in_review_title": "La comanda s'està revisant",
+        "no_tracking_number": "No hi ha cap número de seguiment per a aquest enviament.",
+        "on_its_way_label": "En camí",
+        "out_for_delivery_label": "Enviat al destinatari",
+        "resume_tracking": "Reprendre seguiment",
+        "submitted_label": "Enviat",
+        "track_shipment": "Fer seguiment d'enviament",
+        "request_return": "Sol·licitar devolució",
+        "attempted_delivery_label": "Intent de lliurament",
+        "preparing_for_shipping_label": "En preparació per a l'enviament",
+        "ready_for_pickup_label": "A punt per a la retirada",
+        "ready_for_pickup_description": "Aquests articles estan preparats per a la seva retirada. Porta la confirmació de la comanda quan vinguis a retirar-ho.",
+        "picked_up_label": "Retirat",
+        "submitted_description": "Revisa els detalls de la comanda i el pagament.",
+        "last_updated": "Última actualització el {{date}}",
+        "multiple_shipments_label": "Diversos enviaments",
+        "view_order_for_details": "Veure la comanda per obtenir informació",
+        "confirmed_description_digital": "Rebràs un correu electrònic quan la comanda estigui a punt.",
+        "delivered_description_gift_card": {
+          "one": "La targeta de regal es va enviar per correu electrònic.",
+          "other": "Les targetes de regal es van enviar per correu electrònic.",
+          "many": "Les targetes de regal es van enviar per correu electrònic."
+        },
+        "gift_card_label": {
+          "one": "Targeta de regal",
+          "other": "Targetes de regal",
+          "many": "Targetes de regal"
+        },
+        "ready_for_pickup_location": "La teva comanda està llesta per a la seva retirada a la sucursal",
+        "confirmed_description_pickup": "Rebràs un correu electrònic quan la teva comanda estigui a punt per retirar-la.",
+        "confirmed_gift_card_additional_description": {
+          "one": "La targeta de regal s'enviarà a un correu electrònic diferent.",
+          "other": "Cada targeta de regal s'enviarà a un correu electrònic per separat.",
+          "many": "Cada targeta de regal s'enviarà a un correu electrònic per separat."
+        },
+        "confirmed_description_gift_card_text": "Rebràs un missatge de text quan la teva comanda estigui a punt.",
+        "delivered_description_gift_card_text": {
+          "one": "La targeta de regal es va enviar per missatge de text.",
+          "other": "Les targetes de regal es van enviar per missatge de text.",
+          "many": "Les targetes de regal es van enviar per missatge de text."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "La targeta de regal s'enviarà en un missatge de text diferent.",
+          "other": "Cada targeta de regal s'enviarà a un missatge de text independent.",
+          "many": "Cada targeta de regal s'enviarà a un missatge de text independent."
+        },
+        "gift_resend_success": {
+          "one": "Targeta de regal reenviada",
+          "other": "Targetes de regal reenviades",
+          "many": "Targetes de regal reenviades"
+        },
+        "gift_resend_failure": {
+          "one": "Hi ha hagut un problema en reenviar la targeta de regal. Intenta-ho de nou o contacta'ns.",
+          "other": "Hi ha hagut un problema en reenviar les targetes de regal. Intenta-ho de nou o contacta'ns.",
+          "many": "Hi ha hagut un problema en reenviar les targetes de regal. Intenta-ho de nou o contacta'ns."
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Gestionar amb Amazon",
+            "new_window_disclaimer": "(obre una nova finestra)"
+          }
+        },
+        "attempted_to_deliver_label": "Es va intentar el lliurament.",
+        "there_was_a_problem_label": "Hi ha hagut un problema",
+        "buy_with_prime_logo_accessibility_label": "Logo d'Amazon Buy with Prime",
+        "delivered": "Va arribar el {{date}}",
+        "complete_label": "Completat",
+        "multiple_statuses_label": "Estats de diverses comandes",
+        "status_timestamp": "Actualitzat el {{date}}"
       },
       "status_mark_as_delivered": "Marcar com a lliurat",
       "buy_again": "Tornar a comprar",
