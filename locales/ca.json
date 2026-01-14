@@ -382,7 +382,74 @@
           "one": "No hi ha botigues disponibles a %{country} amb el teu article",
           "other": "No hi ha botigues disponibles a %{country} amb els teus articles",
           "many": "No hi ha botigues disponibles a %{country} amb els teus articles"
-        }
+        },
+        "title": "Resum de la comanda",
+        "order_name_label": "Comanda %{name}",
+        "shopping_cart_label": "Cistella",
+        "discount_title": "Descompte",
+        "discount_label": "Codi de descompte",
+        "discount_placeholder": "Codi de descompte",
+        "gift_card_title": "Targeta de regal",
+        "gift_card_label": "Targeta de regal",
+        "gift_card_placeholder": "Targeta de regal",
+        "gift_card_and_discount_title": "Codi de descompte o targeta de regal",
+        "gift_card_and_discount_label": "Codi de descompte o targeta de regal",
+        "gift_card_and_discount_placeholder": "Codi de descompte o targeta de regal",
+        "add_discount_or_gift_card": "Afegeix un codi de descompte o una targeta de regal",
+        "remove_gift_card_label": "Esborrar targeta de regal",
+        "remove_discount_label": "Eliminar descompte",
+        "free_shipping_discount_label": "Enviament gratuït",
+        "applied_discount_message": "%{amount} van ser reduïts del preu total",
+        "discount_has_been_applied": "El descompte ha estat aplicat",
+        "discount_has_been_removed": "El descompte ha estat remogut",
+        "gift_card_has_been_applied": "La targeta de regal ha estat aplicada",
+        "gift_card_has_been_removed": "La targeta de regal ha estat remoguda",
+        "discount_already_applied": "Hem aplicat un descompte a la teva comanda. No es pot aplicar un descompte addicional.",
+        "cart_does_not_meet_discount_requirements_notice": "El codi de descompte <strong style=\"text-transform:uppercase\">%{code}</strong> no és vàlid per als articles de la cistella",
+        "discount_requires_customer_notice": "Introduïu la vostra informació d'enviament per aplicar el codi de descompte <strong style=\"text-transform:uppercase\">%{code}</strong>",
+        "customer_does_not_meet_discount_requirements_notice": "El codi de descompte <strong style=\"text-transform:uppercase\">%{code}</strong> no està disponible per a tu en aquest moment",
+        "shipping_information_does_not_meet_discount_requirements_notice": "El codi de descompte <strong style=\"text-transform:uppercase\">%{code}</strong> no està disponible per a la vostra adreça d'enviament",
+        "customer_already_used_once_per_customer_discount_notice": "El codi de descompte <strong style=\"text-transform:uppercase\">%{code}</strong> ja s'ha utilitzat",
+        "shipping_label": "Enviament",
+        "shipping_default_value": "Calculat al següent pas",
+        "shipping_pending_message": "Encara no està disponible",
+        "shipping_policy_link": "Costos d'enviament",
+        "taxes_label": "Impostos",
+        "total_outstanding_label": "Munto a pagar",
+        "paid_label": "Pagat",
+        "payment_due_label": "Pendent per pagament",
+        "vat_label_html": "Inclou %{amount} d'impostos",
+        "discount_and_gift_card_savings_notice": "Després del %{discount_amount} de descompte i %{gift_card_amount} en targetes de regal",
+        "discount_savings_notice": "Després del %{discount_amount} de descompte",
+        "gift_card_savings_notice": "Després de %{gift_card_amount} en targetes de regal",
+        "cost_table_title": "Resum de costos",
+        "description_label": "Descripció",
+        "price_label": "Preu",
+        "quantity_label": "Quantitat",
+        "product_change_label": "Canviar",
+        "product_image_label": "Imatge del producte",
+        "scroll_order_summary": "Desplaça't per veure més articles",
+        "collapse_order_summary_short": "Amagar",
+        "expand_order_summary": "Mostra resum de la comanda",
+        "collapse_order_summary": "Amagar resum de la comanda",
+        "total_updated_label": "Preu total actualitzat:",
+        "order_total_updated_label": "Total actualitzat",
+        "total_already_paid_label": "Pagat",
+        "unit_price": {
+          "accessible_separator": "per",
+          "per_item": {
+            "single": "%{price} cada article",
+            "one": "%{price} per %{count} article",
+            "other": "%{price} per %{count} articles",
+            "many": "%{price} per %{count} articles"
+          }
+        },
+        "pickup_label": "Retir a la botiga",
+        "no_pickup_location": "No hi ha cap lloc de retir disponible.",
+        "calculating_shipping": "Calculant…",
+        "estimated_taxes_label": "Impostos estimats",
+        "information_estimated_taxes_label": "Impostos (estimació)",
+        "gift_card_ending": "Targeta de regal que acaba a %{last_characters}"
       },
       "shipping": {
         "subscription_delivery_description": {
@@ -900,6 +967,196 @@
         "paginator": {
           "next_accessibility_label": "Pàgina següent",
           "previous_accessibility_label": "Pàgina anterior"
+        }
+      },
+      "stock": {
+        "unshippable_product": {
+          "header": {
+            "other": "No hi ha lliurament disponible per a %{count} articles",
+            "many": "No hi ha lliurament disponible per a %{count} articles"
+          },
+          "message": {
+            "one": "Aquest article s'eliminarà del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça.",
+            "other": "Aquests articles s'eliminaran del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça.",
+            "many": "Aquests articles s'eliminaran del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça."
+          },
+          "status_column_header": "Sense entrega"
+        },
+        "price_update": {
+          "title": "Actualització de preus",
+          "description": "Els preus d'aquests articles van canviar i es van actualitzar a la cistella.",
+          "updated_price": "Preu actualitzat"
+        },
+        "return_to_store_label": "Tornar a la botiga",
+        "item_label": {
+          "one": "{{count}} article",
+          "other": "{{count}} articles",
+          "many": "{{count}} articles"
+        },
+        "continue_cta_label": "Continuar amb el pagament",
+        "out_of_stock": {
+          "description": "Aquests articles ja no estan disponibles i s'han eliminat de la cistella.",
+          "items_unavailable": "Alguns articles ja no estan disponibles i es van eliminar de la cistella."
+        },
+        "unfulfillable_product": {
+          "title": "Lliurament no disponible",
+          "message": {
+            "one": "%{delivery_method} ja no està disponible per a aquest article.",
+            "other": "%{delivery_method} ja no està disponible per a aquests articles.",
+            "many": "%{delivery_method} ja no està disponible per a aquests articles."
+          },
+          "default_message": {
+            "one": "La forma de lliurament escollida ja no està disponible per a aquest article.",
+            "other": "La forma de lliurament escollida ja no està disponible per a aquests articles.",
+            "many": "La forma de lliurament escollida ja no està disponible per a aquests articles."
+          }
+        },
+        "price_and_quantity_update": {
+          "title": "Actualització de preu i quantitat",
+          "description": "Els preus i les quantitats disponibles d'aquests articles van canviar i es van actualitzar a la cistella."
+        },
+        "out_of_stock_in_context_label": "Aquest producte no està disponible al vostre país o regió."
+      }
+    }
+  },
+  "customer_accounts": {
+    "account_information": {
+      "profile_card": {
+        "errors": {
+          "name_cannot_contain_url": "{{fieldName}} no pot incloure una URL",
+          "name_cannot_contain_html_tags": "{{fieldName}} no pot contenir etiquetes HTML",
+          "email_cant_be_blank": "El correu electrònic no pot estar en blanc",
+          "invalid_email_format": "Introdueix un correu electrònic vàlid"
+        },
+        "editable_email_help_text": "Aquest correu electrònic es fa servir per iniciar sessió i actualitzar comandes."
+      },
+      "profile_update_confirmation_message": "Perfil actualitzat",
+      "people": {
+        "pagination": {
+          "load_more": "Carregar més",
+          "load_more_accessibility_label": "Carregar més persones",
+          "loading_accessibility_label": "Carregant persones"
+        }
+      },
+      "add_button": "Afegir",
+      "verify_new_email_modal": {
+        "title": "Verificar correu electrònic",
+        "description": "Introdueix el codi enviat a {{email}}",
+        "one_time_password_label": "Codi de sis dígits",
+        "email_resend_button": "Reenviar el codi",
+        "email_resend_button_accessibility_label": "Reenviar codi de verificació",
+        "verify_button_accessibility_label": "Verificar contrasenya d'un sol ús",
+        "cancel_button": "Cancel·la",
+        "cancel_button_accessibility_label": "Cancel·lar edició del correu electrònic",
+        "email_resend_button_success_toast_message": "Codi de verificació enviat",
+        "email_resend_button_error_banner_message": "No s'ha pogut enviar el codi de verificació"
+      },
+      "email_update_success_modal": {
+        "title": "Verificar correu electrònic",
+        "description": "Correu electrònic actualitzat correctament. Redirigint per iniciar sessió."
+      },
+      "email_update_confirmation_message": "Correu electrònic actualitzat a {{email}}"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "Opcions de disseny",
+      "list_title": "Comandes",
+      "order_list": {
+        "column_headers": {
+          "order": "Comanda",
+          "actions_accessibility_label": "Accions",
+          "products_accessibility_label": "Productes"
+        },
+        "delivered": "Data de lliurament: {{date}}",
+        "empty_state_order_source_description": "Aquí només es mostraran les comandes que realitzeu {{email}} .",
+        "empty_state_subtitle": "Ves a la botiga per fer una comanda.",
+        "empty_state_title": "Encara no tens cap comanda",
+        "estimated_delivery": "S'estima pel {{date}}",
+        "items": {
+          "one": "{{count}} article",
+          "other": "{{count}} articles",
+          "many": "{{count}} articles"
+        },
+        "order_link": "Veure la comanda {{name}}",
+        "order_number": "Comanda {{name}}",
+        "orders_title": "Confirmat",
+        "pagination": {
+          "nav_accessibility_label": "Botons de navegació de les comandes",
+          "next": "Següent",
+          "next_accessibility_label": "Comandes següents",
+          "previous_accessibility_label": "Comandes anteriors",
+          "load_more": "Carregar més",
+          "load_more_accessibility_label": "Carregar més comandes"
+        },
+        "sort_by": "Ordenar per {{option}}",
+        "sort_hide_options_accessibility_label": "Amagar les opcions d'ordenació per a les comandes confirmades.",
+        "sort_show_options_accessibility_label": "Mostra les opcions d'ordenació per a les comandes confirmades.",
+        "sort": {
+          "date": {
+            "newest": "Del més recent al més antic",
+            "oldest": "Del més antic al més recent"
+          },
+          "location": {
+            "ascending": "Sucursal (AZ)",
+            "descending": "Sucursal (ZA)"
+          },
+          "order_number": {
+            "ascending": "Número de comanda (de menor a major)",
+            "descending": "Número de comanda (de major a menor)"
+          },
+          "order_total": {
+            "ascending": "Total de la comanda (de menor a major)",
+            "descending": "Total de la comanda (de major a menor)"
+          }
+        },
+        "one_images_accessibility_label": "La comanda inclou {{lineItemName1}} .",
+        "two_images_accessibility_label": "La comanda inclou {{lineItemName1}} i {{lineItemName2}} .",
+        "three_images_accessibility_label": "La comanda inclou {{lineItemName1}} , {{lineItemName2}} i {{lineItemName3}} .",
+        "four_images_accessibility_label": "La comanda inclou {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} i {{lineItemName4}} .",
+        "no_filtered_results_description": "Treure o ajustar els filtres per veure les comandes",
+        "no_filtered_results_title": "No hi ha cap resultat filtrat",
+        "estimated_shortform": "El {{date}} aprox.",
+        "payment_status": {
+          "list_view": {
+            "overdue": "Endarrerit",
+            "due": "Venç el {{date}}",
+            "due_today": "Venç avui",
+            "due_without_date": "Vençut",
+            "due_on_fulfillment": "Venç en el moment de la preparació de la comanda",
+            "pay_to_confirm": "Pagar per confirmar",
+            "payment_not_due": "Encara no vençut",
+            "paid": "Pagat"
+          },
+          "gallery_view": {
+            "overdue": "Pagament endarrerit",
+            "due": "El pagament venç el {{date}}",
+            "due_today": "El pagament venç avui",
+            "due_without_date": "Pagament vençut",
+            "due_on_fulfillment": "El pagament venç en el moment de la preparació de la comanda",
+            "pay_to_confirm": "Pagar per confirmar",
+            "payment_not_due": "Pagament encara no vençut"
+          }
+        },
+        "sort_currently_sorted_by_accessibility_label": "Actualment, estan ordenades per: {{option}}",
+        "carousel": {
+          "one_products_accessibility_label": "La comanda inclou {{lineItemName1}} (quantitat: {{lineItemQuantity1}} )",
+          "two_products_accessibility_label": "La comanda inclou {{lineItemName1}} (quantitat: {{lineItemQuantity1}} ), {{lineItemName2}} (quantitat: {{lineItemQuantity2}} )",
+          "three_products_accessibility_label": "La comanda inclou {{lineItemName1}} (quantitat: {{lineItemQuantity1}} ), {{lineItemName2}} (quantitat: {{lineItemQuantity2}} ), {{lineItemName3}} (quantitat: {{lineItemQuantity3}} )",
+          "four_products_accessibility_label": "La comanda inclou {{lineItemName1}} (quantitat: {{lineItemQuantity1}} ), {{lineItemName2}} (quantitat: {{lineItemQuantity2}} ), {{lineItemName3}} (quantitat: {{lineItemQuantity3}} ), {{lineItemName4}} {{lineItemQuantity4}} }",
+          "five_products_accessibility_label": "La comanda inclou {{lineItemName1}} (quantitat: {{lineItemQuantity1}} ), {{lineItemName2}} (quantitat: {{lineItemQuantity2}} ), {{lineItemName3}} (quantitat: {{lineItemQuantity3}} ), {{lineItemName4}} {{lineItemQuantity4}} } {{lineItemName5}} (quantitat: {{lineItemQuantity5}} )",
+          "six_products_accessibility_label": "La comanda inclou {{lineItemName1}} (quantitat: {{lineItemQuantity1}} ), {{lineItemName2}} (quantitat: {{lineItemQuantity2}} ), {{lineItemName3}} (quantitat: {{lineItemQuantity3}} ), {{lineItemName4}} {{lineItemQuantity4}} } {{lineItemName5}} (quantitat: {{lineItemQuantity5}} ), {{lineItemName6}} (quantitat: {{lineItemQuantity6}} )",
+          "six_and_more_products_accessibility_label": "La comanda inclou {{lineItemName1}} (quantitat: {{lineItemQuantity1}} ), {{lineItemName2}} (quantitat: {{lineItemQuantity2}} ), {{lineItemName3}} (quantitat: {{lineItemQuantity3}} ), {{lineItemName4}} {{lineItemQuantity4}} } {{lineItemName5}} (quantitat: {{lineItemQuantity5}} ), {{lineItemName6}} (quantitat: {{lineItemQuantity6}} ) i altres articles",
+          "view_order_details": "Veure detalls de la comanda",
+          "next": "Següent"
+        },
+        "show_order_actions_accessibility_label": "Mostrar accions per a la comanda {{name}}",
+        "empty_state_title_for_pending_orders": "No hi ha cap comanda pendent",
+        "more_than_four_products_accessibility_label": "La comanda inclou {{lineItemName1}} , {{lineItemName2}} , {{lineItemName3}} i {{numberOfAdditionalProducts}} productes més",
+        "plus_more_products": "{{numberOfAdditionalProducts}} productes",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Veure la comanda per obtenir informació",
+            "estimated_delivery": "S'estima pel {{date}}"
+          }
         }
       }
     }
