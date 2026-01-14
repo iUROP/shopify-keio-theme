@@ -224,41 +224,7 @@
         "governorate_label": "Província",
         "governorate_placeholder": "Província",
         "emirate_label": "Emirat",
-        "emirate_placeholder": "Emirat",
-        "state_and_territory_label": "Estat/Territori",
-        "state_and_territory_placeholder": "Estat/Territori",
-        "phone_label": "Telèfon",
-        "optional_phone_label": "Telèfon (opcional)",
-        "phone_placeholder": "Telèfon",
-        "phone_tooltip": "En cas que haguem de contactar-te sobre la teva comanda.",
-        "zip_code_label": "Codi postal",
-        "zip_code_placeholder": "Codi postal",
-        "postal_code_label": "Codi postal",
-        "postal_code_placeholder": "Codi postal",
-        "postcode_label": "Codi postal",
-        "postcode_placeholder": "Codi postal",
-        "pincode_label": "Codi d'identificació personal",
-        "pincode_placeholder": "Codi d'identificació personal",
-        "region_none": "No s'ha seleccionat cap",
-        "civic_number_warning": "Afegeix un número de domicili si el tens",
-        "optional_last_name_label": "Cognoms (opcional)",
-        "different_shipping_address_label": "Enviar a una adreça diferent",
-        "different_shipping_address_text": "Usar una adreça una sola vegada per a aquesta comanda",
-        "change_company_location_link_label": "Canviar sucursal de l'empresa",
-        "change_location_link_label": "Canviar sucursal",
-        "ship_to_company": "Enviar a {{companyName}}",
-        "shipping_used_as_billing_notice": "També s'utilitzarà com a adreça de facturació per a aquesta comanda.",
-        "company_attention_label": "Empresa/A l'atenció de",
-        "optional_company_attention_label": "Empresa/destinatari (opcional)",
-        "available_addresses_label": "Adreces disponibles",
-        "optional_zip_code_label": "Codi postal (opcional)",
-        "optional_postal_code_label": "Codi postal (opcional)",
-        "optional_postcode_label": "Codi postal (opcional)",
-        "optional_pincode_label": "Codi d'identificació personal (opcional)",
-        "email_rollup_accessibility_label": "Opcions de correu electrònic",
-        "phone_rollup_accessibility_label": "Opcions de telèfon",
-        "phone_country_code_label": "Codi de país del número de telèfon",
-        "storefront_link": "lloc web del comerciant"
+        "emirate_placeholder": "Emirat"
       },
       "order_summary": {
         "estimated_tax_label": "Impost estimat",
@@ -1007,16 +973,14 @@
         "unshippable_product": {
           "header": {
             "other": "No hi ha lliurament disponible per a %{count} articles",
-            "many": "No hi ha lliurament disponible per a %{count} articles",
-            "one": "No hi ha entrega disponible per a %{count} article"
+            "many": "No hi ha lliurament disponible per a %{count} articles"
           },
           "message": {
             "one": "Aquest article s'eliminarà del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça.",
             "other": "Aquests articles s'eliminaran del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça.",
             "many": "Aquests articles s'eliminaran del carretó perquè no hi ha formes de lliurament disponibles per a la teva adreça."
           },
-          "status_column_header": "Sense entrega",
-          "title": "No hi ha entrega disponible"
+          "status_column_header": "Sense entrega"
         },
         "price_update": {
           "title": "Actualització de preus",
@@ -1051,79 +1015,7 @@
           "title": "Actualització de preu i quantitat",
           "description": "Els preus i les quantitats disponibles d'aquests articles van canviar i es van actualitzar a la cistella."
         },
-        "out_of_stock_in_context_label": "Aquest producte no està disponible al vostre país o regió.",
-        "page_title": "Problemes d'inventari",
-        "title": "Esgotat",
-        "items_unavailable_notice": "Alguns articles ja no estan disponibles.",
-        "product_column_header": "Productes",
-        "quantity_column_header": "Quantitat",
-        "price_column_header": "Preu",
-        "status_column_header": "Estat",
-        "removed_from_cart_notice": "Retirat del carret",
-        "sold_out_label": "Esgotat",
-        "reduced_label": "Reduït",
-        "reduced_with_quantity_label": "Només queden %{quantity_available}",
-        "remove_from_cart_button_label": "Retirar del carret",
-        "go_back_to_cart_button_label": "Tornar a la cistella",
-        "remove": "Treure",
-        "empty_cart_label": "El teu carretó esta buit",
-        "quantity_update": {
-          "page_title": "Actualització de quantitat",
-          "title": "Actualització de quantitat",
-          "description": "Les quantitats disponibles d'aquests articles van canviar i es van actualitzar a la cistella."
-        },
-        "unpurchasable_product": {
-          "title": "Un producte no es pot comprar",
-          "header": "S'han tret alguns articles de la cistella",
-          "message": "Aquests articles no estan disponibles per a les comandes B2B."
-        },
-        "unpurchasable_product_generic": {
-          "title": "Un producte no es pot comprar",
-          "header": "S'han tret alguns articles de la cistella",
-          "message": "Aquests articles no estan disponibles."
-        }
-      },
-      "delivery_options": {
-        "ship": "Enviament",
-        "pick_up": "Retir",
-        "pick_up_in_two_hours": "Normalment està llest en 2 hores",
-        "pick_up_in_four_hours": "Normalment està llest en 4 hores",
-        "pick_up_immediately": "A punt per ser retirat ara",
-        "pick_up_next_day": "A punt per retirar l'endemà",
-        "pick_up_in_one_hour": "Normalment està llest en 1 hora",
-        "pick_up_in_twenty_four_hours": "Normalment està llest en 24 hores",
-        "pick_up_in_two_to_four_days": "Normalment està llest en 2 a 4 dies",
-        "pick_up_in_five_or_more_days": "Normalment està llest en 5 dies o més",
-        "pick_up_in_zero_to_two_hours": "A punt per retir en 2 hores",
-        "pick_up_in_two_to_four_hours": "A punt per retir en 4 hores",
-        "shipping_address": "Direcció d'enviament",
-        "pick_up_locations": "Llocs de retir",
-        "pickup_point_method_definition": "Enviament a un punt de retir",
-        "retail_method_definition": "Enviament al detall",
-        "none_method_definition": "Sense enviament",
-        "subscription_pickup_information": "Aquesta forma de lliurament s'aplicarà a tots els articles d'aquesta comanda ia totes les comandes futures que es facin usant aquesta subscripció.",
-        "ship_to_address": "Enviar a una adreça",
-        "pick_up_from_store": "Retir a la botiga",
-        "company_location_no_address_banner": "Les comandes amb enviament a sucursals sense adreça s'enviaran per a revisió."
-      },
-      "customer_account": {
-        "not_user_label": "No ets %{first_name}?",
-        "have_an_account_label": "Tens un compte?",
-        "sign_in_link_label": "Iniciar sessió",
-        "sign_out_link_label": "Tancar sessió",
-        "save_my_information_label": "Desar la meva informació i consultar més ràpidament la propera vegada",
-        "incomplete_address": "L'adreça seleccionada és incompleta. %{update_address_link} o seleccioneu una adreça diferent.",
-        "invalid_address": "L'adreça seleccionada no és vàlida. %{update_address_link} o seleccioneu una adreça diferent.",
-        "rollup_label": "Compte",
-        "invalid_shipping_method_summary": "Seleccioneu una adreça d'enviament vàlida per veure els mètodes d'enviament disponibles.",
-        "saved_address_option_link": "Usar una adreça guardada",
-        "saved_address_modal_title": "Usar les meves adreces desades",
-        "saved_address_option_description": {
-          "one": "Tens {{count}} adreça guardada.",
-          "other": "Tens {{count}} adreces guardades.",
-          "many": "Tens {{count}} adreces guardades."
-        },
-        "rollup_accessibility_label": "Opcions de compte"
+        "out_of_stock_in_context_label": "Aquest producte no està disponible al vostre país o regió."
       }
     },
     "checkpoint": {
@@ -1495,7 +1387,28 @@
         "subscriptions_list_accessibility_label": "Llista de productes de subscripció",
         "pre_orders_title": "Propers",
         "pre_orders_list_accessibility_label": "Llista de productes de la comanda pendents",
-        "resources_list_accessibility_label": "Productes de subscripció i productes de la comanda pendents que usen aquesta forma de pagament"
+        "resources_list_accessibility_label": "Productes de subscripció i productes de la comanda pendents que usen aquesta forma de pagament",
+        "resources_card_scroll": "Desplaça't per veure més articles",
+        "resources_card_show_more": "Mostra més",
+        "resources_card_show_less": "Mostrar menys",
+        "loading_resources": "Carregant les subscripcions i les properes comandes"
+      },
+      "link_expired": {
+        "message": "L'enllaç per actualitzar la vostra forma de pagament ha caducat.",
+        "return_home_button": "Tornar a la pàgina d'inici",
+        "update_message": "L'enllaç per actualitzar la vostra forma de pagament ha caducat.",
+        "add_message": "L'enllaç per afegir la vostra forma de pagament ha caducat."
+      },
+      "update_success": {
+        "title": "Forma de pagament actualitzada",
+        "done_button": "Seguir comprant"
+      },
+      "expired_badge_label": "Caducat",
+      "credit_card_title": "Targeta de crèdit",
+      "additional_payment_methods": "Formes de pagament addicionals",
+      "add_success": {
+        "title": "S'ha afegit la forma de pagament",
+        "done_button": "Seguir comprant"
       }
     },
     "navigation_and_structure": {
@@ -1539,6 +1452,215 @@
       "try_new_search": "Intentar una nova cerca",
       "skip_to_content": "Anar directament al contingut",
       "loading_policy_content_accessibility_label": "Carregant contingut de la política"
+    },
+    "payment_method_brands": {
+      "maestro": "Mestre",
+      "laser": "Làser",
+      "storecredit": "Crèdit a la botiga"
+    },
+    "enable_javascript": "Per veure el vostre compte, activa JavaScript a la configuració del navegador o inicia sessió amb un altre navegador.",
+    "ui_components": {
+      "closeNotification": "Tancar",
+      "expandNotification": "Veure més",
+      "closeModal": "Tancar",
+      "processing": "Processant...",
+      "increase": "Augmentar {{type}}",
+      "decrease": "Reduir {{type}}",
+      "minimumReached": "Mínim de {{value}} aconseguit",
+      "maximumReached": "Màxim de {{value}} aconseguit",
+      "january": "Gener",
+      "february": "Febrer",
+      "march": "Març",
+      "may": "Maig",
+      "june": "Juny",
+      "july": "Juliol",
+      "august": "agost",
+      "september": "Setembre",
+      "november": "Novembre",
+      "december": "Desembre",
+      "monday": "Dilluns",
+      "tuesday": "Dimarts",
+      "wednesday": "Dimecres",
+      "thursday": "Dijous",
+      "friday": "Divendres",
+      "saturday": "Dissabte",
+      "sunday": "Diumenge",
+      "mondayAbbreviation": "Dj.",
+      "wednesdayAbbreviation": "El meu.",
+      "thursdayAbbreviation": "Dj.",
+      "fridayAbbreviation": "Vaig veure.",
+      "saturdayAbbreviation": "Sà.",
+      "showNextMonth": "Mostrar el mes proper, {{month}} {{year}}",
+      "showPreviousMonth": "Mostrar el mes anterior, {{month}} {{year}}",
+      "rangeStart": "Inici del rang",
+      "inRange": "Dins el rang",
+      "rangeEnd": "Fi del rang",
+      "autocompleteOptionsAvailable": {
+        "one": "{{count}} article disponible",
+        "other": "{{count}} articles disponibles",
+        "many": "{{count}} articles disponibles"
+      },
+      "removeItem": "Eliminar {{label}}",
+      "month": {
+        "other": "mesos",
+        "many": "mesos"
+      },
+      "mapClusterTitle": {
+        "one": "Grup de {{number}} marcador",
+        "other": "Grup de {{number}} marcadors",
+        "many": "Grup de {{number}} marcadors"
+      },
+      "qrCode": "Codi QR",
+      "addFile": "Afegeix fitxer",
+      "dropzoneInvalidFileType": "El tipus de fitxer no és compatible.",
+      "dropzoneDraggedOver": "Deixeu anar el fitxer per pujar-lo",
+      "clipboardCopied": "Copiat",
+      "clipboardFailedToCopy": "Error en copiar",
+      "clear": "Esborrar"
+    },
+    "profile_preview_bar": {
+      "customize_button": "Personalitzar",
+      "hide_bar": "Amagar barra",
+      "navigate_to_admin": "Navegar fins al tauler de control",
+      "previewing": "Vista prèvia de:",
+      "saved_at": "Desat el {{date}} a les {{time}}"
+    },
+    "sign_in": {
+      "error": {
+        "invalid": {
+          "invalid_code": "Introdueix el codi de 6 dígits correcte"
+        }
+      },
+      "processing": "Processant…"
+    }
+  },
+  "sections": {
+    "header": {
+      "announcement": "Anunci",
+      "cart_count": {
+        "one": "{{ count }} article",
+        "other": "{{ count }} articles",
+        "many": "{{ count }} articles"
+      }
+    },
+    "cart": {
+      "title": "El teu carret",
+      "caption": "Articles a la cistella",
+      "remove_title": "Eliminar {{ title }}",
+      "note": "Instruccions especials de la comanda",
+      "checkout": "Pagar comanda",
+      "empty": "El teu carretó esta buit",
+      "cart_error": "Hi va haver un error en actualitzar la cistella de compra. Intenta-ho de nou.",
+      "cart_quantity_error_html": "Només podeu afegir {{ quantity }} d'aquest article al vostre carret.",
+      "headings": {
+        "product": "Producte",
+        "price": "Preu",
+        "quantity": "Quantitat",
+        "image": "Imatge del producte"
+      },
+      "update": "Actualitzar",
+      "login": {
+        "title": "Tens un compte?",
+        "paragraph_html": "<a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\" class=\"link underlined-link\">Inicia sessió</a> per finalitzar les compres amb més rapidesa."
+      },
+      "estimated_total": "Total estimat",
+      "new_estimated_total": "Nou total estimat",
+      "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Aranzels i impostos inclosos. Descomptes i <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">enviament</a> calculats a la pantalla de pagament.",
+      "duties_and_taxes_included_shipping_at_checkout_without_policy": "Aranzels i impostos inclosos. Descomptes i enviament calculats a la pantalla de pagament.",
+      "taxes_included_shipping_at_checkout_with_policy_html": "Impostos inclosos. Descomptes i <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">enviament</a> calculats a la pantalla de pagament.",
+      "taxes_included_shipping_at_checkout_without_policy": "Impostos inclosos. Descomptes i enviament calculats a la pantalla de pagament.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Aranzels inclosos. Impostos, descomptes i <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">enviament</a> calculats a la pantalla de pagament.",
+      "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Aranzels inclosos. Impostos, descomptes i enviament calculats a la pantalla de pagament.",
+      "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Impostos, descomptes i <a href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">enviament</a> calculats a la pantalla de pagament.",
+      "taxes_at_checkout_shipping_at_checkout_without_policy": "Impostos, descomptes i enviament calculats a la pantalla de pagament."
+    },
+    "footer": {
+      "payment": "Formes de pagament"
+    },
+    "featured_blog": {
+      "view_all": "Veure-ho tot",
+      "onboarding_title": "Article de bloc",
+      "onboarding_content": "Ofereix als teus clients un resum del teu article de bloc"
+    },
+    "featured_collection": {
+      "view_all": "Veure-ho tot",
+      "view_all_label": "Veure tots els productes de la col·lecció {{ collection_name }}"
+    },
+    "collection_list": {
+      "view_all": "Veure-ho tot"
+    },
+    "collection_template": {
+      "title": "Col·lecció",
+      "empty": "No s'ha trobat cap producte",
+      "use_fewer_filters_html": "Fes servir menys filtres o <a class=\"&lt;span class='notranslate'&gt;{{ class }}&lt;/span&gt;\" href=\"&lt;span%20class='notranslate'&gt;{{%20link%20}}&lt;/span&gt;\">elimina'ls tots</a>"
+    },
+    "video": {
+      "load_video": "Carregar vídeo: {{ description }}"
+    },
+    "slideshow": {
+      "load_slide": "Carregar diapositiva",
+      "next_slideshow": "Diapositiva següent",
+      "pause_slideshow": "Pausar la presentació",
+      "play_slideshow": "Reproduir la presentació"
+    },
+    "page": {
+      "title": "Títol de la pàgina"
+    },
+    "announcements": {
+      "previous_announcement": "Anunci anterior",
+      "next_announcement": "Anunci següent",
+      "announcement": "Anunci",
+      "announcement_bar": "Barra d'anuncis"
+    },
+    "quick_order_list": {
+      "product_total": "Subtotal de productes",
+      "view_cart": "Veure carret",
+      "each": "{{ money }} /unitat",
+      "product": "Producte",
+      "variant": "Variant",
+      "variant_total": "Total de variants",
+      "items_added": {
+        "one": "{{ quantity }} article agregat",
+        "other": "{{ quantity }} articles agregats",
+        "many": "{{ quantity }} articles agregats"
+      },
+      "items_removed": {
+        "one": "{{ quantity }} article eliminat",
+        "other": "{{ quantity }} articles eliminats",
+        "many": "{{ quantity }} articles eliminats"
+      },
+      "product_variants": "Variants de producte",
+      "total_items": "Total d'articles",
+      "remove_all_items_confirmation": "Eliminar els {{ quantity }} articles de la cistella?",
+      "remove_all": "Eliminar tots",
+      "cancel": "Cancel·la",
+      "remove_all_single_item_confirmation": "Eliminar 1 article de la cistella?",
+      "min_error": "Aquest article té un mínim de {{ min }} .",
+      "max_error": "Aquest article té un màxim de {{ max }} .",
+      "step_error": "Només pots afegir aquest article en increments de {{ step }} ."
+    }
+  },
+  "general": {
+    "password_page": {
+      "login_form_heading": "Entrar a la botiga usant contrasenya:",
+      "login_password_button": "Entrar usant contrasenya",
+      "login_form_password_label": "Contrasenya",
+      "login_form_password_placeholder": "La teva contrasenya",
+      "login_form_error": "Contrasenya incorrecta",
+      "login_form_submit": "Ingressar",
+      "admin_link_html": "Ets el propietari de la botiga? <a href=\"/admin\" class=\"link underlined-link\">Inicia sessió aquí</a>",
+      "powered_by_shopify_html": "Aquesta botiga comptarà amb tecnologia Shopify {{ shopify }}"
+    },
+    "social": {
+      "alt_text": {
+        "share_on_facebook": "Compartir a Facebook",
+        "share_on_twitter": "Compartir a X",
+        "share_on_pinterest": "Desa a Pinterest"
+      }
+    },
+    "continue_shopping": "Descobrir totes les tarifes",
+    "pagination": {
+      "label": "Paginació"
     }
   }
 }
