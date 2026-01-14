@@ -891,7 +891,34 @@
         "change_currency_section_description": "Seleccioneu una opció de moneda",
         "no_real_orders_dev_store": "Aquesta botiga no pot acceptar comandes ni pagaments reals.",
         "subscription_agreement_label": "Un o més articles de la cistella és una compra diferida o de subscripció. En continuar amb el pagament, acceptes que s'aplicaran càrrecs a la teva forma de pagament automàticament segons el preu i la freqüència indicats en aquesta pàgina fins que s'acabi o la cancel·lis. Totes les cancel·lacions estan subjectes a la %{cancelled}.",
-        "subscription_agreement_cancelled": "política de cancel·lació"
+        "subscription_agreement_cancelled": "política de cancel·lació",
+        "bank_account_missing": "S'ha de connectar un compte bancari",
+        "usdc_cashback_title": "Reemborsament de l'1%",
+        "usdc_cashback_additional_info": "Obté un reemborsament d'1% en USDC directament a la teva cartera digital.",
+        "usdc_cashback_terms": "S'apliquen termes",
+        "discount_show_more_warnings": {
+          "one": "Mostra %{count} més",
+          "other": "Mostra %{count} més",
+          "many": "Mostra %{count} més"
+        },
+        "separate_payments_label": "Els articles són de més d'una botiga. Se't cobrarà a %{separate_payments_link}.",
+        "separate_payments_text": "pagaments separats",
+        "payments": "Pagaments",
+        "business_customer_with_bank_account_vaulting_payment_label": "Guarda aquesta forma de pagament en finalitzar el procés de pagament i autoritza a %{company} que la faci servir per a futures compres en aquesta sucursal fins que la cancel·lis. Tots els contactes assignats a aquesta sucursal poden fer servir la forma de pagament.",
+        "new_bank_account_disclaimer": "En completar la teva comanda, autoritzes a %{shop_name} a fer un dèbit del següent compte a través de l'ACH per la suma i en la data indicats.",
+        "bank_account_disclaimer": "Els pagaments de l'ACH (Cambra de Compensació Automatitzada) poden trigar fins a quatre dies hàbils a processar-se.",
+        "bank_account_vaulted_company_location": "Compte bancari guardat per a aquesta sucursal",
+        "bank_account_generic_error": "No s'ha pogut afegir el compte bancari. Torneu-ho a provar més tard.",
+        "discount_codes_removed_summary": {
+          "one": "S'ha eliminat %{count} codi de descompte",
+          "other": "S'han eliminat %{count} codis de descompte",
+          "many": "S'han eliminat %{count} codis de descompte"
+        },
+        "saved_addresses": "Adreces desades",
+        "save_this_address": "Desar aquesta adreça",
+        "default": "Per defecte",
+        "continue_to_guest_checkout": "Continuar al pagament com a visitant",
+        "add_payment_method": "Afegir forma de pagament"
       },
       "post_purchase": {
         "escape_confirmation": "Has pagat la teva comanda.",
@@ -1417,7 +1444,78 @@
         "must_use_available_delivery_address": "L'adreça de lliurament s'ha de seleccionar entre les adreces de lliurament disponibles.",
         "must_use_available_shipping_rate": "La tarifa d'enviament s'ha de seleccionar entre les tarifes d'enviament disponibles.",
         "shipping_method_invalid_phone_number": "Modifica el número de telèfon a la teva adreça de lliurament per veure els mètodes d'enviament disponibles.",
-        "split_by_delivery_method_not_allowed": "No es permet separar per forma de lliurament per a aquesta sessió o botiga."
+        "split_by_delivery_method_not_allowed": "No es permet separar per forma de lliurament per a aquesta sessió o botiga.",
+        "handle_phone_invalid": "Introdueix un número de telèfon vàlid",
+        "handle_email_invalid": "Introdueix un correu electrònic vàlid",
+        "email_invalid": "Introdueix un correu electrònic vàlid",
+        "email_or_phone_blank": "Introduïu un correu electrònic o número de telèfon.",
+        "email_or_phone_invalid": "Introdueix un correu electrònic o número de telèfon mòbil vàlid",
+        "address_first_name_blank": "Introdueix un nom",
+        "address_last_name_blank": "Introdueix un cognom",
+        "address_address1_blank": "Introdueix una adreça",
+        "address_address2_blank": "Introdueix un apartament, suite, etc.",
+        "address_city_blank": "Introdueix la ciutat",
+        "address_country_blank": "Selecciona un país/regió",
+        "address_country_not_supported": "No fem enviaments a aquest país o regió. Introduïu una adreça d'enviament nova i torneu-ho a provar.",
+        "address_province_blank": "Selecciona un estat o província",
+        "address_company_blank": "Introduïu un nom d'empresa",
+        "address_phone_blank": "Introdueix un número de telèfon vàlid",
+        "address_zip_blank": "Introdueix la zona o codi postal",
+        "address_zip_invalid_for_country": "Introduïu una zona o codi postal vàlid(a) per a %{country}",
+        "address_zip_invalid_for_country_and_province": "Introduïu una zona o codi postal vàlid(a) per a %{province}, %{country}",
+        "credit_card_name_blank": "Introdueix el teu nom exactament com apareix a la targeta",
+        "credit_card_name_invalid": "Introdueix el teu nom exactament com apareix a la targeta",
+        "credit_card_number_invalid": "Introdueix un número de targeta vàlid",
+        "credit_card_expiry_invalid": "Introdueix una data de venciment vàlida",
+        "credit_card_month_invalid": "Introdueix un mes de venciment vàlid",
+        "credit_card_year_invalid": "Introdueix un any de venciment vàlid",
+        "credit_card_start_invalid": "Introduïu una data d'inici de targeta vàlida",
+        "credit_card_start_month_invalid": "Introduïu un mes d'inici de targeta vàlid",
+        "credit_card_start_year_invalid": "Introduïu un any d'inici de targeta vàlid",
+        "credit_card_verification_value_blank": "Introdueix el codi de seguretat (CVV) de la targeta",
+        "delivery_line_detail_changed": "És possible que alguns detalls de lliurament hagin canviat. Comproveu el mètode d'enviament i torneu-ho a provar.",
+        "reduction_code_code_not_found": "Introdueix un codi de descompte o targeta de regal vàlid(a)",
+        "reduction_code_discount_not_found": "Introdueix un codi de descompte vàlid",
+        "reduction_code_gift_card_code_invalid": "Introdueix una targeta de regal vàlida",
+        "reduction_code_gift_card_unusable": "No pots fer servir una targeta de regal per comprar una altra targeta de regal",
+        "shipping_line_phone_blank": "Introdueix un número de telèfon per utilitzar aquesta forma de lliurament",
+        "shipping_line_phone_invalid": "Introdueix un número de telèfon vàlid",
+        "gift_card_already_applied": "Aquesta targeta de regal ja ha estat aplicada a la teva comanda",
+        "gift_card_disabled": "Aquesta targeta de regal ja no està disponible",
+        "gift_card_expired": "Aquesta targeta de regal ha caducat",
+        "gift_card_depleted": "Aquesta targeta de regal no té prou saldo",
+        "gift_card_currency_mismatch": "Per a aquesta comanda només es poden fer servir targetes de regal a %{checkout_currency}",
+        "payment_gateway_needs_paid_plan_error": "Aquesta forma de pagament no està disponible a la botiga en aquest moment",
+        "payment_gateway_incompatible_with_multi_currency": "Per completar el pagament a la teva moneda local, necessites pagar amb targeta de crèdit.",
+        "physical_gift_card_invalid_quantity": "Les línies darticles de targetes de regal físiques han de tenir una quantitat que coincideixi amb la quantitat de codis de targetes de regal.",
+        "physical_gift_card_duplicate_code": "La línia darticle de la targeta de regal física conté un codi duplicat.",
+        "physical_gift_card_invalid_code": "El codi de la targeta de regal física és invàlid.",
+        "payment_gateway_not_in_test_mode": "no està configurada per a comandes de prova. Aquesta botiga no pot acceptar comandes ni pagaments reals.",
+        "tips_invalid_tip_amount": "Introdueix una propina inferior a %{amount}",
+        "payment_gateway_unsupported_for_subscriptions": "Aquesta forma de pagament no està disponible per a comandes per subscripció.",
+        "address_first_name_too_long": "El nom és massa llarg (el màxim és de 255 caràcters)",
+        "address_last_name_too_long": "El cognom és massa llarg (el màxim és de 255 caràcters)",
+        "address_address1_too_long": "La primera línia de la direcció és massa llarga (el màxim és de 255 caràcters)",
+        "address_address2_too_long": "La segona línia de la direcció és massa llarga (el màxim és de 255 caràcters)",
+        "address_city_too_long": "El nom de la ciutat és massa llarg (el màxim és 255 caràcters)",
+        "address_company_too_long": "El nom de l'empresa és massa llarg (el màxim és de 255 caràcters)",
+        "address_first_name_contains_html_tags": "El nom no pot contenir etiquetes HTML.",
+        "address_last_name_contains_html_tags": "El cognom no pot contenir etiquetes HTML.",
+        "address_address1_contains_html_tags": "L'adreça 1 no pot contenir etiquetes HTML.",
+        "address_address2_contains_html_tags": "L'adreça 2 no pot contenir etiquetes HTML.",
+        "address_city_contains_html_tags": "La ciutat no pot contenir etiquetes HTML.",
+        "address_company_contains_html_tags": "L'empresa no pot contenir etiquetes HTML.",
+        "address_first_name_contains_emojis": "El nom no pot contenir emojis",
+        "address_last_name_contains_emojis": "El cognom no pot contenir emojis",
+        "address_address1_contains_emojis": "L'adreça 1 no pot contenir emojis",
+        "address_address2_contains_emojis": "L'adreça 2 no pot contenir emojis",
+        "address_city_contains_emojis": "La ciutat no pot contenir emojis",
+        "address_company_contains_emojis": "El nom de l'empresa no pot contenir emojis",
+        "address_phone_contains_emojis": "El número de telèfon no pot contenir emojis",
+        "address_zip_contains_emojis": "El codi postal no pot contenir emojis",
+        "address_first_name_contains_url": "El nom no pot contenir un URL",
+        "address_last_name_contains_url": "El cognom no pot contenir una URL",
+        "gift_cards_not_supported_with_deferred_purchase_options": "Les targetes de regal no són compartibles amb les opcions de compra diferida."
       },
       "payment_errors": {
         "generic_error": "S'ha produït un error en processar el pagament. Torneu-ho a provar o utilitzeu una forma de pagament diferent.",
@@ -1560,6 +1658,11 @@
           "tax_credential_use_mx": "Ús de CFDI",
           "shipping_credential_tw": "Número nacional d'identitat/IVA"
         }
+      },
+      "payment_summary": {
+        "credit_card_expires_on_notice": "Venç el %{month}/%{year}",
+        "express_payment_gateway_label": "Express",
+        "billing_address_title": "Adreça de facturació"
       }
     },
     "checkpoint": {
@@ -2897,7 +3000,20 @@
       "update": "Actualitzar adreça",
       "cancel": "Cancel·la",
       "edit": "Edita",
-      "delete_confirm": "Esteu segur/a que voleu eliminar aquesta adreça?"
+      "delete_confirm": "Esteu segur/a que voleu eliminar aquesta adreça?",
+      "title": "Adreces",
+      "default": "Per defecte",
+      "add_new": "Afegir una nova adreça",
+      "edit_address": "Editar direcció",
+      "first_name": "Nom",
+      "last_name": "Cognom",
+      "address1": "Adreça 1",
+      "address2": "Adreça 2",
+      "city": "Ciutat",
+      "country": "País/regió",
+      "province": "Província",
+      "zip": "Codi postal",
+      "phone": "Telèfon"
     },
     "log_in": "Iniciar sessió",
     "log_out": "Tancar sessió",
@@ -2960,6 +3076,21 @@
       "tracking_number": "Número de seguiment",
       "total_duties": "Aranzels",
       "total_refunded": "Reemborsat"
+    },
+    "account": {
+      "title": "El meu compte",
+      "details": "Detalls del compte",
+      "view_addresses": "Veure adreces",
+      "return": "Tornar a detalls del compte"
+    },
+    "account_fallback": "Compte",
+    "activate_account": {
+      "title": "Activar compte",
+      "subtext": "Crea la teva contrasenya per activar el teu compte.",
+      "password": "Contrasenya",
+      "password_confirm": "Confirmar contrasenya",
+      "submit": "Activar compte",
+      "cancel": "Rebutjar invitació"
     }
   },
   "gift_cards": {
@@ -2991,5 +3122,110 @@
       "expanded": "Formulari del destinatari de la targeta de regal expandit",
       "collapsed": "Formulari del destinatari de targeta de regal contret"
     }
+  },
+  "products": {
+    "product": {
+      "inventory_out_of_stock": "Esgotat",
+      "inventory_out_of_stock_continue_selling": "En existències",
+      "volume_pricing": {
+        "title": "Preus per volum",
+        "note": "Preu per volum disponible",
+        "minimum": "Més de {{ quantity }}",
+        "price_at_each": "a {{ price }} per unitat"
+      },
+      "product_variants": "Variants de producte",
+      "taxes_included": "Impostos inclosos.",
+      "duties_included": "Aranzels inclosos.",
+      "duties_and_taxes_included": "Aranzels i impostos inclosos."
+    },
+    "modal": {
+      "label": "Galeria multimèdia"
+    },
+    "facets": {
+      "clear": "Esborrar",
+      "clear_all": "Eliminar tots",
+      "filter_and_sort": "Filtrar i ordenar",
+      "filters_selected": {
+        "one": "{{ count }} seleccionat",
+        "other": "{{ count }} seleccionats",
+        "many": "{{ count }} seleccionats"
+      },
+      "max_price": "El preu més alt és {{ price }}",
+      "product_count_simple": {
+        "one": "{{ count }} producte",
+        "other": "{{ count }} productes",
+        "many": "{{ count }} productes"
+      },
+      "reset": "Restablir",
+      "sort_by_label": "Ordenar per:",
+      "to": "Per",
+      "clear_filter": "Eliminar filtre",
+      "filter_selected_accessibility": "{{ type }} ( {{ count }} filtres seleccionats)",
+      "show_more": "Mostra més",
+      "show_less": "Mostrar menys",
+      "filter_and_operator_subtitle": "Seleccionar tots"
+    }
+  },
+  "templates": {
+    "search": {
+      "no_results": "No s'han trobat resultats per a “ {{ terms }} ” Revisa l'ortografia o utilitza una paraula o frase diferent.",
+      "results_with_count": {
+        "one": "{{ count }} resultat",
+        "other": "{{ count }} resultats",
+        "many": "{{ count }} resultats"
+      },
+      "title": "Resultats de cerca",
+      "page": "Pàgina",
+      "products": "Productes",
+      "search_for": "Cerca “ {{ terms }} ”",
+      "results_with_count_and_term": {
+        "one": "S'ha trobat {{ count }} resultat per a \" {{ terms }} \"",
+        "other": "S'han trobat {{ count }} resultats per a \" {{ terms }} \"",
+        "many": "S'han trobat {{ count }} resultats per a \" {{ terms }} \""
+      },
+      "results_pages_with_count": {
+        "one": "{{ count }} pàgina",
+        "other": "{{ count }} pàgines",
+        "many": "{{ count }} pàgines"
+      },
+      "results_products_with_count": {
+        "one": "{{ count }} producte",
+        "other": "{{ count }} productes",
+        "many": "{{ count }} productes"
+      },
+      "suggestions": "Suggeriments",
+      "pages": "Pàgines",
+      "results_suggestions_with_count": {
+        "one": "{{ count }} suggeriment",
+        "other": "{{ count }} suggeriments",
+        "many": "{{ count }} suggeriments"
+      }
+    },
+    "cart": {
+      "cart": "Cistella"
+    },
+    "contact": {
+      "form": {
+        "name": "Nom",
+        "email": "Correu electrònic",
+        "phone": "Número de telèfon",
+        "comment": "Comentari",
+        "post_success": "Gràcies per contactar-nos. Et respondrem com més aviat millor.",
+        "error_heading": "Si us plau, ajusta el següent:",
+        "title": "Formulari de contacte"
+      }
+    },
+    "404": {
+      "title": "A aquesta pàgina li falta un cable",
+      "subtext": "Però tranquil les nostres tarifes et mantenen sempre connectat"
+    }
+  },
+  "localization": {
+    "country_label": "País/regió",
+    "update_language": "Actualitzar idioma",
+    "update_country": "Actualitzar país/regió",
+    "search": "Cerca",
+    "popular_countries_regions": "Països o regions populars",
+    "country_results_count": "{{ count }} països o regions trobats"
   }
 }
