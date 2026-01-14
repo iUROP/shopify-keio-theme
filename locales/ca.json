@@ -697,7 +697,13 @@
       },
       "payment": {
         "gift_card_wrapper": {
-          "manage_label": "Gestionar targetes de regal"
+          "manage_label": "Gestionar targetes de regal",
+          "heading": "Targeta de regal",
+          "apply_gift_card_label": "Sol·licitar una targeta de regal",
+          "payment_tag": "Targeta de regal",
+          "apply_another_gift_card_label": "Sol·licitar una altra targeta de regal",
+          "gift_card_label": "Targeta de regal %{identifier}",
+          "add_label": "Afegir una targeta de regal"
         },
         "custom_onsite_payment_method_modal": {
           "title": "Confirmació de pagament al lloc personalitzada"
@@ -918,7 +924,126 @@
         "save_this_address": "Desar aquesta adreça",
         "default": "Per defecte",
         "continue_to_guest_checkout": "Continuar al pagament com a visitant",
-        "add_payment_method": "Afegir forma de pagament"
+        "add_payment_method": "Afegir forma de pagament",
+        "subscription_agreement_label_html": "Reconec que estic acceptant una subscripció. Es renovarà al preu i amb la freqüència indicada fins que finalitzi o es\n <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">cancel·leu</a> .\n",
+        "waiting_on_payment_methods": "Buscant formes de pagament disponibles...",
+        "apple_pay_payment_error": "No s'ha pogut completar el pagament. Intenta-ho de nou o utilitza una altra forma de pagament.",
+        "subscription_card_update_agreement_label": "Quan canvieu la forma de pagament s'actualitzarà la vostra subscripció i els pagaments recurrents en el futur.",
+        "card_security_vault_notice": "Necessitem la teva informació per a futurs pagaments. Totes les transaccions són segures i estan encriptades.",
+        "taxes_not_included": "Impostos no inclosos",
+        "no_taxes_banner_content": "No es cobraran impostos en aquesta comanda. Un cop hagis cobrat el pagament, ja no es podran afegir impostos.",
+        "card_update_label": "Actualitzar targeta",
+        "paypal": {
+          "connect": "Fes clic per connectar el teu compte de PayPal"
+        },
+        "card_expired": "Vençuda",
+        "card_verification_confirm": "Per a finalitats de verificació, introduïu el codi de seguretat de la vostra targeta.",
+        "different_credit_card_label": "Utilitza una targeta de crèdit diferent",
+        "delete_customer_mandate_modal_cancel": "Cancel·la",
+        "apple": {
+          "connect": "Fes clic per connectar el teu compte d'Apple Pay",
+          "not_available": "Apple Pay no està disponible en aquest navegador. Per connectar el vostre compte d'Apple Pay, haureu d'utilitzar Safari en un dispositiu Apple."
+        },
+        "account_connected": "Compte connectat.",
+        "billing_address_associated_with_mandate": "Usar una adreça associada amb una forma de pagament",
+        "billing_address_associated_with_mandate_info": "Si vols canviar la teva adreça de facturació, elimina i torna a introduir les dades de la targeta de crèdit",
+        "credit_card_vaulting_sign_in_banner_title": "Guarda la targeta de crèdit",
+        "credit_card_vaulting_sign_in_banner_info": "Inicia sessió o crea un compte per desar la targeta de crèdit per a compres futures.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Inicia sessió",
+        "ftd_vault_credit_card_label": "Desar aquesta targeta de crèdit al meu compte per pagar més ràpid",
+        "delete_customer_mandate_modal_title": "Vols eliminar aquesta targeta de pagament?",
+        "delete_customer_mandate_modal_body": "Si elimines aquesta targeta, hauràs d'afegir-la novament per poder fer-la servir per pagar.",
+        "delete_customer_mandate_modal_confirm": "Eliminar targeta",
+        "google": {
+          "connect": "Fes clic per connectar amb el teu compte de Google Pay",
+          "error_authorizing": "Error en autoritzar el pagament"
+        },
+        "mor_disclaimer_html": "En fer clic a baix i completar la comanda, acceptes la compra dels articles des de Global-e com a responsable del processament de pagaments \nde la transacció, d'acord amb els <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Termes i condicions</a>\n i la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Política de privadesa</a> de Global-e. Global-e és un proveïdor\n internacional de serveis de logística de %{shop_name}.\n",
+        "purchase_options_card_update_agreement_label_html": "En modificar la forma de pagament, autoritzeu els pagaments de les compres periòdiques o diferides d'acord amb la <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">política de cancel·lació</a> d'aquesta botiga.",
+        "multibanco_label": "Multibanc",
+        "receiver_payment_experience_hint": "Després de fer la comanda, rebràs els detalls del pagament. Realitza el pagament a Multibanc o en línia en un termini de %{due_days} dies.",
+        "pending_payment": {
+          "due_notice": "El pagament de %{amount_due} venç el %{due_date}.",
+          "multibanco": {
+            "instruction_html": "Realitza el pagament a Multibanc o en línia amb els detalls següents. Si tens preguntes o desitges actualitzar els detalls de pagament, %{contact_us}.",
+            "entity": "Entitat",
+            "reference": "Referència",
+            "amount": "Quantitat",
+            "find_nearest_atm": "Trobar el caixer automàtic més proper",
+            "buyer_action_info": "Heu de fer el pagament de %{amount_due}."
+          }
+        },
+        "purchase_options_agreement_label": "Un o diversos articles de la cistella són una compra diferida o recurrent. En continuar amb el pagament, acceptes que s'aplicaran càrrecs a la teva forma de pagament automàticament segons el preu i la freqüència indicats en aquesta pàgina fins que s'acabi o la cancel·lis. Totes les cancel·lacions estan subjectes a la %{cancellation_policy_label}.",
+        "update_payment_method": "Actualitzar forma de pagament",
+        "paypal_modal": {
+          "order_contains_subscriptions": "Subscripció",
+          "order_contains_fixed_selling_plans": "Pot ser que el total no inclogui impostos, enviament, càrrecs diferits i alguns descomptes. Continua a la pantalla de pagament per a la suma que venç avui."
+        },
+        "purchase_options_agreement_label_html": "Entenc que un o més articles del meu carretó són una compra diferida o recurrent. En continuar, accepto la\n <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">política de cancel·lació</a>\n i autoritzo a realitzar càrrecs en la meva forma de pagament segons els preus, la freqüència i les dates indicades en aquesta pàgina fins que es prepari el meu \ndemanat o ho cancel·leu, si està permès.\n",
+        "payment_method_saved": "Forma de pagament guardada",
+        "card_vaulted_company_location": "Targeta guardada per a aquesta sucursal",
+        "order_covered_by_store_credit_notice": "La comanda està coberta pel teu crèdit a la botiga.",
+        "order_covered_by_redeemables_notice": "La comanda està coberta.",
+        "store_credit": {
+          "label": "Crèdit a la botiga",
+          "apply_label": "Aplicar crèdit a la botiga",
+          "add_label": "Afegeix crèdit a la botiga",
+          "manage_label": "Gestionar crèdit a la botiga",
+          "buying_gift_card": "No pots utilitzar el crèdit a la botiga per comprar una targeta de regal.",
+          "no_fixed_selling_plans": "No pots fer servir el crèdit a la botiga amb les opcions de compra diferida."
+        },
+        "clear": "Esborrar",
+        "billing_must_match_shipping_notice": "La vostra adreça de facturació que figura al pagament ha de coincidir amb l'adreça d'enviament.",
+        "same_billing_address_checkbox_label": "Usar l'adreça d'enviament com a adreça de facturació",
+        "location_billing_address_label": "Adreça de facturació de la sucursal",
+        "fact_billing_address_label": "Adreça de facturació",
+        "location_shipping_address_label": "Adreça d'enviament de la sucursal",
+        "no_working_method_error": "Aquesta botiga no pot acceptar pagaments en aquest moment. Actualitza la pàgina o torna més tard.",
+        "brand_not_available": "Aquesta botiga no accepta {{brand}} . Fes servir una targeta diferent per fer el pagament.",
+        "shipping_rate_updated": "S'han actualitzat els mètodes d'enviament disponibles. Confirmeu la vostra elecció abans d'iniciar el procés de pagament.",
+        "billing_address_invalid_phone": "Actualitza el número de telèfon de la teva adreça de facturació per a {{label}} {{last_digits}} per continuar.",
+        "billing_address_invalid_phone_no_card": "Actualitzeu el número de telèfon de la vostra adreça de facturació per continuar.",
+        "preview_not_available": {
+          "title": "Vista prèvia no disponible",
+          "content": "No us preocupeu, aquest procés de pagament exprés funciona per als vostres clients.",
+          "button": "Acceptar"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Introduïu una data d'emissió vàlida",
+              "issue_number": "Introduïu un número d'emissió vàlid"
+            },
+            "invalid": {
+              "verification_value": "Introdueix un codi de seguretat (CVV) vàlid"
+            }
+          }
+        },
+        "simulated_checkout": "Vista prèvia properament disponible",
+        "vaulting_agreement_label": "Desa la meva informació de pagament amb %{company} per accelerar el procés de pagament.",
+        "business_customer_vaulting_payment_label": "Guarda aquesta forma de pagament en finalitzar el procés de pagament i autoritza a %{company} que la faci servir per a futures compres en aquesta sucursal. Tots els contactes assignats a aquesta sucursal poden fer servir la forma de pagament.",
+        "purchase_options_and_vaulting_agreement_label": "Un o més articles de la cistella és una compra diferida o una subscripció. En continuar amb el pagament, acceptes que s'aplicaran càrrecs a la teva forma de pagament automàticament segons el preu i la freqüència indicats en aquesta pàgina fins que s'acabi o la cancel·lis. Totes les cancel·lacions estan subjectes a la %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "política de cancel·lació",
+        "use_different_credit_card_label": "Usar una altra targeta",
+        "saved_credit_card": "La teva targeta de crèdit guardada",
+        "saved_credit_card_info": "Últims quatre dígits",
+        "saved_credit_cards_modal": {
+          "view_all_label": "Veure totes les targetes desades",
+          "done": "A punt",
+          "cancel": "Cancel·la"
+        },
+        "expired_cards_info": {
+          "one": "Hi ha %{count} targeta vençuda que podeu veure i editar al vostre compte.",
+          "other": "Hi ha %{count} targetes vençudes que podeu veure i editar al vostre compte.",
+          "many": "Hi ha %{count} targetes vençudes que podeu veure i editar al vostre compte."
+        },
+        "local_payment_method_receiver_notice": "Després de fer la comanda, rebràs els detalls del pagament. Realitza el pagament en un caixer automàtic o en línia en un termini de {{dueDays}} dies.",
+        "order_edit_banner_title": "Es requereix el pagament de {{amount_owed}}",
+        "order_edit_banner_subtitle": "La teva comanda {{order_number}} es va actualitzar. Revisa els canvis i paga per confirmar la comanda.",
+        "order_edit_banner_single_item_added": "Agregat",
+        "order_edit_banner_multiple_items_added": "S'afegir {{amount}} .",
+        "order_edit_banner_single_item_removed": "Eliminat",
+        "order_edit_banner_multiple_items_removed": "S'eliminar {{amount}} ."
       },
       "post_purchase": {
         "escape_confirmation": "Has pagat la teva comanda.",
