@@ -1,0 +1,359 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "shopify": {
+    "sentence": {
+      "two_words_connector": " i ",
+      "last_word_connector": ", i "
+    },
+    "checkout": {
+      "general": {
+        "page_title": "Pantalla de pagament",
+        "skip_to_content": "Anar directament al contingut",
+        "breadcrumb": "Ruta de navegació",
+        "complete_purchase_button_label": "Finalitzar la comanda",
+        "pay_now_button_label": "Pagar ara",
+        "authenticate_purchase_button_label": "Autenticar pagament",
+        "edit_link_label": "Edita",
+        "all_rights_reserved": "Tots els drets reservats %{shop_name}",
+        "cart": "Cistella",
+        "close_modal_label": "Tancar",
+        "close_notice_label": "Tancar",
+        "expand_notice_label": "Veure més",
+        "continue_to_shipping_method": "Continuar amb enviaments",
+        "continue_to_payment_method": "Continuar amb el pagament",
+        "continue_to_review": "Revisar l'ordre",
+        "back_to_cart": "Tornar a la cistella",
+        "back_to_contact_information": "Tornar a informació",
+        "back_to_shipping_method": "Tornar a enviaments",
+        "back_to_payment_method": "Tornar al pagament",
+        "choose_shipping_method": "Seleccioneu un mètode d'enviament",
+        "choose_payment_method": "Seleccioneu un mètode de pagament",
+        "choose_billing_address": "Seleccioneu una adreça de facturació",
+        "contact_us_html": "Poseu-vos en contacte amb nosaltres per obtenir més informació",
+        "autocomplete_title": "Suggeriments",
+        "autocomplete_single_item": "1 opció disponible",
+        "autocomplete_multi_item": "{{number}} opcions disponibles",
+        "autocomplete_close": "Tanca els suggeriments",
+        "forwarding_indicator": {
+          "new_window": "Obre en una finestra nova.",
+          "external": "Obre lloc extern.",
+          "external_and_new_window": "Obre lloc extern extern en una finestra nova."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - Caixa"
+        },
+        "tooltip_accessibility_label": "Més informació",
+        "errors": {
+          "session_identifier_not_unique_error": "S'ha produït un error amb la comanda. Intenta tornar a processar el pagament.",
+          "line_item_limit_reached": "S'ha aconseguit la quantitat màxima de línies d'article.",
+          "only_empty_terms_accepted": "Aquesta política només accepta termes buits.",
+          "session_is_already_finished": "Aquesta sessió de pagament ja es va finalitzar.",
+          "merchandise": {
+            "only_value_constraint": "Només es permeten valors exactes a l'entrada de mercaderia promocional.",
+            "merchandise_not_found": "Producte no trobat.",
+            "merchandise_variant_not_found": "Variant de producte no trobada.",
+            "merchandise_not_applicable": "No s'ha pogut comprar cap variant de producte.",
+            "bundle_products_not_supported_for_b2b": "No s'han pogut afegir els articles en paquet a les comandes B2B per a aquesta sucursal.",
+            "gift_card_quantity_mismatch": "Quan s'especifiquen els codis de targeta de regal, la quantitat de línia d'article i el nombre de codis de targeta de regal han de coincidir.",
+            "gift_card_not_supported": "No s'admeten les targetes de regal en aquesta pantalla de pagament.",
+            "gift_card_not_unique": "La targeta de regal amb el codi {{code}} apareix més d'una vegada en aquesta pantalla de pagament. Els codis reben un format abans de la comparació.",
+            "gift_card_used": "El codi {{code}} ja es va assignar a una targeta de regal. Els codis reben un format abans de la comparació.",
+            "gift_card_invalid": "El codi {{code}} de la targeta de regal no és vàlid.",
+            "gift_card_code_changed": "El codi {{proposed_code}} de la targeta de regal es va canviar a {{formatted_code}} per complir les regles de format.",
+            "gift_card_with_attributes_not_supported": "Les targetes de regal no s'admeten amb atributs personalitzats en aquesta pantalla de pagament.",
+            "gift_card_with_components_not_supported": "No s'admeten les targetes de regal amb components en aquesta pantalla de pagament.",
+            "selling_plan_mismatch": "Es va modificar la subscripció.",
+            "selling_plan_not_supported": "No s'admeten subscripcions.",
+            "selling_plan_not_supported_b2b": "No s'admeten les subscripcions de la pantalla de pagament B2B.",
+            "price_mismatch": "El preu proposat anteriorment per a aquesta mercaderia promocional no era vàlid i es va modificar.",
+            "inventory_not_found": "No es va trobar inventari per a aquesta mercaderia promocional.",
+            "product_not_published": "El producte no està publicat.",
+            "duplicated_stable_id": "Aquesta línia de mercaderia promocional té la mateixa identificació estable que una altra línia.",
+            "minimum_quantity_not_met": "La quantitat d'alguns articles no arriba al mínim requerit.",
+            "maximum_quantity_exceeded": "La quantitat d'alguns articles supera el màxim permès.",
+            "quantity_increment_not_met": "La quantitat d'alguns articles no compleix els límits de la comanda.",
+            "quantity_rules_not_met": "La quantitat d'alguns articles no compleix els límits de la comanda.",
+            "bundle_requires_components": "La mercaderia promocional daquest paquet no té components.",
+            "title_too_long": "El títol de la mercaderia promocional és massa llarg.",
+            "title_empty": "El títol de la mercaderia promocional és buit.",
+            "mixed_currencies": "El pagament conté línies darticle amb monedes diferents.",
+            "product_not_published_in_buyer_location": "El producte no està publicat a la ubicació del comprador."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "El contacte de l'empresa no té accés a l'empresa.",
+            "customer_account_required": "Heu d'iniciar sessió per continuar.",
+            "contact_info_does_not_match_customer_account": "La informació de contacte ha de coincidir amb la del compte amb què heu iniciat sessió.",
+            "phone_number_does_not_match_expected_pattern": "El número de telèfon especificat no coincideix amb el patró esperat.",
+            "email_required": "El correu electrònic és obligatori quan es compra la mercaderia promocional amb una subscripció.",
+            "email_domain_is_invalid": "Aquest domini especificat no s'ha pogut resoldre.",
+            "missing_contact_method": "Manca un mètode de contacte vàlid.",
+            "checkout_completion_target_is_missing": "Manca l'objectiu de finalització de pagament.",
+            "invalid_customer_profile": "S'ha proporcionat un perfil de client no vàlid.",
+            "customer_profile_access_restricted": "La pantalla de pagament no té permís per accedir al perfil de client.",
+            "checkout_completion_target_is_invalid_proc": "Objectiu de finalització de pagament no vàlid.",
+            "company_location_required": "El client ha de triar una sucursal de lempresa per poder continuar.",
+            "lost_access_to_company": "El client ja no té accés a cap empresa.",
+            "company_purchase_permission_required": "El client no té permís per fer comandes d'empresa.",
+            "personal_order_not_allowed": "No s'admeten comandes personals a aquesta botiga.",
+            "buyer_identity_presentment_currency_does_not_match": "Hi ha hagut un problema en processar la teva comanda. Torneu-ho a intentar en uns minuts."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "El carretó només ha de tenir una línia de lliurament.",
+            "wrong_number_of_delivery_lines": "Cal especificar una línia de lliurament per a cada grup de mercaderia promocional.",
+            "external_delivery_promise_error": "Un error extern de cerca de promesa de lliurament.",
+            "options_instructions_invalid": "Les instruccions especificades no coincideixen amb el patró esperat.",
+            "destination_address_required": "L'adreça de destinació és obligatòria per poder continuar.",
+            "pickup_points_unavailable": "Els punts de retirada no estan disponibles actualment.",
+            "local_pickup_delivery_line_detail_changed": "Cal canviar l'estratègia actual de lliurament per a la retirada a la botiga per tal de poder continuar.",
+            "local_pickup_no_delivery_strategy_available": "No es va trobar una estratègia de lliurament disponible per a la retirada a la botiga.",
+            "origin_location_id_required": "La identificació de la sucursal dorigen és obligatòria quan se sol·licita la forma de lliurament RETAIL.",
+            "invalid_origin_location_id": "No s'ha pogut trobar cap sucursal que coincideixi amb la identificació de la sucursal d'origen.",
+            "origin_location_id_not_allowed": "Les formes de lliurament sol·licitades no admeten una identificació d'ubicació d'origen.",
+            "auto_fulfill_not_allowed": "Aquesta sessió no està autoritzada per anul·lar el comportament de la preparació de comandes.",
+            "auto_fulfill_required": "La preparació de comandes automàtica és obligatòria quan se sol·licita la forma de lliurament de la BOTIGA FÍSICA."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "La suma rebuda ha d'estar a la moneda de la botiga."
+          },
+          "checkout_source": {
+            "revoked": "Aquesta pantalla de pagament ja no està disponible."
+          }
+        },
+        "full_price": "Preu regular:",
+        "title": "Pantalla de pagament - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Pantalla de pagament",
+        "loading_title": "Pantalla de pagament - {{shopName}}",
+        "submit_order_button_label": "Enviar comanda",
+        "submit_for_review_button_label": "Enviar per revisió",
+        "submit_for_review_notice_label": "El pagament no vencerà fins que es revisi la comanda.",
+        "continue_to_payment_plans_button_label": "Continuar a plans de pagament",
+        "back_button_label": "Devolució",
+        "choose_delivery_strategy": "Trieu una forma de lliurament",
+        "autocomplete_zero_item": "No hi ha cap article disponible.",
+        "autocomplete_powered_by_google": "Tecnologia {{brandName}}",
+        "processing": "En procés...",
+        "stepper": {
+          "increase": "Augmentar {{type}}",
+          "decrease": "Reduir {{type}}",
+          "minimum_reached": "Mínim de {{value}} aconseguit",
+          "maximum_reached": "Màxim de {{value}} aconseguit"
+        },
+        "dates": {
+          "weekdays": {
+            "monday": "dilluns",
+            "tuesday": "dimarts",
+            "wednesday": "dimecres",
+            "thursday": "dijous",
+            "friday": "divendres",
+            "saturday": "dissabte",
+            "sunday": "diumenge"
+          },
+          "months": {
+            "january": "gener",
+            "february": "febrer",
+            "march": "març",
+            "may": "maig",
+            "june": "juny",
+            "july": "juliol",
+            "august": "agost",
+            "september": "setembre",
+            "november": "novembre",
+            "december": "desembre"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Mostrar el mes anterior, {{month}} {{year}}",
+          "show_next_month": "Mostrar el mes proper, {{month}} {{year}}",
+          "range_start": "Inici del rang",
+          "in_range": "Dins el rang",
+          "range_end": "Fi del rang"
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Grup de {{number}} marcador",
+            "other": "Grup de {{number}} marcadors",
+            "many": "Grup de {{number}} marcadors"
+          }
+        },
+        "confirm_order_button_label": "Confirmar comanda",
+        "qr_code": "Codi QR",
+        "dropzone": {
+          "add_file": "Afegeix fitxer",
+          "invalid_file_type": "El tipus de fitxer no és compatible",
+          "dragged_over": "Deixeu anar el fitxer que voleu pujar"
+        },
+        "loading": "Carregant…",
+        "remove_chip": "Eliminar article"
+      },
+      "contact": {
+        "title": "Informació",
+        "address_title": "Direcció",
+        "delivery_option_title": "Forma de lliurament",
+        "contact_method_title": "Contacte",
+        "email_label": "Correu electrònic",
+        "email_placeholder": "Correu electrònic",
+        "email_or_phone_label": "Email o número de telèfon mòbil",
+        "email_or_phone_placeholder": "Email o número de telèfon mòbil",
+        "stored_addresses_label": "Adreces desades",
+        "new_address_label": "Fes servir una nova adreça",
+        "first_name_label": "Nom",
+        "optional_first_name_label": "Nom (opcional)",
+        "last_name_label": "Cognoms",
+        "address1_label": "Direcció",
+        "address2_label": "Casa, apartament, etc. (opcional)",
+        "optional_address2_label": "Casa, apartament, etc. (opcional)",
+        "city_label": "Ciutat",
+        "country_label": "País / Regió",
+        "country_code": "Codi de país/regió",
+        "province_label": "Província / Estat",
+        "province_placeholder": "Província / Estat",
+        "county_label": "Comtat",
+        "county_placeholder": "Comtat",
+        "state_label": "Estat",
+        "state_placeholder": "Estat",
+        "region_label": "Regió",
+        "region_placeholder": "Regió",
+        "governorate_label": "Província",
+        "governorate_placeholder": "Província",
+        "emirate_label": "Emirat",
+        "emirate_placeholder": "Emirat"
+      },
+      "order_summary": {
+        "estimated_tax_label": "Impost estimat",
+        "multiple_shipping_lines_label": "Total d'enviament",
+        "applied_free_shipping_discount_label": "Aplicat",
+        "original_price": "Preu original",
+        "sale_price": "Preu d'oferta",
+        "recurring_subtotal_label": "Subtotal recurrent",
+        "recurring_total_label": "Total recurrent",
+        "recurring_total_tooltip": "No inclou cap enviament, impostos, aranzels ni descomptes aplicables.",
+        "gift_card_subscriptions_notice": "Les targetes regal només s'aplicaran al primer pagament",
+        "confirmation_number_label": "Confirmació N°%{confirmation_number}",
+        "estimated_taxes_finalization_tooltip_content": "L'import exacte dels impostos i el total definitiu es confirmaran per correu electrònic o missatge de text després de fer la comanda.",
+        "deferred_payment_info": {
+          "title": "El pagament de %{amount_due} venç el %{due_at}",
+          "description_html": "Si teniu alguna pregunta sobre la vostra comanda, %{contact_us}.",
+          "paid_today": "Total pagat avui",
+          "due_on_fulfillment_title": "El pagament de %{amount_due} s'ha de completar en preparar la comanda.",
+          "due_on_receipt_title": "El total a pagar després de la recepció és de %{amount_due}",
+          "paid_today_next": "Pagat avui"
+        },
+        "percent_off_shipping": "%{percent} % de descompte en l'enviament",
+        "amount_off_shipping": "%{amount} de descompte en l'enviament",
+        "payment_terms_totals": {
+          "due_today": "Total a pagar avui",
+          "due_later_checkout_to_draft": "Total a pagar més endavant",
+          "due_on_fulfillment": "Total a pagar en preparar la comanda",
+          "due_on_receipt": "Pagament total després de la recepció",
+          "total_paid": "Total pagat",
+          "due_today_next": "Venç avui",
+          "due_on_fulfillment_next": "A pagar en la preparació de la comanda"
+        },
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> no s'ha pogut utilitzar amb els descomptes existents.",
+        "maximum_discount_code_limit_reached": "Vas aconseguir la quantitat màxima de codis de descompte. Treu un codi existent per poder utilitzar <strong style=\"text-transform:uppercase\">%{code}</strong> .",
+        "order_total_label": "Total de la comanda",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> no funciona en aquests moments. Contacta'ns per obtenir ajuda.",
+        "due_on_fulfillment": "Pagadero en preparar la comanda",
+        "subscriptions": "Subscripcions",
+        "duties_label": "Aranzels",
+        "duties_and_taxes_label": "Aranzels i impostos",
+        "error_duties_tooltip": "Aquesta comanda s'envia des d'un altre país, per la qual cosa es poden cobrar aranzels i impostos al moment del lliurament.",
+        "may_be_charged_on_delivery": "Es pot cobrar al lliurament",
+        "total_updated_label_with_price": "Preu total actualitzat: %{totalPrice}",
+        "recurring_payments": "Pagaments recurrents",
+        "recurring_total_multiple_label": "Aquesta comanda té un càrrec recurrent per a diversos articles.",
+        "deferred_total_due_date_label": "Total a pagar el {{date}}",
+        "full_price": "Preu regular: %{price}",
+        "custom_discount": "Descompte personalitzat",
+        "expand_component_information": {
+          "one": "Mostra %{count} article",
+          "other": "Mostra %{count} articles",
+          "many": "Mostra %{count} articles"
+        },
+        "collapse_component_information": {
+          "one": "Amagar %{count} article",
+          "other": "Amagar %{count} articles",
+          "many": "Amagar %{count} articles"
+        },
+        "discount_discovery": {
+          "add_code": "Afegir descompte",
+          "merchandise_quantity_label": {
+            "one": "%{count} article",
+            "other": "%{count} articles",
+            "many": "%{count} articles"
+          }
+        },
+        "alternative_payment_currency_total": "Cobrat de la següent manera %{amount_due}",
+        "calculating": "Calculant…",
+        "group_title_label": "Parteix de \"%{group_title}\"",
+        "discount_title_stacking": {
+          "one": "Descompte",
+          "other": "Descomptes",
+          "many": "Descomptes"
+        },
+        "discount_order_stacking": {
+          "one": "Descompte en comandes",
+          "other": "Descomptes en comandes",
+          "many": "Descomptes en comandes"
+        },
+        "price_per_item": {
+          "accessibility_label": "%{price} per article",
+          "label": "%{price}/unitat"
+        },
+        "updated_shipping_method": "Mètode d'enviament actualitzat: %{shipping_method}",
+        "discount_not_found": "No ha estat possible trobar un descompte vàlid que coincideixi amb el codi introduït",
+        "total_savings": "Estalvi total",
+        "return_restocking_fee_label": "Càrrec per reposició",
+        "return_shipping_fee_label": "Enviament de devolució",
+        "enter_shipping_address": "Introduir la direcció d'enviament",
+        "shipping_discount_title": "Descompte d'enviament",
+        "discount_code_applied": "Codi de descompte aplicat",
+        "discount_code_applied_with_code": "S'ha aplicat el codi de descompte %{code}",
+        "gift_card_applied": "Targeta de regal aplicada",
+        "duties_included_label": "El total inclou impostos i aranzels. No s'apliquen càrrecs addicionals pel lliurament.",
+        "deferred_balance_info": {
+          "title": "El saldo de {{amount_due}} venç el {{due_at}}",
+          "due_on_fulfillment_title": "El saldo de {{amount_due}} venç en completar la preparació de la comanda"
+        },
+        "eligible_customer_missing_notice": "El codi de descompte <strong style=\"text-transform:uppercase\">%{code}</strong> requereix un client elegible.",
+        "subtotal_label_with_quantity": {
+          "one": "Subtotal · %{count} article",
+          "other": "Subtotal · %{count} articles",
+          "many": "Subtotal · %{count} articles"
+        },
+        "cost_table_item_column_header": "Article",
+        "product_image_quantity_label": "Quantitat",
+        "more_items_modal": {
+          "clear_search": "Esborrar cerca",
+          "empty_results": "No s'ha trobat cap resultat per a %{searchText}. Revisa l'ortografia o fes servir una paraula o frase diferent.",
+          "number_items_shown": "%{shownNumber} de %{totalNumber} articles",
+          "search_item": "Cerca"
+        },
+        "number_items": {
+          "one": "%{count} article",
+          "other": "%{count} articles",
+          "many": "%{count} articles"
+        },
+        "view_all_items": {
+          "one": "Veure %{count} article",
+          "other": "Veure els %{count} articles",
+          "many": "Veure els %{count} articles"
+        },
+        "price_before_discount_aria_text": "Preu original",
+        "price_after_discount_aria_text": "Preu rebaixat",
+        "discount_code_aria_text": "Codi de descompte",
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Envia-ho a una adreça"
+        }
+      }
+    }
+  }
+}
