@@ -106,7 +106,7 @@
                 {% assign movil_10gb = all_products['tarifa-movil-10gb-barata'] %}
                 {% assign variant_movil_10gb = movil_10gb.variants.first %}
                 {% assign movil_10gb_add_ons = movil_10gb.metafields.custom.add_ons.value %}
-                <div class="main-custom-pack-card card-movil">
+                {% comment %} <div class="main-custom-pack-card card-movil">
                   <div class="main-custom-pack-card__heading">
                     10 Gb
                     {% render 'qty-selector' %}
@@ -120,7 +120,7 @@
                   <div class="main-custom-pack-card__pricing" original-price="{{ variant_movil_10gb.price }}">
                     <div class="bestPrice">{{ variant_movil_10gb.price | money_without_currency }}<span>€/año</span></div>
                   </div>
-                </div>
+                </div> {% endcomment %}
                 {% comment %} Card {% endcomment %}
                 {% comment %} Card {% endcomment %}
                 {% assign movil_15gb = all_products['products-tarifa-movil-15gb-barata'] %}
