@@ -558,6 +558,9 @@
       "contact": {
         "company_label": "DNI",
         "optional_company_label": "DNI"
+      },
+      "field_errors": {
+        "address_company_blank": "Introduce un DNI válido"
       }
     }
   }
