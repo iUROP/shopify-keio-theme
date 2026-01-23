@@ -554,6 +554,10 @@
           "other": "Envío",
           "one": "Envío"
         }
+      },
+      "contact": {
+        "company_label": "DNI",
+        "optional_company_label": "DNI"
       }
     }
   }
