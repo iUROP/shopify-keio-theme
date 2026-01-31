@@ -111,4 +111,10 @@ html a.main-custom-button, body a.main-custom-button {
   .main-custom-product-card--inner__desc ul {
     height: 165px;
   }
+  .main-custom-product-card--inner h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
 }
