@@ -108,7 +108,7 @@ html a.main-custom-button, body a.main-custom-button {
 }
 
 @media only screen and (max-width: 1490px) {
-  .main-custom-product-card--inner h3 {
-
+  .main-custom-product-card--inner__desc ul {
+    height: 165px;
   }
 }
