@@ -118,3 +118,10 @@ html a.main-custom-button, body a.main-custom-button {
     overflow: hidden;
   }
 }
+
+i-minicart .i-minicart-container__snap--upsells--list__item--labels h3 {
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+}
