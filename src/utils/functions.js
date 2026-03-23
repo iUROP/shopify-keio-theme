@@ -156,9 +156,33 @@ window.Permalink = function() {
         body: JSON.stringify({ items: items })
       })
 
-      resolve(await request.json())
+      const response = await request.json()
 
-      if (open) openCart()
+      if (!request.ok && items.length > 1) {
+        console.warn('Bulk add failed (status ' + request.status + '), trying main item only...')
+        const retryRequest = await fetch(`/cart/add.js`, {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ items: [items[0]] })
+        })
+        const retryResponse = await retryRequest.json()
+        resolve(retryResponse)
+
+        if (retryRequest.ok) {
+          if (open) openCart()
+        } else {
+          console.error('Add to cart failed:', retryResponse)
+        }
+      } else if (!request.ok) {
+        console.error('Add to cart failed:', response)
+        resolve(response)
+      } else {
+        resolve(response)
+        if (open) openCart()
+      }
+
       reactive()
     })
   }
