@@ -122,9 +122,10 @@ window.Permalink = function() {
         method: "GET"
       })
 
-      removeShipping()
+      const cartData = await request.json()
+      resolve(cartData)
 
-      resolve(await request.json())
+      removeShipping(cartData)
     })
   }
 
@@ -267,8 +268,7 @@ window.Permalink = function() {
     }))
   }
 
-  const removeShipping = async function() {
-    const cart = await Permalink.getCart()
+  const removeShipping = function(cart) {
     if (cart) {
       if (cart.item_count == 1) {
         const isShipping = cart.items.find((item) => (item.variant_id == 56023547871563 || item.variant_id == 56023553245515 || item.variant_id == 56023554457931))
