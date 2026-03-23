@@ -652,7 +652,7 @@
               const hasShipping = currentCart.items.find((item) => item.variant_id == Number(document.querySelector('#shipping_variant').value))
               if (!hasShipping) {
                 addObj.push({
-                  id: document.querySelector('#shipping_variant').value,
+                  id: Number(document.querySelector('#shipping_variant').value),
                   quantity: 1
                 })
               }
@@ -663,25 +663,35 @@
               const hasInstallation = currentCart.items.find((item) => item.variant_id == Number(document.querySelector('#installation_variant').value))
               if (!hasInstallation) {
                 addObj.push({
-                  id: document.querySelector('#installation_variant').value,
+                  id: Number(document.querySelector('#installation_variant').value),
                   quantity: 1
                 })
               }
-              
+
             }
           }
 
         } else {
-          console.log("No hay suscripción activa (probablemente es compra única).");
+          // Fallback: si el producto requiere suscripción pero la app no cargó, usar plan anual por defecto
+          const productJson = document.querySelector('[id^="ProductJson"]');
+          if (productJson) {
+            const productData = JSON.parse(productJson.textContent);
+            if (productData.requires_selling_plan) {
+              console.log("Producto requiere suscripción, aplicando plan anual por defecto");
+              addObj[0]['selling_plan'] = 690050466123;
+            } else {
+              console.log("Compra única (no requiere suscripción).");
+            }
+          }
         }
 
         const activeVariants = Array.from(
           document.querySelectorAll('.custom-product-add-ons--option.active')
-        ).map(el => el.getAttribute('rel-variant'));
+        ).map(el => el.getAttribute('rel-variant')).filter(Boolean);
 
         activeVariants.forEach(variantId => {
           let obj = {
-            id: variantId,
+            id: Number(variantId),
             quantity: 1,
             properties: {
               _bulker_id: bulkerId
