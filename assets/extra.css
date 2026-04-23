@@ -144,4 +144,13 @@ i-minicart .i-minicart-container__snap--upsells--list__item--labels h3 {
     overflow: hidden;
     height: 65px;
   }
+  .main-custom-product-list__container--row.row-products-2 .slick-list {
+    width: 100% !important;
+  }
+  .main-custom-product-list__container--row.row-products-2 .slick-list .slick-track {
+    width: 100% !important;
+  }
+  .main-custom-product-list__container--row.row-products-2 .slick-list .slick-track .slick-slide {
+    width: 100% !important;
+  }
 }
