@@ -133,3 +133,8 @@ i-minicart .i-minicart-container__snap--upsells--list__item--labels h3 {
   }
 }
 
+@media only screen and (max-width: 1024px) {
+  .main-custom-categories__container--card__text {
+    padding: 20px;
+  }
+}
