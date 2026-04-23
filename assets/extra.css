@@ -126,7 +126,10 @@ i-minicart .i-minicart-container__snap--upsells--list__item--labels h3 {
   overflow: hidden !important;
 }
 
-.main-custom-categories__container--card {
-  width: 50%;
-  aspect-ratio: 2 / 1.5;
+@media only screen and (min-width: 1025px) {
+  .main-custom-categories__container--card {
+    width: 50%;
+    aspect-ratio: 2 / 1.5;
+  }
 }
+
