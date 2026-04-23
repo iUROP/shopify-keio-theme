@@ -137,4 +137,11 @@ i-minicart .i-minicart-container__snap--upsells--list__item--labels h3 {
   .main-custom-categories__container--card__text {
     padding: 20px;
   }
+  .main-custom-product-list__container--row.row-products-2 .main-custom-product-card--inner h3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 65px;
+  }
 }
