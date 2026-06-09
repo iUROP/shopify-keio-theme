@@ -27,24 +27,6 @@
             "swatch_shape": "circle"
           }
         },
-        "subscriptions_app_block_GcxQUg": {
-          "type": "shopify://apps/subscriptions/blocks/app-block/a3bfe9ec-96f8-4508-a003-df608a36d2ad",
-          "settings": {
-            "subscription_policy_url": "",
-            "color_text_body": "#6d7175",
-            "dividers_color": "#8f8d8d",
-            "border_thickness": 1,
-            "border_radius": 0,
-            "product": "{{product}}"
-          }
-        },
-        "buy_buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
         "collapsible_tab_FGjqXR": {
           "type": "collapsible_tab",
           "settings": {
@@ -65,8 +47,6 @@
         "title",
         "description",
         "variant_picker",
-        "subscriptions_app_block_GcxQUg",
-        "buy_buttons",
         "collapsible_tab_FGjqXR",
         "custom_upsell_aNx6c6"
       ],
